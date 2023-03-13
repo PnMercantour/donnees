@@ -4,7 +4,7 @@ Ce dépôt est destiné à stocker la documentation, les requêtes sql ainsi que
 principaux schémas des bases de données en utilisation. En cas de besoin, de nouveaux schémas pourront être
 ajoutés. 
 
-## Structure
+## Structure du dépôt
 
 ```bash
 donnees
