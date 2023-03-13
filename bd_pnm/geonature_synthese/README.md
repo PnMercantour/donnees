@@ -5,14 +5,14 @@
 _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_
 
 Ce schéma contient les observations de la base de données geonature. 
-A chaque taxon sont associés les attributs tels que définis par taxref ainsi que les informations géographiques 
+A chaque taxon sont associés des attributs tels que définis par taxref ainsi que les informations géographiques 
 correspondant au maillage et aux différentes zones remarquables du parc national du Mercantour. 
-Les données sont accessibles soient de en détail,soit agrégées selon la maille géographique, l'année, ou les classements en groupes inpn 1-2. 
-
+Les données sont accessibles soit de en détail, soit agrégées selon la maille géographique, l'année, ou les classements en groupes inpn 1-2. 
+Est aussi disponible une liste rappelant les espèces patrimoniales/protégées.
 
 ## Tables remarquables
 
-L'ensemble du schéma est constitué de 3 tables :
+L'ensemble du schéma est constitué de 5 tables :
 
  - .detail (vue)
 Contient l'ensemble des observations, complété par les données issues de taxref, et des propriétés de la maille contenant le lieu d'observation. 
@@ -28,7 +28,8 @@ Ne sont conservées que les observations ayant eu lieu sur une seule année
  - .aggregation_maille_groupe*_inpn
 aggrégation des observations selon le groupe inpn 1-2 
 
-
+ - taxon_patrimonial_protege
+liste des taxons (cd_ref) patrimoniaux ou protégés
 
 ## Description des colonnes remarquables
 *Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom pourrait prêter à confusion. *
@@ -41,6 +42,7 @@ aggrégation des observations selon le groupe inpn 1-2
 | id_grid   | int        | identifiant du numéro de maille |
 | cd_nom   | int        | identifiant de nom unique dans taxref      |
 | cd_ref   | int        | identifiant du taxon de référence      |
+|maille | int |n° de la maille d'1km dans laquelle se situe l'observation|
 | patrimoniale/protegee| boolean| Valeurs True/False quand connue, sinon null. |
 |...|...|...|
 
@@ -53,7 +55,7 @@ _Mêmes colonnes que observation  - aggregation par année et par maille_
 _Mêmes colonnes que observation  - aggregation par groupe inpn_
 
 ## Exemples de Requêtes
-_Quelques exemples de requêtes toutes écrites qui permettent de faire des trucs_
+_Quelques exemples de requêtes_
 
 ```sql
 --Requête pour avoir tous les trucs commençant par "a" ou "A"
