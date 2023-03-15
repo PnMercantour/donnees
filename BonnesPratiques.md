@@ -11,8 +11,9 @@ faciliter la lecture et le travail dans la base de données.
  - Eviter les abbréviations qui rendent les noms cryptiques (ex: "liste_patrimoine_protection" plutôt que "lst_pp")
 
 ## Projets QGis
- - Importer les couches et projets depuis le Gestionnaire de BD (Onglet: Base de données>Gestionnaire de BD...) et pas depuis l'explorateur 
- - Eviter tout particulièrement les accents, espaces et caractères spéciaux
+ - Importer les couches et projets depuis le Gestionnaire de sources de données ("Couches>Gestionnaire de source de données" ou CTRL+L)
+ et pas depuis l'explorateur.
+ - Éviter tout particulièrement les accents, espaces et caractères spéciaux
  - Utiliser des alias pour les couches pour en faciliter la lecture
  - Penser à utiliser des groupes pour organiser les couches de travail
  
