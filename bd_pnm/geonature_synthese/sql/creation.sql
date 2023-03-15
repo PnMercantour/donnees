@@ -2,16 +2,14 @@
 -- Vue materialisee observation_taxonomie_grille
 -- lien entre les tables qui seront ensuite accessibles par des vues
 CREATE MATERIALIZED VIEW gn_observation.observation_taxonomie_grille as (
- SELECT s_1.id_synthese,
+  SELECT s_1.id_synthese,
     taxref.cd_ref,
-    grid.id AS maille,
-    st_centroid(s_1.the_geom_local) AS geom
+    grid.id AS id_grid,
+    st_centroid(s_1.the_geom_local)::geometry(Point, 2154) AS geom
    FROM limites.grid,
     gn_synthese.synthese s_1
      LEFT JOIN taxonomie.taxref USING (cd_nom)
-  WHERE s_1.id_nomenclature_info_geo_type = 
-			ref_nomenclatures.get_id_nomenclature(
-				'TYP_INF_GEO'::character varying, '1'::character varying) 
+  WHERE s_1.id_nomenclature_info_geo_type = ref_nomenclatures.get_id_nomenclature('TYP_INF_GEO'::character varying, '1'::character varying) 
   AND st_centroid(s_1.the_geom_local) && grid.geom 
   AND st_x(st_centroid(s_1.the_geom_local)) < st_xmin(st_centroid(grid.geom)::box3d) 
   AND st_y(st_centroid(s_1.the_geom_local)) < st_ymin(st_centroid(grid.geom)::box3d) 
@@ -27,9 +25,11 @@ CREATE VIEW geonature_synthese.detail as (SELECT id_synthese,
     taxref.regne,
     taxref.phylum,
     taxref.classe,
-    COALESCE(patrimoniale IS NOT NULL, FALSE) AS patrimoniale,
-	COALESCE(protegee IS NOT NULL, FALSE) AS protegee,
-	id_grid,
+	taxref.group1_inpn,
+	taxref.group2_inpn,
+    COALESCE(tpp.patrimoniale IS NOT NULL, false) AS patrimoniale,
+    COALESCE(tpp.protegee IS NOT NULL, false) AS protegee,
+	id_grid as maille,
 	surface_coeur,
     surface_aire_adhesion,
     surface_aoa,
@@ -59,31 +59,32 @@ CREATE VIEW geonature_synthese.detail as (SELECT id_synthese,
     ref_nomenclatures.get_nomenclature_label (id_nomenclature_info_geo_type) AS type_inf_geo,
     ref_nomenclatures.get_nomenclature_label (id_nomenclature_determination_method) AS meth_determin,
     ref_nomenclatures.get_nomenclature_label (id_nomenclature_behaviour) AS occ_comportement,
-    ref_nomenclatures.get_nomenclature_label (id_nomenclature_biogeo_status) AS stat_biogeo
-
+    ref_nomenclatures.get_nomenclature_label (id_nomenclature_biogeo_status) AS stat_biogeo,
+    observation_taxonomie_grille.geom::geometry(point,2154)
 
 FROM geonature_synthese.observation_grille_taxonomie
 	LEFT JOIN gn_synthese.synthese_avec_partenaires AS sap USING (id_synthese)
     LEFT JOIN taxonomie.taxref USING (cd_nom)
-    LEFT JOIN taxonomie.v_taxref_pp USING (cd_nom)
+    LEFT JOIN geonature_synthese.taxon_patrimonial_protege tpp ON tpp.cd_ref = observation_taxonomie_grille.cd_ref
 	LEFT JOIN limites.grid on observation_grille_taxonomie.id_grid = grid.id
 	);
 
 -- ----------------------------------------------------------------------------------------------------
 -- Deux vues aggregation_groupe*_inpn_maille
 -- aggregation des donnee pour chaque groupe inpn et par maille
-CREATE geonature_synthese.aggregation_groupe1_inpn_maille AS ( SELECT detail.group1_inpn,
+CREATE VIEW geonature_synthese.aggregation_groupe1_inpn_maille AS ( SELECT detail.group1_inpn,
     detail.maille,
     count(*) AS n_obs,
-    max(grid.geom::text) AS geom
+    max(grid.geom::text)::geometry(Polygon, 2154) AS geom
    FROM geonature_synthese.detail
      LEFT JOIN limites.grid ON grid.id = detail.maille
   GROUP BY detail.group1_inpn, detail.maille);
 
 -- ----------------------------------------------------------------------------------------------------
 -- Vue aggregation_maille_an
--- aggregation des cd_ref par maille et par an
-CREATE VIEW geonature_synthese.aggregation_maille_an
+-- aggregation des cd_ref par maille et par an 
+CREATE VIEW geonature_synthese.aggregation_maille_an as (
+	WITH agg as (
  SELECT detail.maille,
     detail.cd_ref,
     date_part('year'::text, detail.date_min) AS year_min,
@@ -91,16 +92,19 @@ CREATE VIEW geonature_synthese.aggregation_maille_an
     sum(detail.count_min) AS sum_min,
     sum(detail.count_max) AS sum_max,
     min(detail.patrimoniale::integer)::boolean AS patrimoniale,
-    min(detail.protegee::integer)::boolean AS protegee,
-    max(detail.surface_coeur) AS surface_coeur,
-    max(detail.surface_aire_adhesion) AS surface_aire_adhesion,
-    max(detail.surface_aoa) AS surface_aoa,
-    max(detail.nom_vallee::text) AS nom_vallee,
-    max(grid.geom::text) AS geom
+    min(detail.protegee::integer)::boolean AS protegee
    FROM geonature_synthese.detail
-     LEFT JOIN limites.grid ON grid.id = detail.maille
   WHERE date_part('year'::text, detail.date_min) = date_part('year'::text, detail.date_max)
-  GROUP BY detail.maille, detail.cd_ref, (date_part('year'::text, detail.date_min));
+  GROUP BY detail.maille, detail.cd_ref, (date_part('year'::text, detail.date_min)))
+	SELECT agg.*,
+	    grid.surface_coeur AS surface_coeur,
+    	    grid.surface_aire_adhesion AS surface_aire_adhesion,
+    	    grid.surface_aoa AS surface_aoa,
+    	    grid.nom_vallee::text AS nom_vallee,
+    	    grid.geom::geometry(Polygon, 2154) AS geom
+		from agg
+		 LEFT JOIN limites.grid ON grid.id = agg.maille);
+
 
 -- ----------------------------------------------------------------------------------------------------
 -- Vue taxon_patrimonial_protege
