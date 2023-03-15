@@ -3,10 +3,10 @@
 ## Description
 
 Ce schéma contient les observations de la base de données geonature. 
-A chaque taxon sont associés des attributs tels que définis par taxref ainsi que les informations géographiques 
+A chaque taxon sont associés les attributs définis par taxref ainsi que les informations géographiques 
 correspondant au maillage et aux différentes zones remarquables du parc national du Mercantour. 
-Les données sont accessibles soit de en détail, soit agrégées selon la maille géographique, l'année, ou les classements en groupes inpn 1-2. 
-Est aussi disponible une liste rappelant les espèces patrimoniales/protégées.
+Les données sont accessibles soit en détail, soit agrégées selon la maille géographique, l'année, ou les classements en groupes inpn 1-2. 
+Une liste rappelant les espèces patrimoniales/protégées est aussi disponible.
 
 ## Tables remarquables
 
@@ -52,10 +52,25 @@ liste des taxons (cd_ref) patrimoniaux ou protégés
 
 Les principales couches sont chargées, et représentées de façon simple.
 Par défaut, plusieurs filtres sont appliqués afin d'accélérer le chargement du projet:
-### détail des observations geonature
-Un filtre est appliqué qui limite les observations représentées à celle de l'année 2023. 
 
-###
+Il est recommandé de les remplacer par d'autres filtres ne conservant que les observations ponctuelles pertinentes
+pour éviter de surcharger Qgis. 
+
+
+Par exemple, si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
+Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
+```sql
+date_part('year', "date_max") = 2023
+```
+par:
+```sql
+"phylum" = 'Arthropoda'
+```
+
+
+
+
+ 
 
 
 _____
@@ -63,6 +78,7 @@ _Documentation pour utilisateurs avancés et maintenance_
 
 ## Exemples de Requêtes
 
+<!--
 _Requêtes pour récupérer toutes les observations d'une espèce dont le nom valide commence par "ar"_
 
 ```sql
@@ -71,7 +87,7 @@ SELECT *
 FROM table_1
 WHERE nom_truc ILIKE 'a%'
 ```
-
+-->
 ## Dépendances
 
 Les 3 vues aggrégées sont construites sur la vue matérialisée _gn_observation.observation_taxonomie_grille_. 
@@ -85,18 +101,15 @@ Celle ci dépend directement des tables:
  - taxonomie.v_taxref_pp : patrimonialité/protection - jointure sur _cd_nom_
  - ref_nomenclatures.* : détails sur l'observation - jointure sur _id_nomenclature\_\*_
 
-
+<!--
 ## Mises à jour
 
-<!--Tous les ans, ou quand les couches de références changent. -->
+Tous les ans, ou quand les couches de références changent. -->
 
 ## Code de création des tables
 
-[table_1](https://github.com/EcMerc/DemoDBDoc/blob/decd1fccd363a4239451b1d69fdefd363db3b442/sql/table_1.sql)
+[Ici](./sql/creation.sql)
 
-[table_2](https://github.com/EcMerc/DemoDBDoc/blob/decd1fccd363a4239451b1d69fdefd363db3b442/sql/table_2.sql)
-
-[table_3]()
 
 
 
