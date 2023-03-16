@@ -1,5 +1,6 @@
 # geonature_synthese 
 
+
 ## Description
 
 Ce schéma contient les observations de la base de données geonature. 
@@ -22,7 +23,7 @@ Dans les vues aggrégées, la patrimonialité et la protection ne sont vraies qu
 
  - _.aggregation_maille_an_
 
-aggrégation des observation par année de début d'observation et pour chaque maille de limites.grid
+aggrégation des observation par année de début d'observation et pour chaque maille de limites.grid. 
 Ne sont conservées que les observations ayant eu lieu sur une seule année
  
  - _.aggregation_maille_groupe*\_inpn_
@@ -51,18 +52,20 @@ liste des taxons (cd_ref) patrimoniaux ou protégés
 ## Utilisation du projet qgis 
 
 Les principales couches sont chargées, et représentées de façon simple.
-Par défaut, plusieurs filtres sont appliqués afin d'accélérer le chargement du projet:
+Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées non superposées.
+Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques]()).
 
-Il est recommandé de les remplacer par d'autres filtres ne conservant que les observations ponctuelles pertinentes
-pour éviter de surcharger Qgis. 
+Pour utiliser le projet, ces filtres doivent être remplacés pour ne conserver que les données pertinentes.
 
+Exemple:
+	
+> Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
+	Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
 
-Par exemple, si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
-Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
 ```sql
 date_part('year', "date_max") = 2023
 ```
-par:
+> par:
 ```sql
 "phylum" = 'Arthropoda'
 ```
