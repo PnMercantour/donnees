@@ -9,6 +9,31 @@ correspondant au maillage et aux différentes zones remarquables du parc nationa
 Les données sont accessibles soit en détail, soit agrégées selon la maille géographique, l'année, ou les classements en groupes inpn 1-2. 
 Une liste rappelant les espèces patrimoniales/protégées est aussi disponible.
 
+
+
+## Utilisation du projet qgis 
+
+Les principales couches sont chargées, et représentées de façon simple.
+Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées non superposées.
+Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](/BonnesPratiques.md)).
+
+Pour utiliser le projet, ces filtres doivent être remplacés pour ne conserver que les données pertinentes.
+
+Exemple:
+	
+> Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
+	Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
+
+```sql
+date_part('year', "date_max") = 2023
+```
+> par:
+```sql
+"phylum" = 'Arthropoda'
+```
+
+
+
 ## Tables remarquables
 
 Le schéma est constitué de 5 tables :
@@ -48,29 +73,6 @@ liste des taxons (cd_ref) patrimoniaux ou protégés
 |maille | int |n° de la maille d'1km de côté dans laquelle se situe l'observation|
 | patrimoniale/protegee| boolean| Valeurs True/False quand connue, sinon null. |
 |...|...|...|
-
-## Utilisation du projet qgis 
-
-Les principales couches sont chargées, et représentées de façon simple.
-Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées non superposées.
-Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques]()).
-
-Pour utiliser le projet, ces filtres doivent être remplacés pour ne conserver que les données pertinentes.
-
-Exemple:
-	
-> Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
-	Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
-
-```sql
-date_part('year', "date_max") = 2023
-```
-> par:
-```sql
-"phylum" = 'Arthropoda'
-```
-
-
 
 
  
