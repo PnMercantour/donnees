@@ -10,7 +10,7 @@ _Avant de commencer: se trouver sur une session windows qui n'est pas partagée._
 
 - naviguer jusqu'au dossier AppData.
 
-Il se trouve typiquement dans un chemin du type:
+Il se trouve typiquement dans un chemin ressemblant à:
 > C:\Users\ *[nomdelasession]* \AppData\Roaming
 
 Le façon la plus simple de l'atteindre consiste à appuyer sur  _touche windows + R_, 

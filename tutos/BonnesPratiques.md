@@ -22,7 +22,6 @@ faciliter la lecture et le travail dans la base de données.
  - Penser à supprimer les produits intermédiaires
  - Toujours conserver une copie intacte des données de travail
  - Privilégier les exports en dur aux couches temporaires pour les résultats de géotraitements (voir exemple)
- <!-- en dur  à préciser pour les débutants-->
  
 ### En cas de problème
  - Vérifier la projection (CRS: EPSG:2154)
@@ -40,6 +39,7 @@ faciliter la lecture et le travail dans la base de données.
 
   <img src="./img/exports_endurs.png" alt= “” width="75%" height="75%">
 
+  *Privilégier l'export vers un fichier des résultats de traitements (ici "Centroïdes") à la production de couches temporaires*
 
  ### Filtres
 
