@@ -1,2 +1,6 @@
-./*_attachments.zip
-./*/.vs
+*_attachments.zip
+./*.qgs~
+./bn_pnm/.vs/*
+test.txt
+.vs/
+*.qgs~
