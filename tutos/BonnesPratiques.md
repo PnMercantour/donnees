@@ -36,8 +36,9 @@ faciliter la lecture et le travail dans la base de données.
 
  ## Illustrations
 
- ### Exports en dur
+ ### Exports
 
+  <img src="./img/exports_endurs.png" alt= “” width="75%" height="75%">
 
 
  ### Filtres

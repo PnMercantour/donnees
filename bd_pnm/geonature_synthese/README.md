@@ -19,7 +19,7 @@ Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de 
 
 Pour utiliser le projet, ces filtres doivent être remplacés pour ne conserver que les données pertinentes.
 
-Exemple:
+_Exemple:_
 	
 > Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
 	Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
@@ -44,16 +44,16 @@ Contient l'ensemble des observations, complété par les données issues de taxr
 Il a été décidé que chaque observation serait assignée à une et une seule maille de la grille 1km, en cas 
 de superposition parfaite du lieu d'observation avec la limite entre deux mailles, la mailles au n° le plus grand est conservée. 
 
-Dans les vues aggrégées, la patrimonialité et la protection ne sont vraies que si toutes les espèces aggrégées sont protégées ou patrimoniales. 
+Dans les vues agrégées, la patrimonialité et la protection ne sont vraies que si toutes les espèces agrégées sont protégées ou patrimoniales. 
 
- - _.aggregation_maille_an_
+ - _.agregation_maille_an_
 
-aggrégation des observation par année de début d'observation et pour chaque maille de limites.grid. 
+agrégation des observation par année de début d'observation et pour chaque maille de limites.grid. 
 Ne sont conservées que les observations ayant eu lieu sur une seule année
  
- - _.aggregation_maille_groupe*\_inpn_
+ - _.agregation_maille_groupe*\_inpn_
 
-aggrégation des observations selon le groupe inpn 1-2 
+agrégation des observations selon le groupe inpn 1-2 
 
  - _.taxon_patrimonial_protege_
 
@@ -95,7 +95,7 @@ WHERE nom_truc ILIKE 'a%'
 -->
 ## Dépendances
 
-Les 3 vues aggrégées sont construites sur la vue matérialisée _gn_observation.observation_taxonomie_grille_. 
+Les 3 vues agrégées sont construites sur la vue matérialisée _gn_observation.observation_taxonomie_grille_. 
 
 Celle ci dépend directement des tables: 
  - [limites.grid](https://github.com/PnMercantour/limites/README.md#tables_remarquables) : données géographiques liées aux mailles - jointure géographique
