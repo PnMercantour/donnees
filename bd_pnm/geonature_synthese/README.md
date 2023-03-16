@@ -15,7 +15,7 @@ Une liste rappelant les espèces patrimoniales/protégées est aussi disponible.
 
 Les principales couches sont chargées, et représentées de façon simple.
 Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées non superposées.
-Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](/BonnesPratiques.md)).
+Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](/BonnesPratiques.md#filtres)).
 
 Pour utiliser le projet, ces filtres doivent être remplacés pour ne conserver que les données pertinentes.
 
