@@ -39,18 +39,18 @@ faciliter la lecture et le travail dans la base de données.
 
   <img src="./img/exports_endurs.png" alt= “” width="75%" height="75%">
 
-  *Privilégier l'export vers un fichier des résultats de traitements (ici "Centroïdes") à la production de couches temporaires*
+_Privilégier l'export vers un fichier des résultats de traitements (ici "Centroïdes") à la production de couches temporaires._
 
  ### Filtres
 
  <img src="./img/filtre_couche.png" alt= “” width="75%" height="75%">
 
-*L'application d'un filtre est signalée par l'icône de filtre. En cliquant dessus on accède au constructeur de requête qui 
-permet de modifier les paramètres du filtrage.*
+_L'application d'un filtre est signalée par l'icône de filtre. En cliquant dessus on accède au constructeur de requête qui 
+permet de modifier les paramètres du filtrage._
 
  <img src="./img/filtre_symbologie.png" alt= “” width="75%" height="75%">
 
-*L'utilisation d'une expression dans la symbologie ("Couche>Propriétés>Symbologie" ou double clic sur la couche - onglet symbologie)*
-permet de filtrer ou regrouper l'information. Ici on obtient la somme de n_obs par maille. l'expression est modifiable directement, ou 
-en cliquant sur le ε.*
+_L'utilisation d'une expression dans la symbologie ("Couche>Propriétés>Symbologie" ou double clic sur la couche - onglet symbologie)*
+permet de filtrer ou regrouper l'information. Ici on obtient la somme de n_obs par maille. L'expression est modifiable directement ou 
+en cliquant sur le ε pour accéder à l'éditeur d'expressions._
 
