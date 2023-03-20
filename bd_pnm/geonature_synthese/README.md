@@ -33,6 +33,8 @@ date_part('year', "date_max") = 2023
 ```sql
 "phylum" = 'Arthropoda'
 ```
+> Cette manipulation change le filtre: au lien de ne garder que les observations où l'année est 2023, on ne garde que celles où la colonne 
+"phylum" contient exactement le mot "Arthropoda". 
 
 #### Couche "Agrégation par maille, cd_ref et par an"
 > en l'état la couche est filtrée par année d'observation (annee)
@@ -42,8 +44,8 @@ annee = 2023
 > Elle est aussi filtrée au niveau de la symbologie
 
 _Valeur_ : `sum("n_obs",group_by:="maille")`
-> qui permet de regrouper les valeurs des mailles superposées. Au moment du chargement sont donc représentées le nombre d'observation par maille en 2023.
-> les autres couches agrégées sont construites sur le même modèle. 
+> qui permet de regrouper les valeurs des mailles superposées. Au moment du chargement est donc représenté le nombre d'observation par maille en 2023.
+> Les autres couches agrégées sont construites sur le même modèle. 
 
 
 

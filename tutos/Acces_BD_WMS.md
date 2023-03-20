@@ -11,8 +11,9 @@ _Avant de commencer: se trouver sur une session windows qui n'est pas partagée._
 - naviguer jusqu'au dossier AppData.
 
 Il se trouve typiquement dans un chemin ressemblant à:
-> C:\Users\ *[nomdelasession]* \AppData\Roaming
-
+```
+C:\Users\ *[nomdelasession]* \AppData\Roaming
+```
 Le façon la plus simple de l'atteindre consiste à appuyer sur  _touche windows + R_, 
 puis à entrer la commande "%AppData%" dans l'invité de commande (la touche windows se trouve entre ctrl et alt). [Exemple](#Acces-au-dossier-AppData)
 
@@ -32,13 +33,13 @@ l'affichage des fichiers cachés dans les options)
 Une fenêtre s'ouvre, clic sur 'Sélectionner tout'. 
 Cette opération a enrichi l'annuaire des couches WMS avec les catalogues IGN les plus souvent utilisés.
 
-- clic droit sur Postgis dans l'explorateur. Même manip que précédemment avec le fichier "service projets.xml" qui ajoute la connexion vers notre base de données au catalogue.
+- clic droit sur Postgis dans l'explorateur. Même manipulation que précédemment avec le fichier "service projets.xml" qui ajoute la connexion vers notre base de données.
 
 
 
 
 ## Illustrations
 
-### Acces au dossier AppData
+### Accès au dossier AppData
 
 <img src="./img/appdata.png" alt= “” width="50%" height="50%">
