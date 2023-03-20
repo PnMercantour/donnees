@@ -14,7 +14,7 @@ Il se trouve typiquement dans un chemin ressemblant à:
 > C:\Users\ *[nomdelasession]* \AppData\Roaming
 
 Le façon la plus simple de l'atteindre consiste à appuyer sur  _touche windows + R_, 
-puis à entrer la commande "%AppData%" dans l'invité de commande (la touche windows se trouve entre ctrl et alt). [Voir Exemple](#Acces-au-dossier-AppData)
+puis à entrer la commande "%AppData%" dans l'invité de commande (la touche windows se trouve entre ctrl et alt). [Exemple](#Acces-au-dossier-AppData)
 
 (Ce répertoire est masqué par défaut, il est aussi possible de naviguer jusqu'à lui, en autorisant
 l'affichage des fichiers cachés dans les options)
