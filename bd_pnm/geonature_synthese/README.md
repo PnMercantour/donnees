@@ -14,14 +14,16 @@ Une liste rappelant les espèces patrimoniales/protégées est aussi disponible.
 ## Utilisation du projet qgis 
 
 Les principales couches sont chargées, et représentées de façon simple.
-Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées non superposées.
-Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](/BonnesPratiques.md#filtres)).
+Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées superposées.
+Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](../../tutos/BonnesPratiques.md#filtres)).
 
 Pour utiliser le projet, ces filtres doivent être remplacés pour ne conserver que les données pertinentes.
 
-_Exemple:_
+### _Exemples_
+
+#### Couche "détail"
 	
-> Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
+>  Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"
 	Après avoir cliqué sur l'icône de filtre à côté de la couche, on peut remplacer:
 
 ```sql
@@ -31,6 +33,17 @@ date_part('year', "date_max") = 2023
 ```sql
 "phylum" = 'Arthropoda'
 ```
+
+#### Couche "Agrégation par maille, cd_ref et par an"
+> en l'état la couche est filtrée par année d'observation (annee)
+```sql
+annee = 2023
+```
+> Elle est aussi filtrée au niveau de la symbologie
+
+_Valeur_ : `sum("n_obs",group_by:="maille")`
+> qui permet de regrouper les valeurs des mailles superposées. Au moment du chargement sont donc représentées le nombre d'observation par maille en 2023.
+> les autres couches agrégées sont construites sur le même modèle. 
 
 
 
@@ -51,7 +64,7 @@ Dans les vues agrégées, la patrimonialité et la protection ne sont vraies que
 agrégation des observation par année de début d'observation et pour chaque maille de limites.grid. 
 Ne sont conservées que les observations ayant eu lieu sur une seule année
  
- - _.agregation_maille_groupe*\_inpn_
+ - _.agregation_groupe*\_inpn_maille_
 
 agrégation des observations selon le groupe inpn 1-2 
 
@@ -72,6 +85,7 @@ liste des taxons (cd_ref) patrimoniaux ou protégés
 | cd_ref   | int        | identifiant du taxon de référence      |
 |maille | int |n° de la maille d'1km de côté dans laquelle se situe l'observation|
 | patrimoniale/protegee| boolean| Valeurs True/False quand connue, sinon null. |
+|count_min| int| nombre d'individus observés pour un taxon donné|
 |...|...|...|
 
 
@@ -95,18 +109,28 @@ WHERE nom_truc ILIKE 'a%'
 -->
 ## Dépendances
 
-Les 3 vues agrégées sont construites sur la vue matérialisée _gn_observation.observation_taxonomie_grille_. 
+Les 3 vues agrégées sont construites sur la vue matérialisée _geonature_synthese.observation_taxonomie_grille_ qui permet de faire le lien
+entre 4 schémas: 
 
-Celle ci dépend directement des tables: 
+|Schéma| Table/Vue/Vue Matérialisée| Description| clef |
+|:--:|:--:|:--:|:--:|
+|gn_synthese|synthese_avec_partenaires |observations de la base géonature| - |
+|limites|grid|données géographiques liées aux mailles | spatiale|
+|taxonomie|taxref|données taxonomiques| _cd_nom_|
+|taxonomie|v_taxref_pp |patrimonialité/protection|_cd_nom_|
+|ref_nomenclatures|*|détails sur l'observation|_id_nomenclature\_\*_|
+ 
+ 
+ <!-- -
  - [limites.grid](https://github.com/PnMercantour/limites/README.md#tables_remarquables) : données géographiques liées aux mailles - jointure géographique
- <!-- - [limites.grid](https://github.com/PnMercantour/limites/limites/README.md#limites.communes) : données géographiques liées aux mailles - jointure géographique -->
+  [limites.grid](https://github.com/PnMercantour/limites/limites/README.md#limites.communes) : données géographiques liées aux mailles - jointure géographique 
 
  - gn_synthese.synthese_avec_partenaires : observations de la base géonature
  - taxonomie.taxref : classification - jointure sur _cd_nom_
  - taxonomie.v_taxref_pp : patrimonialité/protection - jointure sur _cd_nom_
  - ref_nomenclatures.* : détails sur l'observation - jointure sur _id_nomenclature\_\*_
 
-<!--
+
 ## Mises à jour
 
 Tous les ans, ou quand les couches de références changent. -->
