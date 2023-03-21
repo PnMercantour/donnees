@@ -5,13 +5,13 @@ Il est composé de deux parties principales.
 
  - "bd_pnm"
 
-Documentation, requêtes sql et les projets qgis pour chaque schéma. En cas de besoin, de nouveaux schémas pourront être
+Documentation, requêtes sql et projets qgis liés à chaque schéma. En cas de besoin, de nouveaux schémas pourront être
 ajoutés. 
 
 
  - "tutos"
 
-Guides et tutoriels pour accéder aux données du parc du mercantour, et les traiter en utilisant les outils appropriés.
+Guides et tutoriels pour accéder et traiter les données du parc du mercantour en utilisant les outils appropriés.
 
 
 
