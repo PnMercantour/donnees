@@ -85,3 +85,12 @@ donnees
 └───tutos
     ....
 ```
+
+
+____
+## Maintenance et utilisateurs avancés
+
+### Mise à jour
+Dans chaque dossier-schéma se trouve un dossier bin contenant notamment deux scripts:
+ - `dump_schema` lit depuis la base de données la version courante du schema sql et l'enregistre dans `schema.sql`.  
+ - `dump_project` télécharge la version courante du projet QGIS depuis la base de données et l'enregistre dans `nom_du_schema.qgs`
