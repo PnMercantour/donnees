@@ -16,19 +16,21 @@ le projet qgis "mailles" ne contien -->
 ## Tables remarquables
 
 Les tables suivantes peuvent être chargées directement dans QGIS.  Un style par défaut leur est <!-- (en principe) -->associé. 
-
- - limites.limites
- - limites.communes
- - limites.maille500m
- - limites.maille1k
- - limites.maille10k
+ 
+ - _.area_
+ - _.area_type_
+ - _.limites_
+ - _.communes_
+ - _.maille500m_
+ - _.maille1k_
+ - _.maille10k_
 
 
 
 ## Description détaillée des tables
 _Les tableaux suivants décrivent les principales tables du schéma, et certaines de leur variables. Sauf précision, il s'agit de tables._
 
-### limites.area
+### _.area_
 
 Objets géographiques remarquables du PNM (zones réglementaires, communes, vallées ...)
 
@@ -45,7 +47,7 @@ Objets géographiques remarquables du PNM (zones réglementaires, communes, vall
 <!-- Permet de traiter de façon uniforme les objets géographiques remarquables de types différents (par exemple le calcul de l'intersection de ces objets avec les mailles 1km) -->
 
 
-### limites.area_type
+### _.area_type_
 
 Table de correspondance pour les objets géographiques remarquables.
 
@@ -55,7 +57,7 @@ Table de correspondance pour les objets géographiques remarquables.
 | type   | int        | numéro d'identifiant de type d'objet géographique - fait la correspondance avec id_type de _limites.area_     |
 | description      | string       |  ...   |
 
-### limites.communes
+### _.communes_
 Contient 28 entités.
 
 | Nom de la colonne      | Type | Description     |
@@ -68,7 +70,7 @@ Contient 28 entités.
 | addhesion      | string       | deux valeurs: "oui", "non", concernant l'adhésion à la charte du PNM   |
 
 
-### limites.grid (Vue)
+### _.grid_ (Vue)
 <!-- est-ce que cette grille couvre l'ensemble?  -->
 Vue de synthèse donnant pour chaque maille de limites.maille1k la surface appartenant à chaque zone, et le nom de la vallée principale.
 
