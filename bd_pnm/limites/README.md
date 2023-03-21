@@ -1,12 +1,17 @@
 # Limites
 
-Le schema `limites` donne accès aux données géographiques réglementaires du Parc national du Mercantour:
- - les limites des différentes zones du PNM,
- - la liste des communes de l'aire optimale d'adhésion, 
+## Description
+
+Le schema `limites` donne accès aux données géographiques réglementaires du Parc national du Mercantour 
+et des entités administratives remarquables:
+ - les différentes zones du PNM
+ - la liste des communes de l'aire optimale d'adhésion
  - la répartition géographique des services territoriaux
- - ....
 
+ 
+<!-- ## Utilisation du projet qgis 
 
+le projet qgis "mailles" ne contien -->
 
 ## Tables remarquables
 
@@ -29,7 +34,7 @@ Objets géographiques remarquables du PNM (zones réglementaires, communes, vall
 
 
 | Nom de la colonne      | Type | Description     |
-| :---        |    :----:   |          :---: |
+| :---        |    :----:   |:---: |
 | id      | (PK) int       |   ... |
 | id_type   | int        | numéro de correspondance avec la table _area.type_     |
 | name   | string        | nom de l'objet     | <!-- remplacer "name" par "nom" -->
@@ -75,7 +80,7 @@ _Ne contient que les polygones qui sont dans le parc_
 Intersections des mailles 1000 et des polygones remarquables du PNM (table _area_),
 c'est-à-dire qu'il contient des mailles fragmentées selon les zones qui les recouvrent.
 
-| Nom de la colonne      | Type | Description     |
+| Nom de la colonne | Type | Description     |
 | :---        |    :----:   |          :---: |
 | id_grid      | (PK) int       |   ... |
 |id_area	| (PK) int|  ...|
@@ -85,8 +90,9 @@ c'est-à-dire qu'il contient des mailles fragmentées selon les zones qui les re
 
 ### limites.limites
 Contient 6 entités: coeur, aire d'adhésion.....
-| Nom de la colonne      | Type | Description     |
-| :---        |    :----:   |          :---: |
+
+| Nom de la colonne  | Type | Description     |
+| :---        |    :----:   | :---: |
 | id      | (PK) int       |   ... |
 | nom   | string        | nom de la zone (coeur, aire d'adhésion...)     |
 | description   | string        | Détail sur le nom     |
@@ -129,8 +135,9 @@ Pas de dépendance connue.
 
 
 
-______
 
+_____
+_Documentation pour utilisateurs avancés et maintenance_
 
 <!-- toute la suite devrait être dans un autre document dédié au sql -->
 
@@ -252,8 +259,10 @@ where a.id = limites.get_id_area('limites','coeur')
 
 ### Mise à jour des données
 
-Exemple de mise à jour manuelle de la table `grid1k_area` pour les communes (exemple à généraliser et automatiser):
 
+Exemple de mise à jour manuelle de la table `grid1k_area` pour les communes :
+<!-- (exemple à généraliser et automatiser): -->
+```sql
     with c as (select a.id from limites.area a where id_type = 4)
     delete from limites.grid1k_area gka using c where c.id = gka.id_area
 
@@ -272,3 +281,4 @@ Exemple de mise à jour manuelle de la table `grid1k_area` pour les communes (ex
         st_multi(geom)
     from i
     where st_area(geom) > 0;
+```
