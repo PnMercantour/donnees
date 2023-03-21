@@ -50,7 +50,6 @@ WHERE nom_truc ILIKE 'a%'
 
 table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 
--->
 
 
 ## Projets Qgis
@@ -58,3 +57,5 @@ table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 ## Mises à jour
 
 Tous les ans, ou quand les couches de références changent. 
+-->
+
