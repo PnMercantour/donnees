@@ -1,4 +1,4 @@
-# _Exemple de format pour la documentation_
+<!-- # _Exemple de format pour la documentation_
 _Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
 
 ------------
@@ -49,6 +49,8 @@ WHERE nom_truc ILIKE 'a%'
 ## Dépendances
 
 table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
+
+-->
 
 
 ## Projets Qgis
