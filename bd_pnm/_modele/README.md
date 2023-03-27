@@ -2,14 +2,20 @@
 _Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
 
 ------------
- # schema_test _(Nom du Schéma)_
+ # _Nom du Schéma_
  ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_
+ _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
  C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.
  Les données sont issues de https://www.sourcededonnees.com, et sont mises à jour manuellement quand elles changent, c'est-à-dire jamais. 
 
+ ## Utilisation du projet Qgis
+_Description du projet Qgis accessible par défaut dans le projet._
+
+### _Exemples_
+_Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
+
 ## Tables remarquables
-_Les tables accessibles, le type de données_
+_Les tables accessibles, le type de données_ </br>
 Contient X tables accessibles. 
 - La première table qui fait des trucs
 - la deuxième qui est aussi très intéressante
@@ -36,6 +42,11 @@ Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom p
 | :---        |    :----:   |          :---: |
 |...      |...       |...   |
 
+
+_____
+_Documentation pour utilisateurs avancés et maintenance_
+
+
 ## Exemples de Requêtes
 _Quelques exemples de requêtes toutes écrites qui permettent de faire des trucs_
 
@@ -51,8 +62,7 @@ WHERE nom_truc ILIKE 'a%'
 table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 
 
-## Projets Qgis
 
-## Mises à jour
+## Code de création des tables
 
-Tous les ans, ou quand les couches de références changent. 
+[lien](./README.md)
