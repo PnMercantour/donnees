@@ -3,12 +3,12 @@
 ## Description
 
 Le schema `limites` donne accès aux données géographiques réglementaires du Parc national du Mercantour 
-et des entités administratives remarquables:
- - les différentes zones du PNM
- - la liste des communes de l'aire optimale d'adhésion
- - la répartition géographique des services territoriaux
+et des entités administratives remarquables aux alentours:
+- les différentes zones du PNM
+- la liste des communes de l'aire optimale d'adhésion
+- la répartition géographique des services territoriaux 
 
- 
+___NB: Les limites doivent être revues. Elles peuvent être utilisées à fin illustratives, mais leurs localisations précises sont en cours de révision.___
 <!-- ## Utilisation du projet qgis 
 
 le projet qgis "mailles" ne contien -->
@@ -17,13 +17,13 @@ le projet qgis "mailles" ne contien -->
 
 Les tables suivantes peuvent être chargées directement dans QGIS.  Un style par défaut leur est <!-- (en principe) -->associé. 
  
- - _.area_
- - _.area_type_
- - _.limites_
- - _.communes_
- - _.maille500m_
- - _.maille1k_
- - _.maille10k_
+ - _.area_ : Contient l'essentiel des géométrie d'intérêt. __Leur filtrage est nécessaire car ces géométries peuvent être superposées__.
+ - _.area_type_ : Table de correspondance entre les identifiants d'area (_area.id_type_), un type et une description explicite.
+ - _.limites_ : Contient les limites des zones d'intérêt du parc (coeur, aire d'adhésion....)
+ - _.communes_ : Communes du parc
+ - _.maille500m_ : Maillage à 500m de côté couvrant l'emprise du parc et des environs
+ - _.maille1k_ :  Maillage à 1km de côté couvrant l'emprise du parc et des environs
+ - _.maille10k_ :  Maillage à 10km de côté couvrant l'emprise du parc et des environs
 
 
 
