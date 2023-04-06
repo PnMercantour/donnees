@@ -3,12 +3,12 @@
 
  ## Description
 
-Le schéma `admin_express` contient les données relatives les données administratives (département, communes, EPCI, ...) pour :
+Le schéma `admin_express` contient les données relatives les données administratives pour :
  - la région Sud PACA, 
  - les départements de la région, 
- - les EPCI inclus dans les départements des Alpes de Haute Provence et des Alpes Maritimes ainsi que les EPCI contigus, 
+ - les EPCI ("Établissement public de coopération intercommunale", structures intercommunale ou intercommunalité) inclus dans les départements des Alpes de Haute Provence et des Alpes Maritimes ainsi que les EPCI contigus, 
  - les communes (multipolygon) et chefs lieu (point) de ces deux départements, 
- - les anciennes communes de Larche et Meyronnes..
+ - les anciennes communes de Larche et Meyronnes.
 
 Elles proviennent du service admin express COG produit conjointement par l'INSEE et l'IGN
 (Version: ADMIN-EXPRESS-COG-CARTO_3-1\_\_SHP_LAMB93_FXX_2022-04-15)
@@ -21,15 +21,19 @@ Elles proviennent du service admin express COG produit conjointement par l'INSEE
 
 Le projet QGIS `admin_express` permet de parcourir les données administratives régionales (des relations sont établies entre les différentes couches pour faciliter la navigation à partir des outils QGIS d'identification des entités).
 
-A noter que les communes du territoire du PNM sont directement accessibles dans le schema limites.
+_Par ailleurs, les communes du territoire du PNM sont directement accessibles dans le schéma .limites._
 
 
 ## Tables remarquables
-_Les tables accessibles, le type de données_
-Contient 3 tables principales. 
-- _.pn_  : parcs nationaux (aire d'adhésion et coeurs séparés)
-- _.pnr_ : parcs naturels régionaux 
-- _.rnr_ : réserves naturelles régionales
+
+Contient 6 tables principales. 
+- _.chflieu_commune_  
+- _.commune_ 
+- _.commune_associee_ou_deleguee_ 
+- _.departement_ 
+- _.epci_ 
+- _.region_ :
+
 <!--
 ## Description des colonnes remarquables
 
@@ -95,7 +99,7 @@ Utiliser QGIS ou OGR/GDAL pour filtrer les données et les pousser en base.
   - Départements de la région Sud PACA
   - Région
 
-On garde la structure des tables IGN pour simplifier l'import ultérieur de mises à jour.
+_Garder la structure des tables IGN pour simplifier l'import ultérieur de mises à jour._
 
 - Charger les tables en base de données dans le schema `admin_express`
 
@@ -104,3 +108,10 @@ On garde la structure des tables IGN pour simplifier l'import ultérieur de mise
 
 - Après chargement, ajouter les index et clés étrangères nécessaires.
 
+# Mise à jour du projet
+
+Il est vivement recommandé de mettre à jour le projet git lorsque le schema ou le projet QGIS sont modifiés en base.
+
+Le script [bin/dump_schema](bin/dump_schema) lit depuis la base de données la version courante du schema sql et l'enregistre dans [schema.sql](sql/schema.sql).
+
+Le script [bin/dump_project](bin/dump_project) télécharge la version courante du projet QGIS depuis la base de données et l'enregistre dans [admin_express.qgs](QGIS/admin_express.qgs.
