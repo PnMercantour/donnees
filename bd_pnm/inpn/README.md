@@ -4,11 +4,11 @@
  ## Description
 
 Le schéma `inpn` contient les données relatives aux espaces protégés de la région Sud PACA. 
-Elles proviennent du Service du Patrimoine Naturel du Muséum national d'Histoire naturelle (MNHN-SPN - [description détaillée ici](https://inpn.mnhn.fr/docs/transfertSIG.pdf) ), et 
+Elles proviennent du Service du Patrimoine Naturel du Muséum national d'Histoire naturelle (MNHN-SPN - [description détaillée ici](https://inpn.mnhn.fr/docs/transfertSIG.pdf)), et 
 sont automatiquement mises à jour à partir du serveur inpn.
 
 Ces données sont également accessibles via des flux [WMS](QGIS/inpn_wms.xml) et [WFS](QGIS/inpn_wfs.xml), en [télécharchement]( https://inpn.mnhn.fr/telechargement/cartes-et-information-geographique/ep/pn
-) ou sur le [géoportail](geoportail.gouv.fr) ( "Cartes > Données thématiques > Développement durable, énergie > Espaces protégés").
+) ou sur le [géoportail](geoportail.gouv.fr) ("Cartes > Données thématiques > Développement durable, énergie > Espaces protégés").
 
 
 
@@ -22,7 +22,7 @@ Le projet QGIS `inpn` dans ce schéma permet de visualiser les:
 
 
 ## Tables remarquables
-_Les tables accessibles, le type de données_
+
 Contient 3 tables principales. 
 - pn
 - pnr
