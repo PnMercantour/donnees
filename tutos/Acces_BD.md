@@ -78,4 +78,4 @@ _(Les autres façons d'ajouter des couches peuvent créer des problèmes en appliqu
 
 ### Autoriser le chargement des projets
 
-<img src="./img/editerconnexion_permettre_projets.png" alt= “” width="50%" height="50%"> 
+<img src="./img/editerconnexion_chargerprojets.png" alt= “” width="50%" height="50%"> 
