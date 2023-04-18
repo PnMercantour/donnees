@@ -5,11 +5,11 @@
 
  - _Vous avez reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique_
  - _Vous êtes bien sur une session windows qui n'est pas partagée._
- - _Vous pouvez charger le projet "Strategie flore.qgz"._
+ - _Vous pouvez charger les couches du projet "Strategie flore.qgz" - téléchargeable [ici](./ressources/Strategie_Flore.qgz)._
 
 
 
-## Etapes de paramétrage à l'aide des fichiers de Certificats
+## Etapes de paramétrage à l'aide deu fichier xml
 
 - Télécharger le fichier zip 
 
@@ -47,7 +47,13 @@ l'affichage des fichiers cachés dans les options)
 _La liste des tables et schémas accessibles devraient apparaître._
 
 
+____
+## FAQ
+> Je ne vois pas les projets, mais seulement les tables de la base de données
 
+ Faire un clic droit sur Postgis/Service Projets dans l'explorateur, cliquer "Editer la connexion" et cocher "Permettre le chargement et l'enregistrement de projets QGIS" puis "OK".
+ [Illustration](#Autoriser-le-chargement-des-projets)
+____
 
 ## Illustrations
 
@@ -62,9 +68,14 @@ _Après avoir appuyé sur la touche WINDOWS+R , la fenêtre "Exécuter" apparait_
 ### Gestionnaire de sources de donnees
 <img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
 
-_Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant._
-
-_(Les autres façons peuvent appliquer des paramètres d'import par défaut susceptibles de poser problème)_
 
 
 <img src="./img/gestionnaire_sources_pg.png" alt= “” width="50%" height="50%"> 
+
+_Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant._
+
+_(Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut)_
+
+### Autoriser le chargement des projets
+
+<img src="./img/editerconnexion_permettre_projets.png" alt= “” width="50%" height="50%"> 
