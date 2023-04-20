@@ -1,7 +1,5 @@
 
 
-
-
 # Glossaire
 
 ### Base de données
