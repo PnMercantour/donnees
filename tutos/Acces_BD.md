@@ -42,6 +42,8 @@ l'affichage des fichiers cachés dans les options)
 
 - Cliquer sur PostgreSQL dans la barre de gauche
 
+- Cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
+
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
 
 _La liste des tables et schémas accessibles devraient apparaître._
