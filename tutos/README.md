@@ -3,7 +3,7 @@
 # Glossaire
 
 ### Base de données
-Au sens large, une base de donnée permet de stocker des données. 
+Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques. 
 
 On parle de base de données relationnelles quand ces données sont structurées en tables, gérant de façon explicite les relations entre entités. C'est le cas de la base de données du Parc du Mercantour qui est décrite dans ce dépôt. 
 
