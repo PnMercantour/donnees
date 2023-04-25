@@ -132,8 +132,7 @@ ou bien celles pour lesquelles la colonne 'id_type' contient la valeur 4.
 _Certaines couches du serveur sont chargées par défaut avec des filtres. Il est tout à fait possible de les modifier pour accéder à d'autres données, 
 ou de restreindre encore le filtre proposé le temps de la consultation du projet. Dans ce cas, veillez cependant à ne pas enregistrer vos modifications sur un projet partagé._
 
-_Les projets devraient être conçus de façon à ce que vous n'ayez pas à manipuler les filtres. Néanmoins, vous êtes encouragés à apprendre à les utiliser.
-Les filtres emploient une syntaxe SQL et un [tutoriel](lienavenir) dédié sera créé._
+_Néanmoins, vous êtes encouragés à apprendre à les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](lienavenir) dédié sera créé._
 
 <!--
 _Les filtres sont aussi visibles en dans les propriétés d'une couche, à l'onglet "Source". Ce n'est pas très intuitif...._  
