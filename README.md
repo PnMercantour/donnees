@@ -4,8 +4,8 @@ Bienvenue sur le git du Parc national du Mercantour.
 
 _[Première fois sur git ? Cliquez ici](./tutos/premierefois.md)_
 
-Vous trouverez ici un _dépôt_ ([qu'est-ce que c'est ?](./tutos/README.md#depot)) contenant la documentation et 
-les codes concernant la _base de données_ ([qu'est-ce que c'est ?](./tutos/README.md#base-de-donnees)) utilisée par les agents du parc.
+Vous trouverez ici un _dépôt_ ([qu'est-ce que c'est ?](./tutos/README.md#depot  "Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.")) contenant la documentation et 
+les codes concernant la _base de données_ ([qu'est-ce que c'est ?](./tutos/README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques")) utilisée par les agents du parc.
 
 
 # Le dépôt Données
@@ -40,7 +40,7 @@ Le dossier [bn_pnm](./bd_pnm) contient un dossier par schéma ([qu'est-ce que c'
  Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour la bonne utilisation des données géographiques.
 
 
- ## liens directs
+ ## Liens directs
  _les noms des schémas sont des liens cliquables, emmenant vers leur documentation_
 
  ### [bn_pnm](./bd_pnm)
