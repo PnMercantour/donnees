@@ -67,11 +67,6 @@ Pour ce tutoriel, il s'agit du projet "Mon premier projet" dans le schéma "tuto
 _Vous avez bien réussi à charger le projet "MonPremierProjet" et en voyez le contenu. Nous allons maintenant passer en revue 
 les moyens de naviguer dans le projet et observer les données._
 
-0. Enregistrer le projet en local 
-
-Vous pouvez à tout moment "enregistrer sous" un projet qui est enregistré sur le serveur. 
-Cela en crée une copie qui ne sera plus accessible à personne d'autre que vous, 
-mais vous pourrez ensuite le modifier sans risque de perdre le travail de vos collègues.
 
 
 1. Afficher/masquer des couches
@@ -132,11 +127,8 @@ ou bien celles pour lesquelles la colonne 'id_type' contient la valeur 4.
 _Certaines couches du serveur sont chargées par défaut avec des filtres. Il est tout à fait possible de les modifier pour accéder à d'autres données, 
 ou de restreindre encore le filtre proposé le temps de la consultation du projet. Dans ce cas, veillez cependant à ne pas enregistrer vos modifications sur un projet partagé._
 
-_Néanmoins, vous êtes encouragés à apprendre à les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](lienavenir) dédié sera créé._
+_Néanmoins, vous êtes encouragés à apprendre à les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](lienavenir "Lien à venir") dédié sera créé._
 
-<!--
-_Les filtres sont aussi visibles en dans les propriétés d'une couche, à l'onglet "Source". Ce n'est pas très intuitif...._  
---> 
 
 4. La table attributaire
 
@@ -158,19 +150,26 @@ _A gauche, la table atributaire en format table. A droite,en format formulaire. 
 Le mode formulaire permet de visualiser et les entités une à une, la liste des entités apparaissant sur la gauche._
 
 
+Si votre version de Qgis a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton déroulant "Ne montrer que les entités visibles sur la carte".
+Cette option peut être modifiée de façon à toujours montrer toutes les entités, cependant ce mode d'affichage peut faire planter Qgis sur les couches contenant un grand nombre d'entités. 
+
+Le mode d'affichage par défaut est modifiable dans les paramètres de Qgis: 
+
+Préférences>Options>Sources de données - "Comportement des tables d'attributs"
 
 
 
-
-## Editer d'une couche
+## Editer une couche
 
 _On se concentrera sur les couches au format [vecteur](bonjourcestunlien.xml). Toutes les couches présentes dans le projet tuto sont dans ce format. 
 Il existe des méthodes pour modifier les [rasters](autrelien), mais nous ne les aborderons pas ici._
 
+_L'édition d'une couche contenue dans la base de données n'est pas possible sans les droits _
+
 Editer une couche Qgis modifie le fichier de source des données. Il est donc important rester prudent et garder une copie des données d'origine quand c'est possible. 
 Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
-|<img src="./img/mode_edition.png" alt= “”  height="75%"> |  <img src="./img/modeedition_parcouche.png" alt= “” width="75%" > |  <img src="./img/mode_tableattributaire.png" alt= “”  width="75%"> |
+|<img src="./img/mode_edition.png" alt= “”  height="40%"> |  <img src="./img/modeedition_parcouche.png" alt= “” width="40%" > |  <img src="./img/mode_tableattributaire.png" alt= “”  width="40%"> |
 |:--:|:--:|:--:|:--:|
 |Dans la barre d'outils Qgis |En passant par un clic droit sur la couche|depuis la fenêtre de la table attributaire|
 
@@ -263,4 +262,12 @@ dans le Gestionnaire de mises en page.
 Il est aussi possible de créer une nouvelle mise en page. 
 
 Dans tous les cas, à l'ouverture d'une mise en page, une nouvelle fenêtre s'ouvre. 
+
+
+
+0. Enregistrer le projet en local 
+
+Vous pouvez à tout moment "enregistrer sous" un projet qui est enregistré sur le serveur. 
+Cela en crée une copie qui ne sera plus accessible à personne d'autre que vous, 
+mais vous pourrez ensuite le modifier sans risque de perdre le travail de vos collègues.
 
