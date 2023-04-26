@@ -2,49 +2,52 @@
 
 # Glossaire
 
-### Base de données
-Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques. 
+### Base de donnÃ©es
+Au sens large, une base de donnÃ©e permet de stocker et de manipuler des donnÃ©es par des moyens informatiques. 
 
-On parle de base de données relationnelles quand ces données sont structurées en tables, gérant de façon explicite les relations entre entités. C'est le cas de la base de données du Parc du Mercantour qui est décrite dans ce dépôt. 
+On parle de base de donnÃ©es relationnelles quand ces donnÃ©es sont structurÃ©es en tables, gÃ©rant de faÃ§on explicite les relations entre entitÃ©s. C'est le cas de la base de donnÃ©es du Parc du Mercantour qui est dÃ©crite dans ce dÃ©pÃ´t. 
 
-Les logiciels permettant de gérer ces bases de données sont appelés des Systèmes de Gestions de Bases de Données Relationnelles (SGBDR). 
+Les logiciels permettant de gÃ©rer ces bases de donnÃ©es sont appelÃ©s des SystÃ¨mes de Gestions de Bases de DonnÃ©es Relationnelles (SGBDR). 
 
 ### Couche
-Dans un projet Qgis, une couche est une représentation de données spatialisée. Elle contient le lien vers le fichier contenant la données, ainsi que les informations permettant sa représentation (notamment sa symbologie).
-Une couche _n'est pas_ en elle même de la donnée, mais le lien vers une donnée. 
+Dans un projet Qgis, une couche est une reprÃ©sentation de donnÃ©es spatialisÃ©e. Elle contient le lien vers le fichier contenant la donnÃ©es, ainsi que les informations permettant sa reprÃ©sentation (notamment sa symbologie).
+Une couche _n'est pas_ en elle mÃªme de la donnÃ©e, mais le lien vers une donnÃ©e. 
 
-On peut toutefois, depuis Qgis éditer et changer les données vers lesquelles une couche renvoie (notamment en activant l'outil "Éditer").
+On peut toutefois, depuis Qgis Ã©diter et changer les donnÃ©es vers lesquelles une couche renvoie (notamment en activant l'outil "Ã‰diter").
 
-### Dépôt
-Un dépôt git est un entrepôt virtuel, qui permet d'enregistrer et de maintenir facilement du code et de la documentation, notamment par la gestion de versions.
+### DÃ©pÃ´t
+Un dÃ©pÃ´t git est un entrepÃ´t virtuel, qui permet d'enregistrer et de maintenir facilement du code et de la documentation, notamment par la gestion de versions.
 
 ### Projet
-Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements. 
-En tant que tel, un projet Qgis ne contient **pas** de données, mais des liens (ou chemins) vers des données, représentées sous formes de couches. 
+Un projet Qgis contient un ensemble de couches, les informations permettant de les reprÃ©senter, ainsi que l'ensemble des paramÃ¨tres conditionnant la rÃ©alisation de gÃ©otraitements. 
+En tant que tel, un projet Qgis ne contient **pas** de donnÃ©es, mais des liens (ou chemins) vers des donnÃ©es, reprÃ©sentÃ©es sous formes de couches. 
 
 
 ### Raster
-En géomatique, un raster est l'un des deux modes principaux de représentation des données spatiales. A la façon d'une photographie, il stocke l'information spatiale dans une matrice régulière de pixels, contenant chacun une information chiffrée.
+En gÃ©omatique, un raster est l'un des deux modes principaux de reprÃ©sentation des donnÃ©es spatiales. A la faÃ§on d'une photographie, il stocke l'information spatiale dans une matrice rÃ©guliÃ¨re de pixels, contenant chacun une information chiffrÃ©e.
 
-Une matrice dans un raster est appelée "bande". Un raster peut être multi-bandes, c'est-à-dire contenir plusieurs matrices superposées - à la façon d'une photographie qui contient tois matrices: rouge-vert-bleu. 
+Une matrice dans un raster est appelÃ©e "bande". Un raster peut Ãªtre multi-bandes, c'est-Ã -dire contenir plusieurs matrices superposÃ©es - Ã  la faÃ§on d'une photographie qui contient tois matrices: rouge-vert-bleu. 
 
-Un raster est caractérisé par sa "résolution spatiale" qui est définie par la taille de ses pixels. 
+Un raster est caractÃ©risÃ© par sa "rÃ©solution spatiale" qui est dÃ©finie par la taille de ses pixels. 
 
 
-### Schéma
-Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions. 
-Il permet d'organiser le contenu d'une base de données en thématique, de manière similaire à un dossier dans un répertoire de fichier - on ne peut pas cependant imbriquer un schéma dans un autre. 
+### SchÃ©ma
+Dans une base de donnÃ©es relationnelle, un schÃ©ma regroupe diffÃ©rents objets dont des tables, vues et fonctions. 
+Il permet d'organiser le contenu d'une base de donnÃ©es en thÃ©matique, de maniÃ¨re similaire Ã  un dossier dans un rÃ©pertoire de fichier - on ne peut pas cependant imbriquer un schÃ©ma dans un autre. 
 
-Dans la base de données du parc, un schéma spécifique est dédié à chaque principale thématique (i.e. : ag_pasto, flore, limites). Ce dépôt contient pour les principaux schémas la documentation permettant d'en comprendre le contenu. 
+Dans la base de donnÃ©es du parc, un schÃ©ma spÃ©cifique est dÃ©diÃ© Ã  chaque principale thÃ©matique (i.e. : ag_pasto, flore, limites). Ce dÃ©pÃ´t contient pour les principaux schÃ©mas la documentation permettant d'en comprendre le contenu. 
+
+### Table attributaire
+La table attributaire contient l'ensemble des donnÃ©es, spatiales ou non, liÃ©es Ã  une couche vecteur.
 
 ### Vecteur
-En géomatique, un vecteur est l'un des deux modes principaux de représentation des données spatiales. 
-Il est basé sur l'utilisation de coordonnées qui permettent de localiser des points définissant la géométrie de chaque entité.
+En gÃ©omatique, un vecteur est l'un des deux modes principaux de reprÃ©sentation des donnÃ©es spatiales. 
+Il est basÃ© sur l'utilisation de coordonnÃ©es qui permettent de localiser des points dÃ©finissant la gÃ©omÃ©trie de chaque entitÃ©.
 
 Dans Qgis un vecteur peut contenir soit: 
 - des points, 
 - des lignes, 
  - des polygones. 
-Chaque entité est caractérisée par sa géométrie (les coordonnées des points la composant), et des attributs qui peuvent être variables. 
+Chaque entitÃ© est caractÃ©risÃ©e par sa gÃ©omÃ©trie (les coordonnÃ©es des points la composant), et des attributs qui peuvent Ãªtre variables. 
 
 
