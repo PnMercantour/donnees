@@ -1,22 +1,26 @@
 # Mon Premier projet
 
-_Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser la [base de données](./README.md#base-de-donnees) du parc ? Voilà comment faire !_
+_Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser la [base de données](./README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques.")
+du parc ? Voilà comment faire !_
 
 
-_Ce tutoriel contient les étapes pour la consultation d'un [projet Qgis](./README.md#projet "projet Qgis contient un ensemble de couches,
-les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") existant, ainsi que les possibles opérations à réaliser pour en faciliter la visualisation._
+_Ce tutoriel contient les étapes pour la consultation d'un [projet Qgis](./README.md#projet "Un projet Qgis contient un ensemble de couches,
+les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") existant, 
+ainsi que les possibles opérations à réaliser pour en faciliter la visualisation._
 
 > Scénario: On vous a demandé d'établir pour certaines zones la présence ou l'absence d'une espèce végétale donnée. 
 > 
 > Pour cela, vous devez consulter un [projet Qgis](./README.md#projet "projet Qgis contient un ensemble de couches,
-les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), faire vos relevés terrains, puis entrer les résultats en modifiant une couche existante.
+les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), faire vos relevés terrains, 
+puis entrer les résultats en modifiant une couche existante.
 
 
 ## Accès à la [base de données](./README.md#base-de-donnees)
 _Cette partie reprend le processus décrit dans [ce tutoriel](./Acces_BD.md)._
 ### 1. Vérifier que vous avez bien accès à la base de données par Qgis. 
 
-Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierProjet.qgz) et tenter de le lancer. Si les [couches](./README.md#couche "Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez continuer,
+Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierProjet.qgz) et tenter de le lancer. Si les [couches](./README.md#couche 
+"Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez continuer,
 sinon contacter le SI. 
 
 
@@ -45,13 +49,15 @@ Une fois Qgis lancé, vous pouvez ouvrir le gestionnaire de sources de données 
 
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
 
-_La liste des [tables et schémas](./README.md#schema) accessibles devraient apparaître._
+_La liste des [tables et schémas](./README.md#schema "Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions.") 
+accessibles devraient apparaître._
 
 
 
 _NB: Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant. (Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut)_
 
-_Cette étape visait à vérifier la connexion à la base de données. Maintenant nous allons charger un [projet](./README.md#projet), qui regroupe des données et leur représentation._
+_Cette étape visait à vérifier la connexion à la base de données. Maintenant nous allons charger un [projet](./README.md#projet "Un projet Qgis contient un ensemble de couches,
+les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") qui regroupe des données et leur représentation._
 
 ### 3. Charger le projet d'intérêt
 
@@ -71,7 +77,7 @@ les moyens de naviguer dans le projet et observer les données._
 
 1. Afficher/masquer des couches
 
-_Dans Qgis, la position de la plupart des éléments est personnalisable, et il arrive qu'on les modifie par accident. 
+_Dans Qgis, la position de la plupart des éléments sont personnalisables, et il arrive qu'on les modifie par accident. 
 Si ça arrive, cas on pourra les retrouver dans l'onglet "Vue", et vérifier que le panneau ou la barre d'outils concernée est bien visible._
 
 
@@ -79,8 +85,6 @@ Si ça arrive, cas on pourra les retrouver dans l'onglet "Vue", et vérifier que
 
 A gauche de chaque couche se trouve une petite boite qui peut être cochée ou décochée. 
 Cette boite permet d'afficher ou de masquer chaque couche, ou élément de symbologie d'une couche.
-
-
 
 
 2. Les propriétés
@@ -108,7 +112,6 @@ Vous pouvez remarquer un symbole : <img src="./img/symbole_filtre.png" alt= “�
 
 
 
-
 Il signifie que la couche en question est filtrée. Les filtres sont des outils très puissants, notamment pour limiter la charge sur vos ordinateurs. 
 Ils sont appliqués au niveau du serveur, et permettent de ne charger que les entités d'une couche que vous aurez choisies par une expression. 
 
@@ -118,22 +121,24 @@ Par exemple, en cliquant sur le symbole filtre de "area" ou en faisant clic droi
 ```
 
 qui signifie: 
+```
 "Ne charge que les entités pour lesquelles la colonne "name" contient la chaîne de caractères 'coeur' 
-ou bien celles pour lesquelles la colonne 'id_type' contient la valeur 4.
-"
+ou bien celles pour lesquelles la colonne 'id_type' contient la valeur 4."
+```
 
 
 
 _Certaines couches du serveur sont chargées par défaut avec des filtres. Il est tout à fait possible de les modifier pour accéder à d'autres données, 
 ou de restreindre encore le filtre proposé le temps de la consultation du projet. Dans ce cas, veillez cependant à ne pas enregistrer vos modifications sur un projet partagé._
 
-_Néanmoins, vous êtes encouragés à apprendre à les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](lienavenir "Lien à venir") dédié sera créé._
+_Néanmoins, vous êtes encouragés à apprendre à les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](./lienavenir "Lien à venir") dédié sera créé._
 
 
 4. La table attributaire
 
 Les couches au format [vecteur](./README.md#vecteur "En géomatique, un vecteur est l'un des deux modes principaux de représentation des données spatiales. 
-") contiennent une [table attributaire](), donnant des informations sur les données qu'elles contiennent. 
+") contiennent une [table attributaire](./README#table-attributaire "La table attributaire contient l'ensemble des données, spatiales ou non, liées à une couche vecteur.
+"), donnant des informations sur les données qu'elles contiennent. 
 Vous pouvez visualiser cette table en cliquant droit sur la couche puis sur "Ouvrir la table d'attributs".
 
 <img src="./img/ouvrir_latable_attribut.png" alt= “” width="15%" height="50%"> 
@@ -143,14 +148,13 @@ Il existe deux façons de représenter la table attributaire. Une vue "Table" et
 l'autre en cliquant sur l'icone correspondante en bas à droite de la fenêtre. 
 
 
-
 <img src="./img/tableattributaire.png" alt= “” width="15%" height="50%">  <img src="./img/tableattributaire_form.png" alt= “” width="15%" height="50%"> 
 
 _A gauche, la table atributaire en format table. A droite,en format formulaire. Le mode table permet de visualiser d'un coup d'oeil l'ensemble des entités et attributs simultanément.
 Le mode formulaire permet de visualiser et les entités une à une, la liste des entités apparaissant sur la gauche._
 
 
-Si votre version de Qgis a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton déroulant "Ne montrer que les entités visibles sur la carte".
+Si votre version de Qgis a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton-déroulant: "Ne montrer que les entités visibles sur la carte".
 Cette option peut être modifiée de façon à toujours montrer toutes les entités, cependant ce mode d'affichage peut faire planter Qgis sur les couches contenant un grand nombre d'entités. 
 
 Le mode d'affichage par défaut est modifiable dans les paramètres de Qgis: 
@@ -164,12 +168,12 @@ Préférences>Options>Sources de données - "Comportement des tables d'attributs
 _On se concentrera sur les couches au format [vecteur](bonjourcestunlien.xml). Toutes les couches présentes dans le projet tuto sont dans ce format. 
 Il existe des méthodes pour modifier les [rasters](autrelien), mais nous ne les aborderons pas ici._
 
-_L'édition d'une couche contenue dans la base de données n'est pas possible sans les droits _
+_L'édition d'une couche contenue dans la base de données est possible seulement si des droits particuliers vous ont été accordés. La plupart des couches sont uniquement consultables._
 
-Editer une couche Qgis modifie le fichier de source des données. Il est donc important rester prudent et garder une copie des données d'origine quand c'est possible. 
+Editer une couche Qgis modifie le fichier de source des données. Il est donc important de rester prudent et de conserver une copie des données d'origine quand c'est possible. 
 Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
-|<img src="./img/mode_edition.png" alt= “”  height="40%"> |  <img src="./img/modeedition_parcouche.png" alt= “” width="40%" > |  <img src="./img/mode_tableattributaire.png" alt= “”  width="40%"> |
+|<img src="./img/mode_edition.png" alt= “”  height="20%"> |  <img src="./img/modeedition_parcouche.png" alt= “” width="30%" > |  <img src="./img/mode_tableattributaire.png" alt= “”  width="30%"> |
 |:--:|:--:|:--:|:--:|
 |Dans la barre d'outils Qgis |En passant par un clic droit sur la couche|depuis la fenêtre de la table attributaire|
 
@@ -233,8 +237,8 @@ de ne pas écraser la symbologie d'un projet partagé._
 
 ## Exporter une carte au format image
 
-_Attention, de nombreux projets du Parc contiennent des données qu'il n'est pas possible de diffuser librement. 
-Il est donc fortement suggérer de n'employer les exports que pour des utilisations internes._
+_Attention, de nombreux projets du Parc contiennent des données qui peuvent être sensibles. Avant de publier ou mettre en circulation des exports de données, veiller à s'assurer 
+de leur sensibilité auprès du chargé de mission en lien avec elles._
 
 1. Export simple
 
