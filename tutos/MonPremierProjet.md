@@ -269,9 +269,69 @@ Dans tous les cas, à l'ouverture d'une mise en page, une nouvelle fenêtre s'ou
 
 
 
-0. Enregistrer le projet en local 
+## Sauvegarder un projet localement et le partager
+
+1. Enregistrer le projet en local au format qgs/qgz
+
+_Un projet sous ces formats sera plus léger, mais ne contient pas les données. Seulement le chemin où trouver les fichiers servant à produire les couches._
 
 Vous pouvez à tout moment "enregistrer sous" un projet qui est enregistré sur le serveur. 
 Cela en crée une copie qui ne sera plus accessible à personne d'autre que vous, 
 mais vous pourrez ensuite le modifier sans risque de perdre le travail de vos collègues.
+
+Un projet enregistré sous ce format ne contient que les chemins menants aux couches ainsi que la définition
+de style des couches. Si il dépendait d'une base de données sécurisée et qu'il est déplacé sur un ordinateur 
+ne disposant pas de cet accès, la couche sera inaccessible et ne s'affichera pas. 
+
+De même, si le projet d'origine faisait référence à des fichiers locaux, alors le projet copié sur une autre 
+machine devra pouvoir retrouver les mêmes fichiers en suivant exactement les mêmes chemins. 
+
+2. Enregistrer le projet au format gpkg
+
+_Sous ce format le projet peut contenir l'ensemble des données, et des informations sur le style permettant de produire les couches. Il est part conséquent bien plus lourd, mais peut être facilement échangé. La démarche pour le construire est toutefois plus complexe._
+
+0. Le format gpkg
+
+Le format geopackage (gpkg) est un format relativement récent qui a l'avantage de pouvoir contenir plusieurs sources de données spatialisées vecteur et raster, tout en conservant l'intégrité de leurs tables attributaires.
+Il peut aussi stocker des projets et fichiers de styles. Il réunit ainsi en un seul fichier ce qui traditionnellement demande l'utilisation de formats peu pratiques (shapefile), et évite les problèmes de préservation des chemins relatifs des projets au format qgs/qgz. 
+
+Le format gpkg fonctionne sur le modèle de la base de données, les outils pour l'ouvrir et le modifier sont donc liés au menus de bases de données dans Qgis. 
+
+1. Sauvegarder un projet au format geopackage
+
+Afin de pouvoir enregistrer le projet et l'ensemble des couches le composant dans un geopackage, il faut d'abord créer un geopackage vierge. 
+On pourra le faire à l'onglet Couche:
+> Couche > Créer une couche > Nouvelle couche Geopackage ...
+
+
+<img src="./img/creer_gpkg.png" alt= “”  width="40%"> 
+
+2. Connexion au gpkg
+
+Qgis n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
+Pour cela on peut passer par le gestionnaire de base de données (Ctrl + 3) 
+> Base de données > Gestionnaire de base de données
+
+et cliquer droit sur "Geopackage>Nouvelle connexion..." dans le menu de gauche.
+On pourra alors naviguer jusqu'au fichier geopackage nouvellement créé. 
+
+3. Enregistrement du projet
+
+Enfin, on pourra simplement aller à:
+> Projet > Enregistrer le projet sous.... > Geopackage
+
+Et lui donner un nom (car on peut même enregistrer plusieurs projets dans un geopackage).
+
+4. Ouvrir un projet dans un geopackage
+
+Pour ouvrir le projet ainsi enregistré, il suffit d'aller à 
+
+> Projet > Ouvrir depuis .. > Geopackage
+
+_Si vous recevez un geopackage, il vous faudra possiblement d'abord vous connecter au geopackage en passant le "Gestionnaire de base de données" avant de pouvoir l'ouvrir._
+
+5. Examiner le contenu d'un geopackage
+
+Vous pouvez aussi passer par le gestionnaire de base de donnée (Ctrl + 3) 
+
 
