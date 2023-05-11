@@ -1,6 +1,7 @@
 # Mon Premier projet
 
-_Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser la [base de données](./README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques.")
+_Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser la [base de données](./README.md#base-de-donnees 
+"Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques.")
 du parc ? Voilà comment faire !_
 
 
@@ -54,7 +55,8 @@ accessibles devraient apparaître._
 
 
 
-_NB: Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant. (Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut)_
+_NB: Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant. 
+(Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut)_
 
 _Cette étape visait à vérifier la connexion à la base de données. Maintenant nous allons charger un [projet](./README.md#projet "Un projet Qgis contient un ensemble de couches,
 les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") qui regroupe des données et leur représentation._
@@ -329,9 +331,5 @@ Pour ouvrir le projet ainsi enregistré, il suffit d'aller à
 > Projet > Ouvrir depuis .. > Geopackage
 
 _Si vous recevez un geopackage, il vous faudra possiblement d'abord vous connecter au geopackage en passant le "Gestionnaire de base de données" avant de pouvoir l'ouvrir._
-
-5. Examiner le contenu d'un geopackage
-
-Vous pouvez aussi passer par le gestionnaire de base de donnée (Ctrl + 3) 
 
 
