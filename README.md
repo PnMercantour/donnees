@@ -49,15 +49,24 @@ Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'
  |:--:|:--:|
  |[ag_pasto](./bd_pnm/ag_pasto)|Agropastoralisme <!-- à compléter -->|
  |[geonature_synthese](./bd_pnm/geonature_synthese)|Observations géonature, détaillées <br > et agrégées selon différents critères|
+ |[geotrek](./bd_pnm/geotrek)| Sentiers du parc|
+ |[inpn](./bd_pnm/inpn)| Limites de parcs nationaux, régionaux, et réserves naturelles|
  |[limites](./bd_pnm/limites)| Limites du parc et administratives|
+ |[survol](./bd_pnm/survol)| Zones sensibles en lien avec les autorisations de survol|
 
  ### [tutos](./tutos)
 
  |Nom|Description|
  |:--:|:--:|
- |[Acces_BD](./tutos/Acces_BD.md)| Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
- |[Acces_WMS](./tutos/Acces_WMS.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
-
+ |[acces_bd](./tutos/acces_bd.md)| Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
+ |[acces_wms](./tutos/acces_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
+ |[bonnes_pratiques](./tutos/bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
+ |[catalogue_wms](./tutos/catalogue_wms.md)|Liste des ressources accessibles au format wms |
+ |[FAQ](./tutos/FAQ.md)| Questions les plus fréquentes et leurs solutions |
+ |[git](./tutos/git.md)|Présentation et explication de ce qu'est "git"|
+ |[mon_premier_projet](./tutos/mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
+ |[glossaire](./tutos/README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
+ 
  ## Structure du dépôt
 
 ```bash

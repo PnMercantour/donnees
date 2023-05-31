@@ -51,3 +51,10 @@ Dans Qgis un vecteur peut contenir soit:
 Chaque entité est caractérisée par sa géométrie (les coordonnées des points la composant), et des attributs qui peuvent être variables. 
 
 
+### WMS
+
+Un WMS (_Web Map Service_) permet de communiquer des données géoréférencées depuis un serveur vers un utilisateur 
+par le biais d'une adresse URL.
+
+De cette façon, l'utilisateur n'a pas à charger l'entièreté de la donnée, et peut ne consulter que les zones géographiques d'intérêt. Le WMS donne pas accès à la donnée elle
+même mais à sa représentation: l'utilisateur n'a pas la main sur la symbologie, et ne peut pas réaliser d'analyse spatiale sur les données WMS. 
