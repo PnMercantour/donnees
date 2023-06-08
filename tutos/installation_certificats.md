@@ -2,7 +2,7 @@
 ## Avant de commencer
 
  - _Vous avez reçu un fichier zip de la part du service informatique contenant les certificats permettant l'accès ça la base de données_
-
+## Etapes de l'installation
 - Naviguer jusqu'au dossier AppData
 
 
