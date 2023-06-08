@@ -1,28 +1,31 @@
 # Installation des certificats
+## Avant de commencer
+
+ - _Vous avez re√ßu un fichier zip de la part du service informatique contenant les certificats permettant l'acc√®s √ßa la base de donn√©es_
 
 - Naviguer jusqu'au dossier AppData
 
 
-Il se trouve typiquement dans un chemin ressemblant ‡:
+Il se trouve typiquement dans un chemin ressemblant √†:
 ```
 C:\Users\ *[nomdelasession]* \AppData\Roaming
 ```
-Le faÁon la plus simple de l'atteindre consiste ‡ appuyer sur  _touche windows + R_, 
-puis ‡ entrer la commande "%AppData%" dans l'invitÈ de commande (la touche windows se trouve entre Ctrl et Alt). [Illustration](#Acces-au-dossier-AppData)
+Le fa√ßon la plus simple de l'atteindre consiste √† appuyer sur  _touche windows + R_, 
+puis √† entrer la commande "%AppData%" dans l'invit√© de commande (la touche windows se trouve entre Ctrl et Alt). [Illustration](#Acces-au-dossier-AppData)
 
-(Ce rÈpertoire est masquÈ par dÈfaut, il est aussi possible de naviguer jusqu'‡ lui, en autorisant
-l'affichage des fichiers cachÈs dans les options)
+(Ce r√©pertoire est masqu√© par d√©faut, il est aussi possible de naviguer jusqu'√† lui, en autorisant
+l'affichage des fichiers cach√©s dans les options)
 
-- CrÈer un dossier "postgresql" dans le dossier AppData\Roaming s'il n'existe pas
-- Copier dans ce dossier tous les fichiers du zip, y compris le fichier masquÈ .pg_service.conf
+- Cr√©er un dossier "postgresql" dans le dossier AppData\Roaming s'il n'existe pas
+- Copier dans ce dossier tous les fichiers du zip, y compris le fichier masqu√© .pg_service.conf
 
 
-(les remplacer s'ils existent dÈj‡)
+(les remplacer s'ils existent d√©j√†)
 
 ## Illustrations
 
-### AccËs au dossier AppData
+### Acc√®s au dossier AppData
 
-<img src="./img/appdata.png" alt= ìî width="50%" height="50%">
+<img src="./img/appdata.png" alt= ‚Äú‚Äù width="50%" height="50%">
 
-_AprËs avoir appuyÈ sur la touche WINDOWS+R , la fenÍtre "ExÈcuter" apparait_
+_Apr√®s avoir appuy√© sur la touche WINDOWS+R , la fen√™tre "Ex√©cuter" apparait_
