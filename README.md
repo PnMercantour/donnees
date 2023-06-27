@@ -5,45 +5,27 @@ Bienvenue sur le git du Parc national du Mercantour.
 _[Première fois sur git ? Cliquez ici](./tutos/PremiersPas.md)_
 
 Vous trouverez ici un [_dépôt_ (qu'est-ce que c'est ?)](./tutos/README.md#depot  "Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") contenant la documentation et 
-les codes concernant la [_base de données_ (qu'est-ce que c'est ?](./tutos/README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques")) utilisée par les agents du parc.
+les codes concernant la [_base de données_ (qu'est-ce que c'est ?)](./tutos/README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques") utilisée par les agents du parc. Ainsi que des 
+tutoriels et ressources facilitant l'utilisation de la base de données, et des ressources géographiques en général.
 
 
-# Le dépôt Données
+# Ce dépôt
 
 
-Il est composé de deux parties principales.
+Ce dépôt est composé de deux parties principales.
 
  - "[bd_pnm](./bd_pnm)"
- 
- Documentation, requêtes sql et _projets qgis_ liés à chaque schéma.
-
-
- - "[tutos](./tutos)"
- 
- Guides et tutoriels pour accéder et traiter les données du parc du mercantour en utilisant les outils appropriés.
-
-
-
-## Description
-
-### [bn_pnm](./bd_pnm)
-
+  
+ Documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schema "Un schéma est un sous-ensemble organisé d'une base de données")), les requêtes sql et _projets qgis_.
 Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'est ?)](./tutos/README.md#schema). Chaque dossier-schéma contient:
  - un fichier README.md qui en fait la documentation
  - un dossier "sql" contenant les requêtes sql utiles à ce schéma
- - un dossier "projets_qgis" contenant les projets_qgis validés en format texte 
+ - un dossier "projets_qgis" contenant les projets_qgis validés en format texte (téléchargeables et utilisables par les agents)
  - un dossier "bin" à l'usage des gestionnaires de la base de données
  Le dossier "_modele" contient le modèle de la documentation appliquée à chaque schéma. 
  
- ### [tutos](./tutos)
 
- Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour la bonne utilisation des données géographiques.
-
-
- ## Liens directs
- _les noms des schémas sont des liens cliquables, emmenant vers leur documentation_
-
- ### [bn_pnm](./bd_pnm)
+_les noms des schémas sont des liens cliquables, emmenant vers leur documentation_
 
  |Schéma|Description des données|
  |:--:|:--:|
@@ -54,7 +36,11 @@ Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'
  |[limites](./bd_pnm/limites)| Limites du parc et administratives|
  |[survol](./bd_pnm/survol)| Zones sensibles en lien avec les autorisations de survol|
 
- ### [tutos](./tutos)
+
+ - "[tutos](./tutos)"
+ 
+ Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
+termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
 
  |Nom|Description|
  |:--:|:--:|
@@ -66,6 +52,9 @@ Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'
  |[git](./tutos/git.md)|Présentation et explication de ce qu'est "git"|
  |[mon_premier_projet](./tutos/mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
  |[glossaire](./tutos/README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
+
+
+
  
  ## Structure du dépôt
 
