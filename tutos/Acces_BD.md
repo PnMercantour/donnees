@@ -9,7 +9,7 @@
 
 
 
-## Etapes de paramétrage à l'aide deu fichier xml
+## Etapes de paramétrage à l'aide du fichier xml
 
 - Télécharger le fichier zip 
 
@@ -47,6 +47,11 @@ l'affichage des fichiers cachés dans les options)
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
 
 _La liste des tables et schémas accessibles devraient apparaître._
+
+_Vous pourrez aussi directement charger des projets directement depuis:_
+> Projet > Ouvrir depuis... > PostgreSQL
+
+_Puis en choisissant la connexion "Service projets" et le schéma concerné._
 
 
 ____

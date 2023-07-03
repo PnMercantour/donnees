@@ -38,7 +38,7 @@ _Solution_
 - > Modification manuelle: Si le message d'erreur donne les identifiants des entités aux géométries incorrectes, il est possible de les examiner et 
 modifier manuellement pour corriger les éventuelles erreurs. 
 
-## Impossible de charger un projet depuis la base de données PostgreSQL
+### Impossible de charger un projet depuis la base de données PostgreSQL
 Il existe plusieurs cas de figures:
 
 - 1. Vous ne disposez pas d'un accès à la base de données
@@ -54,3 +54,17 @@ _Solution_
 
 > Dans le Gestionnaire des sources de données (Onglet "Couche > Gestionnaire des sources de données" ou CTRL + L), sélectionner l'onglet "PostgreSQL". Puis sélectionner la connexion "Service projets". Enfin, cliquer sur "Editer". 
 Une nouvelle fenêtre s'affiche en bas de laquelle se trouve la case à cocher "Permettre l'enregistrement et le chargement de projets QGIS dans la base de données. "
+
+### Je ne vois pas les projets, mais seulement les tables de la base de données
+
+ Faire un clic droit sur Postgis/Service Projets dans l'explorateur, cliquer "Editer la connexion" et cocher "Permettre le chargement et l'enregistrement de projets QGIS" puis "OK".
+ [Illustration](#Autoriser-le-chargement-des-projets)
+
+
+
+
+## Illustration
+
+#### Autoriser le chargement des projets
+
+<img src="./img/editerconnexion_chargerprojets.png" alt= “” width="50%" height="50%"> 
