@@ -1,19 +1,19 @@
-<!-- # _Exemple de format pour la documentation_
 _Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
 
 ------------
- # schema_test _(Nom du Schéma)_
+ # ag_pasto _(Nom du Schéma)_
  ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_
- C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.
- Les données sont issues de https://www.sourcededonnees.com, et sont mises à jour manuellement quand elles changent, c'est-à-dire jamais. 
+ Ce schéma contient les données liées à l'agro-pastoralisme dans le parc du mercantour. 
 
+<!-- 
 ## Tables remarquables
 _Les tables accessibles, le type de données_
 Contient X tables accessibles. 
 - La première table qui fait des trucs
 - la deuxième qui est aussi très intéressante
 - sans parler de la troisième
+
 
 #	# Description des colonnes remarquables
 

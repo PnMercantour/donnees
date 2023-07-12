@@ -2,7 +2,7 @@
 
 Bienvenue sur le git du Parc national du Mercantour. 
 
-_[Première fois sur git ? Cliquez ici](./tutos/PremiersPas.md)_
+_[Première fois sur git ? Cliquez ici](./tutos/git.md)_
 
 Vous trouverez ici un [_dépôt_ (qu'est-ce que c'est ?)](./tutos/README.md#depot  "Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") 
 contenant la documentation et les codes concernant la [_base de données_ (qu'est-ce que c'est ?)](./tutos/README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques") 
@@ -14,7 +14,7 @@ utilisée par les agents du parc. Ainsi que des tutoriels et ressources facilita
 
 Ce dépôt est composé de deux parties principales.
 
- - "[bd_pnm](./bd_pnm)"
+ ## "[bd_pnm](./bd_pnm)"
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schema "Un schéma est un sous-ensemble organisé d'une base de données")), 
 ainsi que les _projets qgis_ associés et les requêtes sql d'intérêt.
@@ -39,7 +39,7 @@ _les noms des schémas sont des liens cliquables_
  |[survol](./bd_pnm/survol)| Zones sensibles en lien avec les autorisations de survol|
 
 
- - "[tutos](./tutos)"
+ ## "[tutos](./tutos)"
  
  Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
