@@ -13,5 +13,12 @@ Le dépôt "données" du Parc National du Mercantour contient à la fois des descrip
 Vous pouvez naviguer dans le dépôt à la fois par les dossiers plus hauts, et par les liens intertextes cliquables 
 comme [celui-ci](./git.md) (qui ne fait que vous renvoyer ici).
 
+Dans chaque page comportant des titres et des sous-titres, une table des matières est générée automatiquement. Elle est visible en cliquant sur son icône 
+qui peut se trouver en haut à gauche....
+<img src="./img/table_des_matieres_git_accueil.png" alt= “” width="65%" height="65%"> 
+
+...ou en haut à gauche de la page. 
+<img src="./img/table_des_matieres_git_page.png" alt= “” width="65%" height="65%"> 
+
 
 Pour revenir à la page d'accueil qui détaille l'ensemble du contenu du dépôt [cliquez ici](/../)

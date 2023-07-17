@@ -57,4 +57,4 @@ Un WMS (_Web Map Service_) permet de communiquer des données géoréférencées
 par le biais d'une adresse URL.
 
 De cette façon, l'utilisateur n'a pas à charger l'entièreté de la donnée, et peut ne consulter que les zones géographiques d'intérêt. Le WMS donne pas accès à la donnée elle
-même mais à sa représentation: l'utilisateur n'a pas la main sur la symbologie, et ne peut pas réaliser d'analyse spatiale sur les données WMS. 
+même mais à sa représentation: l'utilisateur n'a pas la main sur la symbologie (excepté la transparence), et ne peut pas réaliser d'opérations de transformation sur les données WMS. 

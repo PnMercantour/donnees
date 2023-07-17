@@ -12,7 +12,7 @@ utilisée par les agents du parc. Ainsi que des tutoriels et ressources facilita
 # Ce dépôt
 
 
-Ce dépôt est composé de deux parties principales.
+Ce dépôt est composé de deux parties principales qui vous seront utiles.
 
  ## "[bd_pnm](./bd_pnm)"
   
@@ -20,10 +20,11 @@ Dans ce dossier, se trouve la documentation permettant de comprendre le contenu 
 ainsi que les _projets qgis_ associés et les requêtes sql d'intérêt.
 
 Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'est ?)](./tutos/README.md#schema). Chaque dossier-schéma contient:
- - un fichier README.md qui en fait la documentation
+ - un fichier README.md détaille le contenu et l'utilité du schéma
+ - un dossier "projets_qgis" contenant les projets_qgis validés en format texte (téléchargeables et utilisables par les agents). Les projets ne sont pas directement visionnables depuis git, il est nécessaire de les télécharger pour ensuite les ouvrir avec Qgis. 
  - un dossier "sql" contenant les requêtes sql utiles à ce schéma
- - un dossier "projets_qgis" contenant les projets_qgis validés en format texte (téléchargeables et utilisables par les agents)
  - un dossier "bin" à l'usage des gestionnaires de la base de données
+
  Le dossier "_modele" contient le modèle de la documentation appliquée à chaque schéma. 
  
 
@@ -46,12 +47,14 @@ termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation �
 
  |Nom|Description|
  |:--:|:--:|
- |[acces_bd](./tutos/acces_bd.md)| Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
- |[acces_wms](./tutos/acces_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
+ |[ajout_fond_de_carte_wms](./tutos/ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms]()|
  |[bonnes_pratiques](./tutos/bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
- |[catalogue_wms](./tutos/catalogue_wms.md)|Liste des ressources accessibles au format wms |
+ |[configuration_ressources_wms](./tutos/configuration_ressources_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
+ |[edition_de_polygones](./tutos/edition_de_polygones.md)|
  |[FAQ](./tutos/FAQ.md)| Questions les plus fréquentes et leurs solutions |
  |[git](./tutos/git.md)|Présentation et explication de ce qu'est "git"|
+ |[installation_certificats_base_de_donnees]((./tutos/installation_certificats_base_de_donnees.md))|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
+ |[liste_ressources_geographiques_wms](./tutos/liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
  |[mon_premier_projet](./tutos/mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
  |[glossaire](./tutos/README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
 
