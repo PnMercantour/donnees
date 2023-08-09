@@ -14,7 +14,7 @@ utilisée par les agents du parc. Ainsi que des tutoriels et ressources facilita
 
 Ce dépôt est composé de deux parties principales qui vous seront utiles.
 
- ## "[bd_pnm](./bd_pnm)"
+ ## [bd_pnm](./bd_pnm)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")), 
 ainsi que les _projets qgis_ associés et les requêtes sql d'intérêt.
@@ -40,7 +40,7 @@ _les noms des schémas sont des liens cliquables_
  |[survol](./bd_pnm/survol)| Zones sensibles en lien avec les autorisations de survol|
 
 
- ## "[tutos](./tutos)"
+ ## [tutos](./tutos)
  
  Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
@@ -58,7 +58,7 @@ de carte au format wms.
  |[edition_de_polygones](./tutos/edition_de_polygones.md)|
  |[FAQ](./tutos/FAQ.md)| Questions les plus fréquentes et leurs solutions |
  |[git](./tutos/git.md)|Présentation et explication de ce qu'est "git"|
- |[installation_certificats_base_de_donnees]((./tutos/installation_certificats_base_de_donnees.md))|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
+ |[installation_certificats_base_de_donnees](./tutos/installation_certificats_base_de_donnees.md)|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
  |[liste_ressources_geographiques_wms](./tutos/liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
  |[mon_premier_projet](./tutos/mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
  |[glossaire](./tutos/README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
