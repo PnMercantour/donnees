@@ -13,7 +13,7 @@
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). _[Illustration](#Gestionnaire-de-sources-de-donnees)_
 
 - Cliquer sur l'onglet "WMS" dans la colonne à gauche de la fenêtre.
-- 
+
 <img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
 
 
@@ -28,13 +28,13 @@ _Entrer une valeur dans ce champ évite que Qgis n'essaie de charger des tuiles t
 <img src="./img/ajout_wms_parametres.png" alt= “” width="50%" height="50%"> 
 
 - Appuyer sur ajouter.
-- 
+ 
 
 ## Vous souhaitez ajouter une ressource depuis un nouveau lien
 
 - Cliquer sur "Nouveau"
 
-- Entrer un nom clair permettant de comprendre de quelle ressource il s'agit ( "IGN - base de données Hydro" par exemple
+- Entrer un nom clair permettant de comprendre de quelle ressource il s'agit ( "IGN - base de données Hydro" par exemple=
 
 - Coller le lien de la ressource dans le champs "URL"
 

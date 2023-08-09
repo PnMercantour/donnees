@@ -45,6 +45,11 @@ _les noms des schémas sont des liens cliquables_
  Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
 
+Si vous venez de recevoir votre ordinateur, il est nécessaire de réaliser les premiers paramétrages pour avoir accès à la base de données du parc, et aux fonds 
+de carte au format wms. 
+[ajout_fond_de_carte_wms](./tutos/ajout_fond_de_carte_wms.md)
+
+
  |Nom|Description|
  |:--:|:--:|
  |[ajout_fond_de_carte_wms](./tutos/ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms]()|

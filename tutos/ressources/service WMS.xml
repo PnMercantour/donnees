@@ -1,0 +1,10 @@
+<!DOCTYPE connections>
+<qgsWMSConnections version="1.0">
+    <wms name="IGN - Environnement" url="https://wxs.ign.fr/environnement/geoportail/wmts?SERVICE=WMTS&amp;VERSION=1.0.0&amp;REQUEST=GetCapabilities" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+    <wms name="IGN - Licence 7569 - Usages gratuits" url="https://wxs.ign.fr/0pu51tipfn6hp8e5pk3a1fqd/geoportail/r/wms" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+    <wms name="IGN - essentiels" url="https://wxs.ign.fr/essentiels/geoportail/r/wms?VERSION=1.3.0" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+    <wms name="IGN - orthohisto" url="https://wxs.ign.fr/orthohisto/geoportail/r/wms?VERSION=1.3.0" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+    <wms name="INPN - Espaces naturels" url="https://ws.carmencarto.fr/WMS/119/fxx_inpn" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+    <wms name="Sandre - BD Topage®" url="https://services.sandre.eaufrance.fr/geo/topage" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+    <wms name="Sandre - mdo" url="https://services.sandre.eaufrance.fr/geo/mdo" ignoreAxisOrientation="false" invertAxisOrientation="false" referer="" smoothPixmapTransform="false" password="" ignoreGetFeatureInfoURI="false" dpiMode="7" ignoreGetMapURI="false" username=""/>
+</qgsWMSConnections>

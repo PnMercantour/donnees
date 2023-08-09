@@ -25,7 +25,7 @@ Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierP
 sinon contacter le SI. 
 
 
-### 2. Charger l'ensemble des connexions
+### 2. Charger l'ensemble des connexions (si nécessaire)
 
 Vous devez avoir reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique.
 

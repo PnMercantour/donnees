@@ -36,9 +36,9 @@ en cliquant sur "Ajouter un groupe". On peut ensuite glisser des couches dans le
 
  
 ### Pour le travail en local
- - Ne pas trop encombrer un projet, préférer utiliser un projet par objectif.
- - Penser à supprimer les produits intermédiaires
  - Toujours conserver une copie intacte des données de travail
+ - Ne pas trop encombrer un projet de trop nombreuses couches, préférer utiliser un projet par objectif.
+ - Penser à supprimer les produits intermédiaires de votre projet, et des fichiers.
  - Privilégier les exports en dur aux couches temporaires pour les résultats de géotraitements 
   <img src="./img/exports_endurs.png" alt= “” width="75%" height="75%">
 
