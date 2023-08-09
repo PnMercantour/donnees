@@ -6,15 +6,15 @@ termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation �
  |Nom|Description|
  |:--:|:--:|
  |[ajout_fond_de_carte_wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms]()|
- |[bonnes_pratiques](./tutos/bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
- |[configuration_ressources_wms](./tutos/configuration_ressources_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
- |[edition_de_polygones](./tutos/edition_de_polygones.md)|
- |[FAQ](./tutos/FAQ.md)| Questions les plus fréquentes et leurs solutions |
- |[git](./tutos/git.md)|Présentation et explication de ce qu'est "git"|
- |[installation_certificats_base_de_donnees]((./tutos/installation_certificats_base_de_donnees.md))|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
- |[liste_ressources_geographiques_wms](./tutos/liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
- |[mon_premier_projet](./tutos/mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
- |[glossaire](./tutos/README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
+ |[bonnes_pratiques](./bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
+ |[configuration_ressources_wms](./configuration_ressources_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
+ |[edition_de_polygones](./edition_de_polygones.md)|
+ |[FAQ](./FAQ.md)| Questions les plus fréquentes et leurs solutions |
+ |[git](./git.md)|Présentation et explication de ce qu'est "git"|
+ |[installation_certificats_base_de_donnees]((./installation_certificats_base_de_donnees.md))|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
+ |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
+ |[mon_premier_projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
+ |[glossaire](./README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
 
 
 

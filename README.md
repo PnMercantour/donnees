@@ -4,8 +4,8 @@ Bienvenue sur le git du Parc national du Mercantour.
 
 _[Première fois sur git ? Cliquez ici](./tutos/git.md)_
 
-Vous trouverez ici un [_dépôt_ (qu'est-ce que c'est ?)](./tutos/README.md#depot  "Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") 
-contenant la documentation et les codes concernant la [_base de données_ (qu'est-ce que c'est ?)](./tutos/README.md#base-de-donnees "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques") 
+Vous trouverez ici un [_dépôt_ (qu'est-ce que c'est ?)](./tutos/README.md##dépôt-repository  "Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") 
+contenant la documentation et les codes concernant la [_base de données_ (qu'est-ce que c'est ?)](./tutos/README.md##base-de-données "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques") 
 utilisée par les agents du parc. Ainsi que des tutoriels et ressources facilitant l'utilisation de la base de données, et des ressources géographiques en général.
 
 
@@ -16,7 +16,7 @@ Ce dépôt est composé de deux parties principales qui vous seront utiles.
 
  ## "[bd_pnm](./bd_pnm)"
   
-Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schema "Un schéma est un sous-ensemble organisé d'une base de données")), 
+Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")), 
 ainsi que les _projets qgis_ associés et les requêtes sql d'intérêt.
 
 Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'est ?)](./tutos/README.md#schema). Chaque dossier-schéma contient:
