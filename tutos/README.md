@@ -1,6 +1,6 @@
  # Table des matières des tutos
  
- Le dossier [tutos](./tutos) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
+ Le dossier [tutos](./) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du parc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
 
  |Nom|Description|
@@ -11,7 +11,7 @@ termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation �
  |[edition_de_polygones](./edition_de_polygones.md)|
  |[FAQ](./FAQ.md)| Questions les plus fréquentes et leurs solutions |
  |[git](./git.md)|Présentation et explication de ce qu'est "git"|
- |[installation_certificats_base_de_donnees]((./installation_certificats_base_de_donnees.md))|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
+ |[installation_certificats_base_de_donnees](./installation_certificats_base_de_donnees.md)|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
  |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
  |[mon_premier_projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
  |[glossaire](./README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
