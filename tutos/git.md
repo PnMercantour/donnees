@@ -21,4 +21,4 @@ qui peut se trouver en haut à gauche....
 <img src="./img/table_des_matieres_git_page.png" alt= “” width="65%" height="65%"> 
 
 
-Pour revenir à la page d'accueil qui détaille l'ensemble du contenu du dépôt [cliquez ici](/../)
+Pour revenir à la page d'accueil qui détaille l'ensemble du contenu du dépôt [cliquez ici](../../)
