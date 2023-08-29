@@ -5,13 +5,12 @@ Il exige d'avoir reçu au préalable un fichier zip du service informatique du Par
 
 ## Avant de commencer
 
- - _Vous avez reçu un fichier zip ou .xml permettant le paramétrage de la connexion de la part du service informatique_
  - _Vous êtes bien sur une session windows qui n'est pas partagée._
 
 ## Etapes du paramétrage
 
 
-- Enregistrer et décompresser si nécessaire le fichier zip contenant le fichier "service WMS.xml".
+- Télécharger le fichier [service WMS.xml en cliquant sur ce lien](./ressources/service WMS.xml), puis sur l'icône permettant le téléchargement.
 
 - Déplacer ce fichier dans un dossier où il sera facile à retrouver.
  
