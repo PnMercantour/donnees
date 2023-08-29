@@ -10,7 +10,7 @@ les informations permettant de les représenter, ainsi que l'ensemble des param�
 ainsi que les possibles opérations à réaliser pour en faciliter la visualisation._
 
 > Scénario: On vous a demandé d'établir pour certaines zones la présence ou l'absence d'une espèce végétale donnée. 
-> 
+
 > Pour cela, vous devez consulter un [projet Qgis](./README.md#projet "projet Qgis contient un ensemble de couches,
 les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), faire vos relevés terrains, 
 puis entrer les résultats en modifiant une couche existante.
@@ -20,7 +20,9 @@ puis entrer les résultats en modifiant une couche existante.
 _Cette partie reprend le processus décrit dans [ce tutoriel](./Acces_BD.md)._
 ### 1. Vérifier que vous avez bien accès à la base de données par Qgis. 
 
-Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierProjet.qgz) et tenter de le lancer. Si les [couches](./README.md#couche 
+Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierProjet.qgz) en cliquant sur l'icône de téléchargement en haut à droite,
+<img src="./img/git_telechargement.png" alt= “” width="50%" height="50%"> 
+puis  tenter de le lancer. Si les [couches](./README.md#couche 
 "Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez continuer,
 sinon contacter le SI. 
 

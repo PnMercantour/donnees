@@ -17,5 +17,4 @@ Les plateformes IGN desquelles elles sont issues sont toutefois en cours de migr
 |Sandre - mdo|https://services.sandre.eaufrance.fr/geo/mdo |Masses d'eau, hydro-ecoregions.|
 
 
-# Autres ressources disponibles
-
+<!-- # Autres ressources disponibles --> 

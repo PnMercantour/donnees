@@ -2,12 +2,12 @@
 
 _Vous trouverez dans ce fichier une liste de problèmes et questions fréquentes avec des solutions simples._
 
-_En cliquant en haut à gauche de cette fenêtre vous avez accès à la table des matières pour chercher directement la question qui vous intéresse_
+_En cliquant en haut à droite de cette fenêtre vous avez accès à la table des matières pour chercher directement la question qui vous intéresse_
 
 
 
 
-## Recherche de données
+<!-- ## Recherche de données -->
 
 <!-- ### Je souhaite importer des courbes de niveau dans mon projet Qgis. --> 
 
@@ -74,6 +74,15 @@ _Solution_
 
 > Dans le Gestionnaire des sources de données (Onglet "Couche > Gestionnaire des sources de données" ou CTRL + L), sélectionner l'onglet "PostgreSQL". Puis sélectionner la connexion "Service projets". Enfin, cliquer sur "Editer". 
 Une nouvelle fenêtre s'affiche en bas de laquelle se trouve la case à cocher "Permettre l'enregistrement et le chargement de projets QGIS dans la base de données. "
+
+
+### Je ne vois plus le panneau couches/explorateur/...
+Le plus probable est qu'un panneau ait été déplacé/fermé dans une mauvaise manipulation. 
+Pour le faire réapparaître, il suffit de cliquer sur 
+> Vue>Panneaux
+Puis de cocher les cases d'intérêt (généralement: Couches/Boîtes à Outils de traitements/Style de couche)
+
+
 
 ### Je ne vois pas les projets, mais seulement les tables de la base de données
 

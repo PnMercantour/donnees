@@ -1,11 +1,11 @@
  # Table des matières des tutos
  
  Le dossier [tutos](./) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du parc, et provenant de sources externes. Ainsi qu'un glossaire des 
-termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
+termes utilisés en géomatique ou en lien avec ce dépôt, ainsi qu'une F.A.Q. qui a vocation à intégrer vos interrogations.
 
  |Nom|Description|
  |:--:|:--:|
- |[ajout_fond_de_carte_wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms]()|
+ |[ajout_fond_de_carte_wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms](#wms)|
  |[bonnes_pratiques](./bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
  |[configuration_ressources_wms](./configuration_ressources_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
  |[edition_de_polygones](./edition_de_polygones.md)|
@@ -51,15 +51,16 @@ Un dépôt git est un entrepôt virtuel, qui permet d'enregistrer et de mainteni
 notamment par la gestion de versions.
 
 ### Echelle (Scale)
-L'échelle d'une carte est le rapport entre la taille d'une distance réelle et sur le graphique. Quand la carte est sur un support à taille fixe (i.e. papier), 
-elle peut être exprimée sous la forme d'un ratio (1/25000 : 1 cm sur la carte = 25 000 en réalité). Sur un support à taille variable (numérique) ,
-il est préférable de la par une échelle graphique permettant d'indiquer l'échelle quelle que soit la taille de la carte.
+L'échelle d'une carte est le rapport de taille entre la distance réelle et la distance sur la carte. Quand la carte est sur un support à taille fixe (i.e. papier), 
+elle peut être exprimée sous la forme d'un ratio (1/25000 : 1 cm sur la carte = 25 000 cm en réalité). Sur un support à taille variable (numérique),
+il est préférable d'utiliser une échelle graphique. C'est-à-dire de représenter graphiquement une longueur en indiquant sa longueur en réalité.
+Cela permet d'indiquer l'échelle quelle que soit la taille de la carte.
 
 ### Emprise/Etendue (Bounding box)
 L'emprise d'un objet géographique correspond au rectangle définit par ses coordonnées minimales et maximales, contenant 
 l'intégralité de l'objet géographique
 
-### Entité (Entity
+### Entité (Entity)
 Une entité dans un format [vecteur](./README.md#vecteur) représente un objet réel avec une géométrie et des attributs. 
 
 ### EPSG (European Petroleum Survey Group)
@@ -71,7 +72,8 @@ Un fond de carte est la "couche de fond" d'une carte. Elle doit être évidente 
 Elle peut contenir des informations topopgraphiques, administratives, ou 
 
 ### GeoPacKage (.gpkg)
-Le format geopackage est un format non propriétaire permettant de stocker des informations géographiques et/ou des tables attributaires. Il a l'avantage de pouvoir contenir des données au format rasters et/ou vecteur, ainsi 
+Le format geopackage est un format non propriétaire permettant de stocker des informations géographiques et/ou des tables attributaires. 
+Il a l'avantage de pouvoir contenir des données au format rasters et/ou vecteur, ainsi 
 que le style associé à chaque donnée. 
 
 ### MNT - modèle numérique de terrain ("DEM" - Digital elevation model)
