@@ -1,8 +1,8 @@
 # Résumé
 
-Ce document vise à définir les pratiques et conventions de nommage pour les fichiers, projets  et couches qgis dans la bd_pnm.
-Ces recommandations sont sujettes à exception dans certains cas, mais leur respect dans la pratique quotidienne permettra de 
-faciliter la relecture, la communication en cas de problème, et le travail dans la base de données.
+Ce document vise à définir les bonnes pratiques  pour le travail géomatique, et les conventions de nommage pour les fichiers, projets  et couches qgis dans la bd_pnm.
+Ces recommandations sont sujettes à exception, mais leur respect général permettra de 
+faciliter la relecture, la communication en cas de problème, et le travail.
 
 ## Préconisations de nommage
  - Éviter les accents, espaces et caractères spéciaux dans les noms de fichiers (*, #, !, é, ê, ...)

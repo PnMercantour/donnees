@@ -7,19 +7,21 @@ Il exige d'avoir reçu au préalable un fichier zip du service informatique du Par
 
  - _Vous désirez modifier la forme ou les attributs d'un fichier au format vecteur (.gpkg/.shp)_
 
- -_Vous avez les autorisations pour modifier ce fichier dans la base de données/ Ou bien Ce fichier se trouve bien en local ([Comment vérifier?]())_
+ - _Vous avez les autorisations pour modifier ce fichier dans la base de données, ou bien ce fichier que vous souhaitez modifier est bien enregistré sur votre machine (Vérifier en faisant clic droit > Propriétés sur la couche concernée)_
  
  
 ## Edition de Polygones
 
 
 - Activer le mode édition (2 façons possibles).
-	- En sélectionnant la couche à modifier, puis en cliquant sur l'icône de crayon dans la barre d'outils en haut de l'écran  
+
+- En sélectionnant la couche à modifier, puis en cliquant sur l'icône de crayon dans la barre d'outils en haut de l'écran  
 <img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
-	- Ou bien, en faisant un clic droit sur la couche à modifier, puis en cliquant sur  l'icône crayon "Basculer en mode édition"
+	
+- Ou bien, en faisant un clic droit sur la couche à modifier, puis en cliquant sur  l'icône crayon "Basculer en mode édition"
 <img src="./img/modeedition_parcouche.png" alt= “” width="50%" height="50%"> 
 
-- Une fois dans ce mode, un crayon apparait au dessus du symbole de la couche
+- Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche
 <img src="./img/couche_en_cours_edition.png" alt= “” width="50%" height="50%"> 
 
 
@@ -37,7 +39,7 @@ _A partir de là, un grand nombre d'opérations sont disponibles, nous ne décriron
 <img src="./img/edition_ajouter_une_entite.png" alt= “” width="50%" height="50%"> 
 
 - Après avoir cliqué dessus, votre curseur change, et vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
-	- une entité 
+	- une entité par point
 	- une partie de ligne ou de polygone
 - Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entité sans en rajouter de nouveau (_donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_)
 - A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entité. Dans la plupart des cas, vous n'êtes pas obligé d'entrer

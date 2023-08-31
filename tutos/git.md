@@ -18,7 +18,9 @@ qui peut se trouver en haut à gauche....
 <img src="./img/table_des_matieres_git_accueil.png" alt= “” width="50%" height="50%"> 
 
 
-...ou en haut à gauche de la page. 
+<br>
+
+...ou en haut à droite de la page. 
 <img src="./img/table_des_matieres_git_page.png" alt= “” width="65%" height="65%"> 
 
 

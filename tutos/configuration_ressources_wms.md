@@ -3,9 +3,10 @@
 <!--Ce tutorial détaille les étapes permettant de configurer l'accès au catalogue de données WMS/WFS du Parc national du Mercantour.
 Il exige d'avoir reçu au préalable un fichier zip du service informatique du Parc. --> 
 
+<!--
 ## Avant de commencer
 
- - _Vous êtes bien sur une session windows qui n'est pas partagée._
+ - _Vous êtes bien sur une session windows qui n'est pas partagée._  -->
 
 ## Etapes du paramétrage
 
@@ -28,6 +29,6 @@ _Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
  - Sélectionner le fichier "service WMS.xml" précédemment enregistré. 
 Une fenêtre s'ouvre, clic sur 'Tout Sélectionner' puis 'Importer'
 
-_Cette opération a enrichi l'annuaire des couches WMS avec les catalogues IGN les plus souvent utilisés._
-_Vous pouvez maintenant ajouter des fonds de carte au format wms en suivant la démarche décrite [ici](./ajout_fond_de_carte.md)
+_Cette opération a enrichi l'annuaire des couches WMS avec les catalogues IGN les plus souvent utilisés._ 
+_Vous pouvez maintenant ajouter des fonds de carte au format wms en suivant la démarche décrite [ici](./ajout_fond_de_carte_wms.md)_
 

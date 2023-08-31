@@ -8,8 +8,8 @@ termes utilisés en géomatique ou en lien avec ce dépôt, ainsi qu'une F.A.Q. 
  |[ajout_fond_de_carte_wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms](#wms)|
  |[bonnes_pratiques](./bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
  |[configuration_ressources_wms](./configuration_ressources_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
- |[edition_de_polygones](./edition_de_polygones.md)|
- |[FAQ](./FAQ.md)| Questions les plus fréquentes et leurs solutions |
+ |[edition_de_polygones](./edition_de_polygones.md)| Édition de données vecteurs pour modifier/ajouter des entités ou attributs|
+ |[FAQ](./FAQ.md)| Solutions aux questions et problèmes les plus fréquents |
  |[git](./git.md)|Présentation et explication de ce qu'est "git"|
  |[installation_certificats_base_de_donnees](./installation_certificats_base_de_donnees.md)|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
  |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
@@ -138,11 +138,11 @@ Chaque entité est caractérisée par sa géométrie (les coordonnées des point
 
 ### WMS
 
-Un WMS (_Web Map Service_) permet de communiquer des données géoréférencées depuis un serveur vers un utilisateur 
+Un WMS (_Web Map Service_) permet de consulter des données géoréférencées sur un serveur vers un utilisateur 
 par le biais d'une adresse URL.
 
-De cette façon, l'utilisateur n'a pas à charger l'entièreté de la donnée, et peut ne consulter que les zones géographiques d'intérêt. Le WMS donne pas accès à la donnée elle
-même mais à sa représentation: l'utilisateur n'a pas la main sur la symbologie (excepté la transparence), et ne peut pas réaliser d'opérations de transformation sur les données WMS. 
+De cette façon, l'utilisateur n'a pas à charger l'entièreté de la donnée, et peut ne consulter que les zones géographiques d'intérêt. Le WMS ne donne pas accès à la donnée elle
+même mais à sa représentation: l'utilisateur n'a donc pas la main sur la symbologie (excepté la transparence), et ne peut pas réaliser d'opérations de transformation sur les données WMS. 
 
 
 ### Zone tampon (Buffer)
