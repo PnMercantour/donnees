@@ -16,19 +16,19 @@ Ce dépôt est composé de deux parties principales qui vous seront utiles.
 
  ## [bd_pnm](./bd_pnm)
   
-Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")), 
+Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 
 ainsi que les _projets qgis_ associés et les requêtes sql d'intérêt.
 
-Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma (qu'est-ce que c'est ?)](./tutos/README.md#schema). Chaque dossier-schéma contient:
- - un fichier README.md détaille le contenu et l'utilité du schéma
- - un dossier "projets_qgis" contenant les projets_qgis validés en format texte (téléchargeables et utilisables par les agents). Les projets ne sont pas directement visionnables depuis git, il est nécessaire de les télécharger pour ensuite les ouvrir avec Qgis. 
+Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma](./tutos/README.md#schema). Chaque dossier-schéma contient:
+ - un fichier README.md détaillant le contenu et l'utilité du schéma
+ - un dossier "projets_qgis" contenant les projets_qgis validés en format texte (téléchargeables et utilisables par les agents). _NB: Les projets ne sont pas directement visionnables depuis git, il est nécessaire de les télécharger pour ensuite les ouvrir avec Qgis._
  - un dossier "sql" contenant les requêtes sql utiles à ce schéma
  - un dossier "bin" à l'usage des gestionnaires de la base de données
 
  Le dossier "_modele" contient le modèle de la documentation appliquée à chaque schéma. 
  
 
-_les noms des schémas sont des liens cliquables_
+_les noms des schémas ci-dessous sont des liens cliquables_
 
  |Schéma|Description des données|
  |:--:|:--:|

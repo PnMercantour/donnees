@@ -24,30 +24,31 @@ permet de modifier les paramètres du filtrage._
 
  <img src="./img/filtre_symbologie.png" alt= “” width="75%" height="75%">
 
-_L'utilisation d'une expression dans la symbologie ("Couche>Propriétés>Symbologie" ou double clic sur la couche - onglet symbologie)*
+_L'utilisation d'une expression dans la symbologie ("Couche>Propriétés>Symbologie" ou double clic sur la couche - onglet symbologie)
 permet de filtrer ou regrouper l'information. Ici on obtient la somme de n_obs par maille. L'expression est modifiable directement ou 
 en cliquant sur le ε pour accéder à l'éditeur d'expressions._
 
 	 
  - Éviter tout particulièrement les accents, espaces et caractères spéciaux dans les noms de fichier ou de projet.
- - Utiliser des alias pour les couches pour en faciliter la lecture (En faisant Clic droit sur la couche puis "Renommer". Cette opération
-n'est que cosmétique et ne modifie pas les données ni le fichier.)
+ - Ne pas trop encombrer un projet Qgis de trop nombreuses couches, préférer utiliser un projet par objectif.
+ - Avoir un dossier par projet, contenant le projet Qgis dédié, et les données locales (s'il y en a).
+ - Utiliser des alias pour les couches pour en faciliter la lecture (en utilisant le clic droit sur la couche puis "Renommer". Cette opération
+n'est que cosmétique et ne modifie pas les données ni le fichier).
  - Penser à utiliser des groupes pour organiser les couches de travail. Cela peut se faire en faisant Clic droit dans le panneau des couches puis
 en cliquant sur "Ajouter un groupe". On peut ensuite glisser des couches dans le groupe pour les rendre visible/invisible en un clic. 
 
  
 ### Pour le travail en local
- - Avoir un dossier par projet, contenant le projet Qgis dédié, et les données locales (s'il y en a)
  - Toujours conserver une copie intacte des données de travail par exemple dans un sous-dossier
- - Ne pas trop encombrer un projet Qgis de trop nombreuses couches, préférer utiliser un projet par objectif.
  - Penser à supprimer les produits intermédiaires de votre projet, et des fichiers.
  - Privilégier les exports en dur aux couches temporaires pour les résultats de géotraitements 
   <img src="./img/exports_endurs.png" alt= “” width="75%" height="75%">
+
 _Exemple: "Enregistrer vers un fichier" plutôt que "Créer une couche temporaire"._
  
 ### En cas de problème
  - Vérifier la projection (CRS: EPSG:2154)
- - Vérifier qu'on travaille bien sur les bons fichiers ('couche'> Propriétés)
+ - Vérifier qu'on travaille bien sur les bons fichiers ('couche'> Propriétés>Source)
  - Vérifier la nature des données sur lesquelles on travaille (vecteur/raster, type de données dans les colonnes...)
  - Si le projet en question n'est pas compliqué, essayer d'exécuter la tâche voulue dans un projet vierge.
  - Redémarrer Qgis.

@@ -12,36 +12,58 @@ ainsi que les possibles opérations à réaliser pour en faciliter la visualisat
 > Scénario: On vous a demandé d'établir pour certaines zones la présence ou l'absence d'une espèce végétale donnée. 
 
 > Pour cela, vous devez consulter un [projet Qgis](./README.md#projet "projet Qgis contient un ensemble de couches,
-les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), faire vos relevés terrains, 
-puis entrer les résultats en modifiant une couche existante.
+les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), 
+entrer vos relevés terrains en modifiant une couche existante.
 
 
 ## Accès à la [base de données](./README.md#base-de-donnees)
-_Cette partie reprend le processus décrit dans [ce tutoriel](./Acces_BD.md)._
+_Cette partie reprend le processus décrit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
 ### 1. Vérifier que vous avez bien accès à la base de données par Qgis. 
 
 Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierProjet.qgz) en cliquant sur l'icône de téléchargement en haut à droite,
+
+
+_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
 <img src="./img/git_telechargement.png" alt= “” width="50%" height="50%"> 
+
 puis  tenter de le lancer. Si les [couches](./README.md#couche 
-"Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez continuer,
-sinon contacter le SI. 
+"Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
+Sinon, continuer au paragraphe suivant.
+
+#### Installation des certificats pour l'accès à la base de données _(si nécessaire)_
+_Pour vérifier si vous avez déjà paramétré la connexion à la base de données, ouvrir Qgis puis lancer le gestionnaire_
+ _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet PostgreSQL._
+ _Si le menu déroulant est vide ou ne contient pas "Service projets", continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
 
-### 2. Charger l'ensemble des connexions (si nécessaire)
+- Télécharger le fichier zip qui vous a été envoyé par le SI
 
-Vous devez avoir reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique.
+-- Naviguer jusqu'au dossier AppData.
 
-Enregistrer, et décompresser si nécessaire, le fichier "service projets.xml".
+Il se trouve typiquement dans un chemin ressemblant à:
+```
+C:\Users\ *[nomdelasession]* \AppData\Roaming
+```
+Le façon la plus simple de l'atteindre consiste à appuyer sur  _touche windows + R_, 
+puis à entrer la commande "%AppData%" dans l'invité de commande (la touche windows se trouve entre Ctrl et Alt). 
 
-Déplacer ce fichier dans un dossier où il sera facile à retrouver.
- 
-> Exemple: C:\Users\VotreNom\Documents\QgisXML
+(Ce répertoire est masqué par défaut, il est aussi possible de naviguer jusqu'à lui, en autorisant
+l'affichage des fichiers cachés dans les options)
 
+- Créer un dossier "postgresql" dans le dossier ..\AppData\Roaming s'il n'existe pas
 
-Une fois Qgis lancé, vous pouvez ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L).
+- Copier dans ce dossier tous les fichiers du zip, y compris - et surtout - le fichier masqué .pg_service.conf
+(les remplacer s'ils existent déjà)
 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+#### Chargement des paramètres pour l'accès à la base de données
 
+- Télécharger le fichier [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20postgresql.xml), puis sur l'icône permettant le téléchargement.
+_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
+<img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
+
+- Ouvrir Qgis
+
+- Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L) 
 
 - Cliquer sur PostgreSQL dans la barre de gauche
 
@@ -52,7 +74,7 @@ Une fois Qgis lancé, vous pouvez ouvrir le gestionnaire de sources de données 
 
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
 
-_La liste des [tables et schémas](./README.md#schema "Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions.") 
+_La liste des [tables et schémas](./README.md#schéma "Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions.") 
 accessibles devraient apparaître._
 
 
@@ -60,17 +82,55 @@ accessibles devraient apparaître._
 _NB: Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant. 
 (Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut)_
 
-_Cette étape visait à vérifier la connexion à la base de données. Maintenant nous allons charger un [projet](./README.md#projet "Un projet Qgis contient un ensemble de couches,
-les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") qui regroupe des données et leur représentation._
+_Cette étape visait à vérifier et mettre en place la connexion à la base de données. Maintenant nous allons mettre en place les connexions aux wms qui permettent_
+_de charger des fonds de carte._
+
+### 2. Charger les connexions wms
+
+#### Service WMS (fonds de carte) _(si nécessaire)_
+
+_Pour vérifier si vous avez déjà chargé le catalogue de ressources WMS, ouvrir Qgis puis lancer le gestionnaire_
+ _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet WMS/WMTS._
+ _Si le menu déroulant est vide, continuer cette partie du tutoriel, sinon passer à la partie suivante_
+
+- Télécharger le fichier [service WMS.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
+_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
+<img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
+
+Déplacer ce fichier dans un dossier où il sera facile à retrouver.
+ 
+> Exemple: C:\Users\"VotreNom"\Documents\QgisXML
+_Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
+
+Une fois Qgis lancé, vous pouvez ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L).
+
+<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+
+
+- clic droit sur WMS/WMTS dans l'explorateur, sélectionner "charger des connexions" 
+
+ - Sélectionner le fichier "service WMS.xml" précédemment enregistré. 
+Une fenêtre s'ouvre, clic sur 'Tout Sélectionner' puis 'Importer'
+
+
+
 
 ### 3. Charger le projet d'intérêt
 
-Pour cela, cliquer sur l'onglet "Projet" en haut à gauche de la fenêtre Qgis: Projet>Ouvrir Depuis>PostgreSQL
+Récupérer le projet, possiblement déjà téléchargé plus haut à [ce lien](./ressources/PremierProjet.qgz) en cliquant sur l'icône de téléchargement en haut à droite.
+L'ouvrir avec Qgis.
 
-<img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
 
-Vous aurez ensuite accès à la liste des serveurs disponibles. 
-Pour ce tutoriel, il s'agit du projet "Mon premier projet" dans le schéma "tutos".
+#### Remplacer des couches manquantes
+
+Un projet Qgis ne contient pas les données, juste les liens y menant. Il est donc normal qu'en ouvrant le projet téléchargé, des erreurs s'affichent.
+
+Dans ce cas, si les données sont accessibles, il est facile de remplacer le chemin d'accès pour réparer le projet.
+
+Pour ce faire, vous pouvez télécharger les données manquantes ici:
+[Presence à completer](./ressources/couche_test_a_remplir.gpkg)
+[Observations](./ressources/pts_random_tinee.gpkg)
+
 
 
 ## Visualisation des données du projet
@@ -169,19 +229,26 @@ Préférences>Options>Sources de données - "Comportement des tables d'attributs
 
 ## Editer une couche
 
-_On se concentrera sur les couches au format [vecteur](bonjourcestunlien.xml). Toutes les couches présentes dans le projet tuto sont dans ce format. 
-Il existe des méthodes pour modifier les [rasters](autrelien), mais nous ne les aborderons pas ici._
+_On se concentrera sur les couches au format [vecteur](./README.md#vecteur ). Toutes les couches présentes dans le projet tuto sont dans ce format. 
+Il existe des méthodes pour modifier les [rasters](./README.md#raster ), mais nous ne les aborderons pas ici._
 
 _L'édition d'une couche contenue dans la base de données est possible seulement si des droits particuliers vous ont été accordés. La plupart des couches sont uniquement consultables._
 
 Editer une couche Qgis modifie le fichier de source des données. Il est donc important de rester prudent et de conserver une copie des données d'origine quand c'est possible. 
 Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
-|<img src="./img/mode_edition.png" alt= “”  height="20%"> |  <img src="./img/modeedition_parcouche.png" alt= “” width="30%" > |  <img src="./img/mode_tableattributaire.png" alt= “”  width="30%"> |
-|:--:|:--:|:--:|:--:|
-|Dans la barre d'outils Qgis |En passant par un clic droit sur la couche|depuis la fenêtre de la table attributaire|
+|<img src="./img/mode_edition.png" alt= “”  height="20%"> 
+Dans la barre d'outils Qgis 
 
-Dans tous les cas, cliquer sur le petit crayon activera le mode édition pour la couche sélectionnée. On pourra alors y apporter des modifications de différentes façon.
+<img src="./img/modeedition_parcouche.png" alt= “” width="30%" >   
+
+En passant par un clic droit sur la couche
+
+<img src="./img/mode_tableattributaire.png" alt= “”  width="30%"> 
+
+depuis la fenêtre de la table attributaire
+
+Dans tous les cas, cliquer sur le petit crayon activera le mode édition pour la couche sélectionnée. On pourra alors y apporter des modifications de différentes façons.
 Ces modifications ne seront toutefois enregistrées et effectives qu'à la sortie du mode édition (en cliquant à nouveau sur le crayon). Si le logiciel crash, ou qu'on ne confirme 
 pas les changements à la sortie du mode édition, les changements seront perdus et les données d'origine seront conservées. 
 
@@ -194,9 +261,12 @@ Une fois en mode Edition, on peut modifier directement la table attributaire à 
 
 En mode édition, on peut aussi éditer directement la géométrie d'une entité, ou en créer de nouvelles. 
 
-|<img src="./img/outil_sommet.png" alt= “”  width="75%"> |<img src="./img/ajouter_entite.png" alt= “”  height="50%"> |
-|:--:|:--:|
-|l'outil sommet permet de modifier la géométrie de points/lignes/polygones existants| Ajouter une entité permet de créer de nouvelles entités|
+<img src="./img/outil_sommet.png" alt= “”  width="75%"> 
+L'outil sommet permet de modifier la géométrie de points/lignes/polygones existants
+
+
+<img src="./img/ajouter_entite.png" alt= “”  height="50%"> 
+Ajouter une entité permet de créer de nouvelles entités
 
 
 La création d'une nouvelle entité se fait par une succession de clics gauches, et est finalisée par un clic droit.

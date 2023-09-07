@@ -83,7 +83,6 @@ Pour le faire réapparaître, il suffit de cliquer sur
 Puis de cocher les cases d'intérêt (généralement: Couches/Boîtes à Outils de traitements/Style de couche)
 
 
-
 ### Je ne vois pas les projets, mais seulement les tables de la base de données
 
  Faire un clic droit sur Postgis/Service Projets dans l'explorateur, cliquer "Editer la connexion" et cocher "Permettre le chargement et l'enregistrement de projets QGIS" puis "OK".
