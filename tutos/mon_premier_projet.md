@@ -57,7 +57,7 @@ l'affichage des fichiers cachés dans les options)
 
 #### Chargement des paramètres pour l'accès à la base de données
 
-- Télécharger le fichier [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20postgresql.xml), puis sur l'icône permettant le téléchargement.
+- Télécharger le fichier [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml), puis sur l'icône permettant le téléchargement.
 _(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
 <img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
 
