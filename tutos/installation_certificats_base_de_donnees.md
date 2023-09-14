@@ -1,7 +1,18 @@
 # Accès la base de données.
 
 
-## Avant de commencer
+
+## Explications:
+Dans ce tuto, vous allez permettre à Qgis de se connecter à la base de données. Pour cela, il faut déposer certains fichiers
+qui vous auront été envoyés par le SI  - ce sont les certificats.
+Pour cela, il faudra dézipper ce fichier, copier-coller son contenu dans un dossier spécifique. 
+Ce répertoire peut être masqué par défaut, on utilisera donc une méthode particulière pour y accéder. 
+
+Cette opération doit être renouvelée tous les ans, les certifiats vous identifiant à la base de données ayant une durée
+limitée pour des raisons de sécurité. 
+
+
+## Pas à pas
 
  - _Vous avez reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique_
  - _Vous êtes bien sur une session windows qui n'est pas partagée._
@@ -9,26 +20,19 @@
 
 
 
-## Etapes de paramétrage à l'aide du fichier zip
-
 - Télécharger le fichier zip 
-
--- Naviguer jusqu'au dossier AppData.
-
-Il se trouve typiquement dans un chemin ressemblant à:
+- Dézipper le fichier reçu dans un dossier. 
+- Aller dans le dossier AppData. Deux façons de faire sont possibles:
+	- _Recommandé_ :Appuyer sur  _touche windows + R_ (la touche windows se trouve entre Ctrl et Alt) puis entrer la commande "%AppData%"
+	- Naviguer manuellement dans l'explorateur de fichiers jusqu'à
 ```
 C:\Users\ *[nomdelasession]* \AppData\Roaming
 ```
-Le façon la plus simple de l'atteindre consiste à appuyer sur  _touche windows + R_, 
-puis à entrer la commande "%AppData%" dans l'invité de commande (la touche windows se trouve entre Ctrl et Alt). 
 
-(Ce répertoire est masqué par défaut, il est aussi possible de naviguer jusqu'à lui, en autorisant
-l'affichage des fichiers cachés dans les options)
+- Vérifier si un dossier "postgresql" existe dans ..\AppData\Roaming  
+- Sinon, le créer.
 
-- Créer un dossier "postgresql" dans le dossier ..\AppData\Roaming s'il n'existe pas
-
-- Copier dans ce dossier tous les fichiers du zip, y compris - et surtout - le fichier masqué .pg_service.conf
-(les remplacer s'ils existent déjà)
+- Copier dans ce dossier tous les fichiers du zip à votre nom, y compris - et surtout - le fichier masqué .pg_service.conf. S'ils existent déjà, les remplacer.
 
 
 - Lancer Qgis
@@ -40,7 +44,7 @@ l'affichage des fichiers cachés dans les options)
 
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
 
-_La liste des tables et schémas accessibles devraient apparaître._
+_La liste des tables et schémas accessibles devrait apparaître._
 
 _Vous pourrez aussi directement charger des projets directement depuis:_
 > Projet > Ouvrir depuis... > PostgreSQL

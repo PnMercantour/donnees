@@ -1,36 +1,61 @@
 # Edition de polygones.
 
+
+## Explications
+
+Dans une couche au format [vecteur](./README.md#vecteur), il est possile de modifier ou d'ajouter des entités. 
+Qgis permet de le faire en passant par le mode édition. 
+Nous verrons ici comment créer une nouvelle couche vide, puis y créer des entités. Une fois les
+entités créées, on peut facilement en modifier la géométrie ou les attributs. 
+
+Il n'est possible de créer/modifier des entités que dans des couches dont vous êtes propriétaires. C'est-à-dire ou
+bien des couches issues de fichiers enregistrés localement dans votre ordinateur, ou bien d'un serveur ou vous êtes identifié
+comme disposant des droits de création/modification. 
+
+
+Attention, une fois une modification enregistrée, il n'est pas possible de revenir en arrière.
+
 <!--Ce tutorial détaille les étapes permettant de configurer l'accès au catalogue de données WMS/WFS du Parc national du Mercantour.
 Il exige d'avoir reçu au préalable un fichier zip du service informatique du Parc. --> 
+Dans ce tuto, on crée une couche au format GeoPackage. Ce format ouvert et non-propriétaire présente l'avantage de ne contenir qu'un fichier (contrairement au shapefile) 
+et s'ouvre facilement avec Qgis. 
 
-## Avant de commencer
-
- - _Vous désirez modifier la forme ou les attributs d'un fichier au format vecteur (.gpkg/.shp)_
-
- - _Vous avez les autorisations pour modifier ce fichier dans la base de données, ou bien ce fichier que vous souhaitez modifier est bien enregistré sur votre machine (Vérifier en faisant clic droit > Propriétés sur la couche concernée)_
  
  
-## Edition de Polygones
+## Pas à pas
 
+### Créer une nouvelle couche. 
+- Dans la barre des menus, Cliquer sur "Couche > Créer une couche > Nouvelle couche GeoPackage"
+<img src="./img/creer_couche.png" alt= “” width="50%" height="50%"> 
+
+- Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
+<img src="./img/pitits_points.png" alt= “” width="50%" height="50%"> 
+
+- Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: Point, Polyligne ou Polygone.
+- Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"
+- Ajouter des champs si nécessaire. Il sera toujours possible d'en ajouter plus tard. 
+
+
+### Activer le mode édition
 
 - Activer le mode édition (2 façons possibles).
 
-- En sélectionnant la couche à modifier, puis en cliquant sur l'icône de crayon dans la barre d'outils en haut de l'écran  
+	- _Recommandé_ Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
 <img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
 	
-- Ou bien, en faisant un clic droit sur la couche à modifier, puis en cliquant sur  l'icône crayon "Basculer en mode édition"
+	- Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
 <img src="./img/modeedition_parcouche.png" alt= “” width="50%" height="50%"> 
 
-- Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche
+- Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche ...
 <img src="./img/couche_en_cours_edition.png" alt= “” width="50%" height="50%"> 
 
 
-- .. et de de nombreux outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée", 
+- .. et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée", 
 visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
 
 <img src="./img/barre_doutils_numerisation.png" alt= “” width="50%" height="50%"> 
 
-_A partir de là, un grand nombre d'opérations sont disponibles, nous ne décrirons que les plus simples._
+_A partir de là, différentes opérations sont disponibles, nous ne décrirons que les plus simples._
 
 ### Créer une nouvelle entité
 
@@ -38,12 +63,12 @@ _A partir de là, un grand nombre d'opérations sont disponibles, nous ne décriron
 
 <img src="./img/edition_ajouter_une_entite.png" alt= “” width="50%" height="50%"> 
 
-- Après avoir cliqué dessus, votre curseur change, et vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
+- Après avoir cliqué dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
 	- une entité par point
 	- une partie de ligne ou de polygone
-- Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entité sans en rajouter de nouveau (_donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_)
+- Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entité sans en rajouter de nouveau, _donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_.
 - A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entité. Dans la plupart des cas, vous n'êtes pas obligé d'entrer
-quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie. Pour certaines couches il sera nécessaire d'entrer manuellement un id avant de pouvoir continuer à saisir des entités.
+quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie. 
 
 <img src="./img/nouvelle_entite.png" alt= “” width="50%" height="50%"> 
 
@@ -72,5 +97,7 @@ _Tant que les modifications n'ont pas été enregistrées, elles ne sont pas défini
 
 - Une fois activé l'outil édition, il est possible de simplement éditer à la main les cases de la table attributaire. On peut activer le mode édition depuis la barre d'outils de la table attributaire.
 <img src="./img/mode_tableattributaire.png" alt= “” width="50%" height="50%"> 
+
+
 
 

@@ -1,12 +1,62 @@
 # Ajouter une couche WMS
 
-## Avant de commencer
+## Explications
+
+Les fonds de carte qu'on utilise souvent (ex: SCAN 25, orthophotos) sont le plus souvent utilisés dans le format WMS.
+Ce format présente des caractéristiques particulières. Il ne s'agit pas de fichiers stockés dans votre machine, 
+mais plutôt d'un moyen d'accéder à des fichiers qui se trouvent sur un serveur distant, au moyen d'un url et de paramètres de connexion.
+De cette façon, à chaque déplacement dans le projet Qgis, une requête est envoyée au serveur, qui va répondre en donnant accès aux données dans la région concernée.
+Cette méthode d'accéder à la donnée à l'avantage de ne pas surcharger les machines -  puisque ce sont souvent des données volumineuses -  et de 
+de ne charger que la portion du territoire qui est concernée par le projet. 
+
+Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pouvoir
+y avoir accès facilement ensuite. Pour cela, on va utiliser un fichier .xml qui donne une liste d'adresse de serveurs, et les options
+permettant de s'y connecter. 
+On verra aussi comment ajouter manuellement des WMS issus d'autres sources. 
+
+
+## Pas à pas
 
 - _Vous souhaitez ajouter un fond de carte à votre projet Qgis_
-- _Vous avez déjà ajouté le catalogue de ressources wms à l'aide de [ce tuto](./configuration_ressources_wms.md) ou avez le lien vers une autre ressource wms vous intéressant._
 
-## Etapes du paramétrage
 
+
+### Ajout du catalogue de WMS
+
+- Télécharger le fichier [service WMS.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
+_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
+<img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
+
+- Déplacer ce fichier dans un dossier où il sera facile à retrouver.
+ 
+> Exemple: C:\Users\"VotreNom"\Documents\QgisXML
+_Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
+- Lancer Qgis
+ 
+- Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
+<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+
+- Cliquer sur WMS/WMTS dans l'explorateur, sélectionner "charger des connexions" 
+
+ - Sélectionner le fichier "service WMS.xml" précédemment enregistré. 
+Une fenêtre s'ouvre, clic sur 'Tout Sélectionner' puis 'Importer'
+
+_Cette opération a enrichi l'annuaire des couches WMS avec les catalogues IGN les plus souvent utilisés._ 
+_Vous pouvez maintenant ajouter des fonds de carte au format wms en suivant la démarche décrite plus bas_
+
+### Ajouter un WMS depuis un nouveau lien
+
+- Cliquer sur "Nouveau"
+
+- Entrer un nom clair permettant de comprendre de quelle ressource il s'agit ( "IGN - base de données Hydro" par exemple)
+
+- Coller le lien de la ressource dans le champs "URL"
+
+- Cliquer sur "OK"
+
+
+
+### Charger un fond de carte dans un projet Qgis
 
 - Lancer Qgis
  
@@ -19,7 +69,7 @@
 
 ## Si vous souhaitez ajouter une ressource se trouvant déjà dans le catalogue
 
-- Dans le menu déroulant des couches, choisir la source de données qui vous intéresse (ici : "IGN - Licence 7569 - Usages gratuits")
+- Dans le menu déroulant des couches, choisir la source de données qui vous intéresse (par exemple: "IGN - Licence 7569 - Usages gratuits")
 - Cliquer sur connexion
 - Les couches liées à la couche choisie vont apparaître. Choisir celle qui vous intéresse (ici la carte topographique "SCAN25"):
 - Prendre soin de bien remplir les champs "taille de la tuile" avec, par exemple 256 comme valeur, ou moins.
@@ -31,12 +81,3 @@ _Entrer une valeur dans ce champ évite que Qgis n'essaie de charger des tuiles t
 - Appuyer sur ajouter.
  
 
-## Vous souhaitez ajouter une ressource depuis un nouveau lien
-
-- Cliquer sur "Nouveau"
-
-- Entrer un nom clair permettant de comprendre de quelle ressource il s'agit ( "IGN - base de données Hydro" par exemple)
-
-- Coller le lien de la ressource dans le champs "URL"
-
-- Cliquer sur "OK"
