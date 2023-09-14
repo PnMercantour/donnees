@@ -16,7 +16,6 @@ limitée pour des raisons de sécurité.
 
  - _Vous avez reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique_
  - _Vous êtes bien sur une session windows qui n'est pas partagée._
- - _Vous pouvez charger les couches du projet "Strategie flore.qgz" - téléchargeable [ici](./ressources/Strategie_Flore.qgz)._
 
 
 
