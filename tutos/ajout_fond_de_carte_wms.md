@@ -2,23 +2,20 @@
 
 ## Explications
 
-Les fonds de carte qu'on utilise souvent (ex: SCAN 25, orthophotos) sont le plus souvent utilisés dans le format WMS.
+Les fonds de carte qu'on utilise souvent (ex: SCAN 25, orthophotos) sont le plus souvent utilisés au format WMS.
 Ce format présente des caractéristiques particulières. Il ne s'agit pas de fichiers stockés dans votre machine, 
 mais plutôt d'un moyen d'accéder à des fichiers qui se trouvent sur un serveur distant, au moyen d'un url et de paramètres de connexion.
-De cette façon, à chaque déplacement dans le projet Qgis, une requête est envoyée au serveur, qui va répondre en donnant accès aux données dans la région concernée.
-Cette méthode d'accéder à la donnée à l'avantage de ne pas surcharger les machines -  puisque ce sont souvent des données volumineuses -  et de 
+A chaque déplacement de la carte dans le projet Qgis, une requête est envoyée au serveur, qui va répondre en donnant accès aux données dans la région concernée.
+Cette méthode d'accés à la donnée a l'avantage de ne pas surcharger les machines -  puisque ce sont souvent des données volumineuses -  et de 
 de ne charger que la portion du territoire qui est concernée par le projet. 
 
 Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pouvoir
-y avoir accès facilement ensuite. Pour cela, on va utiliser un fichier .xml qui donne une liste d'adresse de serveurs, et les options
+y avoir accès facilement par la suite. Pour cela, on va utiliser un fichier .xml contenant une liste d'adresse de serveurs, ainsi que les options
 permettant de s'y connecter. 
 On verra aussi comment ajouter manuellement des WMS issus d'autres sources. 
 
 
 ## Pas à pas
-
-- _Vous souhaitez ajouter un fond de carte à votre projet Qgis_
-
 
 
 ### Ajout du catalogue de WMS
@@ -72,7 +69,7 @@ _Vous pouvez maintenant ajouter des fonds de carte au format wms en suivant la d
 - Dans le menu déroulant des couches, choisir la source de données qui vous intéresse (par exemple: "IGN - Licence 7569 - Usages gratuits")
 - Cliquer sur connexion
 - Les couches liées à la couche choisie vont apparaître. Choisir celle qui vous intéresse (ici la carte topographique "SCAN25"):
-- Prendre soin de bien remplir les champs "taille de la tuile" avec, par exemple 256 comme valeur, ou moins.
+- Prendre soin de bien remplir les champs "taille de la tuile" avec, par exemple 512 comme valeur.
 
 _Entrer une valeur dans ce champ évite que Qgis n'essaie de charger des tuiles trop grosses depuis le WMS, ce qui peut ralentir voire complètement bloquer l'affichage de votre projet._
 

@@ -47,6 +47,38 @@ Cela évite de faire planter instantanément Qgis en essayant de charger une table
 comme il en existe sur le serveur. 
 
 
+### "Traiter les couches inutilisables" à l'ouverture d'un projet: certaines couches ne s'affichent pas
+
+Un projet Qgis ne stocke pas les données en dur, mais uniquement les chemins vers celles-ci. 
+Par conséquent, si des données ont été supprimées ou déplacées, Qgis ne les "trouve plus", et renvoie 
+un message d'erreur  à l'ouverture d'un projet utilisant ces données.
+
+<img src="./img/couche_introuvable_explication.png" alt= “” width="50%" height="50%"> 
+
+- S'il s'agissait de données enregistrées localement sur la machine:
+il suffit de sélectionner la couche manquante dans cette fenêtre,
+puis de cliquer sur "Parcourir" et de montrer à Qgis où se situent les données. Une fois le projet enregistré, l'erreur ne devrait plus apparaitre. 
+
+
+ - S'il s'agissait de données enregistrées sur le serveur:
+le plus simple est de cliquer sur "Conserver les couches inutilisables", puis de cliquer droit sur la couche introuvable et de choisir "Réparer la source des données".
+
+<img src="./img/reparer_la_source_des_donnees.png" alt= “” width="50%" height="50%"> 
+
+
+
+Une toute petite fenêtre s'affiche, vous pouvez l'aggrandir. En bas vous trouverez PostgreSQL, puis "Service projets" et les schémas et tables contenant les données du parc. 
+
+<img src="./img/reparer_source_donnees_postgreSQL.png" alt= “” width="50%" height="50%"> 
+
+
+
+En cas de doute, vous pouvez toujours double cliquer sur la couche manquante, et regarder dans ses propriétés sa source afin de retrouver le nom du schéma et de la table correspondant. 
+<img src="./img/nom_schema_table.png" alt= “” width="50%" height="50%"> 
+
+
+
+
 ### Message d'erreur " L'entité ...  a une géométrie non valide" pendant un géotraitement
 Même si elles ne sont pas formulées, les géométries dans Qgis répondent à des règles. Une entité invalide peut tout de même être affichée, mais
 toute tentative de traitement, ou de jointure avec une autre couche renverra cette erreur. 

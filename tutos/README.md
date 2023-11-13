@@ -7,12 +7,11 @@ termes utilisés en géomatique ou en lien avec ce dépôt, ainsi qu'une F.A.Q. 
  |:--:|:--:|
  |[ajout_fond_de_carte_wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms](#wms)|
  |[bonnes_pratiques](./bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
- |[configuration_ressources_wms](./configuration_ressources_wms.md)|Mise en place des fichiers xml pour paramétrer l'accès aux données WMS/WFS depuis Qgis|
  |[edition_de_polygones](./edition_de_polygones.md)| Édition de données vecteurs pour modifier/ajouter des entités ou attributs|
  |[FAQ](./FAQ.md)| Solutions aux questions et problèmes les plus fréquents |
  |[git](./git.md)|Présentation et explication de ce qu'est "git"|
- |[installation_certificats_base_de_donnees](./installation_certificats_base_de_donnees.md)|Mise en place des fichiers xml pour paramétrer l'accès à la base de données depuis Qgis|
- |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms |
+ |[installation_certificats_base_de_donnees](./installation_certificats_base_de_donnees.md)|Paramétrage de l'accès à la base de données depuis Qgis|
+ |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms (SCAN25, orthophoto....) |
  |[mon_premier_projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
  |[glossaire](./README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
 

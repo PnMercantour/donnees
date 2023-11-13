@@ -29,29 +29,31 @@ et s'ouvre facilement avec Qgis.
 <img src="./img/creer_couche.png" alt= “” width="50%" height="50%"> 
 
 - Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
-<img src="./img/pitits_points.png" alt= “” width="50%" height="50%"> 
+<img src="./img/pitits_points.png" alt= “” width="30%" height="30%"> 
 
-- Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: Point, Polyligne ou Polygone.
+- Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
 - Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"
-- Ajouter des champs si nécessaire. Il sera toujours possible d'en ajouter plus tard. 
+- Si nécessaire, ajouter des champs. Il sera toujours possible d'en ajouter plus tard. 
 
 
 ### Activer le mode édition
 
 - Activer le mode édition (2 façons possibles).
 
-	- _Recommandé_ Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
+    Méthode 1 (_Recommandé_):  Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
 <img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
 	
-	- Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
+    Méthode 2 :Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
 <img src="./img/modeedition_parcouche.png" alt= “” width="50%" height="50%"> 
 
-- Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche ...
+- Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..
 <img src="./img/couche_en_cours_edition.png" alt= “” width="50%" height="50%"> 
 
 
-- .. et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée", 
-visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
+- ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée".
+
+
+- visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
 
 <img src="./img/barre_doutils_numerisation.png" alt= “” width="50%" height="50%"> 
 
@@ -90,12 +92,13 @@ quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie.
 
 En combinant le déplacement, la modification, et la création de sommets, il est possible de changer complètement la forme d'un polygone.
 
-_Tant que les modifications n'ont pas été enregistrées, elles ne sont pas définitives; _
+_Tant que les modifications n'ont pas été enregistrées, elles ne sont pas définitives_
 
 
 ### Modifier les attributs d'une entité
 
-- Une fois activé l'outil édition, il est possible de simplement éditer à la main les cases de la table attributaire. On peut activer le mode édition depuis la barre d'outils de la table attributaire.
+- Une fois activé l'outil édition, il est possible d'éditer à la main les cases de la table attributaire. 
+_On peut aussi activer le mode édition depuis la barre d'outils de la table attributaire._
 <img src="./img/mode_tableattributaire.png" alt= “” width="50%" height="50%"> 
 
 

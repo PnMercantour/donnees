@@ -33,6 +33,7 @@ _les noms des schémas ci-dessous sont des liens cliquables_
  |Schéma|Description des données|
  |:--:|:--:|
  |[ag_pasto](./bd_pnm/ag_pasto)|Agropastoralisme <!-- à compléter -->|
+ |[charte](./bd_pnm/charte)|Données nécessaires à la réalisation de la carte des vocations<!-- à compléter -->|
  |[geonature_synthese](./bd_pnm/geonature_synthese)|Observations géonature, détaillées <br > et agrégées selon différents critères|
  |[geotrek](./bd_pnm/geotrek)| Sentiers du parc|
  |[inpn](./bd_pnm/inpn)| Limites de parcs nationaux, régionaux, et réserves naturelles|

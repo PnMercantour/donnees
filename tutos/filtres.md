@@ -11,7 +11,8 @@ Les filtres sont des outils très puissants qui sont utilisés de façon récurrente
 
 
 ### Les couches déjà filtrées
-
+- Ouvrir Qgis
+- Charger le projet ""
 
 ### Modifier un filtre
 

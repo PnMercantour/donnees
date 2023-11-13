@@ -14,9 +14,9 @@ limitée pour des raisons de sécurité.
 
 ## Pas à pas
 
- - _Vous avez reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique_
- - _Vous êtes bien sur une session windows qui n'est pas partagée._
-
+ _Vous avez reçu un fichier zip permettant le paramétrage de la connexion de la part du service informatique_
+ 
+ _Vous êtes bien connecté sur votre session._
 
 
 - Télécharger le fichier zip 
