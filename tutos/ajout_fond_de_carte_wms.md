@@ -19,9 +19,7 @@ On verra aussi comment ajouter manuellement des WMS issus d'autres sources.
 
 ### Ajout du catalogue de WMS
 
-- Télécharger le fichier [service WMS.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
-_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
-<img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
+- Télécharger le catalogue en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [service WMS.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/service%20WMS.xml)
 
 - Déplacer ce fichier dans un dossier où il sera facile à retrouver.
  
