@@ -25,7 +25,7 @@ Dans les onglets de gauche, cliquer sur "Sources de données", puis dans "Comport
 Dorénavant, la table d'attribut ne montrera que les entités visibles sur l'étendue du canevas visible, en zoomant vous limiterez le nombre d'entités à charger dans la table d'attribut et donc
 le risque de plantage de Qgis. 
 
-
+___________________________________
 ### La table d'attribut d'une couche ne montre pas toutes les entités. 
 
 _Si vous êtes sûr que votre couche contient un grand nombre d'entités, mais seules quelques unes, voire aucunes
@@ -46,6 +46,7 @@ Qgis est paramétré par défaut pour ne montrer que les entités de la table d'attr
 Cela évite de faire planter instantanément Qgis en essayant de charger une table d'attribut contenant des milliers d'entités,
 comme il en existe sur le serveur. 
 
+___________________________________
 
 ### "Traiter les couches inutilisables" à l'ouverture d'un projet: certaines couches ne s'affichent pas
 
@@ -74,10 +75,12 @@ Une toute petite fenêtre s'affiche, vous pouvez l'aggrandir. En bas vous trouver
 
 
 En cas de doute, vous pouvez toujours double cliquer sur la couche manquante, et regarder dans ses propriétés sa source afin de retrouver le nom du schéma et de la table correspondant. 
+
 <img src="./img/nom_schema_table.png" alt= “” width="50%" height="50%"> 
 
 
 
+___________________________________
 
 ### Message d'erreur " L'entité ...  a une géométrie non valide" pendant un géotraitement
 Même si elles ne sont pas formulées, les géométries dans Qgis répondent à des règles. Une entité invalide peut tout de même être affichée, mais
@@ -89,6 +92,7 @@ _Solution_
 
 - > Modification manuelle: Si le message d'erreur donne les identifiants des entités aux géométries incorrectes, il est possible de les examiner et 
 modifier manuellement pour corriger les éventuelles erreurs. 
+___________________________________
 
 ### Impossible de charger un projet depuis la base de données PostgreSQL
 Il existe plusieurs cas de figures:
@@ -107,6 +111,7 @@ _Solution_
 > Dans le Gestionnaire des sources de données (Onglet "Couche > Gestionnaire des sources de données" ou CTRL + L), sélectionner l'onglet "PostgreSQL". Puis sélectionner la connexion "Service projets". Enfin, cliquer sur "Editer". 
 Une nouvelle fenêtre s'affiche en bas de laquelle se trouve la case à cocher "Permettre l'enregistrement et le chargement de projets QGIS dans la base de données. "
 
+___________________________________
 
 ### Je ne vois plus le panneau couches/explorateur/...
 Le plus probable est qu'un panneau ait été déplacé/fermé dans une mauvaise manipulation. 
@@ -115,11 +120,14 @@ Pour le faire réapparaître, il suffit de cliquer sur
 Puis de cocher les cases d'intérêt (généralement: Couches/Boîtes à Outils de traitements/Style de couche)
 
 
+___________________________________
+
 ### Je ne vois pas les projets, mais seulement les tables de la base de données
 
  Faire un clic droit sur Postgis/Service Projets dans l'explorateur, cliquer "Editer la connexion" et cocher "Permettre le chargement et l'enregistrement de projets QGIS" puis "OK".
 <img src="./img/editerconnexion_chargerprojets.png" alt= “” width="50%" height="50%"> 
 	
+___________________________________
 
 ## Oruxmaps
 

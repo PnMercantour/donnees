@@ -17,7 +17,6 @@ On verra aussi comment ajouter manuellement des WMS issus d'autres sources.
 
 ## Pas à pas
 
-
 ### Ajout du catalogue de WMS
 
 - Télécharger le fichier [service WMS.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
@@ -42,10 +41,16 @@ _Cette opération a enrichi l'annuaire des couches WMS avec les catalogues IGN le
 _Vous pouvez maintenant ajouter des fonds de carte au format wms en suivant la démarche décrite plus bas_
 
 ### Ajouter un WMS depuis un nouveau lien
+_Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogue mentionné plus haut._
 
+- Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
+<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+
+- Aller dans l'onglet "WMS/WMTS" dans le ruban de gauche.
+ 
 - Cliquer sur "Nouveau"
 
-- Entrer un nom clair permettant de comprendre de quelle ressource il s'agit ( "IGN - base de données Hydro" par exemple)
+- Entrer un nom clair permettant d'identifier la ressource ( i.e."IGN - base de données Hydro" )
 
 - Coller le lien de la ressource dans le champs "URL"
 
