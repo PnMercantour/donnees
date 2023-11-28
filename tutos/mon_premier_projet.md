@@ -20,14 +20,12 @@ entrer vos relevés terrains en modifiant une couche existante.
 _Cette partie reprend le processus décrit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
 ### 1. Vérifier que vous avez bien accès à la base de données par Qgis. 
 
-Pour cela vous pouvez télécharger le projet à [ce lien](./ressources/PremierProjet.qgz) en cliquant sur l'icône de téléchargement en haut à droite,
 
+Pour cela vous pouvez ouvrir Qgis et charger le projet depuis la base de données. 
 
-_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
-<img src="./img/git_telechargement.png" alt= “” width="50%" height="50%"> 
+<img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
 
-puis  tenter de le lancer. Si les [couches](./README.md#couche 
-"Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
+Si les [couches](./README.md#couche "Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
 Sinon, continuer au paragraphe suivant.
 
 #### Installation des certificats pour l'accès à la base de données _(si nécessaire)_
@@ -38,7 +36,7 @@ _Pour vérifier si vous avez déjà paramétré la connexion à la base de donn�
 
 - Télécharger le fichier zip qui vous a été envoyé par le SI
 
--- Naviguer jusqu'au dossier AppData.
+- Naviguer jusqu'au dossier AppData.
 
 Il se trouve typiquement dans un chemin ressemblant à:
 ```
@@ -55,11 +53,9 @@ l'affichage des fichiers cachés dans les options)
 - Copier dans ce dossier tous les fichiers du zip, y compris - et surtout - le fichier masqué .pg_service.conf
 (les remplacer s'ils existent déjà)
 
-#### Chargement des paramètres pour l'accès à la base de données
+#### Chargement des paramètres pour accéder à la base de données
 
-- Télécharger le fichier [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml), puis sur l'icône permettant le téléchargement.
-_(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
-<img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
+- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
 
 - Ouvrir Qgis
 
@@ -117,20 +113,25 @@ Une fenêtre s'ouvre, clic sur 'Tout Sélectionner' puis 'Importer'
 
 ### 3. Charger le projet d'intérêt
 
-Récupérer le projet, possiblement déjà téléchargé plus haut à [ce lien](./ressources/PremierProjet.qgz) en cliquant sur l'icône de téléchargement en haut à droite.
-L'ouvrir avec Qgis.
+Récupérer le projet en cliquant sur "Projet > Ouvrir Depuis > Postgresql" dans la barre de menu
 
+<img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
 
+<!--
 #### Remplacer des couches manquantes
 
-Un projet Qgis ne contient pas les données, juste les liens y menant. Il est donc normal qu'en ouvrant le projet téléchargé, des erreurs s'affichent.
+_Un projet Qgis ne contient pas les données, juste les liens y menant. Il est donc normal qu'en ouvrant un projet sans disposer
+de toutes les données liées, des erreurs s'affichent._
 
 Dans ce cas, si les données sont accessibles, il est facile de remplacer le chemin d'accès pour réparer le projet.
 
-Pour ce faire, vous pouvez télécharger les données manquantes ici:
-[Presence à completer](./ressources/couche_test_a_remplir.gpkg)
-[Observations](./ressources/pts_random_tinee.gpkg)
+Pour ce faire, vous pouvez télécharger les données manquantes ici en faisant clic droit - Enregistrer la cible du lien sous:
 
+- [Presence à completer](./ressources/couche_test_a_remplir.gpkg)
+- [Observations](./ressources/pts_random_tinee.gpkg)
+
+vous pourrez ensuite
+--> 
 
 
 ## Visualisation des données du projet
@@ -179,15 +180,14 @@ Vous pouvez remarquer un symbole : <img src="./img/symbole_filtre.png" alt= “�
 Il signifie que la couche en question est filtrée. Les filtres sont des outils très puissants, notamment pour limiter la charge sur vos ordinateurs. 
 Ils sont appliqués au niveau du serveur, et permettent de ne charger que les entités d'une couche que vous aurez choisies par une expression. 
 
-Par exemple, en cliquant sur le symbole filtre de "area" ou en faisant clic droit > Filtre sur cette couche vous voyez l'expression suivante :
+Par exemple, en cliquant sur le symbole filtre de "Vallees" ou en faisant clic droit > Filtre sur cette couche vous voyez l'expression suivante :
 ```sql
-"name"='coeur' OR "id_type"=4
+"id_type" = 3
 ```
 
 qui signifie: 
 ```
-"Ne charge que les entités pour lesquelles la colonne "name" contient la chaîne de caractères 'coeur' 
-ou bien celles pour lesquelles la colonne 'id_type' contient la valeur 4."
+"Ne charge que les entités pour lesquelles la colonne "id_type" a la valeur 3."
 ```
 
 
@@ -234,7 +234,19 @@ Il existe des méthodes pour modifier les [rasters](./README.md#raster ), mais n
 
 _L'édition d'une couche contenue dans la base de données est possible seulement si des droits particuliers vous ont été accordés. La plupart des couches sont uniquement consultables._
 
+### Enregistrer une couche localement
+
+
 Editer une couche Qgis modifie le fichier de source des données. Il est donc important de rester prudent et de conserver une copie des données d'origine quand c'est possible. 
+Pour cela faire clic droit sur la couche
+> Exporter > Sauvegarder les entités sous
+Puis en cliquant sur les "..." naviguer sur l'emplacement de votre machine ou vous souhaitez enregistrer la couche.
+
+Une fois la nouvelle couche enregistrée, elle devrait apparaitre dans le projet. Vous pourrez vérifier qu'il s'agit bien d'une copie locale 
+en vérifiant son emplacement dans ses propriétés (clic droit> Propriétés onglet Information)
+
+### Mode Edition
+
 Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
 |<img src="./img/mode_edition.png" alt= “”  height="20%"> 
@@ -278,6 +290,18 @@ Un "id" ou "fid" correspondant à l'identifiant unique de chaque entité peut ê
 Il n'est pas nécessaire d'entrer les autres attributs pour que la nouvelle enttité soit sauvegardée. 
 
 
+Il est souvent pratique d'afficher des barres d'outils supplémentaires (et parfois d'en cacher pour clarifier le menu).
+Pour cela, il faut faire clic droit à n'importe quel endroit de la barre d'outils,
+ou aller dans Vue > Barres d'outils
+
+Deux outils peuvent être particulièrement pratique pour la numérisation: 
+
+- "Accrochage" qui permet de rendre "magnétique" le clic, et de superposer parfaitement des points et
+- "Numérisation avancée" qui permet à des outils de modifications de géométries en mode édition.
+
+(les autres barres d'outils peuvent contenir des outils pratiques. N'hésitez pas à les explorer!)
+
+
 <!--
 ### Autoriser le chargement des projets
 
@@ -307,6 +331,23 @@ Permet de représenter des différences quantitatives entre des entités.
 
 _Dans ce tutoriel nous n'irons pas plus loin sur la symbologie, mais un autre tutoriel lui sera dédiée. Nous vous invitons à faire des essais, tout en prenant soin 
 de ne pas écraser la symbologie d'un projet partagé._
+
+## Les outils Qgis
+
+_Qgis peut être utilisé comme un outil d'analyse particulièrement puissants._
+
+En plus des fonctionnalités déjà évoquées, Qgis contient un grand nombre d'outils qui permettent des analyses plus ou moins complexes. 
+La plupart des outils sont disponibles dans les menus "Vecteur" et "Raster" de la barre de menu (mais pas tous!). Dans ces onglets, seule une 
+sélection des outils est affichée, organisés par catégorie. 
+
+Pour voir l'intégralité des outils disponibles, il faut activer le panneau "Boite à outils de traitement", 
+
+soit dans le menu "Vue > Panneaux"
+
+soit en faisant clic droit sur la barre de menus.
+
+
+Nous ne rentrerons pas ici dans le détail de ces outils, mais ce sont eux qui permettent de réaliser les opérations les plus complexes de Qgis. 
 
 
 ## Exporter une carte au format image
@@ -340,6 +381,10 @@ dans le Gestionnaire de mises en page.
 Il est aussi possible de créer une nouvelle mise en page. 
 
 Dans tous les cas, à l'ouverture d'une mise en page, une nouvelle fenêtre s'ouvre. 
+
+## Les outils de Qgis
+
+
 
 
 

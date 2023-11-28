@@ -3,6 +3,7 @@
 _Vous trouverez dans ce fichier une liste de problèmes et questions fréquentes avec des solutions simples._
 
 _En cliquant en haut à droite de cette fenêtre vous avez accès à la table des matières pour chercher directement la question qui vous intéresse_
+<img src="./img/table_des_matieres_git_page.png" alt= “” width="50%" height="50%"> 
 
 
 
@@ -10,7 +11,6 @@ _En cliquant en haut à droite de cette fenêtre vous avez accès à la table des ma
 <!-- ## Recherche de données -->
 
 <!-- ### Je souhaite importer des courbes de niveau dans mon projet Qgis. --> 
-
 
 
 ## Dans QGIS
@@ -148,5 +148,7 @@ Pour rendre une couche accessible dans Oruxmaps, il est nécessaire de produire u
 - Ouvrir "Options des couches" puis "Charger une couche KML"
 Vous devriez trouver le fichier kml, et pouvoir le sélectionner pour le charger. 
 
+
+### Copier une couche d'Oruxmaps vers un ordinateur
 
 

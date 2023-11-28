@@ -22,8 +22,8 @@ limitée pour des raisons de sécurité.
 - Télécharger le fichier zip 
 - Dézipper le fichier reçu dans un dossier. 
 - Aller dans le dossier AppData. Deux façons de faire sont possibles:
-	- _Recommandé_ :Appuyer sur  _touche windows + R_ (la touche windows se trouve entre Ctrl et Alt) puis entrer la commande "%AppData%"
-	- Naviguer manuellement dans l'explorateur de fichiers jusqu'à
+	- 1- _Recommandé_ :Appuyer sur  _touche windows + R_ (la touche windows se trouve entre Ctrl et Alt) puis entrer la commande "%AppData%"
+	- 2- Naviguer manuellement dans l'explorateur de fichiers jusqu'à
 ```
 C:\Users\ *[nomdelasession]* \AppData\Roaming
 ```

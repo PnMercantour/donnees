@@ -10,7 +10,7 @@ Le schéma `admin_express` contient les données relatives les données administ
  - les communes (multipolygon) et chefs lieu (point) de ces deux départements, 
  - les anciennes communes de Larche et Meyronnes.
 
-Elles proviennent du service admin express COG produit conjointement par l'INSEE et l'IGN
+Elles proviennent du service admin express COG produit conjointement par l'INSEE et l'IGN: https://geoservices.ign.fr/adminexpress
 (Version: ADMIN-EXPRESS-COG-CARTO_3-1\_\_SHP_LAMB93_FXX_2022-04-15)
 
 
