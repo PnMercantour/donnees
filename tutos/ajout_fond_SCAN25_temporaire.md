@@ -21,8 +21,9 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascul
 
 - Dans nom entrer "Scan 25"
 - Dans URL copier le lien suivant
-> https://data.geopf.fr/private/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities 
+> https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
 
+<!--
 - Il faut ensuite cliquer sur la petite croix verte dans l'encadré "Athentification"
 
 <img src="./img/croix_verte_nouveau_wms.png" alt= “” width="50%" height="50%"> 
@@ -32,8 +33,8 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascul
 	- clé d'en-tête: apikey
 	- Valeur d'en-tête: ign_scan_ws
 <img src="./img/detail_params_scan25.png" alt= “” width="50%" height="50%"> 
-
-- Et enfin cliquer sur OK. 
+--> 
+-  Puis cliquer sur OK. 
 
 - Cette couche est maintenant disponible pour être chargée dans un projet comme décrit dans les instructions ci-dessous.
 
