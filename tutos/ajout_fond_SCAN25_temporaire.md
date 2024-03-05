@@ -34,6 +34,8 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascul
 	- Valeur d'en-tête: ign_scan_ws
 <img src="./img/detail_params_scan25.png" alt= “” width="50%" height="50%"> 
 --> 
+- Cocher la case "Ignorer les URI GetMap/GetTile/GetLegendGraphic signalés dans les capacités"
+
 -  Puis cliquer sur OK. 
 
 - Cette couche est maintenant disponible pour être chargée dans un projet comme décrit dans les instructions ci-dessous.
