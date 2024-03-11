@@ -129,6 +129,16 @@ ___________________________________
 	
 ___________________________________
 
+### Je souhaite enregistrer une couche avec sa symbologie
+
+Les formats traditionnels d'enregistrement ne permettaient pas d'associer les données et leur mode de représentation, mais 
+le format GeoPackage si.
+Pour cela, il faut passer par l'outil "Empaquetage de couche" de la boite à outils (accessible à l'aide de CTRL+ALT+T) ou dans 
+l'onglet "Traitement" de la barre de menu.
+
+
+___________________________________
+
 ## Oruxmaps
 
 ### charger une couche dans Oruxmaps
