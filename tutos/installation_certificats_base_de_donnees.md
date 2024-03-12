@@ -34,15 +34,24 @@ C:\Users\ *[nomdelasession]* \AppData\Roaming
 - Copier dans ce dossier tous les fichiers du zip à votre nom, y compris - et surtout - le fichier masqué .pg_service.conf. S'ils existent déjà, les remplacer.
 
 
-- Télécharger le fichier de paramétrage en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [services postgresql.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/services%20postgresql.xml)
-
-
 - Lancer Qgis
 
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L) 
 
 - Cliquer sur PostgreSQL dans la barre de gauche
 <img src="./img/gestionnaire_sources_pg.png" alt= “” width="50%" height="50%"> 
+
+## _Si vous voyez "service projets" dans le menu déroulant en haut_
+
+- Sélectionner "service projets" dans le menu déroulant en haut
+
+- cliquer sur "Connecter"
+
+- Vous avez maintenant accès à l'ensemble des schémas et projets de la base des données pour lesquels vos droits ont été définis
+
+## _Si vous ne voyez pas "service projets" dans le menu déroulant en haut_
+
+- Télécharger le fichier de paramétrage en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [services postgresql.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/services%20postgresql.xml)
 
 - Cliquer sur "Charger" à droite de la fenêtre
 
