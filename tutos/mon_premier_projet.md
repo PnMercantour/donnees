@@ -34,7 +34,7 @@ _Pour vérifier si vous avez déjà paramétré la connexion à la base de donn�
  _Si le menu déroulant est vide ou ne contient pas "Service projets", continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
 
-- Télécharger le fichier zip qui vous a été envoyé par le SI
+- Télécharger le fichier zip qui vous a été envoyé par le SI ( qui a le format "prénom.nom@mercantour-parcnational.fr.zip" ) 
 
 - Naviguer jusqu'au dossier AppData.
 
@@ -55,8 +55,6 @@ l'affichage des fichiers cachés dans les options)
 
 #### Chargement des paramètres pour accéder à la base de données
 
-- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
-
 - Ouvrir Qgis
 
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L) 
@@ -65,18 +63,25 @@ l'affichage des fichiers cachés dans les options)
 
 <img src="./img/gestionnaire_sources_pg.png" alt= “” width="50%" height="50%"> 
 
-- Cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
+
+#### _Si vous ne voyez pas "service projets"_
+- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
+
+- Dans le gestionnaire de sources de qgis, cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
 
 
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
+
+
 
 _La liste des [tables et schémas](./README.md#schéma "Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions.") 
 accessibles devraient apparaître._
 
 
 
-_NB: Le gestionnaire de données est le moyen à privilégier pour importer des données au projet courant. 
-(Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut)_
+_NB: Il est aussi possible d'accéder aux couches de la base de données par l'onglet "Base de données> Gestionnaire BD" de la barre de menus. 
+Le Gestionnaire BD et le gestionnaire de sources de données sont à privilégier pour ajouter des données dans votre projet Qgis. 
+Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut_
 
 _Cette étape visait à vérifier et mettre en place la connexion à la base de données. Maintenant nous allons mettre en place les connexions aux wms qui permettent_
 _de charger des fonds de carte._
@@ -89,7 +94,7 @@ _Pour vérifier si vous avez déjà chargé le catalogue de ressources WMS, ouvr
  _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet WMS/WMTS._
  _Si le menu déroulant est vide, continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
-- Télécharger le fichier [service WMS.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
+-  Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service WMS.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
 _(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
 <img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
 
@@ -165,7 +170,7 @@ si vous travaillez sur le serveur ce seront les paramètres de connexion qui ser
 - vérifier le type de données ( raster/vecteur, type de géométrie) et la projection
 - vérifier le décompte d'entité (il s'agit du décompte après application du filtre)
 
-
+_NB: Souvent, en rencontrant un problème avec une couche, il est important d'aller en vérifier les propriétés pour s'assurer qu'il s'agit bien du type de géométrie attendu, que l'on travaille bien sur le bon fichier..._
 
 3. Les filtres
 
@@ -214,8 +219,8 @@ l'autre en cliquant sur l'icone correspondante en bas à droite de la fenêtre.
 
 <img src="./img/tableattributaire.png" alt= “” width="15%" height="50%">  <img src="./img/tableattributaire_form.png" alt= “” width="15%" height="50%"> 
 
-_A gauche, la table atributaire en format table. A droite,en format formulaire. Le mode table permet de visualiser d'un coup d'oeil l'ensemble des entités et attributs simultanément.
-Le mode formulaire permet de visualiser et les entités une à une, la liste des entités apparaissant sur la gauche._
+_A gauche, la table attributaire en format table. A droite,en format formulaire. Le mode table permet de visualiser d'un coup d'oeil l'ensemble des entités et attributs simultanément.
+Le mode formulaire permet de visualiser les entités une à une, la liste des entités apparaissant sur la gauche._
 
 
 Si votre version de Qgis a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton-déroulant: "Ne montrer que les entités visibles sur la carte".
@@ -381,8 +386,6 @@ dans le Gestionnaire de mises en page.
 Il est aussi possible de créer une nouvelle mise en page. 
 
 Dans tous les cas, à l'ouverture d'une mise en page, une nouvelle fenêtre s'ouvre. 
-
-## Les outils de Qgis
 
 
 
