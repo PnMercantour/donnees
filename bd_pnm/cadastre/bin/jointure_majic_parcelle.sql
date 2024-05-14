@@ -20,5 +20,5 @@ ON = parcelle.id = concat(
 	'0', morale.departement::varchar, 
 	lpad(morale.code_commune::varchar,3,'0') , 
 	lpad(replace(morale.prefixe::varchar,' ',''),3,  '0' ),
-	lpad("section"::varchar,2,'0'),
+	lpad(morale."section"::varchar,2,'0'),
 	lpad(morale.plan::varchar, 4,'0'))  
