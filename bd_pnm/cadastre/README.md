@@ -1,7 +1,3 @@
-# _Exemple de format pour la documentation_
-_Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
-
-------------
  # _Cadastre_
  ## Description
 Ce schéma contient les données issues du cadastre librement accessibles - mises en forme pour faciliter leur consultation. Les parcelles sont issues de https://cadastre.data.gouv.fr/data/etalab-cadastre/2024-01-01/geojson/departements/
