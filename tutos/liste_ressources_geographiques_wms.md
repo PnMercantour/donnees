@@ -1,5 +1,5 @@
 _De document décrit les principales données accessibles par flux WMS_
-_Si vous souhaitez rajouter d'autres ressources WMS vous pouvez suivre [ce tutoriel](./ajout_fond_de_carte_WMS.md)._
+_Si vous souhaitez rajouter d'autres ressources WMS vous pouvez suivre [ce tutoriel](./ajout_fond_de_carte_wms.md)._
 
 
 # Catalogue WMS pré-installé
