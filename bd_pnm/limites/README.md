@@ -8,7 +8,13 @@ et des entités administratives remarquables aux alentours:
 - la liste des communes de l'aire optimale d'adhésion
 - la répartition géographique des services territoriaux 
 
-___NB: Les limites doivent être revues. Elles peuvent être utilisées à fin illustratives, mais leurs localisations précises sont en cours de révision.___
+
+
+
+___NB: Les limites doivent être revues. Elles peuvent être utilisées à fin illustratives, mais leurs localisations précises sont en cours de révision.
+Si des statistiques précises concernant les superficies de communes en coeur de parc, se référer au document spécifiquement produites pour le calcul de 
+"X:\6.7 SYSTEME INFORMATION\6_OUTILS_MEMO\STATS-CHIFFRES CLES\Données par communes.xlsx"___
+
 <!-- ## Utilisation du projet qgis 
 
 le projet qgis "mailles" ne contien -->

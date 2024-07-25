@@ -4,12 +4,49 @@ Ce schéma contient les données issues du cadastre librement accessibles - mise
 et le fichier des personnes morales de https://www.data.gouv.fr/fr/datasets/fichiers-des-locaux-et-des-parcelles-des-personnes-morales/ .
 Les données utilisées sont issues de l'édition 2023.
 
+<!--
+# Description des colonnes remarquables
+
+Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom pourrait prêter à confusion. 
+
+#### Autorisations_travaux_test
+Table temporaire qui contient 
+| Nom de la colonne      | Type | Description     |
+| :---        |    :----:   |          :---: |
+| n_truc      | (PK) int       | c'est le numéro du truc   |
+| nom_truc   | string        | c'est le nom du fameux truc      |
+
+--> 
+
+ ## Utilisation des projets Qgis
+_Description du projet Qgis accessible par défaut dans le projet._
+
+
+### Projet Cadastre
+Ce projet permet de consulter les tracés des parcelles, de vérifier qu'elles appartiennent à une personne privée ou morale et le cas échéant, de visualiser son propriétaire.
+Il n'a vocation qu'à être consulté.
+
+Ce projet s'affiche différemment selon le niveau de zoom. De loin ce sont les communes qui s'affichent en couleurs nettement différentes. 
+- A niveau moyen on peut voir les sections cadastrales sans pour autant qu'elles soient nommées. 
+- En continuant le zoom, les couleurs distinguant les communes sont remplacées par la catégorisation des parcelles selon qu'elles appartiennent à une personne morale ou privée. Les sections cadastrales sont alors étiquetées selon leur lettre. 
+- A haut niveau de zoom ( min 1:15 000) les identifiants de parcelles s'affichent.
+- A Très haut niveau de zoom (min 1:4000) les propriétaires de chaque parcelle s'affichent là où ces parcelles appartiennent à des personnes morales. 
+
+Il est aussi possible de chercher directement une parcelle par id en réalisant une "Sélection par expression"
+
+### Projet Autorisations Travaux
+Ce projet permet de consulter les identifiants des travaux autorisés pour chaque parcelle. Il n'a pas vocation à être modifié directement pour l'instant. 
+Les données concernant les autorisations de travaux qu'il contient ne sont pas exhaustives pour l'instant.
+
+Il fonctionne sur le même mode que le projet avec des informations différentes affichées selon le niveau de zoom:
+- les communes 
+- les sections cadastrales et les parcelles pour lesquelles des autorisations de travaux ont été délivrées (sans précision)
+- l'ensemble des parcelles, où on peut encore vérifier qu'elles appartiennent à une personne privée ou morale et le cas échéant, de visualiser son propriétaire.
+- Les numéros des autorisations de travaux. Il peut être nécessaire de zoomer jusqu'à des échelles jusqu'à 1:500, puisque certaines parcelles très petites (<1ha)  ont reçu de nombreuses autorisations.
+
 
 
 <!--
- ## Utilisation du projet Qgis
-_Description du projet Qgis accessible par défaut dans le projet._
-
 ### _Exemples_
 _Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
 

@@ -22,7 +22,7 @@ L'outil  "Selection par expression" peut se trouver à plusieurs endroits:
 - dans la barre d'outils de la table d'attributs d'une couche 
 - dans la boite à outils de traitements dans la catégorie "sélection dans un vecteur
  
-Il est représenté par ce symbole:  <img src="./img/selection_expression.png" alt= “” width="80%" height="80%"> 
+Il est représenté par ce symbole:  <img src="./img/selection_expression.png" alt= “” width="15%" height="15%"> 
 
 Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de qgis. 
 
@@ -38,17 +38,25 @@ Il est séparé en 3 panneaux:
 ### Construire une expression
 Dans le cas d'une sélection par expression, il s'agit de vérifier que les valeurs d'une ou plusieurs colonnes répondent à des conditions. 
 C'est-à-dire que l'expression entrée doit aboutir pour chaque entité à vérifier si une condition est vraie ou fausse (on peut aussi utiliser les valeurs 1 et 0 où 1=vrai et 0=faux)
-
 Pour désigner la colonne d'une couche donnée, il faut donner son nom entouré de double-guillemets "" .
 
-> Par exemple: "id" = 10   ne sélectionnera que les entités où la valeur de la colonne "id" est égale à 10, puisque c'est la seule pour laquelle "id"=10 est vrai.
+
+> "id" = 10
+> ne sélectionnera que les entités où la valeur de la colonne "id" est égale à 10, puisque c'est la seule pour laquelle "id"=10 est vrai.
 
 Les guillemets simples, eux, servent à désigner du texte: 
 
-> Par exemple: "nom" = 'Beuil'  ne sélectionnera que les entités où la colonne "nom" contient exactement la chaîne de charactère 'Beuil'. Elle ne sélectionnera pas les entités avec 'beuil' ni ' Beuil ' comme nom (noter les espaces dans ce dernier exemple)
+> "nom" = 'Beuil'  
+> ne sélectionnera que les entités où la colonne "nom" contient exactement la chaîne de charactère 'Beuil'. Elle ne sélectionnera pas les entités avec 'beuil' ni ' Beuil ' comme nom (noter les espaces dans ce dernier exemple)
 
 
-La manière la plus simple de ne pas se tromper est d'entrer les noms de colonnes en déroulant l'onglet "Champs et Valeurs" du panneau central, et en double-cliquant sur les colonnes nous intéressant. Elles seront directement copiées avec la mise en forme appropriée dans l'éditeur. 
+La manière la plus simple de ne pas se tromper est d'entrer les noms de colonnes en déroulant l'onglet "Champs et Valeurs" du panneau central, et en double-cliquant sur les colonnes nous intéressant. 
+Elles seront directement copiées avec la mise en forme appropriée dans l'éditeur. 
+
+De la même façon, une fois qu'un champ est sélectionné dans le panneau central, il est possible d'en vérifier les valeurs dans le panneau de droite.
+En cliquant sur "Tous uniques" on affichera toutes les valeurs possibles de ce champ dans la couche. (A ne pas utiliser dans les couches trop grandes)
+En cliquant sur "Echantillon de 10" on affichera 10 valeurs possibles que peut prendre ce champs. 
+
 
 
 Avec ces outils, on peut déjà construire de nombreuses expressions correspondant à des conditions simples.
@@ -59,19 +67,49 @@ En utilisant l'éditeur d'expression il est aussi possible de construire des exp
 
 On peut par exemple comparer des colones entre elles
  
-> par exemple : "aire_pastorale">"aire_forest" permettra de ne sélectionner que les entités où la valeure dans la colonne "aire_pastorale" est supérieure à celle dans la colonne "aire_forest"
+> "aire_pastorale">"aire_forest" 
+> permettra de ne sélectionner que les entités où la valeure dans la colonne "aire_pastorale" est supérieure à celle dans la colonne "aire_forest"
 
 Ou se servir de fonctions comme $area:
 
-> "aire_pastorale"> $area/2 va sélectionner les entités où la valeur dans "aire_pastorale" est supérieure à l'aire, dans l'unité de calcul d'aire définie par le projet (en général: m², ce paramètre est modifiables dans les propriétés du projet, onglet "Général")
+> "aire_pastorale"> $area/2 va sélectionner les entités où la valeur dans "aire_pastorale" est supérieure à l'aire, dans l'unité de calcul d'aire définie dans le projet (en général: m², ce paramètre est modifiables dans les propriétés du projet, onglet "Général")
 
 _Attention, $area et area sont deux fonctions différentes. $area renvoie à la superficie de chaque entité, tandis que area est une fonction qui s'applique à un objet donné_
 >  exemple qgis de l'utilisation d'area: area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
 
 
+Il existe de nombreux outils que vous pouvez explorer comme les outils :
+- "Chaînes de caractères" pour manipuler du texte (récupérez les premiers/derniers caractère d'un champs, changer la casse, ..)
+- "Date et Heure" pour gérer l'information temporelle et les champs au format datetime
+- "Géométrie" pour réaliser des opérations géométriques (vérifier des intersections, buffer, obtenir les distances entre entités...)
+- ...
+
+### Calculatrice de champs
+
+L'éditeur d'expression apparait aussi quand on clique sur l'icône de la "calculatrice de champ" depuis une table d'attribut. 
+Dans ce contexte, l'expression servira à déterminer la valeur que prendra une colonne nouvelle ou déjà existante
+
+> $area
+> permettra remplir automatiquement une colonne par l'aire de toutes les entités la composant dans l'unité de calcul d'aire définie dans le projet (en général: m²,  on pourra donc avoir : $area/10000 pour convertir en ha)
 
 
-### Les opérateurs importants
+#### Les types de champs
+
+En utilisant la calculatrice de champs, il faut être vigilant à ce que le type en sortie de l'expression corresponde bien au type de la colonne existante ou à créer. 
+On peut les voir rapidement en déroulant l'onglet "Champs et Valeurs" du panneau central. On pourra ainsi distinguer les colonnes qui stockent: 
+- des nombres entiers : elles sont précédées de "123"
+- des nombres décimaux: elles sont précédées de "1.2"
+- des chaînes de caractère: elles sont précédées de "abc"
+
+Ces distinctions sont importantes car on ne peut pas réaliser les mêmes opérations sur chaque type. 
+Essayer de stocker des valeurs dans un type dans une colonne d'un autre type peut causer des erreurs ou des pertes de précision. 
+
+_Le fonctionnement est similaire à celui d'Excel: 22 sera considéré comme un nombre, tandis que '22' sera considéré comme une chaîne de caractères_
+
+Il est possible de convertir de type "à la volée" dans les cas triviaux avec les fonctions de conversion
+
+> 
+> Permettra
 
 
 

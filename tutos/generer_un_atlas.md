@@ -1,39 +1,34 @@
-# Edition de polygones.
+# Generation d'atlas.
 
 
 ## Explications
 
-Dans une couche au format [vecteur](./README.md#vecteur), il est possile de modifier ou d'ajouter des entités. 
-Qgis permet de le faire en passant par le mode édition. 
-Nous verrons ici comment créer une nouvelle couche vide, puis y créer des entités. Une fois les
-entités créées, on peut facilement en modifier la géométrie ou les attributs. 
+QGis permet de générer des atlas. C'est-à-dire qu'il génère un ensemble de cartes avec la même représentation (symbologie) centrées sur des entités différentes d'une même couche.
+On peut ainsi générer par exemple les cartes des environs des principales villes d'une région.
 
-Il n'est possible de créer/modifier des entités que dans des couches dont vous êtes propriétaires. C'est-à-dire ou
-bien des couches issues de fichiers enregistrés localement dans votre ordinateur, ou bien d'un serveur ou vous êtes identifié
-comme disposant des droits de création/modification. 
-
-
-Attention, une fois une modification enregistrée, il n'est pas possible de revenir en arrière.
-
-<!--Ce tutorial détaille les étapes permettant de configurer l'accès au catalogue de données WMS/WFS du Parc national du Mercantour.
-Il exige d'avoir reçu au préalable un fichier zip du service informatique du Parc. --> 
-Dans ce tuto, on crée une couche au format GeoPackage. Ce format ouvert et non-propriétaire présente l'avantage de ne contenir qu'un fichier (contrairement au shapefile) 
-et s'ouvre facilement avec Qgis. 
+La condition principale étant que toutes les entités qui doivent apparaître sur l'atlas soient dans une même couche
+ 
 
  
  
 ## Pas à pas
 
-### Créer une nouvelle couche. 
-- Dans la barre des menus, Cliquer sur "Couche > Créer une couche > Nouvelle couche GeoPackage"
-<img src="./img/creer_couche.png" alt= “” width="50%" height="50%"> 
+### Ouvrir l'éditeur de cartes.
 
-- Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
-<img src="./img/pitits_points.png" alt= “” width="30%" height="30%"> 
+- En partant d'une carte existante, dans la barre de menu cliquer sur "Projet" puis "Gestionnaire de mise en page"
 
-- Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
-- Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"
-- Si nécessaire, ajouter des champs. Il sera toujours possible d'en ajouter plus tard. 
+- Créer une nouvelle mise en page, ou utiliser une mise en page existante. 
+
+Dans la fenêtre de mise en pâge, il faut d'abord activer les paramètres d'atlas. Pour ça: 
+- dans la barre de menu, cliquer sur "Atlas" puis "Paramètres de l'atlas"
+
+- Dans la barre de droite, apparait un onglet "Atlas" à côté de "Mise en page", "Propriétés de l'objet", et "Guides". Cocher la case "Générer un atlas"
+
+- Dans le menu déroulant "couche de couverture", sélectionner la couche contenant les entités sur lesquelles devra être centré l'atlas. 
+
+- Facultatif: Filter ou ordonner par un des champs de la couche de couverture. 
+
+
 
 
 ### Activer le mode édition

@@ -11,9 +11,35 @@ _En cliquant en haut à droite de cette fenêtre vous avez accès à la table des ma
 <!-- ## Recherche de données -->
 
 <!-- ### Je souhaite importer des courbes de niveau dans mon projet Qgis. --> 
+## Concernant le parc
 
+### J'ai un souci avec les limites du parc
+Du fait de la méthode de leur tracé, les limites du parc sont compliquées à estimées avec une très grande précision.
+Pour la plupart, elles s'appuient réglementairement sur le cadastre qui peut manquer de précision, mais il arrive aussi qu'elles traversent des parcelles.
+Les cartes sur lesquelles les limites s'appuient sont tracées au 1/100 000.
+
+Pour ces raisons, la délimitation à très grande échelle des limites du parc est un travail en cours. 
+
+Pour ce qui concerne les calculs de superficie de pourcentage de zone coeur/d'aire d'adhésion, se référer au document 
+> X:\6.7 SYSTEME INFORMATION\6_OUTILS_MEMO\STATS-CHIFFRES CLES\Données par communes.xlsx
+
+N'hésitez pas à signaler les erreurs importantes/à conséquence 
+
+<!--
+### Je souhaite réaliser une carte à l'aide de données qui ne me sont pas accessibles
+
+Contacter le chargé de mission référent sur le sujet, et s'assurer qu'il ne s'agit pas de données sensibles dont la diffusion est limitée. 
+-->
 
 ## Dans QGIS
+
+### J'AI UN PROBLEME ET JE SAIS PAS QUOI FAIRE
+- Vérifier l'emplacement des données (est-ce qu'il s'agit de données qui sont sur la base de données, en local sur la machine, sur une tablette connectée en USB....)
+- Vérifier la projection des données (2154)
+- Vérifier le format des données 
+	- ça peut être le type de géométrie point/ligne/polygone, 
+	- le type d'attribut  (on ne peut pas faire de calculs sur des attributs au format texte)
+	- 
 
 ### Qgis plante quand j'essaie d'ouvrir la table d'attribut d'une couche
 _Il est probable que la table que vous essayer d'ouvrir est trop grande pour être gérée par Qgis._
@@ -159,6 +185,9 @@ Pour rendre une couche accessible dans Oruxmaps, il est nécessaire de produire u
 Vous devriez trouver le fichier kml, et pouvoir le sélectionner pour le charger. 
 
 
-### Copier une couche d'Oruxmaps vers un ordinateur
+### Charger le scan 25 dans Orux Maps
+
+
+> https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
 
 

@@ -14,7 +14,11 @@ faciliter la relecture, la communication en cas de problème, et le travail.
 
 ### Général
  - Importer les couches et projets depuis le Gestionnaire de sources de données ("Couches>Gestionnaire de source de données" ou CTRL+L)
- et pas depuis l'explorateur.
+ et pas depuis l'explorateur. Particulièrement pour les couches provenant de la base de données (Postgresql)
+  <img src="./img/gestionnaire_sources_pg.png" alt= “” width="75%" height="75%">
+
+
+
  - Au chargement d'un projet, certaines couches peuvent être filtrées. Ce filtre peut être appliqué par l'outil filtre et/ou dans le menu symbologie. 
 Ces filtres doivent être modifiés pour accéder aux données pertinentes, ou à l'intégralité des données.
  <img src="./img/filtre_couche.png" alt= “” width="75%" height="75%">

@@ -1,7 +1,7 @@
 _Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
 
 ------------
- # ag_pasto _(Nom du Schéma)_
+ # ag_pasto
  ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_
 
@@ -275,7 +275,7 @@ L'identité des exploitants est anonymisé par une clé d'identifiant unique.
 
 
 
-
+<!--
 ### Exploitants: t_exploitant_exp 
 Annuaire des exploitants opérant dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
 
@@ -291,12 +291,12 @@ Annuaire des exploitants opérant dans la zone optimale d'adhésion du PNM (Parc
 |groupe_exploitant  (int4) 	|Regroupement d'exploitant auquel appartient l'exploitant (Clé étrangère)|
 |commentaire  (text) 	|Commentaire libre|
 |prenom  (text) 	|Prénom de l'exploitant |
-
-
-
 Contraintes légales 	
-
 Données permettant l'identification d'individus (nom et prénom). Ne pas diffuser 
+
+-->
+
+
 
 
 Contraintes pour la ressource 	
