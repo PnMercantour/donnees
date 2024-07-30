@@ -3,7 +3,7 @@
 
 
 ## Explications:
-Dans ce tuto, vous allez permettre à Qgis de se connecter à la base de données. Pour cela, il faut déposer certains fichiers
+Dans ce tuto, vous allez permettre à QGIS de se connecter à la base de données. Pour cela, il faut déposer certains fichiers
 qui vous auront été envoyés par le SI  - ce sont les certificats.
 Pour cela, il faudra dézipper ce fichier, copier-coller son contenu dans un dossier spécifique. 
 Ce répertoire peut être masqué par défaut, on utilisera donc une méthode particulière pour y accéder. 
