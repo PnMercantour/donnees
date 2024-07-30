@@ -9,7 +9,7 @@ Nous verrons ici comment appliquer ces conditions et une fois la sélection réa
  
 ## Pas à pas
 
-On retrouve l'éditeur d'expression à différents endroits de QGis dont notablement:
+On retrouve l'éditeur d'expression à différents endroits de QGIS dont notablement:
 - la sélection par expression
 - la calculatrice de champs
 - _utilisation avancée_ : automatisation de valeurs prises pour des paramètres spécifiques (exemple: taille de police conditionnée à l'échelle de la carte)
@@ -25,7 +25,7 @@ L'outil  "Selection par expression" peut se trouver à plusieurs endroits:
  
 Il est représenté par ce symbole:  <img src="./img/selection_expression.png" alt= “” width="15%" height="15%"> 
 
-Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de QGis. 
+Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de QGIS. 
 
 ### L'éditeur d'expression
 
@@ -76,7 +76,7 @@ Ou se servir de fonctions comme $area:
 > "aire_pastorale"> $area/2 va sélectionner les entités où la valeur dans "aire_pastorale" est supérieure à l'aire, dans l'unité de calcul d'aire définie dans le projet (en général: m², ce paramètre est modifiables dans les propriétés du projet, onglet "Général")
 
 _Attention, $area et area sont deux fonctions différentes. $area renvoie à la superficie de chaque entité, tandis que area est une fonction qui s'applique à un objet donné_
->  exemple qgis de l'utilisation d'area: area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
+>  exemple QGIS de l'utilisation d'area: area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
 
 
 Il existe de nombreux outils que vous pouvez explorer comme les outils :

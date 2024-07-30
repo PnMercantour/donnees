@@ -50,9 +50,9 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascul
 
 
 
-### Charger un fond de carte dans un projet Qgis
+### Charger un fond de carte dans un projet QGIS
 
-- Lancer Qgis
+- Lancer QGIS
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
 

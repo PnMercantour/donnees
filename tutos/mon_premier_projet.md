@@ -5,31 +5,31 @@ _Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser 
 du parc ? Voilà comment faire !_
 
 
-_Ce tutoriel contient les étapes pour la consultation d'un [projet Qgis](./README.md#projet "Un projet Qgis contient un ensemble de couches,
+_Ce tutoriel contient les étapes pour la consultation d'un [projet QGIS](./README.md#projet "Un projet QGIS contient un ensemble de couches,
 les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") existant, 
 ainsi que les possibles opérations à réaliser pour en faciliter la visualisation._
 
 > Scénario: On vous a demandé d'établir pour certaines zones la présence ou l'absence d'une espèce végétale donnée. 
 
-> Pour cela, vous devez consulter un [projet Qgis](./README.md#projet "projet Qgis contient un ensemble de couches,
+> Pour cela, vous devez consulter un [projet QGIS](./README.md#projet "projet QGIS contient un ensemble de couches,
 les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), 
 entrer vos relevés terrains en modifiant une couche existante.
 
 
 ## Accès à la [base de données](./README.md#base-de-donnees)
 _Cette partie reprend le processus décrit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
-### 1. Vérifier que vous avez bien accès à la base de données par Qgis. 
+### 1. Vérifier que vous avez bien accès à la base de données par QGIS. 
 
 
-Pour cela vous pouvez ouvrir Qgis et charger le projet depuis la base de données. 
+Pour cela vous pouvez ouvrir QGIS et charger le projet depuis la base de données. 
 
 <img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
 
-Si les [couches](./README.md#couche "Dans un projet Qgis, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
+Si les [couches](./README.md#couche "Dans un projet QGIS, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
 Sinon, continuer au paragraphe suivant.
 
 #### Installation des certificats pour l'accès à la base de données _(si nécessaire)_
-_Pour vérifier si vous avez déjà paramétré la connexion à la base de données, ouvrir Qgis puis lancer le gestionnaire_
+_Pour vérifier si vous avez déjà paramétré la connexion à la base de données, ouvrir QGIS puis lancer le gestionnaire_
  _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet PostgreSQL._
  _Si le menu déroulant est vide ou ne contient pas "Service projets", continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
@@ -55,7 +55,7 @@ l'affichage des fichiers cachés dans les options)
 
 #### Chargement des paramètres pour accéder à la base de données
 
-- Ouvrir Qgis
+- Ouvrir QGIS
 
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L) 
 
@@ -67,7 +67,7 @@ l'affichage des fichiers cachés dans les options)
 #### _Si vous ne voyez pas "service projets"_
 - Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
 
-- Dans le gestionnaire de sources de qgis, cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
+- Dans le gestionnaire de sources de QGIS, cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
 
 
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
@@ -80,7 +80,7 @@ accessibles devraient apparaître._
 
 
 _NB: Il est aussi possible d'accéder aux couches de la base de données par l'onglet "Base de données> Gestionnaire BD" de la barre de menus. 
-Le Gestionnaire BD et le gestionnaire de sources de données sont à privilégier pour ajouter des données dans votre projet Qgis. 
+Le Gestionnaire BD et le gestionnaire de sources de données sont à privilégier pour ajouter des données dans votre projet QGIS. 
 Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut_
 
 _Cette étape visait à vérifier et mettre en place la connexion à la base de données. Maintenant nous allons mettre en place les connexions aux wms qui permettent_
@@ -90,7 +90,7 @@ _de charger des fonds de carte._
 
 #### Service WMS (fonds de carte) _(si nécessaire)_
 
-_Pour vérifier si vous avez déjà chargé le catalogue de ressources WMS, ouvrir Qgis puis lancer le gestionnaire_
+_Pour vérifier si vous avez déjà chargé le catalogue de ressources WMS, ouvrir QGIS puis lancer le gestionnaire_
  _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet WMS/WMTS._
  _Si le menu déroulant est vide, continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
@@ -103,7 +103,7 @@ Déplacer ce fichier dans un dossier où il sera facile à retrouver.
 > Exemple: C:\Users\"VotreNom"\Documents\QgisXML
 _Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
 
-Une fois Qgis lancé, vous pouvez ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L).
+Une fois QGIS lancé, vous pouvez ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L).
 
 <img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
 
@@ -125,7 +125,7 @@ Récupérer le projet en cliquant sur "Projet > Ouvrir Depuis > Postgresql" dans
 <!--
 #### Remplacer des couches manquantes
 
-_Un projet Qgis ne contient pas les données, juste les liens y menant. Il est donc normal qu'en ouvrant un projet sans disposer
+_Un projet QGIS ne contient pas les données, juste les liens y menant. Il est donc normal qu'en ouvrant un projet sans disposer
 de toutes les données liées, des erreurs s'affichent._
 
 Dans ce cas, si les données sont accessibles, il est facile de remplacer le chemin d'accès pour réparer le projet.
@@ -147,7 +147,7 @@ les moyens de naviguer dans le projet et observer les données._
 
 1. Afficher/masquer des couches
 
-_Dans Qgis, la position de la plupart des éléments sont personnalisables, et il arrive qu'on les modifie par accident. 
+_Dans QGIS, la position de la plupart des éléments sont personnalisables, et il arrive qu'on les modifie par accident. 
 Si ça arrive, cas on pourra les retrouver dans l'onglet "Vue", et vérifier que le panneau ou la barre d'outils concernée est bien visible._
 
 
@@ -223,10 +223,10 @@ _A gauche, la table attributaire en format table. A droite,en format formulaire.
 Le mode formulaire permet de visualiser les entités une à une, la liste des entités apparaissant sur la gauche._
 
 
-Si votre version de Qgis a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton-déroulant: "Ne montrer que les entités visibles sur la carte".
-Cette option peut être modifiée de façon à toujours montrer toutes les entités, cependant ce mode d'affichage peut faire planter Qgis sur les couches contenant un grand nombre d'entités. 
+Si votre version de QGIS a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton-déroulant: "Ne montrer que les entités visibles sur la carte".
+Cette option peut être modifiée de façon à toujours montrer toutes les entités, cependant ce mode d'affichage peut faire planter QGIS sur les couches contenant un grand nombre d'entités. 
 
-Le mode d'affichage par défaut est modifiable dans les paramètres de Qgis: 
+Le mode d'affichage par défaut est modifiable dans les paramètres de QGIS: 
 
 Préférences>Options>Sources de données - "Comportement des tables d'attributs"
 
@@ -242,7 +242,7 @@ _L'édition d'une couche contenue dans la base de données est possible seulemen
 ### Enregistrer une couche localement
 
 
-Editer une couche Qgis modifie le fichier de source des données. Il est donc important de rester prudent et de conserver une copie des données d'origine quand c'est possible. 
+Editer une couche QGIS modifie le fichier de source des données. Il est donc important de rester prudent et de conserver une copie des données d'origine quand c'est possible. 
 Pour cela faire clic droit sur la couche
 > Exporter > Sauvegarder les entités sous
 Puis en cliquant sur les "..." naviguer sur l'emplacement de votre machine ou vous souhaitez enregistrer la couche.
@@ -255,7 +255,7 @@ en vérifiant son emplacement dans ses propriétés (clic droit> Propriétés on
 Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
 |<img src="./img/mode_edition.png" alt= “”  height="20%"> 
-Dans la barre d'outils Qgis 
+Dans la barre d'outils QGIS 
 
 <img src="./img/modeedition_parcouche.png" alt= “” width="30%" >   
 
@@ -317,7 +317,7 @@ Deux outils peuvent être particulièrement pratique pour la numérisation:
 Dans couche on appelle le mode de représentation des données d'une couche la "symbologie" (exemple: des aplats de couleurs, cercles noirs pour des points, lignes vertes etc...)
 Elle peut être modifiée de façon précise pour chaque couche en passant par les propriétés d'une couche, à l'onglet symbologie.
 
-Les outils de symbologie dans Qgis sont très puissants, et permettent de représenter les informations d'une couche de façon synthétique.
+Les outils de symbologie dans QGIS sont très puissants, et permettent de représenter les informations d'une couche de façon synthétique.
 On décrit ici les modes de représentation les plus communément utilisés:
 - Symbole unique
 
@@ -337,11 +337,11 @@ Permet de représenter des différences quantitatives entre des entités.
 _Dans ce tutoriel nous n'irons pas plus loin sur la symbologie, mais un autre tutoriel lui sera dédiée. Nous vous invitons à faire des essais, tout en prenant soin 
 de ne pas écraser la symbologie d'un projet partagé._
 
-## Les outils Qgis
+## Les outils QGIS
 
-_Qgis peut être utilisé comme un outil d'analyse particulièrement puissants._
+_QGIS peut être utilisé comme un outil d'analyse particulièrement puissants._
 
-En plus des fonctionnalités déjà évoquées, Qgis contient un grand nombre d'outils qui permettent des analyses plus ou moins complexes. 
+En plus des fonctionnalités déjà évoquées, QGIS contient un grand nombre d'outils qui permettent des analyses plus ou moins complexes. 
 La plupart des outils sont disponibles dans les menus "Vecteur" et "Raster" de la barre de menu (mais pas tous!). Dans ces onglets, seule une 
 sélection des outils est affichée, organisés par catégorie. 
 
@@ -352,7 +352,7 @@ soit dans le menu "Vue > Panneaux"
 soit en faisant clic droit sur la barre de menus.
 
 
-Nous ne rentrerons pas ici dans le détail de ces outils, mais ce sont eux qui permettent de réaliser les opérations les plus complexes de Qgis. 
+Nous ne rentrerons pas ici dans le détail de ces outils, mais ce sont eux qui permettent de réaliser les opérations les plus complexes de QGIS. 
 
 
 ## Exporter une carte au format image
@@ -362,7 +362,7 @@ de leur sensibilité auprès du chargé de mission en lien avec elles._
 
 1. Export simple
 
-Il est possible de réaliser des exports directement depuis le menu de Qgis. A l'onglet Projet > Importer/exporter > Exporter au format Image
+Il est possible de réaliser des exports directement depuis le menu de QGIS. A l'onglet Projet > Importer/exporter > Exporter au format Image
 Cette façon de faire ne permet que d'exporter le contenu du canevas
 
 <img src="./img/export_format_image.png" alt= “”  width="40%"> 
@@ -376,7 +376,7 @@ On peut ainsi facilement exporter au format image la vue de la carte visible à 
 
 2. Mises en page
 
-Qgis permet de réaliser des mises en pages de cartes plus complexes. Pour les réaliser, il faut passer par l'outil de mise en page de Qgis.
+QGIS permet de réaliser des mises en pages de cartes plus complexes. Pour les réaliser, il faut passer par l'outil de mise en page de QGIS.
 
 <img src="./img/mise_en_page.png" alt= “”  width="40%"> 
 
@@ -417,7 +417,7 @@ _Sous ce format le projet peut contenir l'ensemble des données, et des informat
 Le format geopackage (gpkg) est un format relativement récent qui a l'avantage de pouvoir contenir plusieurs sources de données spatialisées vecteur et raster, tout en conservant l'intégrité de leurs tables attributaires.
 Il peut aussi stocker des projets et fichiers de styles. Il réunit ainsi en un seul fichier ce qui traditionnellement demande l'utilisation de formats peu pratiques (shapefile), et évite les problèmes de préservation des chemins relatifs des projets au format qgs/qgz. 
 
-Le format gpkg fonctionne sur le modèle de la base de données, les outils pour l'ouvrir et le modifier sont donc liés au menus de bases de données dans Qgis. 
+Le format gpkg fonctionne sur le modèle de la base de données, les outils pour l'ouvrir et le modifier sont donc liés au menus de bases de données dans QGIS. 
 
 1. Sauvegarder un projet au format geopackage
 
@@ -430,7 +430,7 @@ On pourra le faire à l'onglet Couche:
 
 2. Connexion au gpkg
 
-Qgis n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
+QGIS n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
 Pour cela on peut passer par le gestionnaire de base de données (Ctrl + 3) 
 > Base de données > Gestionnaire de base de données
 

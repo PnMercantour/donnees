@@ -10,7 +10,7 @@ _En cliquant en haut à droite de cette fenêtre vous avez accès à la table des ma
 
 <!-- ## Recherche de données -->
 
-<!-- ### Je souhaite importer des courbes de niveau dans mon projet Qgis. --> 
+<!-- ### Je souhaite importer des courbes de niveau dans mon projet QGIS. --> 
 ## Concernant le parc
 
 ### J'ai un souci avec les limites du parc
@@ -41,15 +41,15 @@ Contacter le chargé de mission référent sur le sujet, et s'assurer qu'il ne s'ag
 	- le type d'attribut  (on ne peut pas faire de calculs sur des attributs au format texte)
 	- 
 
-### Qgis plante quand j'essaie d'ouvrir la table d'attribut d'une couche
-_Il est probable que la table que vous essayer d'ouvrir est trop grande pour être gérée par Qgis._
+### QGIS plante quand j'essaie d'ouvrir la table d'attribut d'une couche
+_Il est probable que la table que vous essayer d'ouvrir est trop grande pour être gérée par QGIS._
 _Solution: Limiter le nombre d'entités affiché par défaut dans la table d'attributs_
 Dans la barre d'outils cliquer sur :
 > Préférences > Options...
 Dans les onglets de gauche, cliquer sur "Sources de données", puis dans "Comportement des tables" choisir "Montré les entités visibles sur la carte".
 
 Dorénavant, la table d'attribut ne montrera que les entités visibles sur l'étendue du canevas visible, en zoomant vous limiterez le nombre d'entités à charger dans la table d'attribut et donc
-le risque de plantage de Qgis. 
+le risque de plantage de QGIS. 
 
 ___________________________________
 ### La table d'attribut d'une couche ne montre pas toutes les entités. 
@@ -68,23 +68,23 @@ _Si ce nombre ne correspond pas au nombre d'entités dans la table d'attribut vou
 
 
 #### Explication
-Qgis est paramétré par défaut pour ne montrer que les entités de la table d'attribut qui sont visibles sur la carte. 
-Cela évite de faire planter instantanément Qgis en essayant de charger une table d'attribut contenant des milliers d'entités,
+QGIS est paramétré par défaut pour ne montrer que les entités de la table d'attribut qui sont visibles sur la carte. 
+Cela évite de faire planter instantanément QGIS en essayant de charger une table d'attribut contenant des milliers d'entités,
 comme il en existe sur le serveur. 
 
 ___________________________________
 
 ### "Traiter les couches inutilisables" à l'ouverture d'un projet: certaines couches ne s'affichent pas
 
-Un projet Qgis ne stocke pas les données en dur, mais uniquement les chemins vers celles-ci. 
-Par conséquent, si des données ont été supprimées ou déplacées, Qgis ne les "trouve plus", et renvoie 
+Un projet QGIS ne stocke pas les données en dur, mais uniquement les chemins vers celles-ci. 
+Par conséquent, si des données ont été supprimées ou déplacées, QGIS ne les "trouve plus", et renvoie 
 un message d'erreur  à l'ouverture d'un projet utilisant ces données.
 
 <img src="./img/couche_introuvable_explication.png" alt= “” width="50%" height="50%"> 
 
 - S'il s'agissait de données enregistrées localement sur la machine:
 il suffit de sélectionner la couche manquante dans cette fenêtre,
-puis de cliquer sur "Parcourir" et de montrer à Qgis où se situent les données. Une fois le projet enregistré, l'erreur ne devrait plus apparaitre. 
+puis de cliquer sur "Parcourir" et de montrer à QGIS où se situent les données. Une fois le projet enregistré, l'erreur ne devrait plus apparaitre. 
 
 
  - S'il s'agissait de données enregistrées sur le serveur:
@@ -109,12 +109,12 @@ En cas de doute, vous pouvez toujours double cliquer sur la couche manquante, et
 ___________________________________
 
 ### Message d'erreur " L'entité ...  a une géométrie non valide" pendant un géotraitement
-Même si elles ne sont pas formulées, les géométries dans Qgis répondent à des règles. Une entité invalide peut tout de même être affichée, mais
+Même si elles ne sont pas formulées, les géométries dans QGIS répondent à des règles. Une entité invalide peut tout de même être affichée, mais
 toute tentative de traitement, ou de jointure avec une autre couche renverra cette erreur. 
 
 _Solution_
 
-- > "Réparer les géométries": dans la boîte à outil de Qgis se trouve un outil "Réparer les géométries" qui peut tenter de réparer les erreurs de géométries.
+- > "Réparer les géométries": dans la boîte à outil de QGIS se trouve un outil "Réparer les géométries" qui peut tenter de réparer les erreurs de géométries.
 
 - > Modification manuelle: Si le message d'erreur donne les identifiants des entités aux géométries incorrectes, il est possible de les examiner et 
 modifier manuellement pour corriger les éventuelles erreurs. 
@@ -171,7 +171,7 @@ ___________________________________
 
 Pour rendre une couche accessible dans Oruxmaps, il est nécessaire de produire un fichier au format kml de cette couche, puis de la charger dans le téléphone. 
 
-- Dans Qgis, charger la couche d'intérêt. 
+- Dans QGIS, charger la couche d'intérêt. 
 - Cliquer droit sur la couche "Exporter> Sauvergarder les entités sous....."
 - Choisir le format Keyhole Markup Language (KML)
 - Parcourir les dossiers en cliquant sur l'icône suivant, et enregistrer le fichier là où il sera facile à retrouver.

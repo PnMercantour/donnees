@@ -1,6 +1,6 @@
 # Résumé
 
-Ce document vise à définir les bonnes pratiques  pour le travail géomatique, et les conventions de nommage pour les fichiers, projets  et couches qgis dans la bd_pnm.
+Ce document vise à définir les bonnes pratiques  pour le travail géomatique, et les conventions de nommage pour les fichiers, projets  et couches QGIS dans la bd_pnm.
 Ces recommandations sont sujettes à exception, mais leur respect général permettra de faciliter la relecture, la communication en cas de problème, et le travail.
 
 ## Préconisations de nommage
@@ -9,7 +9,7 @@ Ces recommandations sont sujettes à exception, mais leur respect général perm
  - Privilégier le français (a minima rester cohérent)
  - Éviter les abbréviations qui rendent les noms cryptiques (ex: "liste_patrimoine_protection" plutôt que "lst_pp")
 
-## Dans QGis
+## Dans QGIS
 
 ### Général
  - Importer les couches et projets depuis le Gestionnaire de sources de données ("Couches>Gestionnaire de source de données" ou CTRL+L)
@@ -33,8 +33,8 @@ en cliquant sur le ε pour accéder à l'éditeur d'expressions._
 
 	 
  - Éviter tout particulièrement les accents, espaces et caractères spéciaux dans les noms de fichier ou de projet.
- - Ne pas trop encombrer un projet Qgis de trop nombreuses couches, préférer utiliser un projet par objectif.
- - Avoir un dossier par projet, contenant le projet Qgis dédié, et les données locales (s'il y en a) ainsi que les notes associées. 
+ - Ne pas trop encombrer un projet QGIS de trop nombreuses couches, préférer utiliser un projet par objectif.
+ - Avoir un dossier par projet, contenant le projet QGIS dédié, et les données locales (s'il y en a) ainsi que les notes associées. 
  - Utiliser des alias pour les couches pour en faciliter la lecture (en utilisant le clic droit sur la couche puis "Renommer". Cette opération
 n'est que cosmétique et ne modifie pas les données ni le fichier).
  - Penser à utiliser des groupes pour organiser les couches de travail. Cela peut se faire en faisant Clic droit dans le panneau des couches puis
@@ -54,7 +54,7 @@ _Exemple: "Enregistrer vers un fichier" plutôt que "Créer une couche temporair
  - Vérifier qu'on travaille bien sur les bons fichiers ('couche'> Propriétés>Source)
  - Vérifier la nature des données sur lesquelles on travaille (vecteur/raster, type de données dans les colonnes...)
  - Si la tâche voulue ne s'exécute que sur une ou deux couches, essayer de l'exécuter dans un projet vierge.
- - Redémarrer Qgis.
+ - Redémarrer QGIS.
 
 
 

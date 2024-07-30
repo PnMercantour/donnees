@@ -5,7 +5,7 @@
 Les fonds de carte qu'on utilise souvent (ex: SCAN 25, orthophotos) sont le plus souvent utilisés au format WMS.
 Ce format présente des caractéristiques particulières. Il ne s'agit pas de fichiers stockés dans votre machine, 
 mais plutôt d'un moyen d'accéder à des fichiers qui se trouvent sur un serveur distant, au moyen d'un url et de paramètres de connexion.
-A chaque déplacement de la carte dans le projet Qgis, une requête est envoyée au serveur, qui va répondre en donnant accès aux données dans la région concernée.
+A chaque déplacement de la carte dans le projet QGIS, une requête est envoyée au serveur, qui va répondre en donnant accès aux données dans la région concernée.
 Cette méthode d'accés à la donnée a l'avantage de ne pas surcharger les machines -  puisque ce sont souvent des données volumineuses -  en chargeant seulement la portion du territoire qui est concernée par le projet. 
 
 Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pouvoir y avoir accès facilement par la suite. Pour cela, on va utiliser un fichier .xml contenant une liste d'adresse de serveurs, ainsi que les options permettant de s'y connecter. On verra aussi comment ajouter manuellement des WMS issus d'autres sources. 
@@ -21,7 +21,7 @@ Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pou
  
 > Exemple: C:\Users\"VotreNom"\Documents\QgisXML
 _Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
-- Lancer Qgis
+- Lancer QGIS
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
 <img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
@@ -52,9 +52,9 @@ _Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogue
 
 
 
-### Charger un fond de carte dans un projet Qgis
+### Charger un fond de carte dans un projet QGIS
 
-- Lancer Qgis
+- Lancer QGIS
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
 
@@ -70,7 +70,7 @@ _Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogue
 - Les couches liées à la couche choisie vont apparaître. Choisir celle qui vous intéresse (ici la carte topographique "SCAN25"):
 - Prendre soin de bien remplir les champs "taille de la tuile" avec, par exemple 512 comme valeur.
 
-_Entrer une valeur dans ce champ évite que Qgis n'essaie de charger des tuiles trop grosses depuis le WMS, ce qui peut ralentir voire complètement bloquer l'affichage de votre projet._
+_Entrer une valeur dans ce champ évite que QGIS n'essaie de charger des tuiles trop grosses depuis le WMS, ce qui peut ralentir voire complètement bloquer l'affichage de votre projet._
 
 <img src="./img/ajout_wms_parametres.png" alt= “” width="90%" height="90%"> 
 

@@ -3,7 +3,7 @@
 
 ## Explications
 
-QGis permet de générer des atlas. C'est-à-dire qu'il génère un ensemble de cartes avec la même représentation (symbologie) centrées sur des entités différentes d'une même couche.
+QGIS permet de générer des atlas. C'est-à-dire qu'il génère un ensemble de cartes avec la même représentation (symbologie) centrées sur des entités différentes d'une même couche.
 On peut ainsi générer par exemple les cartes des environs des principales villes d'une région.
 
 La condition principale étant que toutes les entités qui doivent apparaître sur l'atlas soient dans une même couche

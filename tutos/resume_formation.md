@@ -1,6 +1,6 @@
 # Objectifs
 
-Ce document résume les opérations réalisées pendant la formation Qgis. 
+Ce document résume les opérations réalisées pendant la formation QGIS. 
 Pour chaque opération, vous trouverez un lien vers le tuto concerné. 
 
 ## Visualiser des données
@@ -10,9 +10,9 @@ Pour chaque opération, vous trouverez un lien vers le tuto concerné.
 - Charger les fonds de carte au format WMS
 
 ## Organiser et modifier des données
-- Bien comprendre le fonctionnement de Qgis
+- Bien comprendre le fonctionnement de QGIS
 - Savoir créer et modifier un vecteur : géométrie/attributs
-- Transférer des données depuis un relevé OruxMaps vers Qgis et vice-versa
+- Transférer des données depuis un relevé OruxMaps vers QGIS et vice-versa
 - Réaliser des opérations élémentaires d'analyse spatiale (zone tampon, enveloppe convexe, ...)
 
 ## Questions du STRB: 
@@ -27,20 +27,20 @@ Vous devriez voir le nom d'un dossier de type :
 En branchant votre appareil à un ordinateur, vous pourrez donc retrouver vos traces dans ce dossier
 
 2. Comment exporter les coord. GPX du téléphone portable au PC ? 
-A l'inverse, pour charger des données vecteur depuis Qgis, vers Oruxmaps, il suffit dans un premier temps de convertir la donnée Qgis au format KML
+A l'inverse, pour charger des données vecteur depuis QGIS, vers Oruxmaps, il suffit dans un premier temps de convertir la donnée Qgis au format KML
 en faisant clic-droit sur la couche puis "Enregistrer sous". Vous pourrez ensuite changer le format de fichier vers kml.
 
 Ensuite, il suffit de copier votre fichier dans votre appareil. Là, vous pourrez l'importer grâce à l'outil "trace/route" qui 
 permet de charger un fichier kml ou gpx.
 
 3. Quelle(s) extension(s) pour les coordonnées GPS (GPX et/ou kml) ? 
-Les fichiers KML sont possiblement plus simples à lire sur Qgis. Mais les deux font l'affaire. 
+Les fichiers KML sont possiblement plus simples à lire sur QGIS. Mais les deux font l'affaire. 
 Toutefois, pour toute manipulation ultérieure ne dépendant plus d'Oruxmaps, préférer le format geopackage.
 
 4. La NS est-elle exploitable (complète et compréhensible) ? 
 Je veux bien regarder
 5. Comment consolider plusieurs fichiers gpx en une seule couche kml -> 
-Dans l'onglet "vecteur" dans la barre de menus de qgis, et dans la boite à outils, se frouve l'outil "Fusion de couches vecteurs". Celui-ci permet de regrouper 
+Dans l'onglet "vecteur" dans la barre de menus de QGIS, et dans la boite à outils, se frouve l'outil "Fusion de couches vecteurs". Celui-ci permet de regrouper 
 en un seul fichier, plusieurs sources de données vectorielles, même dans des formats différents. 
 
 6. Comment positionner un point théorique de relevé terrain (ex crotte de loup) 

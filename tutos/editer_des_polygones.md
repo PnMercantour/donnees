@@ -18,7 +18,7 @@ Attention, une fois une modification enregistrée, il n'est pas possible de reven
 <!--Ce tutorial détaille les étapes permettant de configurer l'accès au catalogue de données WMS/WFS du Parc national du Mercantour.
 Il exige d'avoir reçu au préalable un fichier zip du service informatique du Parc. --> 
 Dans ce tuto, on crée une couche au format GeoPackage. Ce format ouvert et non-propriétaire présente l'avantage de ne contenir qu'un fichier (contrairement au shapefile) 
-et s'ouvre facilement avec Qgis. 
+et s'ouvre facilement avec QGIS. 
 
  
  

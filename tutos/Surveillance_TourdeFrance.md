@@ -1,10 +1,10 @@
-# Le projet Qgis
+# Le projet QGIS
 
 Ce tutorial explique l'utilisation du projet Qgis destiné à organiser la surveillance pendant le passage du Tour de France au col de la Bonette.
 
 ## où trouver le projet
 
-Une fois Qgis ouvert, vous pourrez trouver ce projet de la même façon que pour les autres projets stockés sur la base de données du Parc.
+Une fois QGIS ouvert, vous pourrez trouver ce projet de la même façon que pour les autres projets stockés sur la base de données du Parc.
 
 - Dans la barre de menu en haut à gauche Cliquer sur 
 - "Projet > Ouvrir depuis > PostgreSQL" 
@@ -51,7 +51,7 @@ NB:
 Si vous ne trouvez pas une entité que vous avez pourtant créée, il est possible que la table d'attribut d'une couche ne montre pas toutes les entités.
 En bas à droite de de la fenêtre de la table d'attributs se trouve une petite icône avec un menu déroulant "Ne montrer que les entités visibles sur la carte", 
 vous pouvez choisir à la place l'option "Montrer toutes les entités".
-Cette option n'est pas activée par défaut pour éviter de planter Qgis au cas où la table d'attributs serait trop grande pour la mémoire de votre machine. 
+Cette option n'est pas activée par défaut pour éviter de planter QGIS au cas où la table d'attributs serait trop grande pour la mémoire de votre machine. 
 
 
 Pensez à bien entrer votre nom dans "agent", afin qu'il soit possible de vous contacter en cas d'informations contradictoires. 

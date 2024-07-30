@@ -15,7 +15,7 @@ Pour y avoir accès, le plus simple est de faire un clic clic droit sur la batte
 <img src="./img/panneaux_barretoutils.png" alt= “”  width="40%"> 
 
 
-Dans le panneau qui s'affiche, il est possible de chercher automatiquement parmis tous les outils disponibles dans Qgis celui qui s'appelle "Empaquetage de couche". 
+Dans le panneau qui s'affiche, il est possible de chercher automatiquement parmis tous les outils disponibles dans QGIS celui qui s'appelle "Empaquetage de couche". 
 
 Là, il suffit de choisir toutes les couches du projet et de les enregistrer dans un geopackage avec leurs styles et symbologies associées. 
 
@@ -38,7 +38,7 @@ On pourra le faire à l'onglet Couche:
 <img src="./img/creer_gpkg.png" alt= “”  width="40%">  -->
 
 
-Qgis n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
+QGIS n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
 Pour cela on peut passer par le gestionnaire de sources de données (Ctrl + l) 
 > Base de données > Gestionnaire de source de données
 
