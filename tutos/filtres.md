@@ -10,12 +10,15 @@ Ils présentent l'avantage d'être appliqués au niveau du serveur, et donc limiten
 
 Dans certain projets, ou au moment de charger certaines couches, vous pouvez voir cette icône: 
 
+<img src="./img/symbole_filtre.png" alt= “” width="50%" height="50%"> 
+
+
+Elle signifique que la couche associée est filtrée. 
+
+En cliquant dessus, le constructeur d'expression de filtrage apparait. 
 
 <img src="./img/filtre_couche.png" alt= “” width="50%" height="50%"> 
 
-Elle signifique que la couche associée est filtre. 
-
-En cliquant dessus, le constructeur d'expression de filtrage apparait. 
 Effacer l'expression puis cliquer sur "OK" revient à enlever le filtre.
 
 
@@ -38,6 +41,10 @@ Par exemple si on veut toutes les observations datant au moins de 2022, ainsi qu
 
 > "date_min">2022 OR "cd_ref"=4257
 
+De cette façon on peut combiner des conditions pour aboutir à des filtres complexes. 
+par exemple pour filtrer pour n'avoir que les cd_nom correspondant à une liste donnée : 
+
+> "cd_nom" IN (60313,60295,60418,60427,60400,79305,79301)
 
 
 
