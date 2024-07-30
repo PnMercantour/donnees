@@ -2,16 +2,17 @@
 
 ## Explications
 
-Dans une couche au format [vecteur](./README.md#vecteur), il est possile de faire des recherches selon différents paramètres (exemple: "tous les polygones plus petits qu'1 ha", "toutes les communes commençant par la lettre 'C' " , etc...).
+Dans une couche au format [vecteur](./README.md#vecteur), il est possible de faire des recherches selon différents paramètres (exemple: "tous les polygones plus petits qu'1 ha", "toutes les communes commençant par la lettre 'C' " , etc...).
 
-Nous verrons ici comment utiliser ces recherches, et une fois la sélection réalisée comment visualiser, enregistrer ou exporter ces résultats. 
+Nous verrons ici comment appliquer ces conditions et une fois la sélection réalisée comment visualiser, enregistrer ou exporter ces résultats. 
  
  
 ## Pas à pas
 
-On retrouve l'éditeur d'expression à différents endroits de Qgis dont notablement:
+On retrouve l'éditeur d'expression à différents endroits de QGis dont notablement:
 - la sélection par expression
 - la calculatrice de champs
+- _utilisation avancée_ : automatisation de valeurs prises pour des paramètres spécifiques (exemple: taille de police conditionnée à l'échelle de la carte)
 
 
 
@@ -24,7 +25,7 @@ L'outil  "Selection par expression" peut se trouver à plusieurs endroits:
  
 Il est représenté par ce symbole:  <img src="./img/selection_expression.png" alt= “” width="15%" height="15%"> 
 
-Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de qgis. 
+Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de QGis. 
 
 ### L'éditeur d'expression
 
@@ -61,7 +62,7 @@ En cliquant sur "Echantillon de 10" on affichera 10 valeurs possibles que peut p
 
 Avec ces outils, on peut déjà construire de nombreuses expressions correspondant à des conditions simples.
 
-### Outils de sélections plus avancés
+### Outils de expressions plus avancés
 
 En utilisant l'éditeur d'expression il est aussi possible de construire des expressions plus complexes. 
 
@@ -108,12 +109,15 @@ _Le fonctionnement est similaire à celui d'Excel: 22 sera considéré comme un 
 
 Il est possible de convertir de type "à la volée" dans les cas triviaux avec les fonctions de conversion
 
-> 
-> Permettra
+
+## Enregistrer une sélection
+
+### Dans une nouvelle couche
+
+Une fois la sélection réalisée en passant par l'éditeur d'expression, il est possible de créer simplement une nouvelle couche ne contenant que les entités sélectionnées en réalisant un clic droit sur la  couche où contenant les entités sélectionnées, puis 
 
 
-
-
+<!--
 
 ### Créer une nouvelle couche. 
 - Dans la barre des menus, Cliquer sur "Couche > Créer une couche > Nouvelle couche GeoPackage"
@@ -194,4 +198,5 @@ _On peut aussi activer le mode édition depuis la barre d'outils de la table att
 
 
 
+-->
 

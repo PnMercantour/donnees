@@ -1,19 +1,26 @@
  # Table des matières des tutos
  
- Le dossier [tutos](./) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du parc, et provenant de sources externes. Ainsi qu'un glossaire des 
-termes utilisés en géomatique ou en lien avec ce dépôt, ainsi qu'une F.A.Q. qui a vocation à intégrer vos interrogations.
+ [Ce dossier](./) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du parc, et provenant de sources externes. Ainsi qu'un glossaire des 
+termes utilisés en géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations.
 
  |Nom|Description|
  |:--:|:--:|
  |[ajout_fond_de_carte_wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms](#wms)|
- |[bonnes_pratiques](./bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur Qgis|
- |[edition_de_polygones](./edition_de_polygones.md)| Édition de données vecteurs pour modifier/ajouter des entités ou attributs|
+ |[ajout_fond_SCAN25](./ajout_fond_SCAN25.md)| Ajouter le fond SCAN25 à partir d'un [service wms](#wms)|
+ |[bonnes_pratiques](./bonnes_pratiques.md)|Rappel des bonnes pratiques pour le travail informatique et sur QGIS|
+ |[editer_des_polygones](./editer_des_polygones.md)| Édition de données vecteurs pour modifier/ajouter des entités ou attributs|
+ |[empaqueter_un_projet](./empaqueter_un_projet.md)| Enregistrer la symbologie d'un projet et l'ensemble des couches associées dans un seul fichier|
  |[FAQ](./FAQ.md)| Solutions aux questions et problèmes les plus fréquents |
+ |[filtres](./filtres.md)| Comprendre l'utilisation des filtres pour ne charger qu'une partie des entités d'une couche|
+ |[generer_un_atlas](./generer_un_atlas.md)| Générer un ensemble de cartes à partir d'une couche|
  |[git](./git.md)|Présentation et explication de ce qu'est "git"|
- |[installation_certificats_base_de_donnees](./installation_certificats_base_de_donnees.md)|Paramétrage de l'accès à la base de données depuis Qgis|
+ |[glossaire](./README.md#glossaire)|Glossaire des principaux termes de géomatique utilisés sur ce git|
+ |[installation_certificats_base_de_donnees](./installer_certificats_base_de_donnees.md)|Paramétrage de l'accès à la base de données depuis QGIS|
  |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms (SCAN25, orthophoto....) |
- |[mon_premier_projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet Qgis existant, son enregistrement, sa modification et ses exports|
- |[glossaire](./README.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
+ |[mon_premier_projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet QGIS existant, son enregistrement, sa modification et ses exports|
+ |[premier_paramétrage](./premier_parametrage.md)|Configuration de base de QGIS permettant d'en assurer le bon fonctionnement|
+ |[ressources_geographiques_wms](./ressources_geographiques_wms.md)|Liste et description des ressources disponibles au format wms.|
+ 
 
 
 
@@ -40,14 +47,13 @@ Une carte choroplèthe est une carte en aplat de couleurs. Bien qu'elles soient 
 des ratios (proportions ou pourcentages).
 
 ### Couche
-Dans un projet Qgis, une couche est une représentation de données spatialisée. Elle contient le lien vers le fichier contenant la données, ainsi que les informations permettant sa représentation (notamment sa symbologie).
+Dans un projet QGIS, une couche est une représentation de données spatialisée. Elle contient le lien vers le fichier contenant la données, ainsi que les informations permettant sa représentation (notamment sa symbologie).
 Une couche _n'est pas_ en elle même de la donnée, mais le lien vers une donnée. 
 
-On peut toutefois, depuis Qgis éditer et changer les données vers lesquelles une couche renvoie (par exemple en activant l'outil "Éditer").
+On peut toutefois, depuis QGIS éditer et changer les données vers lesquelles une couche renvoie (par exemple en activant l'outil "Éditer").
 
 ### Dépôt (Repository)
-Un dépôt git est un entrepôt virtuel, qui permet d'enregistrer et de maintenir facilement du code et de la documentation, 
-notamment par la gestion de versions.
+Un dépôt git est un entrepôt virtuel, qui permet d'enregistrer et de maintenir facilement du code et de la documentation notamment par la gestion de versions.
 
 ### Echelle (Scale)
 L'échelle d'une carte est le rapport de taille entre la distance réelle et la distance sur la carte. Quand la carte est sur un support à taille fixe (i.e. papier), 
@@ -93,8 +99,8 @@ En cartographie, une projection permet de représenter la Terre (objet en 3 dime
 
 
 ### Projet
-Un projet Qgis contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements. 
-En tant que tel, un projet Qgis ne contient **pas** de données, mais des liens (ou chemins) vers des données, représentées sous formes de couches. 
+Un projet QGIS contient un ensemble de couches, les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements. 
+En tant que tel, un projet QGIS ne contient **pas** de données, mais des liens (ou chemins) vers des données, représentées sous formes de couches. 
 
 
 ### Raster
@@ -115,8 +121,8 @@ Dans la base de données du parc, un schéma spécifique est dédié à chaque p
 Une carte en symbole proportionnels permet de représenter des différences de quantité (ou stock) entre les propriétés de plusieurs objets géographiques.
 
 ### Symbologie
-Dans Qgis, la symbologie est l'ensemble des règles qui permet représenter les entités appartenant à une couche. 
-A moins qu'elle ne soit explicitement enregistrée dans un geopackage, elle n'est conservée que dans le projet Qgis. 
+Dans QGIS, la symbologie est l'ensemble des règles qui permet représenter les entités appartenant à une couche. 
+A moins qu'elle ne soit explicitement enregistrée dans un geopackage, elle n'est conservée que dans le projet QGIS. 
 
 
 ### Table attributaire
@@ -128,7 +134,7 @@ La table attributaire contient l'ensemble des données, spatiales ou non, liées
 En géomatique, un fichier vecteur est l'un des deux modes principaux de représentation des données spatiales. 
 Il est basé sur l'utilisation de coordonnées qui permettent de localiser des points définissant la géométrie de chaque entité.
 
-Dans Qgis un vecteur peut contenir l'un des types de géométrie suivante: 
+Dans QGIS un vecteur peut contenir l'un des types de géométrie suivante: 
 - des points, 
 - des lignes, 
 - des polygones. 

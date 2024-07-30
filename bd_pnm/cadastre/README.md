@@ -1,6 +1,6 @@
  # _Cadastre_
  ## Description
-Ce schéma contient les données issues du cadastre librement accessibles - mises en forme pour faciliter leur consultation. Les parcelles sont issues de https://cadastre.data.gouv.fr/data/etalab-cadastre/2024-01-01/geojson/departements/
+Ce schéma contient les données du cadastre librement accessibles mises en forme pour faciliter leur consultation. Les parcelles sont issues de https://cadastre.data.gouv.fr/data/etalab-cadastre/2024-01-01/geojson/departements/
 et le fichier des personnes morales de https://www.data.gouv.fr/fr/datasets/fichiers-des-locaux-et-des-parcelles-des-personnes-morales/ .
 Les données utilisées sont issues de l'édition 2023.
 
@@ -19,20 +19,18 @@ Table temporaire qui contient
 --> 
 
  ## Utilisation des projets Qgis
-_Description du projet Qgis accessible par défaut dans le projet._
-
 
 ### Projet Cadastre
-Ce projet permet de consulter les tracés des parcelles, de vérifier qu'elles appartiennent à une personne privée ou morale et le cas échéant, de visualiser son propriétaire.
+Ce projet permet de consulter les tracés des parcelles, de vérifier si elles appartiennent à une personne privée ou morale et le cas échéant, de visualiser son propriétaire.
 Il n'a vocation qu'à être consulté.
 
 Ce projet s'affiche différemment selon le niveau de zoom. De loin ce sont les communes qui s'affichent en couleurs nettement différentes. 
 - A niveau moyen on peut voir les sections cadastrales sans pour autant qu'elles soient nommées. 
 - En continuant le zoom, les couleurs distinguant les communes sont remplacées par la catégorisation des parcelles selon qu'elles appartiennent à une personne morale ou privée. Les sections cadastrales sont alors étiquetées selon leur lettre. 
 - A haut niveau de zoom ( min 1:15 000) les identifiants de parcelles s'affichent.
-- A Très haut niveau de zoom (min 1:4000) les propriétaires de chaque parcelle s'affichent là où ces parcelles appartiennent à des personnes morales. 
+- A très haut niveau de zoom (min 1:4000) les propriétaires de chaque parcelle s'affichent là où ces parcelles appartiennent à des personnes morales. 
 
-Il est aussi possible de chercher directement une parcelle par id en réalisant une "Sélection par expression"
+Il est aussi possible de chercher directement une parcelle par id en réalisant une [Sélection par expression](/tutos/editeur_expression.md)
 
 ### Projet Autorisations Travaux
 Ce projet permet de consulter les identifiants des travaux autorisés pour chaque parcelle. Il n'a pas vocation à être modifié directement pour l'instant. 

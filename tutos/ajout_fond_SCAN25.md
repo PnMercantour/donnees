@@ -38,7 +38,14 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascul
 
 -  Puis cliquer sur OK. 
 
-- Cette couche est maintenant disponible pour être chargée dans un projet comme décrit dans les instructions ci-dessous.
+
+- Un nouvel onglet s'ouvre automatiquement vous permettant de choisir entre plusieurs versions du scan 25, choisir celui projeté en Lambert-93 (EPSG:2154)
+
+<img src="./img/selection_scan25_wms.png" alt= “” width="50%" height="50%"> 
+
+- Cliquer sur "Ajouter" en bas à droite pour ajouter cette couche WMS au projet actuel.
+
+- Cette couche est maintenant disponible pour être chargée dans tous vos projets.
 
 
 

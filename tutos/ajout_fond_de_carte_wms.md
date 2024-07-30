@@ -6,13 +6,9 @@ Les fonds de carte qu'on utilise souvent (ex: SCAN 25, orthophotos) sont le plus
 Ce format présente des caractéristiques particulières. Il ne s'agit pas de fichiers stockés dans votre machine, 
 mais plutôt d'un moyen d'accéder à des fichiers qui se trouvent sur un serveur distant, au moyen d'un url et de paramètres de connexion.
 A chaque déplacement de la carte dans le projet Qgis, une requête est envoyée au serveur, qui va répondre en donnant accès aux données dans la région concernée.
-Cette méthode d'accés à la donnée a l'avantage de ne pas surcharger les machines -  puisque ce sont souvent des données volumineuses -  et de 
-de ne charger que la portion du territoire qui est concernée par le projet. 
+Cette méthode d'accés à la donnée a l'avantage de ne pas surcharger les machines -  puisque ce sont souvent des données volumineuses -  en chargeant seulement la portion du territoire qui est concernée par le projet. 
 
-Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pouvoir
-y avoir accès facilement par la suite. Pour cela, on va utiliser un fichier .xml contenant une liste d'adresse de serveurs, ainsi que les options
-permettant de s'y connecter. 
-On verra aussi comment ajouter manuellement des WMS issus d'autres sources. 
+Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pouvoir y avoir accès facilement par la suite. Pour cela, on va utiliser un fichier .xml contenant une liste d'adresse de serveurs, ainsi que les options permettant de s'y connecter. On verra aussi comment ajouter manuellement des WMS issus d'autres sources. 
 
 
 ## Pas à pas

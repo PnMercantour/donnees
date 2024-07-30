@@ -53,7 +53,7 @@ et s'ouvre facilement avec Qgis.
 - ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée".
 
 
-- visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
+- On peut afficher ces outils (s'ils n'apparaissent pas)  en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
 
 <img src="./img/barre_doutils_numerisation.png" alt= “” width="50%" height="50%"> 
 
@@ -93,6 +93,13 @@ quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie.
 En combinant le déplacement, la modification, et la création de sommets, il est possible de changer complètement la forme d'un polygone.
 
 _Tant que les modifications n'ont pas été enregistrées, elles ne sont pas définitives_
+
+
+### Supprimer une entité
+
+- Une fois dans le mode édition, il est aussi possible de supprimer complètement une entité en la sélectionnant avec l'outil de sélection, puis en appuyant sur la touche suppr.
+<img src="./img/selection_entite.png" alt= “” width="50%" height="50%"> 
+
 
 
 ### Modifier les attributs d'une entité

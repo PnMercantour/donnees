@@ -1,7 +1,7 @@
-# Les Filtres dans Qgis
+# Les Filtres dans QGIS
 
 ## Explication
-Les filtres sont des outils permettant de limiter le nombre d'entités chargée dans QGis selon des critères liées à la table d'attribut. 
+Les filtres sont des outils permettant de limiter le nombre d'entités chargée dans QGIS selon des critères liées à la table d'attribut. 
 Ils présentent l'avantage d'être appliqués au niveau du serveur, et donc limitent la charge mise sur votre machine.
 
 
