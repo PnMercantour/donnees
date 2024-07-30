@@ -16,7 +16,6 @@ termes utilisés en géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a 
  |[git](./git.md)|Présentation et explication de ce qu'est "git"|
  |[glossaire](./README.md#glossaire)|Glossaire des principaux termes de géomatique utilisés sur ce git|
  |[installation_certificats_base_de_donnees](./installer_certificats_base_de_donnees.md)|Paramétrage de l'accès à la base de données depuis QGIS|
- |[liste_ressources_geographiques_wms](./liste_ressources_geographiques_wms.md)|Liste des ressources accessibles au format wms (SCAN25, orthophoto....) |
  |[mon_premier_projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet QGIS existant, son enregistrement, sa modification et ses exports|
  |[premier_paramétrage](./premier_parametrage.md)|Configuration de base de QGIS permettant d'en assurer le bon fonctionnement|
  |[ressources_geographiques_wms](./ressources_geographiques_wms.md)|Liste et description des ressources disponibles au format wms.|
