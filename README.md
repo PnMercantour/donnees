@@ -12,12 +12,12 @@ utilisée par les agents du parc. Ainsi que des tutoriels et ressources facilita
 # Ce dépôt
 
 
-Ce dépôt est composé de deux parties principales qui vous seront utiles.
+Ce dépôt est composé de deux parties principales qui vous seront utiles. [bd_pnm](#bd_pnm) contient les descriptions des schémas et données de la base de données du parc, [tutos](#tutos) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
  ## [bd_pnm](./bd_pnm)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 
-ainsi que les _projets qgis_ associés et les requêtes sql d'intérêt.
+ainsi que les [_projets qgis_]((./tutos/README.md#projet ) associés et les requêtes sql d'intérêt.
 
 Le dossier [bn_pnm](./bd_pnm) contient un dossier par [schéma](./tutos/README.md#schema). Chaque dossier-schéma contient:
  - un fichier README.md détaillant le contenu et l'utilité du schéma
@@ -32,13 +32,19 @@ _les noms des schémas ci-dessous sont des liens cliquables_
 
  |Schéma|Description des données|
  |:--:|:--:|
+ |[admin_express](./bd_pnm/admin_express)|Données concernant les limites administratives (produites par l'IGN)<!-- à compléter -->|
  |[ag_pasto](./bd_pnm/ag_pasto)|Agropastoralisme <!-- à compléter -->|
+ |[bd_lacs](./bd_pnm/bd_lacs)|Données concernant les lacs<!-- à compléter -->|
+ |[cadastre](./bd_pnm/cadastre)|Données publiques issues cadastre<!-- à compléter -->|
  |[charte](./bd_pnm/charte)|Données nécessaires à la réalisation de la carte des vocations<!-- à compléter -->|
+|[foret](./bd_pnm/foret)|Données publiques issues cadastre<!-- à compléter -->|
  |[geonature_synthese](./bd_pnm/geonature_synthese)|Observations géonature, détaillées <br > et agrégées selon différents critères|
  |[geotrek](./bd_pnm/geotrek)| Sentiers du parc|
  |[inpn](./bd_pnm/inpn)| Limites de parcs nationaux, régionaux, et réserves naturelles|
  |[limites](./bd_pnm/limites)| Limites du parc et administratives|
+ |[rice](./bd_pnm/rice)| Réserve Internationale de Ciel Etoilé|
  |[survol](./bd_pnm/survol)| Zones sensibles en lien avec les autorisations de survol|
+ |[tourisme](./bd_pnm/tourisme)| Tourisme et fréquentation du parc (compteurs..)|
 
 
  ## [tutos](./tutos)
