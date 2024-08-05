@@ -3,110 +3,110 @@
 
 ## Explications
 
-Dans une couche au format [vecteur](./README.md#vecteur), il est possile de modifier ou d'ajouter des entités. 
-Qgis permet de le faire en passant par le mode édition. 
-Nous verrons ici comment créer une nouvelle couche vide, puis y créer des entités. Une fois les
-entités créées, on peut facilement en modifier la géométrie ou les attributs. 
+Dans une couche au format [vecteur](./README.md#vecteur), il est possile de modifier ou d'ajouter des entitÃ©s. 
+Qgis permet de le faire en passant par le mode Ã©dition. 
+Nous verrons ici comment crÃ©er une nouvelle couche vide, puis y crÃ©er des entitÃ©s. Une fois les
+entitÃ©s crÃ©Ã©es, on peut facilement en modifier la gÃ©omÃ©trie ou les attributs. 
 
-Il n'est possible de créer/modifier des entités que dans des couches dont vous êtes propriétaires. C'est-à-dire ou
-bien des couches issues de fichiers enregistrés localement dans votre ordinateur, ou bien d'un serveur ou vous êtes identifié·e
-et disposez des droits de création/modification. 
+Il n'est possible de crÃ©er/modifier des entitÃ©s que dans des couches dont vous Ãªtes propriÃ©taires. C'est-Ã -dire ou
+bien des couches issues de fichiers enregistrÃ©s localement dans votre ordinateur, ou bien d'un serveur ou vous Ãªtes identifiÃ©Â·e
+et disposez des droits de crÃ©ation/modification. 
 
 
-Attention, une fois une modification enregistrée, il n'est pas possible de revenir en arrière.
+Attention, une fois une modification enregistrÃ©e, il n'est pas possible de revenir en arriÃ¨re.
 
-<!--Ce tutorial détaille les étapes permettant de configurer l'accès au catalogue de données WMS/WFS du Parc national du Mercantour.
-Il exige d'avoir reçu au préalable un fichier zip du service informatique du Parc. --> 
-Dans ce tuto, on crée une couche au format GeoPackage. Ce format ouvert et non-propriétaire présente l'avantage de ne contenir qu'un fichier (contrairement au shapefile) 
+<!--Ce tutorial dÃ©taille les Ã©tapes permettant de configurer l'accÃ¨s au catalogue de donnÃ©es WMS/WFS du Parc national du Mercantour.
+Il exige d'avoir reÃ§u au prÃ©alable un fichier zip du service informatique du Parc. --> 
+Dans ce tuto, on crÃ©e une couche au format GeoPackage. Ce format ouvert et non-propriÃ©taire prÃ©sente l'avantage de ne contenir qu'un fichier (contrairement au shapefile) 
 et s'ouvre facilement avec QGIS. 
 
  
  
-## Pas à pas
+## Pas Ã  pas
 
-### Créer une nouvelle couche. 
-- Dans la barre des menus, Cliquer sur "Couche > Créer une couche > Nouvelle couche GeoPackage"
-<img src="./img/creer_couche.png" alt= “” width="50%" height="50%"> 
+### CrÃ©er une nouvelle couche. 
+- Dans la barre des menus, Cliquer sur "Couche > CrÃ©er une couche > Nouvelle couche GeoPackage"
+<img src="./img/creer_couche.png" alt= â€œâ€ width="50%" height="50%"> 
 
-- Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
-<img src="./img/pitits_points.png" alt= “” width="30%" height="30%"> 
+- Dans la fenÃªtre qui s'affiche, cliquer sur l'icÃ´ne "..." pour renseigner l'emplacement oÃ¹ le fichier sera enregistrÃ©.
+<img src="./img/pitits_points.png" alt= â€œâ€ width="30%" height="30%"> 
 
-- Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
-- Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"
-- Si nécessaire, ajouter des champs. Il sera toujours possible d'en ajouter plus tard. 
+- Renseigner le type de gÃ©omÃ©trie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
+- Ne pas oublier d'indiquer la projection si elle est demandÃ©e: "EPSG:2154 - RGF v1 / Lambert-93"
+- Si nÃ©cessaire, ajouter des champs. Il sera toujours possible d'en ajouter plus tard. 
 
 
-### Activer le mode édition
+### Activer le mode Ã©dition
 
-- Activer le mode édition (2 façons possibles).
+- Activer le mode Ã©dition (2 faÃ§ons possibles).
 
-    Méthode 1 (_Recommandé_):  Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
-<img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
+    MÃ©thode 1 (_RecommandÃ©_):  SÃ©lectionner la couche Ã  modifier, puis cliquer sur l'icÃ´ne de crayon dans la barre d'outils en haut de l'Ã©cran  
+<img src="./img/mode_edition.png" alt= â€œâ€ width="50%" height="50%"> 
 	
-    Méthode 2 :Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
-<img src="./img/modeedition_parcouche.png" alt= “” width="50%" height="50%"> 
+    MÃ©thode 2 :Cliquer droit sur la couche Ã  modifier, puis en cliquant sur l'icÃ´ne crayon "Basculer en mode Ã©dition"
+<img src="./img/modeedition_parcouche.png" alt= â€œâ€ width="50%" height="50%"> 
 
 - Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..
-<img src="./img/couche_en_cours_edition.png" alt= “” width="50%" height="50%"> 
+<img src="./img/couche_en_cours_edition.png" alt= â€œâ€ width="50%" height="50%"> 
 
 
-- ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée".
+- ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupÃ©s dans les barres d'outils "NumÃ©risation" et "NumÃ©risation avancÃ©e".
 
 
-- On peut afficher ces outils (s'ils n'apparaissent pas)  en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
+- On peut afficher ces outils (s'ils n'apparaissent pas)  en faisant un clic droit sur une des barres d'outils en haut de l'Ã©cran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
 
-<img src="./img/barre_doutils_numerisation.png" alt= “” width="50%" height="50%"> 
+<img src="./img/barre_doutils_numerisation.png" alt= â€œâ€ width="50%" height="50%"> 
 
-_A partir de là, différentes opérations sont disponibles, nous ne décrirons que les plus simples._
+_A partir de lÃ , diffÃ©rentes opÃ©rations sont disponibles, nous ne dÃ©crirons que les plus simples._
 
-### Créer une nouvelle entité
+### CrÃ©er une nouvelle entitÃ©
 
-- Proche de l'icone de crayon, dans la barre d'outils, se trouve l'icône "Ajouter une entité"
+- Proche de l'icone de crayon, dans la barre d'outils, se trouve l'icÃ´ne "Ajouter une entitÃ©"
 
-<img src="./img/edition_ajouter_une_entite.png" alt= “” width="50%" height="50%"> 
+<img src="./img/edition_ajouter_une_entite.png" alt= â€œâ€ width="50%" height="50%"> 
 
-- Après avoir cliqué dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
-	- une entité par point
+- AprÃ¨s avoir cliquÃ© dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront, suivant le type de gÃ©omÃ©trie que votre couche contient
+	- une entitÃ© par point
 	- une partie de ligne ou de polygone
-- Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entité sans en rajouter de nouveau, _donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_.
-- A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entité. Dans la plupart des cas, vous n'êtes pas obligé d'entrer
+- Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entitÃ© sans en rajouter de nouveau, _donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_.
+- A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entitÃ©. Dans la plupart des cas, vous n'Ãªtes pas obligÃ© d'entrer
 quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie. 
 
-<img src="./img/nouvelle_entite.png" alt= “” width="50%" height="50%"> 
+<img src="./img/nouvelle_entite.png" alt= â€œâ€ width="50%" height="50%"> 
 
 
 
-### Modifier la géométrie d'une entité existante
+### Modifier la gÃ©omÃ©trie d'une entitÃ© existante
 
-- L'outil sommet, disponible dans la barre d'outil numérisation à droite de l'outil d'ajout d'entité permet d'ajouter, supprimer, ou créer de nouveaux sommets.
-<img src="./img/outil_sommet.png" alt= “” width="50%" height="50%"> 
-- Une fois l'outil sommet sélectionné, on peut sélectionner n'importe quel sommet en cliquant dessus. Les sommets de chaque polygone sont visibles sous la forme de petits cercles rouges
+- L'outil sommet, disponible dans la barre d'outil numÃ©risation Ã  droite de l'outil d'ajout d'entitÃ© permet d'ajouter, supprimer, ou crÃ©er de nouveaux sommets.
+<img src="./img/outil_sommet.png" alt= â€œâ€ width="50%" height="50%"> 
+- Une fois l'outil sommet sÃ©lectionnÃ©, on peut sÃ©lectionner n'importe quel sommet en cliquant dessus. Les sommets de chaque polygone sont visibles sous la forme de petits cercles rouges
 
-<img src="./img/edition_modif_de_sommets.png" alt= “” width="50%" height="50%"> 
+<img src="./img/edition_modif_de_sommets.png" alt= â€œâ€ width="50%" height="50%"> 
 
-- Après avoir sélectionné un sommet avec l'outil sommet, il est possible de le supprimer en appuyant sur la touche "Suppr" du clavier. 
-- On peut aussi le déplacer, en cliquant à nouveau avec le clic gauche à un autre endroit après avoir sélectionné un sommet. 
+- AprÃ¨s avoir sÃ©lectionnÃ© un sommet avec l'outil sommet, il est possible de le supprimer en appuyant sur la touche "Suppr" du clavier. 
+- On peut aussi le dÃ©placer, en cliquant Ã  nouveau avec le clic gauche Ã  un autre endroit aprÃ¨s avoir sÃ©lectionnÃ© un sommet. 
 
-- Enfin, il est possible de créer de nouveaux sommets dans un polygone en cliquant très précisément sur la croix qui apparait en faisant passer le curseur entre deux sommets. 
-<img src="./img/edition_nouveau_sommet.png" alt= “” width="50%" height="50%"> 
+- Enfin, il est possible de crÃ©er de nouveaux sommets dans un polygone en cliquant trÃ¨s prÃ©cisÃ©ment sur la croix qui apparait en faisant passer le curseur entre deux sommets. 
+<img src="./img/edition_nouveau_sommet.png" alt= â€œâ€ width="50%" height="50%"> 
 
-En combinant le déplacement, la modification, et la création de sommets, il est possible de changer complètement la forme d'un polygone.
+En combinant le dÃ©placement, la modification, et la crÃ©ation de sommets, il est possible de changer complÃ¨tement la forme d'un polygone.
 
-_Tant que les modifications n'ont pas été enregistrées, elles ne sont pas définitives_
-
-
-### Supprimer une entité
-
-- Une fois dans le mode édition, il est aussi possible de supprimer complètement une entité en la sélectionnant avec l'outil de sélection, puis en appuyant sur la touche suppr.
-<img src="./img/selection_entite.png" alt= “” width="50%" height="50%"> 
+_Tant que les modifications n'ont pas Ã©tÃ© enregistrÃ©es, elles ne sont pas dÃ©finitives_
 
 
+### Supprimer une entitÃ©
 
-### Modifier les attributs d'une entité
+- Une fois dans le mode Ã©dition, il est aussi possible de supprimer complÃ¨tement une entitÃ© en la sÃ©lectionnant avec l'outil de sÃ©lection, puis en appuyant sur la touche suppr.
+<img src="./img/selection_entite.png" alt= â€œâ€ width="50%" height="50%"> 
 
-- Une fois activé l'outil édition, il est possible d'éditer à la main les cases de la table attributaire. 
-_On peut aussi activer le mode édition depuis la barre d'outils de la table attributaire._
-<img src="./img/mode_tableattributaire.png" alt= “” width="50%" height="50%"> 
+
+
+### Modifier les attributs d'une entitÃ©
+
+- Une fois activÃ© l'outil Ã©dition, il est possible d'Ã©diter Ã  la main les cases de la table attributaire. 
+_On peut aussi activer le mode Ã©dition depuis la barre d'outils de la table attributaire._
+<img src="./img/mode_tableattributaire.png" alt= â€œâ€ width="50%" height="50%"> 
 
 
 
