@@ -1,7 +1,5 @@
-_Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
-
-------------
  # ag_pasto
+
  ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_
 

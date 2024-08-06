@@ -1,5 +1,5 @@
-------------
- # _RICE_
+ # RICE
+
  ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
 Ce schéma contient les informations en lien avec la Réserve Intégrale de Ciel Étoilé.
