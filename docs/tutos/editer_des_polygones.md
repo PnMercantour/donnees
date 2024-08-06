@@ -26,7 +26,7 @@ et s'ouvre facilement avec QGIS.
 
 ### Créer une nouvelle couche. 
 - Dans la barre des menus, Cliquer sur "Couche > Créer une couche > Nouvelle couche GeoPackage"
-![img](./img/creer_couche.png)
+![](./img/creer_couche.png)
 
 - Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
 <img src="./img/pitits_points.png" alt= “” width="30%" height="30%"> 
