@@ -1,7 +1,3 @@
-# _Exemple de format pour la documentation_
-_Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
-
-------------
  # Tourisme
 
  ## Description
