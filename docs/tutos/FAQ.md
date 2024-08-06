@@ -3,7 +3,7 @@
 _Vous trouverez dans ce fichier une liste de problèmes et questions fréquentes avec des solutions simples._
 
 _En cliquant en haut à droite de cette fenêtre vous avez accès à la table des matières pour chercher directement la question qui vous intéresse_
-<img src="./img/table_des_matieres_git_page.png" alt= “” width="50%" height="50%"> 
+![](./img/table_des_matieres_git_page.png)
 
 
 
@@ -80,7 +80,7 @@ Un projet QGIS ne stocke pas les données en dur, mais uniquement les chemins ve
 Par conséquent, si des données ont été supprimées ou déplacées, QGIS ne les "trouve plus", et renvoie 
 un message d'erreur  à l'ouverture d'un projet utilisant ces données.
 
-<img src="./img/couche_introuvable_explication.png" alt= “” width="50%" height="50%"> 
+![](./img/couche_introuvable_explication.png)
 
 - S'il s'agissait de données enregistrées localement sur la machine:
 il suffit de sélectionner la couche manquante dans cette fenêtre,
@@ -90,19 +90,19 @@ puis de cliquer sur "Parcourir" et de montrer à QGIS où se situent les donnée
  - S'il s'agissait de données enregistrées sur le serveur:
 le plus simple est de cliquer sur "Conserver les couches inutilisables", puis de cliquer droit sur la couche introuvable et de choisir "Réparer la source des données".
 
-<img src="./img/reparer_la_source_des_donnees.png" alt= “” width="50%" height="50%"> 
+![](./img/reparer_la_source_des_donnees.png)
 
 
 
 Une toute petite fenêtre s'affiche, vous pouvez l'aggrandir. En bas vous trouverez PostgreSQL, puis "Service projets" et les schémas et tables contenant les données du parc. 
 
-<img src="./img/reparer_source_donnees_postgreSQL.png" alt= “” width="50%" height="50%"> 
+![](./img/reparer_source_donnees_postgreSQL.png)
 
 
 
 En cas de doute, vous pouvez toujours double cliquer sur la couche manquante, et regarder dans ses propriétés sa source afin de retrouver le nom du schéma et de la table correspondant. 
 
-<img src="./img/nom_schema_table.png" alt= “” width="50%" height="50%"> 
+![](./img/nom_schema_table.png)
 
 
 
@@ -151,7 +151,7 @@ ___________________________________
 ### Je ne vois pas les projets, mais seulement les tables de la base de données
 
  Faire un clic droit sur Postgis/Service Projets dans l'explorateur, cliquer "Editer la connexion" et cocher "Permettre le chargement et l'enregistrement de projets QGIS" puis "OK".
-<img src="./img/editerconnexion_chargerprojets.png" alt= “” width="50%" height="50%"> 
+![](./img/editerconnexion_chargerprojets.png)
 	
 ___________________________________
 
@@ -175,12 +175,12 @@ Pour rendre une couche accessible dans Oruxmaps, il est nécessaire de produire 
 - Cliquer droit sur la couche "Exporter> Sauvergarder les entités sous....."
 - Choisir le format Keyhole Markup Language (KML)
 - Parcourir les dossiers en cliquant sur l'icône suivant, et enregistrer le fichier là où il sera facile à retrouver.
-<img src="./img/parcourir_dossiers_enregistrer.png" alt= “” width="20%" height="20%"> 
+![](./img/parcourir_dossiers_enregistrer.png" alt= “” width="20%" height="20%"> 
 - Brancher le portable ou la tablette à l'ordinateur. 
 - Copier le fichier KML dans le dossier 
 > ...> oruxmaps > overlay
 - Ouvrir Oruxmaps, ouvrir les options de cartes, 
-<img src="./img/oruxmaps_optiondecouches.png" alt= “” width="20%" height="20%"> 
+![](./img/oruxmaps_optiondecouches.png" alt= “” width="20%" height="20%"> 
 - Ouvrir "Options des couches" puis "Charger une couche KML"
 Vous devriez trouver le fichier kml, et pouvoir le sélectionner pour le charger. 
 

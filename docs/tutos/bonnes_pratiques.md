@@ -14,18 +14,18 @@ Ces recommandations sont sujettes à exception, mais leur respect général perm
 ### Général
  - Importer les couches et projets depuis le Gestionnaire de sources de données ("Couches>Gestionnaire de source de données" ou CTRL+L)
  et pas depuis l'explorateur. Particulièrement pour les couches provenant de la base de données (Postgresql)
-  <img src="./img/gestionnaire_sources_pg.png" alt= “” width="75%" height="75%">
+  ![](./img/gestionnaire_sources_pg.png" alt= “” width="75%" height="75%">
 
 
 
  - Au chargement d'un projet, certaines couches peuvent être filtrées. Ce filtre peut être appliqué par l'outil filtre et/ou dans le menu symbologie. 
 Ces filtres doivent être modifiés pour accéder aux données pertinentes, ou à l'intégralité des données.
- <img src="./img/filtre_couche.png" alt= “” width="75%" height="75%">
+ ![](./img/filtre_couche.png" alt= “” width="75%" height="75%">
 
 _L'application d'un filtre est signalée par l'icône de filtre. En cliquant dessus on accède au constructeur de requête qui 
 permet de modifier les paramètres du filtrage._
 
- <img src="./img/filtre_symbologie.png" alt= “” width="75%" height="75%">
+ ![](./img/filtre_symbologie.png" alt= “” width="75%" height="75%">
 
 _L'utilisation d'une expression dans la symbologie ("Couche>Propriétés>Symbologie" ou double clic sur la couche - onglet symbologie)
 permet de filtrer ou regrouper l'information. Ici on obtient la somme de n_obs par maille. L'expression est modifiable directement ou 
@@ -45,7 +45,7 @@ en cliquant sur "Ajouter un groupe". On peut ensuite glisser des couches dans le
  - Toujours conserver une copie intacte des données de travail par exemple dans un sous-dossier
  - Penser à supprimer les produits intermédiaires de votre projet, et des fichiers.
  - Privilégier les exports en dur aux couches temporaires pour les résultats de géotraitements 
-  <img src="./img/exports_endurs.png" alt= “” width="75%" height="75%">
+  ![](./img/exports_endurs.png" alt= “” width="75%" height="75%">
 
 _Exemple: "Enregistrer vers un fichier" plutôt que "Créer une couche temporaire"._
  

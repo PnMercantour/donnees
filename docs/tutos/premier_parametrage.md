@@ -24,7 +24,7 @@ _Ces paramètres sont importants à modifier pour le bon fonctionnement de QGIS,
  et sélectionner le SCR "EPSG:2154 - RGF93v1 /Lambert-93" par défaut à la fois
 pour les projets, et pour les couches. 
 
-<img src="./img/config_scr.png" alt= “” width="50%" height="50%"> 
+![](./img/config_scr.png)
 
 ## Table d'attributs
 
@@ -32,7 +32,7 @@ pour les projets, et pour les couches.
 En bas à droite de de la fenêtre de la table d'attributs se trouve une petite icône avec un menu déroulant. 
 Choisir l'option "Ne montrer que les entités visibles sur la carte". 
 
-<img src="./img/tableattributs-limiter.png" alt= “” width="50%" height="50%"> 
+![](./img/tableattributs-limiter.png)
 
 Dorénavant, la table d'attribut ne montrera que les entités visibles sur l'étendue du canevas visible, en zoomant et vous déplaçant sur le canevas vous limiterez le nombre d'entités à charger dans la table d'attribut et donc
 le risque de plantage de QGIS. 

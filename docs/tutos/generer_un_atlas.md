@@ -36,13 +36,13 @@ Dans la fenêtre de mise en pâge, il faut d'abord activer les paramètres d'atl
 - Activer le mode édition (2 façons possibles).
 
     Méthode 1 (_Recommandé_):  Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
-<img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
+![](./img/mode_edition.png)
 	
     Méthode 2 :Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
-<img src="./img/modeedition_parcouche.png" alt= “” width="50%" height="50%"> 
+![](./img/modeedition_parcouche.png)
 
 - Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..
-<img src="./img/couche_en_cours_edition.png" alt= “” width="50%" height="50%"> 
+![](./img/couche_en_cours_edition.png)
 
 
 - ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée".
@@ -50,7 +50,7 @@ Dans la fenêtre de mise en pâge, il faut d'abord activer les paramètres d'atl
 
 - visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
 
-<img src="./img/barre_doutils_numerisation.png" alt= “” width="50%" height="50%"> 
+![](./img/barre_doutils_numerisation.png)
 
 _A partir de là, différentes opérations sont disponibles, nous ne décrirons que les plus simples._
 
@@ -58,7 +58,7 @@ _A partir de là, différentes opérations sont disponibles, nous ne décrirons 
 
 - Proche de l'icone de crayon, dans la barre d'outils, se trouve l'icône "Ajouter une entité"
 
-<img src="./img/edition_ajouter_une_entite.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_ajouter_une_entite.png)
 
 - Après avoir cliqué dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
 	- une entité par point
@@ -67,23 +67,23 @@ _A partir de là, différentes opérations sont disponibles, nous ne décrirons 
 - A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entité. Dans la plupart des cas, vous n'êtes pas obligé d'entrer
 quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie. 
 
-<img src="./img/nouvelle_entite.png" alt= “” width="50%" height="50%"> 
+![](./img/nouvelle_entite.png)
 
 
 
 ### Modifier la géométrie d'une entité existante
 
 - L'outil sommet, disponible dans la barre d'outil numérisation à droite de l'outil d'ajout d'entité permet d'ajouter, supprimer, ou créer de nouveaux sommets.
-<img src="./img/outil_sommet.png" alt= “” width="50%" height="50%"> 
+![](./img/outil_sommet.png)
 - Une fois l'outil sommet sélectionné, on peut sélectionner n'importe quel sommet en cliquant dessus. Les sommets de chaque polygone sont visibles sous la forme de petits cercles rouges
 
-<img src="./img/edition_modif_de_sommets.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_modif_de_sommets.png)
 
 - Après avoir sélectionné un sommet avec l'outil sommet, il est possible de le supprimer en appuyant sur la touche "Suppr" du clavier. 
 - On peut aussi le déplacer, en cliquant à nouveau avec le clic gauche à un autre endroit après avoir sélectionné un sommet. 
 
 - Enfin, il est possible de créer de nouveaux sommets dans un polygone en cliquant très précisément sur la croix qui apparait en faisant passer le curseur entre deux sommets. 
-<img src="./img/edition_nouveau_sommet.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_nouveau_sommet.png)
 
 En combinant le déplacement, la modification, et la création de sommets, il est possible de changer complètement la forme d'un polygone.
 
@@ -94,7 +94,7 @@ _Tant que les modifications n'ont pas été enregistrées, elles ne sont pas dé
 
 - Une fois activé l'outil édition, il est possible d'éditer à la main les cases de la table attributaire. 
 _On peut aussi activer le mode édition depuis la barre d'outils de la table attributaire._
-<img src="./img/mode_tableattributaire.png" alt= “” width="50%" height="50%"> 
+![](./img/mode_tableattributaire.png)
 
 
 

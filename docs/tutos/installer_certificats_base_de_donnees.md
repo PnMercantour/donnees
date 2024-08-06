@@ -39,7 +39,7 @@ C:\Users\ *[nomdelasession]* \AppData\Roaming
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L) 
 
 - Cliquer sur PostgreSQL dans la barre de gauche
-<img src="./img/gestionnaire_sources_pg.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources_pg.png)
 
 ## _Si vous voyez "service projets" dans le menu déroulant en haut_
 

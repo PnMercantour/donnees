@@ -9,12 +9,12 @@ Une fois QGIS ouvert, vous pourrez trouver ce projet de la même façon que pour
 - Dans la barre de menu en haut à gauche Cliquer sur 
 - "Projet > Ouvrir depuis > PostgreSQL" 
 
-<img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
+![](./img/charger_projet.png)
 
 
 Puis dans le menu déroulant bien choisir la connexion"Service projets", puis le schéma "tourdefrance",
 le projet "stationnement_bonnette" devrait s'afficher automatiquement.
-<img src="./img/charger_projet_postgresql_schema.png" alt= “” width="50%" height="50%"> 
+![](./img/charger_projet_postgresql_schema.png)
 
 
 
@@ -32,13 +32,13 @@ Les autres couches chargées dans ce projet le sont uniquement pour servir de po
 
 
 Pour éditer ces couches, il faut d'abord cliquer sur la couche, puis entrer en mode édition:
-<img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
+![](./img/mode_edition.png)
 
 Ensuite, vous pourrez ajouter une entité:
 
 - Proche de l'icone de crayon, dans la barre d'outils, se trouve l'icône "Ajouter une entité"
 
-<img src="./img/edition_ajouter_une_entite.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_ajouter_une_entite.png)
 
 - Après avoir cliqué dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront un polygone
 - Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entité sans en rajouter de nouveau, _donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_.
@@ -67,7 +67,7 @@ Il est préférable de rajouter des commentaires à une entité plutôt que de l
 Par défaut, la couche surveillance est paramétrée en affichage temporel. Cela signifie que seules les entités correspondant à la date d'affichages apparaitront.
 
 Pour afficher le controleur temporel et choisir la date d'affichage, faire un clic droit sur la barre d'outils, et sélectionner "Panneau - Controleur Temporel"
-<img src="./img/panneaux_barreoutils.png" alt= “” width="50%" height="50%"> 
+![](./img/panneaux_barreoutils.png)
 
 
 la plage d'animation par défaut est définie entre le 01-07-2024 et le 05-08-2024, chaque jour étant affiché successivement.

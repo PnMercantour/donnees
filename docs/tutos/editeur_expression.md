@@ -23,13 +23,13 @@ L'outil  "Selection par expression" peut se trouver à plusieurs endroits:
 - dans la barre d'outils de la table d'attributs d'une couche 
 - dans la boite à outils de traitements dans la catégorie "sélection dans un vecteur
  
-Il est représenté par ce symbole:  <img src="./img/selection_expression.png" alt= “” width="15%" height="15%"> 
+Il est représenté par ce symbole:  ![](./img/selection_expression.png" alt= “” width="15%" height="15%"> 
 
 Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de QGIS. 
 
 ### L'éditeur d'expression
 
-<img src="./img/editeur_expression.png" alt= “” width="80%" height="80%"> 
+![](./img/editeur_expression.png" alt= “” width="80%" height="80%"> 
 
 Il est séparé en 3 panneaux: 
 - à gauche il s'agit de l'éditeur : là où on peut entrer et modifier l'expression
@@ -121,10 +121,10 @@ Une fois la sélection réalisée en passant par l'éditeur d'expression, il est
 
 ### Créer une nouvelle couche. 
 - Dans la barre des menus, Cliquer sur "Couche > Créer une couche > Nouvelle couche GeoPackage"
-<img src="./img/creer_couche.png" alt= “” width="50%" height="50%"> 
+![](./img/creer_couche.png)
 
 - Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
-<img src="./img/pitits_points.png" alt= “” width="30%" height="30%"> 
+![](./img/pitits_points.png" alt= “” width="30%" height="30%"> 
 
 - Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
 - Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"
@@ -136,13 +136,13 @@ Une fois la sélection réalisée en passant par l'éditeur d'expression, il est
 - Activer le mode édition (2 façons possibles).
 
     Méthode 1 (_Recommandé_):  Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
-<img src="./img/mode_edition.png" alt= “” width="50%" height="50%"> 
+![](./img/mode_edition.png)
 	
     Méthode 2 :Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
-<img src="./img/modeedition_parcouche.png" alt= “” width="50%" height="50%"> 
+![](./img/modeedition_parcouche.png)
 
 - Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..
-<img src="./img/couche_en_cours_edition.png" alt= “” width="50%" height="50%"> 
+![](./img/couche_en_cours_edition.png)
 
 
 - ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée".
@@ -150,7 +150,7 @@ Une fois la sélection réalisée en passant par l'éditeur d'expression, il est
 
 - visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
 
-<img src="./img/barre_doutils_numerisation.png" alt= “” width="50%" height="50%"> 
+![](./img/barre_doutils_numerisation.png)
 
 _A partir de là, différentes opérations sont disponibles, nous ne décrirons que les plus simples._
 
@@ -158,7 +158,7 @@ _A partir de là, différentes opérations sont disponibles, nous ne décrirons 
 
 - Proche de l'icone de crayon, dans la barre d'outils, se trouve l'icône "Ajouter une entité"
 
-<img src="./img/edition_ajouter_une_entite.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_ajouter_une_entite.png)
 
 - Après avoir cliqué dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
 	- une entité par point
@@ -167,23 +167,23 @@ _A partir de là, différentes opérations sont disponibles, nous ne décrirons 
 - A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entité. Dans la plupart des cas, vous n'êtes pas obligé d'entrer
 quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie. 
 
-<img src="./img/nouvelle_entite.png" alt= “” width="50%" height="50%"> 
+![](./img/nouvelle_entite.png)
 
 
 
 ### Modifier la géométrie d'une entité existante
 
 - L'outil sommet, disponible dans la barre d'outil numérisation à droite de l'outil d'ajout d'entité permet d'ajouter, supprimer, ou créer de nouveaux sommets.
-<img src="./img/outil_sommet.png" alt= “” width="50%" height="50%"> 
+![](./img/outil_sommet.png)
 - Une fois l'outil sommet sélectionné, on peut sélectionner n'importe quel sommet en cliquant dessus. Les sommets de chaque polygone sont visibles sous la forme de petits cercles rouges
 
-<img src="./img/edition_modif_de_sommets.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_modif_de_sommets.png)
 
 - Après avoir sélectionné un sommet avec l'outil sommet, il est possible de le supprimer en appuyant sur la touche "Suppr" du clavier. 
 - On peut aussi le déplacer, en cliquant à nouveau avec le clic gauche à un autre endroit après avoir sélectionné un sommet. 
 
 - Enfin, il est possible de créer de nouveaux sommets dans un polygone en cliquant très précisément sur la croix qui apparait en faisant passer le curseur entre deux sommets. 
-<img src="./img/edition_nouveau_sommet.png" alt= “” width="50%" height="50%"> 
+![](./img/edition_nouveau_sommet.png)
 
 En combinant le déplacement, la modification, et la création de sommets, il est possible de changer complètement la forme d'un polygone.
 
@@ -194,7 +194,7 @@ _Tant que les modifications n'ont pas été enregistrées, elles ne sont pas dé
 
 - Une fois activé l'outil édition, il est possible d'éditer à la main les cases de la table attributaire. 
 _On peut aussi activer le mode édition depuis la barre d'outils de la table attributaire._
-<img src="./img/mode_tableattributaire.png" alt= “” width="50%" height="50%"> 
+![](./img/mode_tableattributaire.png)
 
 
 

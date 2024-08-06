@@ -12,7 +12,7 @@ Pour cela, on peut utiliser l'outil "Empaquetage de couche".
 Pour y avoir accès, le plus simple est de faire un clic clic droit sur la batte des menus, puis de cliquer dans "Panneaux > Panneau Boîte à outils de traitements"
 
 
-<img src="./img/panneaux_barretoutils.png" alt= “”  width="40%"> 
+![](./img/panneaux_barretoutils.png" alt= “”  width="40%"> 
 
 
 Dans le panneau qui s'affiche, il est possible de chercher automatiquement parmis tous les outils disponibles dans QGIS celui qui s'appelle "Empaquetage de couche". 
@@ -35,7 +35,7 @@ On pourra le faire à l'onglet Couche:
 > Couche > Créer une couche > Nouvelle couche Geopackage ...
 
 
-<img src="./img/creer_gpkg.png" alt= “”  width="40%">  -->
+![](./img/creer_gpkg.png" alt= “”  width="40%">  -->
 
 
 QGIS n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 

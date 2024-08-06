@@ -23,7 +23,7 @@ _Cette partie reprend le processus décrit dans [ce tutoriel](./installation_cer
 
 Pour cela vous pouvez ouvrir QGIS et charger le projet depuis la base de données. 
 
-<img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
+![](./img/charger_projet.png)
 
 Si les [couches](./README.md#couche "Dans un projet QGIS, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
 Sinon, continuer au paragraphe suivant.
@@ -61,7 +61,7 @@ l'affichage des fichiers cachés dans les options)
 
 - Cliquer sur PostgreSQL dans la barre de gauche
 
-<img src="./img/gestionnaire_sources_pg.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources_pg.png)
 
 
 #### _Si vous ne voyez pas "service projets"_
@@ -96,7 +96,7 @@ _Pour vérifier si vous avez déjà chargé le catalogue de ressources WMS, ouvr
 
 -  Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service WMS.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
 _(Il sera nécessaire de revenir manuellement sur cette page pour la suite du tuto)_
-<img src="./img/wms_telecharger.png" alt= “” width="50%" height="50%"> 
+![](./img/wms_telecharger.png)
 
 Déplacer ce fichier dans un dossier où il sera facile à retrouver.
  
@@ -105,7 +105,7 @@ _Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
 
 Une fois QGIS lancé, vous pouvez ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L).
 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources.png)
 
 
 - clic droit sur WMS/WMTS dans l'explorateur, sélectionner "charger des connexions" 
@@ -120,7 +120,7 @@ Une fenêtre s'ouvre, clic sur 'Tout Sélectionner' puis 'Importer'
 
 Récupérer le projet en cliquant sur "Projet > Ouvrir Depuis > Postgresql" dans la barre de menu
 
-<img src="./img/charger_projet.png" alt= “” width="50%" height="50%"> 
+![](./img/charger_projet.png)
 
 <!--
 #### Remplacer des couches manquantes
@@ -151,7 +151,7 @@ _Dans QGIS, la position de la plupart des éléments sont personnalisables, et i
 Si ça arrive, cas on pourra les retrouver dans l'onglet "Vue", et vérifier que le panneau ou la barre d'outils concernée est bien visible._
 
 
-<img src="./img/vue_panneaux_barres.png" alt= “” width="30%" height="30%"> 
+![](./img/vue_panneaux_barres.png" alt= “” width="30%" height="30%"> 
 
 A gauche de chaque couche se trouve une petite boite qui peut être cochée ou décochée. 
 Cette boite permet d'afficher ou de masquer chaque couche, ou élément de symbologie d'une couche.
@@ -174,11 +174,11 @@ _NB: Souvent, en rencontrant un problème avec une couche, il est important d'al
 
 3. Les filtres
 
-Vous pouvez remarquer un symbole : <img src="./img/symbole_filtre.png" alt= “” width="02%" > 
+Vous pouvez remarquer un symbole : ![](./img/symbole_filtre.png" alt= “” width="02%" > 
  à droite de certaines couches:
 
 
-<img src="./img/filtres_dans_fenetre.png" alt= “” width="30%" height="30%"> 
+![](./img/filtres_dans_fenetre.png" alt= “” width="30%" height="30%"> 
 
 
 
@@ -210,14 +210,14 @@ Les couches au format [vecteur](./README.md#vecteur "En géomatique, un vecteur 
 "), donnant des informations sur les données qu'elles contiennent. 
 Vous pouvez visualiser cette table en cliquant droit sur la couche puis sur "Ouvrir la table d'attributs".
 
-<img src="./img/ouvrir_latable_attribut.png" alt= “” width="15%" height="50%"> 
+![](./img/ouvrir_latable_attribut.png" alt= “” width="15%" height="50%"> 
 
 
 Il existe deux façons de représenter la table attributaire. Une vue "Table" et une vue "Formulaire". On peut basculer de l'une à 
 l'autre en cliquant sur l'icone correspondante en bas à droite de la fenêtre. 
 
 
-<img src="./img/tableattributaire.png" alt= “” width="15%" height="50%">  <img src="./img/tableattributaire_form.png" alt= “” width="15%" height="50%"> 
+![](./img/tableattributaire.png" alt= “” width="15%" height="50%">  ![](./img/tableattributaire_form.png" alt= “” width="15%" height="50%"> 
 
 _A gauche, la table attributaire en format table. A droite,en format formulaire. Le mode table permet de visualiser d'un coup d'oeil l'ensemble des entités et attributs simultanément.
 Le mode formulaire permet de visualiser les entités une à une, la liste des entités apparaissant sur la gauche._
@@ -254,14 +254,14 @@ en vérifiant son emplacement dans ses propriétés (clic droit> Propriétés on
 
 Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
-|<img src="./img/mode_edition.png" alt= “”  height="20%"> 
+|![](./img/mode_edition.png" alt= “”  height="20%"> 
 Dans la barre d'outils QGIS 
 
-<img src="./img/modeedition_parcouche.png" alt= “” width="30%" >   
+![](./img/modeedition_parcouche.png" alt= “” width="30%" >   
 
 En passant par un clic droit sur la couche
 
-<img src="./img/mode_tableattributaire.png" alt= “”  width="30%"> 
+![](./img/mode_tableattributaire.png" alt= “”  width="30%"> 
 
 depuis la fenêtre de la table attributaire
 
@@ -278,18 +278,18 @@ Une fois en mode Edition, on peut modifier directement la table attributaire à 
 
 En mode édition, on peut aussi éditer directement la géométrie d'une entité, ou en créer de nouvelles. 
 
-<img src="./img/outil_sommet.png" alt= “”  width="75%"> 
+![](./img/outil_sommet.png" alt= “”  width="75%"> 
 L'outil sommet permet de modifier la géométrie de points/lignes/polygones existants
 
 
-<img src="./img/ajouter_entite.png" alt= “”  height="50%"> 
+![](./img/ajouter_entite.png" alt= “”  height="50%"> 
 Ajouter une entité permet de créer de nouvelles entités
 
 
 La création d'une nouvelle entité se fait par une succession de clics gauches, et est finalisée par un clic droit.
 A la finalisation de chaque entité, une fenêtre s'ouvre proposant d'entrer les attributs connus. 
 
-<img src="./img/nouvelle_entite.png" alt= “”  width="40%"> 
+![](./img/nouvelle_entite.png" alt= “”  width="40%"> 
 
 Un "id" ou "fid" correspondant à l'identifiant unique de chaque entité peut être généré automatiquement. 
 Il n'est pas nécessaire d'entrer les autres attributs pour que la nouvelle enttité soit sauvegardée. 
@@ -310,7 +310,7 @@ Deux outils peuvent être particulièrement pratique pour la numérisation:
 <!--
 ### Autoriser le chargement des projets
 
-<img src="./img/editerconnexion_chargerprojets.png" alt= “” width="50%" height="50%">  -->
+![](./img/editerconnexion_chargerprojets.png) -->
 
 ## Changer le mode de représentation d'une couche
 
@@ -365,11 +365,11 @@ de leur sensibilité auprès du chargé de mission en lien avec elles._
 Il est possible de réaliser des exports directement depuis le menu de QGIS. A l'onglet Projet > Importer/exporter > Exporter au format Image
 Cette façon de faire ne permet que d'exporter le contenu du canevas
 
-<img src="./img/export_format_image.png" alt= “”  width="40%"> 
+![](./img/export_format_image.png" alt= “”  width="40%"> 
 
 Cet outil fait apparaitre un menu permettant de choisir l'emprise de l'export: 
 
-<img src="./img/menu_export.png" alt= “”  width="40%"> 
+![](./img/menu_export.png" alt= “”  width="40%"> 
 
 On peut ainsi facilement exporter au format image la vue de la carte visible à l'écran. 
 
@@ -378,7 +378,7 @@ On peut ainsi facilement exporter au format image la vue de la carte visible à 
 
 QGIS permet de réaliser des mises en pages de cartes plus complexes. Pour les réaliser, il faut passer par l'outil de mise en page de QGIS.
 
-<img src="./img/mise_en_page.png" alt= “”  width="40%"> 
+![](./img/mise_en_page.png" alt= “”  width="40%"> 
 
 Si une mise en page a déjà été créée pour le projet en question, vous la trouverez ou bien dans le menu "Projet > Mise en page" ou bien
 dans le Gestionnaire de mises en page.
@@ -426,7 +426,7 @@ On pourra le faire à l'onglet Couche:
 > Couche > Créer une couche > Nouvelle couche Geopackage ...
 
 
-<img src="./img/creer_gpkg.png" alt= “”  width="40%"> 
+![](./img/creer_gpkg.png" alt= “”  width="40%"> 
 
 2. Connexion au gpkg
 

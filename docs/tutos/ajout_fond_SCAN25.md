@@ -15,7 +15,7 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources.png)
 
 - Cliquer sur WMS/WMTS dans l'explorateur, sélectionner "Nouveau" 
 
@@ -26,13 +26,13 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 <!--
 - Il faut ensuite cliquer sur la petite croix verte dans l'encadré "Athentification"
 
-<img src="./img/croix_verte_nouveau_wms.png" alt= “” width="50%" height="50%"> 
+![](./img/croix_verte_nouveau_wms.png)
 
 - Puis entrer les données comme dans l'image ci dessous après avoir cliqué à nouveau sur la petite croix verte: 
 	- Nom: Scan25
 	- clé d'en-tête: apikey
 	- Valeur d'en-tête: ign_scan_ws
-<img src="./img/detail_params_scan25.png" alt= “” width="50%" height="50%"> 
+![](./img/detail_params_scan25.png)
 --> 
 - Cocher la case "Ignorer les URI GetMap/GetTile/GetLegendGraphic signalés dans les capacités"
 
@@ -41,7 +41,7 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Un nouvel onglet s'ouvre automatiquement vous permettant de choisir entre plusieurs versions du scan 25, choisir celui projeté en Lambert-93 (EPSG:2154)
 
-<img src="./img/selection_scan25_wms.png" alt= “” width="50%" height="50%"> 
+![](./img/selection_scan25_wms.png)
 
 - Cliquer sur "Ajouter" en bas à droite pour ajouter cette couche WMS au projet actuel.
 
@@ -58,13 +58,13 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Cliquer sur l'onglet "WMS" dans la colonne à gauche de la fenêtre.
 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources.png)
 
 - Cliquer sur la ressource d'intérêt dans le menu déroulant (ici "SCAN 25") puis sur "Charger"
 - Cliquer sur la couche qui s'affiche dans le menu central
 - Entrer des tailles de tuile (recommandé: "256" et "256".) Le système de coordonnées n'est pas toujours modifiable.
 
-<img src="./img/ajout_wms_parametres.png" alt= “” width="50%" height="50%"> 
+![](./img/ajout_wms_parametres.png)
 
 - puis sur "Ajouter"
 

@@ -10,14 +10,14 @@ Ils présentent l'avantage d'être appliqués au niveau du serveur, et donc limi
 
 Dans certain projets, ou au moment de charger certaines couches, vous pouvez voir cette icône: 
 
-<img src="./img/symbole_filtre.png" alt= “” width="50%" height="50%"> 
+![](./img/symbole_filtre.png)
 
 
 Elle signifique que la couche associée est filtrée. 
 
 En cliquant dessus, le constructeur d'expression de filtrage apparait. 
 
-<img src="./img/filtre_couche.png" alt= “” width="50%" height="50%"> 
+![](./img/filtre_couche.png)
 
 Effacer l'expression puis cliquer sur "OK" revient à enlever le filtre.
 

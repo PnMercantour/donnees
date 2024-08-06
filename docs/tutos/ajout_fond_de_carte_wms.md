@@ -24,7 +24,7 @@ _Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
 - Lancer QGIS
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources.png)
 
 - Cliquer sur WMS/WMTS dans l'explorateur, sélectionner "charger des connexions" 
 
@@ -38,7 +38,7 @@ _Vous pouvez maintenant ajouter des fonds de carte au format wms en suivant la d
 _Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogue mentionné plus haut._
 
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources.png)
 
 - Aller dans l'onglet "WMS/WMTS" dans le ruban de gauche.
  
@@ -60,7 +60,7 @@ _Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogu
 
 - Cliquer sur l'onglet "WMS" dans la colonne à gauche de la fenêtre.
 
-<img src="./img/gestionnaire_sources.png" alt= “” width="50%" height="50%"> 
+![](./img/gestionnaire_sources.png)
 
 
 ## Si vous souhaitez ajouter une ressource se trouvant déjà dans le catalogue
@@ -72,7 +72,7 @@ _Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogu
 
 _Entrer une valeur dans ce champ évite que QGIS n'essaie de charger des tuiles trop grosses depuis le WMS, ce qui peut ralentir voire complètement bloquer l'affichage de votre projet._
 
-<img src="./img/ajout_wms_parametres.png" alt= “” width="90%" height="90%"> 
+![](./img/ajout_wms_parametres.png" alt= “” width="90%" height="90%"> 
 
 - Appuyer sur ajouter.
  
