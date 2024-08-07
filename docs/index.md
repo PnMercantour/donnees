@@ -1,5 +1,9 @@
 ---
 title: Documentation du PnM
+hide:
+  - path
+  - toc
+  - navigation
 ---
 # Documentation du Parc national du Mercantour
 
