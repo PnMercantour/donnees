@@ -50,10 +50,6 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
-nav:
-  - Home: index.md
-  - Base de donnees PnM: bd_pnm/README.md
-#  - Tutos: ./docs/tutos/README.md
 
 # copyright: |
 #  &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
