@@ -81,7 +81,4 @@ _____
 
 
 --> 
-_Documentation pour utilisateurs avancés et maintenance_
-## Jointure 
 
-[Jointure du fichier des personnes morales avec les identifiants des parcelles.](./bin/jointure_majic_parcelle.sql)
