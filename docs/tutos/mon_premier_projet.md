@@ -1,63 +1,63 @@
 # Mon Premier projet
 
-_Vous avez reÃ§u des la confirmation du SI que vous Ãªtes autorisÃ© Ã  utiliser la [base de donnÃ©es](./README.md#base-de-donnees 
-"Au sens large, une base de donnÃ©e permet de stocker et de manipuler des donnÃ©es par des moyens informatiques.")
-du parc ? VoilÃ  comment faire !_
+_Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser la [base de données](./README.md#base-de-donnees 
+"Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques.")
+du parc ? Voilà comment faire !_
 
 
-_Ce tutoriel contient les Ã©tapes pour la consultation d'un [projet QGIS](./README.md#projet "Un projet QGIS contient un ensemble de couches,
-les informations permettant de les reprÃ©senter, ainsi que l'ensemble des paramÃ¨tres conditionnant la rÃ©alisation de gÃ©otraitements.") existant, 
-ainsi que les possibles opÃ©rations Ã  rÃ©aliser pour en faciliter la visualisation._
+_Ce tutoriel contient les étapes pour la consultation d'un [projet QGIS](./README.md#projet "Un projet QGIS contient un ensemble de couches,
+les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements.") existant, 
+ainsi que les possibles opérations à réaliser pour en faciliter la visualisation._
 
-> ScÃ©nario: On vous a demandÃ© d'Ã©tablir pour certaines zones la prÃ©sence ou l'absence d'une espÃ¨ce vÃ©gÃ©tale donnÃ©e. 
+> Scénario: On vous a demandé d'établir pour certaines zones la présence ou l'absence d'une espèce végétale donnée. 
 
 > Pour cela, vous devez consulter un [projet QGIS](./README.md#projet "projet QGIS contient un ensemble de couches,
-les informations permettant de les reprÃ©senter, ainsi que l'ensemble des paramÃ¨tres conditionnant la rÃ©alisation de gÃ©otraitements."), 
-entrer vos relevÃ©s terrains en modifiant une couche existante.
+les informations permettant de les représenter, ainsi que l'ensemble des paramètres conditionnant la réalisation de géotraitements."), 
+entrer vos relevés terrains en modifiant une couche existante.
 
 
-## AccÃ¨s Ã  la [base de donnÃ©es](./README.md#base-de-donnees)
-_Cette partie reprend le processus dÃ©crit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
-### 1. VÃ©rifier que vous avez bien accÃ¨s Ã  la base de donnÃ©es par QGIS. 
+## Accès à la [base de données](./README.md#base-de-donnees)
+_Cette partie reprend le processus décrit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
+### 1. Vérifier que vous avez bien accès à la base de données par QGIS. 
 
 
-Pour cela vous pouvez ouvrir QGIS et charger le projet depuis la base de donnÃ©es. 
+Pour cela vous pouvez ouvrir QGIS et charger le projet depuis la base de données. 
 
 ![](./img/charger_projet.png)
 
-Si les [couches](./README.md#couche "Dans un projet QGIS, une couche est une reprÃ©sentation de donnÃ©es spatialisÃ©e") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
+Si les [couches](./README.md#couche "Dans un projet QGIS, une couche est une représentation de données spatialisée") s'affichent bien, vous pouvez passez au paragraphe 2 "Charger les connexions wms". 
 Sinon, continuer au paragraphe suivant.
 
-#### Installation des certificats pour l'accÃ¨s Ã  la base de donnÃ©es _(si nÃ©cessaire)_
-_Pour vÃ©rifier si vous avez dÃ©jÃ  paramÃ©trÃ© la connexion Ã  la base de donnÃ©es, ouvrir QGIS puis lancer le gestionnaire_
- _de sources de donnÃ©es (Onglet "Couche>Gestionnaire de source de donnÃ©es" ou Ctrl+L). Cliquer sur l'onglet PostgreSQL._
- _Si le menu dÃ©roulant est vide ou ne contient pas "Service projets", continuer cette partie du tutoriel, sinon passer Ã  la partie suivante_
+#### Installation des certificats pour l'accès à la base de données _(si nécessaire)_
+_Pour vérifier si vous avez déjà paramétré la connexion à la base de données, ouvrir QGIS puis lancer le gestionnaire_
+ _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet PostgreSQL._
+ _Si le menu déroulant est vide ou ne contient pas "Service projets", continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
 
-- TÃ©lÃ©charger le fichier zip qui vous a Ã©tÃ© envoyÃ© par le SI ( qui a le format "prÃ©nom.nom@mercantour-parcnational.fr.zip" ) 
+- Télécharger le fichier zip qui vous a été envoyé par le SI ( qui a le format "prénom.nom@mercantour-parcnational.fr.zip" ) 
 
 - Naviguer jusqu'au dossier AppData.
 
-Il se trouve typiquement dans un chemin ressemblant Ã :
+Il se trouve typiquement dans un chemin ressemblant à:
 ```
 C:\Users\ *[nomdelasession]* \AppData\Roaming
 ```
-Le faÃ§on la plus simple de l'atteindre consiste Ã  appuyer sur  _touche windows + R_, 
-puis Ã  entrer la commande "%AppData%" dans l'invitÃ© de commande (la touche windows se trouve entre Ctrl et Alt). 
+Le façon la plus simple de l'atteindre consiste à appuyer sur  _touche windows + R_, 
+puis à entrer la commande "%AppData%" dans l'invité de commande (la touche windows se trouve entre Ctrl et Alt). 
 
-(Ce rÃ©pertoire est masquÃ© par dÃ©faut, il est aussi possible de naviguer jusqu'Ã  lui, en autorisant
-l'affichage des fichiers cachÃ©s dans les options)
+(Ce répertoire est masqué par défaut, il est aussi possible de naviguer jusqu'à lui, en autorisant
+l'affichage des fichiers cachés dans les options)
 
-- CrÃ©er un dossier "postgresql" dans le dossier ..\AppData\Roaming s'il n'existe pas
+- Créer un dossier "postgresql" dans le dossier ..\AppData\Roaming s'il n'existe pas
 
-- Copier dans ce dossier tous les fichiers du zip, y compris - et surtout - le fichier masquÃ© .pg_service.conf
-(les remplacer s'ils existent dÃ©jÃ )
+- Copier dans ce dossier tous les fichiers du zip, y compris - et surtout - le fichier masqué .pg_service.conf
+(les remplacer s'ils existent déjà)
 
-#### Chargement des paramÃ¨tres pour accÃ©der Ã  la base de donnÃ©es
+#### Chargement des paramètres pour accéder à la base de données
 
 - Ouvrir QGIS
 
-- Ouvrir le gestionnaire de sources de donnÃ©es (Onglet "Couche>Gestionnaire de source de donnÃ©es" ou Ctrl+L) 
+- Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L) 
 
 - Cliquer sur PostgreSQL dans la barre de gauche
 
@@ -65,125 +65,123 @@ l'affichage des fichiers cachÃ©s dans les options)
 
 
 #### _Si vous ne voyez pas "service projets"_
-- TÃ©lÃ©charger le fichier suivant, en faisant "clic droit>TÃ©lÃ©charger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
+- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
 
 - Dans le gestionnaire de sources de QGIS, cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
 
 
-- VÃ©rifier que la connexion "Service projets" est disponible, et se connecter
+- Vérifier que la connexion "Service projets" est disponible, et se connecter
 
 
 
-_La liste des [tables et schÃ©mas](./README.md#schÃ©ma "Dans une base de donnÃ©es relationnelle, un schÃ©ma regroupe diffÃ©rents objets dont des tables, vues et fonctions.") 
-accessibles devraient apparaÃ®tre._
+_La liste des [tables et schémas](./README.md#schéma "Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions.") 
+accessibles devraient apparaître._
 
 
 
-_NB: Il est aussi possible d'accÃ©der aux couches de la base de donnÃ©es par l'onglet "Base de donnÃ©es> Gestionnaire BD" de la barre de menus. 
-Le Gestionnaire BD et le gestionnaire de sources de donnÃ©es sont Ã  privilÃ©gier pour ajouter des donnÃ©es dans votre projet QGIS. 
-Les autres faÃ§ons d'ajouter des couches peuvent crÃ©er des problÃ¨mes en appliquant des paramÃ¨tres d'import par dÃ©faut_
+_NB: Il est aussi possible d'accéder aux couches de la base de données par l'onglet "Base de données> Gestionnaire BD" de la barre de menus. 
+Le Gestionnaire BD et le gestionnaire de sources de données sont à privilégier pour ajouter des données dans votre projet QGIS. 
+Les autres façons d'ajouter des couches peuvent créer des problèmes en appliquant des paramètres d'import par défaut_
 
-_Cette Ã©tape visait Ã  vÃ©rifier et mettre en place la connexion Ã  la base de donnÃ©es. Maintenant nous allons mettre en place les connexions aux wms qui permettent_
+_Cette étape visait à vérifier et mettre en place la connexion à la base de données. Maintenant nous allons mettre en place les connexions aux wms qui permettent_
 _de charger des fonds de carte._
 
 ### 2. Charger les connexions wms
 
-#### Service WMS (fonds de carte) _(si nÃ©cessaire)_
+#### Service WMS (fonds de carte) _(si nécessaire)_
 
-_Pour vÃ©rifier si vous avez dÃ©jÃ  chargÃ© le catalogue de ressources WMS, ouvrir QGIS puis lancer le gestionnaire_
- _de sources de donnÃ©es (Onglet "Couche>Gestionnaire de source de donnÃ©es" ou Ctrl+L). Cliquer sur l'onglet WMS/WMTS._
- _Si le menu dÃ©roulant est vide, continuer cette partie du tutoriel, sinon passer Ã  la partie suivante_
+_Pour vérifier si vous avez déjà chargé le catalogue de ressources WMS, ouvrir QGIS puis lancer le gestionnaire_
+ _de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L). Cliquer sur l'onglet WMS/WMTS._
+ _Si le menu déroulant est vide, continuer cette partie du tutoriel, sinon passer à la partie suivante_
 
--  TÃ©lÃ©charger le fichier suivant, en faisant "clic droit>TÃ©lÃ©charger la cible du lien sous " sur le lien suivant: [service WMS.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20WMS.xml), puis sur l'icÃ´ne permettant le tÃ©lÃ©chargement.
-_(Il sera nÃ©cessaire de revenir manuellement sur cette page pour la suite du tuto)_
-![](./img/wms_telecharger.png)
+-  Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service WMS.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/service%20WMS.xml), puis sur l'icône permettant le téléchargement.
 
-DÃ©placer ce fichier dans un dossier oÃ¹ il sera facile Ã  retrouver.
+Déplacer ce fichier dans un dossier où il sera facile à retrouver.
  
 > Exemple: C:\Users\"VotreNom"\Documents\QgisXML
 _Remplacer "VotreNom" par le nom d'utilisateur sur votre machine._
 
-Une fois QGIS lancÃ©, vous pouvez ouvrir le gestionnaire de sources de donnÃ©es (Onglet "Couche>Gestionnaire de source de donnÃ©es" ou Ctrl+L).
+Une fois QGIS lancé, vous pouvez ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou Ctrl+L).
 
 ![](./img/gestionnaire_sources.png)
 
 
-- clic droit sur WMS/WMTS dans l'explorateur, sÃ©lectionner "charger des connexions" 
+- clic droit sur WMS/WMTS dans l'explorateur, sélectionner "charger des connexions" 
 
- - SÃ©lectionner le fichier "service WMS.xml" prÃ©cÃ©demment enregistrÃ©. 
-Une fenÃªtre s'ouvre, clic sur 'Tout SÃ©lectionner' puis 'Importer'
-
-
+ - Sélectionner le fichier "service WMS.xml" précédemment enregistré. 
+Une fenêtre s'ouvre, clic sur 'Tout Sélectionner' puis 'Importer'
 
 
-### 3. Charger le projet d'intÃ©rÃªt
 
-RÃ©cupÃ©rer le projet en cliquant sur "Projet > Ouvrir Depuis > Postgresql" dans la barre de menu
+
+### 3. Charger le projet d'intérêt
+
+Récupérer le projet en cliquant sur "Projet > Ouvrir Depuis > Postgresql" dans la barre de menu
 
 ![](./img/charger_projet.png)
 
 <!--
 #### Remplacer des couches manquantes
 
-_Un projet QGIS ne contient pas les donnÃ©es, juste les liens y menant. Il est donc normal qu'en ouvrant un projet sans disposer
-de toutes les donnÃ©es liÃ©es, des erreurs s'affichent._
+_Un projet QGIS ne contient pas les données, juste les liens y menant. Il est donc normal qu'en ouvrant un projet sans disposer
+de toutes les données liées, des erreurs s'affichent._
 
-Dans ce cas, si les donnÃ©es sont accessibles, il est facile de remplacer le chemin d'accÃ¨s pour rÃ©parer le projet.
+Dans ce cas, si les données sont accessibles, il est facile de remplacer le chemin d'accès pour réparer le projet.
 
-Pour ce faire, vous pouvez tÃ©lÃ©charger les donnÃ©es manquantes ici en faisant clic droit - Enregistrer la cible du lien sous:
+Pour ce faire, vous pouvez télécharger les données manquantes ici en faisant clic droit - Enregistrer la cible du lien sous:
 
-- [Presence Ã  completer](./ressources/couche_test_a_remplir.gpkg)
+- [Presence à completer](./ressources/couche_test_a_remplir.gpkg)
 - [Observations](./ressources/pts_random_tinee.gpkg)
 
 vous pourrez ensuite
 --> 
 
 
-## Visualisation des donnÃ©es du projet
-_Vous avez bien rÃ©ussi Ã  charger le projet "MonPremierProjet" et en voyez le contenu. Nous allons maintenant passer en revue 
-les moyens de naviguer dans le projet et observer les donnÃ©es._
+## Visualisation des données du projet
+_Vous avez bien réussi à charger le projet "MonPremierProjet" et en voyez le contenu. Nous allons maintenant passer en revue 
+les moyens de naviguer dans le projet et observer les données._
 
 
 
 1. Afficher/masquer des couches
 
-_Dans QGIS, la position de la plupart des Ã©lÃ©ments sont personnalisables, et il arrive qu'on les modifie par accident. 
-Si Ã§a arrive, cas on pourra les retrouver dans l'onglet "Vue", et vÃ©rifier que le panneau ou la barre d'outils concernÃ©e est bien visible._
+_Dans QGIS, la position de la plupart des éléments sont personnalisables, et il arrive qu'on les modifie par accident. 
+Si ça arrive, cas on pourra les retrouver dans l'onglet "Vue", et vérifier que le panneau ou la barre d'outils concernée est bien visible._
 
 
-![](./img/vue_panneaux_barres.png" alt= â€œâ€ width="30%" height="30%"> 
+![](./img/vue_panneaux_barres.png)
 
-A gauche de chaque couche se trouve une petite boite qui peut Ãªtre cochÃ©e ou dÃ©cochÃ©e. 
-Cette boite permet d'afficher ou de masquer chaque couche, ou Ã©lÃ©ment de symbologie d'une couche.
+A gauche de chaque couche se trouve une petite boite qui peut être cochée ou décochée. 
+Cette boite permet d'afficher ou de masquer chaque couche, ou élément de symbologie d'une couche.
 
 
-2. Les propriÃ©tÃ©s
+2. Les propriétés
 
-Double cliquer sur une couche, ou faire "clic droit > PropriÃ©tÃ©s" en affiche les propriÃ©tÃ©s. 
+Double cliquer sur une couche, ou faire "clic droit > Propriétés" en affiche les propriétés. 
 
-_**Le dÃ©tail de la table attributaire n'est pas visible dans les propriÃ©tÃ©s.**_
+_**Le détail de la table attributaire n'est pas visible dans les propriétés.**_
 
-LÃ  vous avez accÃ¨s Ã  une sÃ©rie d'onglet donnant des informations sur la couche en question. 
-L'onglet "Information" est particuliÃ¨rement important pour:
-- vÃ©rifier la source des donnÃ©es (si vous travaillez sur des donnÃ©es stockÃ©es sur votre machine, le chemin dÃ©taillÃ© vers le fichier apparaitra, 
-si vous travaillez sur le serveur ce seront les paramÃ¨tres de connexion qui seront visibles).
-- vÃ©rifier le type de donnÃ©es ( raster/vecteur, type de gÃ©omÃ©trie) et la projection
-- vÃ©rifier le dÃ©compte d'entitÃ© (il s'agit du dÃ©compte aprÃ¨s application du filtre)
+Là vous avez accès à une série d'onglet donnant des informations sur la couche en question. 
+L'onglet "Information" est particulièrement important pour:
+- vérifier la source des données (si vous travaillez sur des données stockées sur votre machine, le chemin détaillé vers le fichier apparaitra, 
+si vous travaillez sur le serveur ce seront les paramètres de connexion qui seront visibles).
+- vérifier le type de données ( raster/vecteur, type de géométrie) et la projection
+- vérifier le décompte d'entité (il s'agit du décompte après application du filtre)
 
-_NB: Souvent, en rencontrant un problÃ¨me avec une couche, il est important d'aller en vÃ©rifier les propriÃ©tÃ©s pour s'assurer qu'il s'agit bien du type de gÃ©omÃ©trie attendu, que l'on travaille bien sur le bon fichier..._
+_NB: Souvent, en rencontrant un problème avec une couche, il est important d'aller en vérifier les propriétés pour s'assurer qu'il s'agit bien du type de géométrie attendu, que l'on travaille bien sur le bon fichier..._
 
 3. Les filtres
 
-Vous pouvez remarquer un symbole : ![](./img/symbole_filtre.png" alt= â€œâ€ width="02%" > 
- Ã  droite de certaines couches:
+Vous pouvez remarquer un symbole : ![](./img/symbole_filtre.png) 
+ à droite de certaines couches:
 
 
-![](./img/filtres_dans_fenetre.png" alt= â€œâ€ width="30%" height="30%"> 
+![](./img/filtres_dans_fenetre.png)
 
 
 
-Il signifie que la couche en question est filtrÃ©e. Les filtres sont des outils trÃ¨s puissants, notamment pour limiter la charge sur vos ordinateurs. 
-Ils sont appliquÃ©s au niveau du serveur, et permettent de ne charger que les entitÃ©s d'une couche que vous aurez choisies par une expression. 
+Il signifie que la couche en question est filtrée. Les filtres sont des outils très puissants, notamment pour limiter la charge sur vos ordinateurs. 
+Ils sont appliqués au niveau du serveur, et permettent de ne charger que les entités d'une couche que vous aurez choisies par une expression. 
 
 Par exemple, en cliquant sur le symbole filtre de "Vallees" ou en faisant clic droit > Filtre sur cette couche vous voyez l'expression suivante :
 ```sql
@@ -192,119 +190,120 @@ Par exemple, en cliquant sur le symbole filtre de "Vallees" ou en faisant clic d
 
 qui signifie: 
 ```
-"Ne charge que les entitÃ©s pour lesquelles la colonne "id_type" a la valeur 3."
+"Ne charge que les entités pour lesquelles la colonne "id_type" a la valeur 3."
 ```
 
 
 
-_Certaines couches du serveur sont chargÃ©es par dÃ©faut avec des filtres. Il est tout Ã  fait possible de les modifier pour accÃ©der Ã  d'autres donnÃ©es, 
-ou de restreindre encore le filtre proposÃ© le temps de la consultation du projet. Dans ce cas, veillez cependant Ã  ne pas enregistrer vos modifications sur un projet partagÃ©._
+_Certaines couches du serveur sont chargées par défaut avec des filtres. Il est tout à fait possible de les modifier pour accéder à d'autres données, 
+ou de restreindre encore le filtre proposé le temps de la consultation du projet. Dans ce cas, veillez cependant à ne pas enregistrer vos modifications sur un projet partagé._
 
-_NÃ©anmoins, vous Ãªtes encouragÃ©s Ã  apprendre Ã  les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](./lienavenir "Lien Ã  venir") dÃ©diÃ© sera crÃ©Ã©._
+_Néanmoins, vous êtes encouragés à apprendre à les utiliser. Les filtres emploient une syntaxe SQL et un [tutoriel](./lienavenir "Lien à venir") dédié sera créé._
 
 
 4. La table attributaire
 
-Les couches au format [vecteur](./README.md#vecteur "En gÃ©omatique, un vecteur est l'un des deux modes principaux de reprÃ©sentation des donnÃ©es spatiales. 
-") contiennent une [table attributaire](./README#table-attributaire "La table attributaire contient l'ensemble des donnÃ©es, spatiales ou non, liÃ©es Ã  une couche vecteur.
-"), donnant des informations sur les donnÃ©es qu'elles contiennent. 
+Les couches au format [vecteur](./README.md#vecteur "En géomatique, un vecteur est l'un des deux modes principaux de représentation des données spatiales. 
+") contiennent une [table attributaire](./README#table-attributaire "La table attributaire contient l'ensemble des données, spatiales ou non, liées à une couche vecteur.
+"), donnant des informations sur les données qu'elles contiennent. 
 Vous pouvez visualiser cette table en cliquant droit sur la couche puis sur "Ouvrir la table d'attributs".
 
-![](./img/ouvrir_latable_attribut.png" alt= â€œâ€ width="15%" height="50%"> 
+![](./img/ouvrir_latable_attribut.png)
 
 
-Il existe deux faÃ§ons de reprÃ©senter la table attributaire. Une vue "Table" et une vue "Formulaire". On peut basculer de l'une Ã  
-l'autre en cliquant sur l'icone correspondante en bas Ã  droite de la fenÃªtre. 
+Il existe deux façons de représenter la table attributaire. Une vue "Table" et une vue "Formulaire". On peut basculer de l'une à 
+l'autre en cliquant sur l'icone correspondante en bas à droite de la fenêtre. 
 
 
-![](./img/tableattributaire.png" alt= â€œâ€ width="15%" height="50%">  ![](./img/tableattributaire_form.png" alt= â€œâ€ width="15%" height="50%"> 
+![](./img/tableattributaire.png)
+![](./img/tableattributaire_form.png)
 
-_A gauche, la table attributaire en format table. A droite,en format formulaire. Le mode table permet de visualiser d'un coup d'oeil l'ensemble des entitÃ©s et attributs simultanÃ©ment.
-Le mode formulaire permet de visualiser les entitÃ©s une Ã  une, la liste des entitÃ©s apparaissant sur la gauche._
+_A gauche, la table attributaire en format table. A droite,en format formulaire. Le mode table permet de visualiser d'un coup d'oeil l'ensemble des entités et attributs simultanément.
+Le mode formulaire permet de visualiser les entités une à une, la liste des entités apparaissant sur la gauche._
 
 
-Si votre version de QGIS a bien Ã©tÃ© paramÃ©trÃ©e, en bas Ã  gauche de la table attributaire devrait apparaitre un bouton-dÃ©roulant: "Ne montrer que les entitÃ©s visibles sur la carte".
-Cette option peut Ãªtre modifiÃ©e de faÃ§on Ã  toujours montrer toutes les entitÃ©s, cependant ce mode d'affichage peut faire planter QGIS sur les couches contenant un grand nombre d'entitÃ©s. 
+Si votre version de QGIS a bien été paramétrée, en bas à gauche de la table attributaire devrait apparaitre un bouton-déroulant: "Ne montrer que les entités visibles sur la carte".
+Cette option peut être modifiée de façon à toujours montrer toutes les entités, cependant ce mode d'affichage peut faire planter QGIS sur les couches contenant un grand nombre d'entités. 
 
-Le mode d'affichage par dÃ©faut est modifiable dans les paramÃ¨tres de QGIS: 
+Le mode d'affichage par défaut est modifiable dans les paramètres de QGIS: 
 
-PrÃ©fÃ©rences>Options>Sources de donnÃ©es - "Comportement des tables d'attributs"
+Préférences>Options>Sources de données - "Comportement des tables d'attributs"
 
 
 
 ## Editer une couche
 
-_On se concentrera sur les couches au format [vecteur](./README.md#vecteur ). Toutes les couches prÃ©sentes dans le projet tuto sont dans ce format. 
-Il existe des mÃ©thodes pour modifier les [rasters](./README.md#raster ), mais nous ne les aborderons pas ici._
+_On se concentrera sur les couches au format [vecteur](./README.md#vecteur ). Toutes les couches présentes dans le projet tuto sont dans ce format. 
+Il existe des méthodes pour modifier les [rasters](./README.md#raster ), mais nous ne les aborderons pas ici._
 
-_L'Ã©dition d'une couche contenue dans la base de donnÃ©es est possible seulement si des droits particuliers vous ont Ã©tÃ© accordÃ©s. La plupart des couches sont uniquement consultables._
+_L'édition d'une couche contenue dans la base de données est possible seulement si des droits particuliers vous ont été accordés. La plupart des couches sont uniquement consultables._
 
 ### Enregistrer une couche localement
 
 
-Editer une couche QGIS modifie le fichier de source des donnÃ©es. Il est donc important de rester prudent et de conserver une copie des donnÃ©es d'origine quand c'est possible. 
+Editer une couche QGIS modifie le fichier de source des données. Il est donc important de rester prudent et de conserver une copie des données d'origine quand c'est possible. 
 Pour cela faire clic droit sur la couche
-> Exporter > Sauvegarder les entitÃ©s sous
+> Exporter > Sauvegarder les entités sous
 Puis en cliquant sur les "..." naviguer sur l'emplacement de votre machine ou vous souhaitez enregistrer la couche.
 
-Une fois la nouvelle couche enregistrÃ©e, elle devrait apparaitre dans le projet. Vous pourrez vÃ©rifier qu'il s'agit bien d'une copie locale 
-en vÃ©rifiant son emplacement dans ses propriÃ©tÃ©s (clic droit> PropriÃ©tÃ©s onglet Information)
+Une fois la nouvelle couche enregistrée, elle devrait apparaitre dans le projet. Vous pourrez vérifier qu'il s'agit bien d'une copie locale 
+en vérifiant son emplacement dans ses propriétés (clic droit> Propriétés onglet Information)
 
 ### Mode Edition
 
-Pour rÃ©aliser des modifications ou crÃ©er une nouvelle entitÃ©, il faut d'abord activer le mode Edition pour la couche d'intÃ©rÃªt. Cela peut se faire de plusieurs faÃ§ons: 
+Pour réaliser des modifications ou créer une nouvelle entité, il faut d'abord activer le mode Edition pour la couche d'intérêt. Cela peut se faire de plusieurs façons: 
 
-|![](./img/mode_edition.png" alt= â€œâ€  height="20%"> 
+| ![](./img/mode_edition.png)
 Dans la barre d'outils QGIS 
 
-![](./img/modeedition_parcouche.png" alt= â€œâ€ width="30%" >   
+![](./img/modeedition_parcouche.png )   
 
 En passant par un clic droit sur la couche
 
-![](./img/mode_tableattributaire.png" alt= â€œâ€  width="30%"> 
+![](./img/mode_tableattributaire.png)
 
-depuis la fenÃªtre de la table attributaire
+depuis la fenêtre de la table attributaire
 
-Dans tous les cas, cliquer sur le petit crayon activera le mode Ã©dition pour la couche sÃ©lectionnÃ©e. On pourra alors y apporter des modifications de diffÃ©rentes faÃ§ons.
-Ces modifications ne seront toutefois enregistrÃ©es et effectives qu'Ã  la sortie du mode Ã©dition (en cliquant Ã  nouveau sur le crayon). Si le logiciel crash, ou qu'on ne confirme 
-pas les changements Ã  la sortie du mode Ã©dition, les changements seront perdus et les donnÃ©es d'origine seront conservÃ©es. 
+Dans tous les cas, cliquer sur le petit crayon activera le mode édition pour la couche sélectionnée. On pourra alors y apporter des modifications de différentes façons.
+Ces modifications ne seront toutefois enregistrées et effectives qu'à la sortie du mode édition (en cliquant à nouveau sur le crayon). Si le logiciel crash, ou qu'on ne confirme 
+pas les changements à la sortie du mode édition, les changements seront perdus et les données d'origine seront conservées. 
 
 1. Modification de la table attributaire
 
-Une fois en mode Edition, on peut modifier directement la table attributaire Ã  la faÃ§on d'un tableur. 
+Une fois en mode Edition, on peut modifier directement la table attributaire à la façon d'un tableur. 
 
 
-2. CrÃ©ation d'entitÃ©s/Modification de gÃ©omÃ©trie
+2. Création d'entités/Modification de géométrie
 
-En mode Ã©dition, on peut aussi Ã©diter directement la gÃ©omÃ©trie d'une entitÃ©, ou en crÃ©er de nouvelles. 
+En mode édition, on peut aussi éditer directement la géométrie d'une entité, ou en créer de nouvelles. 
 
-![](./img/outil_sommet.png" alt= â€œâ€  width="75%"> 
-L'outil sommet permet de modifier la gÃ©omÃ©trie de points/lignes/polygones existants
-
-
-![](./img/ajouter_entite.png" alt= â€œâ€  height="50%"> 
-Ajouter une entitÃ© permet de crÃ©er de nouvelles entitÃ©s
+![](./img/outil_sommet.png)
+L'outil sommet permet de modifier la géométrie de points/lignes/polygones existants
 
 
-La crÃ©ation d'une nouvelle entitÃ© se fait par une succession de clics gauches, et est finalisÃ©e par un clic droit.
-A la finalisation de chaque entitÃ©, une fenÃªtre s'ouvre proposant d'entrer les attributs connus. 
-
-![](./img/nouvelle_entite.png" alt= â€œâ€  width="40%"> 
-
-Un "id" ou "fid" correspondant Ã  l'identifiant unique de chaque entitÃ© peut Ãªtre gÃ©nÃ©rÃ© automatiquement. 
-Il n'est pas nÃ©cessaire d'entrer les autres attributs pour que la nouvelle enttitÃ© soit sauvegardÃ©e. 
+![](./img/ajouter_entite.png)
+Ajouter une entité permet de créer de nouvelles entités
 
 
-Il est souvent pratique d'afficher des barres d'outils supplÃ©mentaires (et parfois d'en cacher pour clarifier le menu).
-Pour cela, il faut faire clic droit Ã  n'importe quel endroit de la barre d'outils,
+La création d'une nouvelle entité se fait par une succession de clics gauches, et est finalisée par un clic droit.
+A la finalisation de chaque entité, une fenêtre s'ouvre proposant d'entrer les attributs connus. 
+
+![](./img/nouvelle_entite.png)
+
+Un "id" ou "fid" correspondant à l'identifiant unique de chaque entité peut être généré automatiquement. 
+Il n'est pas nécessaire d'entrer les autres attributs pour que la nouvelle enttité soit sauvegardée. 
+
+
+Il est souvent pratique d'afficher des barres d'outils supplémentaires (et parfois d'en cacher pour clarifier le menu).
+Pour cela, il faut faire clic droit à n'importe quel endroit de la barre d'outils,
 ou aller dans Vue > Barres d'outils
 
-Deux outils peuvent Ãªtre particuliÃ¨rement pratique pour la numÃ©risation: 
+Deux outils peuvent être particulièrement pratique pour la numérisation: 
 
-- "Accrochage" qui permet de rendre "magnÃ©tique" le clic, et de superposer parfaitement des points et
-- "NumÃ©risation avancÃ©e" qui permet Ã  des outils de modifications de gÃ©omÃ©tries en mode Ã©dition.
+- "Accrochage" qui permet de rendre "magnétique" le clic, et de superposer parfaitement des points et
+- "Numérisation avancée" qui permet à des outils de modifications de géométries en mode édition.
 
-(les autres barres d'outils peuvent contenir des outils pratiques. N'hÃ©sitez pas Ã  les explorer!)
+(les autres barres d'outils peuvent contenir des outils pratiques. N'hésitez pas à les explorer!)
 
 
 <!--
@@ -312,80 +311,80 @@ Deux outils peuvent Ãªtre particuliÃ¨rement pratique pour la numÃ©risation:
 
 ![](./img/editerconnexion_chargerprojets.png) -->
 
-## Changer le mode de reprÃ©sentation d'une couche
+## Changer le mode de représentation d'une couche
 
-Dans couche on appelle le mode de reprÃ©sentation des donnÃ©es d'une couche la "symbologie" (exemple: des aplats de couleurs, cercles noirs pour des points, lignes vertes etc...)
-Elle peut Ãªtre modifiÃ©e de faÃ§on prÃ©cise pour chaque couche en passant par les propriÃ©tÃ©s d'une couche, Ã  l'onglet symbologie.
+Dans couche on appelle le mode de représentation des données d'une couche la "symbologie" (exemple: des aplats de couleurs, cercles noirs pour des points, lignes vertes etc...)
+Elle peut être modifiée de façon précise pour chaque couche en passant par les propriétés d'une couche, à l'onglet symbologie.
 
-Les outils de symbologie dans QGIS sont trÃ¨s puissants, et permettent de reprÃ©senter les informations d'une couche de faÃ§on synthÃ©tique.
-On dÃ©crit ici les modes de reprÃ©sentation les plus communÃ©ment utilisÃ©s:
+Les outils de symbologie dans QGIS sont très puissants, et permettent de représenter les informations d'une couche de façon synthétique.
+On décrit ici les modes de représentation les plus communément utilisés:
 - Symbole unique
 
-Mode de reprÃ©sentation le plus simple. On dÃ©finit un symbole qui sera appliquÃ© de maniÃ¨re uniforme Ã  toutes les entitÃ©s, sans prendre en compte leurs attributs
+Mode de représentation le plus simple. On définit un symbole qui sera appliqué de manière uniforme à toutes les entités, sans prendre en compte leurs attributs
 
-- CatÃ©gorisÃ©
+- Catégorisé
 
-Permet de reprÃ©senter des diffÃ©rences qualitatives entre les entitÃ©s. C'est-Ã -dire qu'un de leurs attributs permet de les diffÃ©rencier.
-> Par exemple: pour des polygones reprÃ©sentant l'occupation des sols, le nom de ces catÃ©gories (forÃªt, culture, bÃ¢ti etc...).
+Permet de représenter des différences qualitatives entre les entités. C'est-à-dire qu'un de leurs attributs permet de les différencier.
+> Par exemple: pour des polygones représentant l'occupation des sols, le nom de ces catégories (forêt, culture, bâti etc...).
 
-- GraduÃ©
+- Gradué
 
-Permet de reprÃ©senter des diffÃ©rences quantitatives entre des entitÃ©s.
-> Par exemple: pour des points reprÃ©sentant des villes, on peut faire varier leur taille pour reprÃ©senter leur population. 
+Permet de représenter des différences quantitatives entre des entités.
+> Par exemple: pour des points représentant des villes, on peut faire varier leur taille pour représenter leur population. 
 
 
-_Dans ce tutoriel nous n'irons pas plus loin sur la symbologie, mais un autre tutoriel lui sera dÃ©diÃ©e. Nous vous invitons Ã  faire des essais, tout en prenant soin 
-de ne pas Ã©craser la symbologie d'un projet partagÃ©._
+_Dans ce tutoriel nous n'irons pas plus loin sur la symbologie, mais un autre tutoriel lui sera dédiée. Nous vous invitons à faire des essais, tout en prenant soin 
+de ne pas écraser la symbologie d'un projet partagé._
 
 ## Les outils QGIS
 
-_QGIS peut Ãªtre utilisÃ© comme un outil d'analyse particuliÃ¨rement puissants._
+_QGIS peut être utilisé comme un outil d'analyse particulièrement puissants._
 
-En plus des fonctionnalitÃ©s dÃ©jÃ  Ã©voquÃ©es, QGIS contient un grand nombre d'outils qui permettent des analyses plus ou moins complexes. 
+En plus des fonctionnalités déjà évoquées, QGIS contient un grand nombre d'outils qui permettent des analyses plus ou moins complexes. 
 La plupart des outils sont disponibles dans les menus "Vecteur" et "Raster" de la barre de menu (mais pas tous!). Dans ces onglets, seule une 
-sÃ©lection des outils est affichÃ©e, organisÃ©s par catÃ©gorie. 
+sélection des outils est affichée, organisés par catégorie. 
 
-Pour voir l'intÃ©gralitÃ© des outils disponibles, il faut activer le panneau "Boite Ã  outils de traitement", 
+Pour voir l'intégralité des outils disponibles, il faut activer le panneau "Boite à outils de traitement", 
 
 soit dans le menu "Vue > Panneaux"
 
 soit en faisant clic droit sur la barre de menus.
 
 
-Nous ne rentrerons pas ici dans le dÃ©tail de ces outils, mais ce sont eux qui permettent de rÃ©aliser les opÃ©rations les plus complexes de QGIS. 
+Nous ne rentrerons pas ici dans le détail de ces outils, mais ce sont eux qui permettent de réaliser les opérations les plus complexes de QGIS. 
 
 
 ## Exporter une carte au format image
 
-_Attention, de nombreux projets du Parc contiennent des donnÃ©es qui peuvent Ãªtre sensibles. Avant de publier ou mettre en circulation des exports de donnÃ©es, veiller Ã  s'assurer 
-de leur sensibilitÃ© auprÃ¨s du chargÃ© de mission en lien avec elles._
+_Attention, de nombreux projets du Parc contiennent des données qui peuvent être sensibles. Avant de publier ou mettre en circulation des exports de données, veiller à s'assurer 
+de leur sensibilité auprès du chargé de mission en lien avec elles._
 
 1. Export simple
 
-Il est possible de rÃ©aliser des exports directement depuis le menu de QGIS. A l'onglet Projet > Importer/exporter > Exporter au format Image
-Cette faÃ§on de faire ne permet que d'exporter le contenu du canevas
+Il est possible de réaliser des exports directement depuis le menu de QGIS. A l'onglet Projet > Importer/exporter > Exporter au format Image
+Cette façon de faire ne permet que d'exporter le contenu du canevas
 
-![](./img/export_format_image.png" alt= â€œâ€  width="40%"> 
+![](./img/export_format_image.png)
 
 Cet outil fait apparaitre un menu permettant de choisir l'emprise de l'export: 
 
-![](./img/menu_export.png" alt= â€œâ€  width="40%"> 
+![](./img/menu_export.png)
 
-On peut ainsi facilement exporter au format image la vue de la carte visible Ã  l'Ã©cran. 
+On peut ainsi facilement exporter au format image la vue de la carte visible à l'écran. 
 
 
 2. Mises en page
 
-QGIS permet de rÃ©aliser des mises en pages de cartes plus complexes. Pour les rÃ©aliser, il faut passer par l'outil de mise en page de QGIS.
+QGIS permet de réaliser des mises en pages de cartes plus complexes. Pour les réaliser, il faut passer par l'outil de mise en page de QGIS.
 
-![](./img/mise_en_page.png" alt= â€œâ€  width="40%"> 
+![](./img/mise_en_page.png)
 
-Si une mise en page a dÃ©jÃ  Ã©tÃ© crÃ©Ã©e pour le projet en question, vous la trouverez ou bien dans le menu "Projet > Mise en page" ou bien
+Si une mise en page a déjà été créée pour le projet en question, vous la trouverez ou bien dans le menu "Projet > Mise en page" ou bien
 dans le Gestionnaire de mises en page.
 
-Il est aussi possible de crÃ©er une nouvelle mise en page. 
+Il est aussi possible de créer une nouvelle mise en page. 
 
-Dans tous les cas, Ã  l'ouverture d'une mise en page, une nouvelle fenÃªtre s'ouvre. 
+Dans tous les cas, à l'ouverture d'une mise en page, une nouvelle fenêtre s'ouvre. 
 
 
 
@@ -395,61 +394,61 @@ Dans tous les cas, Ã  l'ouverture d'une mise en page, une nouvelle fenÃªtre s'ou
 
 1. Enregistrer le projet en local au format qgs/qgz
 
-_Un projet sous ces formats sera plus lÃ©ger, mais ne contient pas les donnÃ©es. Seulement le chemin oÃ¹ trouver les fichiers servant Ã  produire les couches._
+_Un projet sous ces formats sera plus léger, mais ne contient pas les données. Seulement le chemin où trouver les fichiers servant à produire les couches._
 
-Vous pouvez Ã  tout moment "enregistrer sous" un projet qui est enregistrÃ© sur le serveur. 
-Cela en crÃ©e une copie qui ne sera plus accessible Ã  personne d'autre que vous, 
-mais vous pourrez ensuite le modifier sans risque de perdre le travail de vos collÃ¨gues.
+Vous pouvez à tout moment "enregistrer sous" un projet qui est enregistré sur le serveur. 
+Cela en crée une copie qui ne sera plus accessible à personne d'autre que vous, 
+mais vous pourrez ensuite le modifier sans risque de perdre le travail de vos collègues.
 
-Un projet enregistrÃ© sous ce format ne contient que les chemins menants aux couches ainsi que la dÃ©finition
-de style des couches. Si il dÃ©pendait d'une base de donnÃ©es sÃ©curisÃ©e et qu'il est dÃ©placÃ© sur un ordinateur 
-ne disposant pas de cet accÃ¨s, la couche sera inaccessible et ne s'affichera pas. 
+Un projet enregistré sous ce format ne contient que les chemins menants aux couches ainsi que la définition
+de style des couches. Si il dépendait d'une base de données sécurisée et qu'il est déplacé sur un ordinateur 
+ne disposant pas de cet accès, la couche sera inaccessible et ne s'affichera pas. 
 
-De mÃªme, si le projet d'origine faisait rÃ©fÃ©rence Ã  des fichiers locaux, alors le projet copiÃ© sur une autre 
-machine devra pouvoir retrouver les mÃªmes fichiers en suivant exactement les mÃªmes chemins. 
+De même, si le projet d'origine faisait référence à des fichiers locaux, alors le projet copié sur une autre 
+machine devra pouvoir retrouver les mêmes fichiers en suivant exactement les mêmes chemins. 
 
 2. Enregistrer le projet au format gpkg
 
-_Sous ce format le projet peut contenir l'ensemble des donnÃ©es, et des informations sur le style permettant de produire les couches. Il est part consÃ©quent bien plus lourd, mais peut Ãªtre facilement Ã©changÃ©. La dÃ©marche pour le construire est toutefois plus complexe._
+_Sous ce format le projet peut contenir l'ensemble des données, et des informations sur le style permettant de produire les couches. Il est part conséquent bien plus lourd, mais peut être facilement échangé. La démarche pour le construire est toutefois plus complexe._
 
 0. Le format gpkg
 
-Le format geopackage (gpkg) est un format relativement rÃ©cent qui a l'avantage de pouvoir contenir plusieurs sources de donnÃ©es spatialisÃ©es vecteur et raster, tout en conservant l'intÃ©gritÃ© de leurs tables attributaires.
-Il peut aussi stocker des projets et fichiers de styles. Il rÃ©unit ainsi en un seul fichier ce qui traditionnellement demande l'utilisation de formats peu pratiques (shapefile), et Ã©vite les problÃ¨mes de prÃ©servation des chemins relatifs des projets au format qgs/qgz. 
+Le format geopackage (gpkg) est un format relativement récent qui a l'avantage de pouvoir contenir plusieurs sources de données spatialisées vecteur et raster, tout en conservant l'intégrité de leurs tables attributaires.
+Il peut aussi stocker des projets et fichiers de styles. Il réunit ainsi en un seul fichier ce qui traditionnellement demande l'utilisation de formats peu pratiques (shapefile), et évite les problèmes de préservation des chemins relatifs des projets au format qgs/qgz. 
 
-Le format gpkg fonctionne sur le modÃ¨le de la base de donnÃ©es, les outils pour l'ouvrir et le modifier sont donc liÃ©s au menus de bases de donnÃ©es dans QGIS. 
+Le format gpkg fonctionne sur le modèle de la base de données, les outils pour l'ouvrir et le modifier sont donc liés au menus de bases de données dans QGIS. 
 
 1. Sauvegarder un projet au format geopackage
 
-Afin de pouvoir enregistrer le projet et l'ensemble des couches le composant dans un geopackage, il faut d'abord crÃ©er un geopackage vierge. 
-On pourra le faire Ã  l'onglet Couche:
-> Couche > CrÃ©er une couche > Nouvelle couche Geopackage ...
+Afin de pouvoir enregistrer le projet et l'ensemble des couches le composant dans un geopackage, il faut d'abord créer un geopackage vierge. 
+On pourra le faire à l'onglet Couche:
+> Couche > Créer une couche > Nouvelle couche Geopackage ...
 
 
-![](./img/creer_gpkg.png" alt= â€œâ€  width="40%"> 
+![](./img/creer_gpkg.png)
 
 2. Connexion au gpkg
 
-QGIS n'est pas par dÃ©faut "conscient" du geopackage nouvellement crÃ©Ã©. Il faut dÃ©finir la connexion Ã  ce fichier. 
-Pour cela on peut passer par le gestionnaire de base de donnÃ©es (Ctrl + 3) 
-> Base de donnÃ©es > Gestionnaire de base de donnÃ©es
+QGIS n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
+Pour cela on peut passer par le gestionnaire de base de données (Ctrl + 3) 
+> Base de données > Gestionnaire de base de données
 
 et cliquer droit sur "Geopackage>Nouvelle connexion..." dans le menu de gauche.
-On pourra alors naviguer jusqu'au fichier geopackage nouvellement crÃ©Ã©. 
+On pourra alors naviguer jusqu'au fichier geopackage nouvellement créé. 
 
 3. Enregistrement du projet
 
-Enfin, on pourra simplement aller Ã :
+Enfin, on pourra simplement aller à:
 > Projet > Enregistrer le projet sous.... > Geopackage
 
-Et lui donner un nom (car on peut mÃªme enregistrer plusieurs projets dans un geopackage).
+Et lui donner un nom (car on peut même enregistrer plusieurs projets dans un geopackage).
 
 4. Ouvrir un projet dans un geopackage
 
-Pour ouvrir le projet ainsi enregistrÃ©, il suffit d'aller Ã  
+Pour ouvrir le projet ainsi enregistré, il suffit d'aller à 
 
 > Projet > Ouvrir depuis .. > Geopackage
 
-_Si vous recevez un geopackage, il vous faudra possiblement d'abord vous connecter au geopackage en passant le "Gestionnaire de base de donnÃ©es" avant de pouvoir l'ouvrir._
+_Si vous recevez un geopackage, il vous faudra possiblement d'abord vous connecter au geopackage en passant le "Gestionnaire de base de données" avant de pouvoir l'ouvrir._
 
 
