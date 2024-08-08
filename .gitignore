@@ -4,3 +4,5 @@
 test.txt
 .vs/
 *.qgs~
+localsave/
+.gitignore
