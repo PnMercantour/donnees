@@ -12,7 +12,7 @@ Pour cela, on peut utiliser l'outil "Empaquetage de couche".
 Pour y avoir accès, le plus simple est de faire un clic clic droit sur la batte des menus, puis de cliquer dans "Panneaux > Panneau Boîte à outils de traitements"
 
 
-![](./img/panneaux_barretoutils.png" alt= “”  width="40%"> 
+![](./img/panneaux_barretoutils.png)
 
 
 Dans le panneau qui s'affiche, il est possible de chercher automatiquement parmis tous les outils disponibles dans QGIS celui qui s'appelle "Empaquetage de couche". 
@@ -26,7 +26,6 @@ Vous pourrez vérifier ensuite que les couches du projet sont bien maintenant si
 
 ## Empaquetage du projet 
 
-<!--
 
 1. Sauvegarder un projet au format geopackage
 
@@ -35,7 +34,7 @@ On pourra le faire à l'onglet Couche:
 > Couche > Créer une couche > Nouvelle couche Geopackage ...
 
 
-![](./img/creer_gpkg.png" alt= “”  width="40%">  -->
+![](./img/creer_gpkg.png)
 
 
 QGIS n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 

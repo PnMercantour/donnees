@@ -1,8 +1,4 @@
-# _Exemple de format pour la documentation_
-_Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
-
-------------
- # _Nom du Schéma_
+ # Foret
  ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
  C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.

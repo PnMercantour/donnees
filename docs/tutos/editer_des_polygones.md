@@ -29,7 +29,7 @@ et s'ouvre facilement avec QGIS.
 ![](./img/creer_couche.png)
 
 - Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
-![](./img/pitits_points.png" alt= “” width="30%" height="30%"> 
+![](./img/pitits_points.png)
 
 - Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
 - Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"

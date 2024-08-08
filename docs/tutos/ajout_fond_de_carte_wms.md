@@ -72,7 +72,7 @@ _Vous avez trouvé le lien vers une ressource WMS qui n'est pas dans le catalogu
 
 _Entrer une valeur dans ce champ évite que QGIS n'essaie de charger des tuiles trop grosses depuis le WMS, ce qui peut ralentir voire complètement bloquer l'affichage de votre projet._
 
-![](./img/ajout_wms_parametres.png" alt= “” width="90%" height="90%"> 
+![](./img/ajout_wms_parametres.png)
 
 - Appuyer sur ajouter.
  

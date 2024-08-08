@@ -23,13 +23,13 @@ L'outil  "Selection par expression" peut se trouver à plusieurs endroits:
 - dans la barre d'outils de la table d'attributs d'une couche 
 - dans la boite à outils de traitements dans la catégorie "sélection dans un vecteur
  
-Il est représenté par ce symbole:  ![](./img/selection_expression.png" alt= “” width="15%" height="15%"> 
+Il est représenté par ce symbole:  ![](./img/selection_expression.png)
 
 Une fois qu'on l'ouvre, il donne accès à l'éditeur d'expression tel qu'il peut apparaitre à différents endroits de QGIS. 
 
 ### L'éditeur d'expression
 
-![](./img/editeur_expression.png" alt= “” width="80%" height="80%"> 
+![](./img/editeur_expression.png)
 
 Il est séparé en 3 panneaux: 
 - à gauche il s'agit de l'éditeur : là où on peut entrer et modifier l'expression
@@ -124,7 +124,7 @@ Une fois la sélection réalisée en passant par l'éditeur d'expression, il est
 ![](./img/creer_couche.png)
 
 - Dans la fenêtre qui s'affiche, cliquer sur l'icône "..." pour renseigner l'emplacement où le fichier sera enregistré.
-![](./img/pitits_points.png" alt= “” width="30%" height="30%"> 
+![](./img/pitits_points.png)
 
 - Renseigner le type de géométrie selon le type d'usage voulu. Dans la plupart des cas: "Point", "Polyligne" ou "Polygone".
 - Ne pas oublier d'indiquer la projection si elle est demandée: "EPSG:2154 - RGF v1 / Lambert-93"

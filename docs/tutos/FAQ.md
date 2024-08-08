@@ -175,12 +175,12 @@ Pour rendre une couche accessible dans Oruxmaps, il est nécessaire de produire 
 - Cliquer droit sur la couche "Exporter> Sauvergarder les entités sous....."
 - Choisir le format Keyhole Markup Language (KML)
 - Parcourir les dossiers en cliquant sur l'icône suivant, et enregistrer le fichier là où il sera facile à retrouver.
-![](./img/parcourir_dossiers_enregistrer.png" alt= “” width="20%" height="20%"> 
+![](./img/parcourir_dossiers_enregistrer.png)
 - Brancher le portable ou la tablette à l'ordinateur. 
 - Copier le fichier KML dans le dossier 
 > ...> oruxmaps > overlay
 - Ouvrir Oruxmaps, ouvrir les options de cartes, 
-![](./img/oruxmaps_optiondecouches.png" alt= “” width="20%" height="20%"> 
+![](./img/oruxmaps_optiondecouches.png)
 - Ouvrir "Options des couches" puis "Charger une couche KML"
 Vous devriez trouver le fichier kml, et pouvoir le sélectionner pour le charger. 
 
