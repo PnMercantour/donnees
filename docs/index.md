@@ -5,7 +5,7 @@ hide:
   - toc
   - navigation
 ---
-# Documentation du Parc national du Mercantour
+# Docs et tutos concernant les données géographiques du Parc national du Mercantour
 
 Bienvenue sur la documentation du Parc national du Mercantour. 
 
@@ -13,10 +13,10 @@ Vous trouverez ici la documentation et les codes concernant la [_base de donnée
 utilisée par les agents du parc. Ainsi que des tutoriels et ressources facilitant l'utilisation de la base de données, et des données géographiques en général.
 
 
-# Ce site
 
-
-Ce site est composé de deux parties principales qui vous seront utiles. [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, [tutos](./docs/tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
+Cette page est composé de deux parties principales qui vous seront utiles: 
+ - [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
+ - [tutos](./docs/tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
  [##bd_pnm](./docs/bd_pnm/README.md)
   
