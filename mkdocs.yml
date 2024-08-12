@@ -1,17 +1,18 @@
-site_name: Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+site_name: Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour
 theme:
   name: material
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.path
-#    - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    #    - toc.integrate
+
   language: fr
   palette:
     - scheme: default
@@ -53,6 +54,7 @@ exclude_docs: |
   */_modele.md
   */resume_formation.md
   */Surveillance_TourdeFrance.md
+
 
 extra_css:
   - stylesheets/extra.css
