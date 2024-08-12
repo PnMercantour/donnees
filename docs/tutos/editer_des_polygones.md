@@ -1,4 +1,4 @@
-# Edition de polygones.
+# Edition de polygones
 
 
 ## Explications

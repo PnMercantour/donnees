@@ -51,6 +51,8 @@ markdown_extensions:
 exclude_docs: |
   /tutos/git.md
   */_modele.md
+  */resume_formation.md
+  */Surveillance_TourdeFrance.md
 
 extra_css:
   - stylesheets/extra.css

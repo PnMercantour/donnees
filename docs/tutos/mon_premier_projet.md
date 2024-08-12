@@ -1,4 +1,4 @@
-# Mon Premier projet
+# Mon premier projet
 
 _Vous avez reçu des la confirmation du SI que vous êtes autorisé à utiliser la [base de données](./README.md#base-de-donnees 
 "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques.")
