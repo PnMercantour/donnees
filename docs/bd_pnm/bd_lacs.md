@@ -1,7 +1,6 @@
- 
- # bd_lacs
+# bd_lacs
 
- ## Description
+## Description
  Ce schéma contient les données relatives aux lacs du mercantour. Il est en cours de documentation.
 
 

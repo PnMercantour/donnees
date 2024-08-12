@@ -1,5 +1,4 @@
-
-# Foret
+# foret
 
 ## Description
 _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
