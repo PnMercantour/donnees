@@ -1,10 +1,7 @@
-# _Exemple de format pour la documentation_
-_Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
+# Bd Source
 
-------------
- # Bd Source
- ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
+## Description
+_Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
 En cours de documentation 
 
 <!--

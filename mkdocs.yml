@@ -50,6 +50,7 @@ markdown_extensions:
 
 exclude_docs: |
   /tutos/git.md
+  */_modele.md
 
 extra_css:
   - stylesheets/extra.css

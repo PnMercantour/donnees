@@ -1,5 +1,6 @@
- # _Cadastre_
- ## Description
+# Cadastre
+
+## Description
 Ce schéma contient les données du cadastre librement accessibles mises en forme pour faciliter leur consultation. Les parcelles sont issues de https://cadastre.data.gouv.fr/data/etalab-cadastre/2024-01-01/geojson/departements/
 et le fichier des personnes morales de https://www.data.gouv.fr/fr/datasets/fichiers-des-locaux-et-des-parcelles-des-personnes-morales/ .
 Les données utilisées sont issues de l'édition 2023.
@@ -30,7 +31,7 @@ Ce projet s'affiche différemment selon le niveau de zoom. De loin ce sont les c
 - A haut niveau de zoom ( min 1:15 000) les identifiants de parcelles s'affichent.
 - A très haut niveau de zoom (min 1:4000) les propriétaires de chaque parcelle s'affichent là où ces parcelles appartiennent à des personnes morales. 
 
-Il est aussi possible de chercher directement une parcelle par id en réalisant une [Sélection par expression](/tutos/editeur_expression.md)
+Il est aussi possible de chercher directement une parcelle par id en réalisant une [Sélection par expression](../tutos/editeur_expression.md)
 
 ### Projet Autorisations Travaux
 Ce projet permet de consulter les identifiants des travaux autorisés pour chaque parcelle. Il n'a pas vocation à être modifié directement pour l'instant. 

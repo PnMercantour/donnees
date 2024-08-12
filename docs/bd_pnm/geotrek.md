@@ -2,15 +2,15 @@
 
 ## Description
 
-Ce schéma contient 
+Documentation en cours de rédaction
 
+<!--
 
 ## Utilisation du projet qgis 
 
 
 
 ### _Exemples_
-<!--
 #### Couche "détail"
 	
 >  Si l'on s'intéresse à toutes les observations d'Arthropodes dans la couche "détail"

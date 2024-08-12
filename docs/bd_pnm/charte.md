@@ -1,21 +1,25 @@
-# Charte
+# charte
+
 ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
  Ce schéma contient toutes les informations nécessaire à la réalisation d'une carte des vocations dans le parc (y compris des couches à la fonction purement esthétique). 
  _NB: Les vocations à Barcelonnette sont absentes de ces données_
+
+<!--
 ## Utilisation du projet Qgis
 _Description du projet Qgis accessible par défaut dans le projet._
+
 
 ### _Exemples_
 _Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
 
 ## Tables remarquables
-_Les tables accessibles, le type de données_ </br>
+
 Contient X tables accessibles. 
 - _aoa_ contient les vocations pour les zones en aire optimale d'adhésion (coeur exclu)
 - _coeur_ contient les vocations pour les zones dans le coeur de parc
 - _col_ contient la liste des cols remarquables du parc (10 entités)
-- _grands sites_ contient une liste de sites remarquables <!-- quels critères? -->
+- _grands sites_ contient une liste de sites remarquables 
 - _hammeaux_aoa/coeur_ contient une liste des hammeaux dans le coeur/l'aire optimale d'adhésion
 - _loc_comm_ contient des points (possiblement des villes. Contient plus que les chefs lieux des communes)
 - _masse_eau_ contient une liste des masses d'eau avec des caractéristiques détaillées. Probablement issu de la bd topage.mdo
@@ -25,6 +29,7 @@ Contient X tables accessibles.
 - _sommets_: points, liste des sommets du parc.
 - _sh_ : zones humides (193 pts, peu d'attributs)
 
+-->
 
 <!-- tables inconnues: 
 - esp_nord_pct

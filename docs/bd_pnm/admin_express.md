@@ -1,7 +1,6 @@
 # admin_express
 
-
- ## Description
+## Description
 
 Le schéma `admin_express` contient les données relatives les données administratives pour :
  - la région Sud PACA, 
@@ -27,6 +26,7 @@ _Par ailleurs, les communes du territoire du PNM sont directement accessibles da
 ## Tables remarquables
 
 Contient 6 tables principales. 
+
 - _.chflieu_commune_  
 - _.commune_ 
 - _.commune_associee_ou_deleguee_ 
@@ -91,7 +91,6 @@ Utiliser QGIS ou OGR/GDAL pour filtrer les données et les pousser en base.
 - Remplacer, sans reprojection, le SRS officiel de l'IGN par le SRS 2154. La précision des géométries est de 10cm.
 
 - Filtrer les tables selon l'emprise désirée
-
   - communes 04 ou 06
   - communes associées/déléguées pertinentes (Meyronnes, Larche)
   - Chef lieu des communes ci-dessus (coordonnées de la mairie des communes)
@@ -112,6 +111,6 @@ _Garder la structure des tables IGN pour simplifier l'import ultérieur de mises
 
 Il est vivement recommandé de mettre à jour le projet git lorsque le schema ou le projet QGIS sont modifiés en base.
 
-Le script [bin/dump_schema](bin/dump_schema) lit depuis la base de données la version courante du schema sql et l'enregistre dans [schema.sql](sql/schema.sql).
+Le script [admin_express/bin/dump_schema](bin/dump_schema) lit depuis la base de données la version courante du schema sql et l'enregistre dans [schema.sql](sql/schema.sql).
 
-Le script [bin/dump_project](bin/dump_project) télécharge la version courante du projet QGIS depuis la base de données et l'enregistre dans [admin_express.qgs](QGIS/admin_express.qgs.
+Le script [admin_express/bin/dump_project](bin/dump_project) télécharge la version courante du projet QGIS depuis la base de données et l'enregistre dans [admin_express.qgs](QGIS/admin_express.qgs.

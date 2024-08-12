@@ -11,10 +11,11 @@ Vous trouverez ici la documentation concernant la [_base de données_ (qu'est-ce
 
 
 Cette page est composé de deux parties principales: 
- * [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
- * [tutos](./docs/tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
- ## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)
+ - [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
+ - [tutos](./docs/tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
+
+## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 
 ainsi que les [_projets qgis_]((./tutos/README.md#projet ) associés et les requêtes sql d'intérêt.
@@ -27,6 +28,7 @@ _les noms des schémas ci-dessous sont des liens cliquables_
  |[admin_express](./bd_pnm/admin_express.md)|Données concernant les limites administratives (produites par l'IGN)<!-- à compléter -->|
  |[ag_pasto](./bd_pnm/ag_pasto.md)|Agropastoralisme <!-- à compléter -->|
  |[bd_lacs](./bd_pnm/bd_lacs.md)|Données concernant les lacs<!-- à compléter -->|
+ |[bd_source](./bd_pnm/bd_lacs.md)|Données concernant les lacs<!-- à compléter -->|
  |[cadastre](./bd_pnm/cadastre.md)|Données publiques issues cadastre<!-- à compléter -->|
  |[charte](./bd_pnm/charte.md)|Données nécessaires à la réalisation de la carte des vocations<!-- à compléter -->|
  |[foret](./bd_pnm/foret.md)|Données publiques issues cadastre<!-- à compléter -->|
