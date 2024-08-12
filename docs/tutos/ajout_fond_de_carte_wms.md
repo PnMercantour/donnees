@@ -1,4 +1,4 @@
-# Ajouter une couche WMS
+# Ajout de couches WMS
 
 ## Explications
 

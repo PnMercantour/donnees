@@ -1,10 +1,9 @@
- # Foret
- ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
- C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.
- Les données sont issues de https://www.sourcededonnees.com, et sont mises à jour manuellement quand elles changent, c'est-à-dire jamais. 
+# Foret
+## Description
+_Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
+Informations concernant les forêts du Parc national du Mercantour
 
- ## Utilisation du projet Qgis
+## Utilisation du projet Qgis
 _Description du projet Qgis accessible par défaut dans le projet._
 
 ### _Exemples_
@@ -17,6 +16,7 @@ Contient X tables accessibles.
 - la deuxième qui est aussi très intéressante
 - sans parler de la troisième
 
+<!--
 #	# Description des colonnes remarquables
 
 Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom pourrait prêter à confusion. 
@@ -61,4 +61,4 @@ table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 
 ## Code de création des tables
 
-[lien](./README.md)
+[lien](./README.md)-->

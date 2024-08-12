@@ -1,8 +1,8 @@
-# Editeur d'Expressions
+# Editeur d'expressions
 
 ## Explications
 
-Dans une couche au format [vecteur](./README.md#vecteur), il est possible de faire des recherches selon différents paramètres (exemple: "tous les polygones plus petits qu'1 ha", "toutes les communes commençant par la lettre 'C' " , etc...).
+Dans une couche au format [vecteur](./glossaire.md#vecteur), il est possible de faire des recherches selon différents paramètres (exemple: "tous les polygones plus petits qu'1 ha", "toutes les communes commençant par la lettre 'C' " , etc...).
 
 Nous verrons ici comment appliquer ces conditions et une fois la sélection réalisée comment visualiser, enregistrer ou exporter ces résultats. 
  
@@ -69,14 +69,17 @@ En utilisant l'éditeur d'expression il est aussi possible de construire des exp
 On peut par exemple comparer des colones entre elles
  
 > "aire_pastorale">"aire_forest" 
+>
 > permettra de ne sélectionner que les entités où la valeure dans la colonne "aire_pastorale" est supérieure à celle dans la colonne "aire_forest"
 
 Ou se servir de fonctions comme $area:
 
-> "aire_pastorale"> $area/2 va sélectionner les entités où la valeur dans "aire_pastorale" est supérieure à l'aire, dans l'unité de calcul d'aire définie dans le projet (en général: m², ce paramètre est modifiables dans les propriétés du projet, onglet "Général")
+> "aire_pastorale"> $area/2 
+> va sélectionner les entités où la valeur dans "aire_pastorale" est supérieure à l'aire, dans l'unité de calcul d'aire définie dans le projet (en général: m², ce paramètre est modifiables dans les propriétés du projet, onglet "Général")
 
 _Attention, $area et area sont deux fonctions différentes. $area renvoie à la superficie de chaque entité, tandis que area est une fonction qui s'applique à un objet donné_
->  exemple QGIS de l'utilisation d'area: area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) → 8.0
+>  exemple QGIS de l'utilisation d'area: area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))')) 
+> Donnera en réponse:  8.0
 
 
 Il existe de nombreux outils que vous pouvez explorer comme les outils :

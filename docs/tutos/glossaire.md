@@ -3,14 +3,14 @@
 
 
 ### Attribut
-Les attributs sont les caractéristiques non spatiales des entités. Ils sont stockés dans les colonnes de [la table attributaire](./README.md#table-attributaire).
+Les attributs sont les caractéristiques non spatiales des entités. Ils sont stockés dans les colonnes de [la table attributaire](#table-attributaire).
 Ils peuvent avoir différents types: texte (ou chaînes de caractères - "string" en anglais), numériques ou dates.
 
 
 ### Base de données
 Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques. 
 
-On parle de base de données relationnelles quand ces données sont structurées en tables, gérant de façon explicite les relations entre [entités](./README.md#entite). 
+On parle de base de données relationnelles quand ces données sont structurées en tables, gérant de façon explicite les relations entre [entités](#entite). 
 C'est le cas de la base de données du Parc du Mercantour qui est décrite dans ce dépôt. 
 
 Les logiciels permettant de gérer ces bases de données sont appelés des Systèmes de Gestions de Bases de Données Relationnelles (SGBDR). 
@@ -26,8 +26,10 @@ Une couche _n'est pas_ en elle même de la donnée, mais le lien vers une donné
 
 On peut toutefois, depuis QGIS éditer et changer les données vers lesquelles une couche renvoie (par exemple en activant l'outil "Éditer").
 
+<!--
 ### Dépôt (Repository)
 Un dépôt git est un entrepôt virtuel, qui permet d'enregistrer et de maintenir facilement du code et de la documentation notamment par la gestion de versions.
+-->
 
 ### Echelle (Scale)
 L'échelle d'une carte est le rapport de taille entre la distance réelle et la distance sur la carte. Quand la carte est sur un support à taille fixe (i.e. papier), 
@@ -63,7 +65,7 @@ où la valeur de chaque pixel représente une altitude.
 En SIG, il s'agit de l'opération qui consiste à enregistrer des données au format numérique. Cela peut être fait de manière automatique à l'aide de certains logiciels,
 ou manuelle en entrant une à une les géométries et les attributs.
 
-### Orthophotographie (Orthophotography)
+### Orthophotographie
 Une orthophotographie est une photographie aérienne qui a été corrigé des déformations dues au relief et à la prise de vue dans le but de pouvoir
 la représenter dans un système de coordonnées géoréférencé, et de pouvoir y mesurer des distances. 
 

@@ -1,3 +1,5 @@
+# Premier paramétrage
+
 _Ce tutoriel contient toutes les informations pour paramétrer QGIS lors du premier paramétrage._
 _Si vous avez déjà accès à la base de données, la plupart des autres indications sont aussi [trouvables ici](./bonnes_pratiques.md)_
 

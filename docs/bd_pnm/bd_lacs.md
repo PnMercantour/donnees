@@ -1,13 +1,7 @@
-# _Exemple de format pour la documentation_
-_Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
-
-------------
- # _Nom du Schéma_
+ # bd_lacs
  ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
- C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.
- Les données sont issues de https://www.sourcededonnees.com, et sont mises à jour manuellement quand elles changent, c'est-à-dire jamais. 
-
+ Ce schéma contient les données relatives aux lacs du mercantour. Il est en cours de documentation.
+ <!--
  ## Utilisation du projet Qgis
 _Description du projet Qgis accessible par défaut dans le projet._
 
@@ -66,3 +60,4 @@ table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 ## Code de création des tables
 
 [lien](./README.md)
+-->

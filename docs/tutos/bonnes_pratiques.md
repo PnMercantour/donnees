@@ -1,4 +1,4 @@
-# Résumé
+# Bonnes Pratiques
 
 Ce document vise à définir les bonnes pratiques  pour le travail géomatique, et les conventions de nommage pour les fichiers, projets  et couches QGIS dans la bd_pnm.
 Ces recommandations sont sujettes à exception, mais leur respect général permettra de faciliter la relecture, la communication en cas de problème, et le travail.

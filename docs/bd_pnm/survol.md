@@ -1,11 +1,13 @@
- # _survol_
- ## Description
+# _survol_
+
+
+## Description
  Ce schéma regroupe les données nécessaire à l'établissement de plan de vol du Parc National du Mercantour. 
  Les données relatives à la localisation d'espèces sensibles sont regroupées selon les périodes de l'années, 
  avec des zones tampon quand nécessaire pour déterminer les zones dont le survol sera interdit. 
 
 
- ## Utilisation du projet Qgis
+## Utilisation du projet Qgis
 Pas encore de projet Qgis dédié.
 
 ### _Exemples_
@@ -33,9 +35,9 @@ _Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de l
 |//|100|cis.activite = 'Manifestations territoriales'|faune|c_tly_quartier_comptage_chant_tqc|
 
 
-
-#	# Description des colonnes remarquables
 <!--
+# Description des colonnes remarquables
+
 Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom pourrait prêter à confusion. 
 
 #### table_1
@@ -55,13 +57,12 @@ Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom p
 | :---        |    :----:   |          :---: |
 |...      |...       |...   |
 
--->
+
 
 
 _____
 _Documentation pour utilisateurs avancés et maintenance_
 
-<!--
 ## Exemples de Requêtes
 _Quelques exemples de requêtes toutes écrites qui permettent de faire des trucs_
 

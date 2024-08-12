@@ -14,7 +14,7 @@ Cette page est composé de deux parties principales:
  * [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
  * [tutos](./docs/tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
- [## bd_pnm](./docs/bd_pnm/README.md)
+ ## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 
 ainsi que les [_projets qgis_]((./tutos/README.md#projet ) associés et les requêtes sql d'intérêt.
@@ -39,7 +39,7 @@ _les noms des schémas ci-dessous sont des liens cliquables_
  |[tourisme](./bd_pnm/tourisme.md)| Tourisme et fréquentation du parc (compteurs..)|
 
 
- [## tutos](./tutos/README.md)
+ ## Tutos Qgis [tutos](./tutos/README.md)
  
  Le dossier [tutos](./tutos/README.md) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !

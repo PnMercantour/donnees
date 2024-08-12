@@ -1,9 +1,11 @@
- # Tourisme
+# Tourisme
 
- ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
- Ce schéma contient les informations en lien avec le tourisme et la fréquentation du parc (notamment les données issues des compteurs de passage)
+## Description
 
+Ce schéma contient les informations en lien avec le tourisme et la fréquentation du parc (notamment les données issues des compteurs de passage),
+il est en cours de documentation. 
+
+<!--
 
  ## Utilisation du projet Qgis
 _Description du projet Qgis accessible par défaut dans le projet._
@@ -63,3 +65,4 @@ table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 ## Code de création des tables
 
 [lien](./README.md)
+-->

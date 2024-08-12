@@ -1,15 +1,13 @@
-# Generation d'atlas.
+# Generation d'atlas
 
 
 ## Explications
 
-QGIS permet de générer des atlas. C'est-à-dire qu'il génère un ensemble de cartes avec la même représentation (symbologie) centrées sur des entités différentes d'une même couche.
-On peut ainsi générer par exemple les cartes des environs des principales villes d'une région.
+QGIS permet de générer des atlas un ensemble de cartes avec la même représentation (symbologie) centrées sur des entités différentes d'une même couche.
+On peut ainsi générer par exemple les cartes des principales villes d'une région.
 
-La condition principale étant que toutes les entités qui doivent apparaître sur l'atlas soient dans une même couche
- 
-
- 
+La condition principale est qu'il faut que toutes les entités qui doivent apparaître sur l'atlas soient dans une même couche.
+  
  
 ## Pas à pas
 
@@ -19,14 +17,16 @@ La condition principale étant que toutes les entités qui doivent apparaître s
 
 - Créer une nouvelle mise en page, ou utiliser une mise en page existante. 
 
-Dans la fenêtre de mise en pâge, il faut d'abord activer les paramètres d'atlas. Pour ça: 
+Dans la fenêtre de mise en page, il faut d'abord activer les paramètres d'atlas. Pour ça: 
+
+
 - dans la barre de menu, cliquer sur "Atlas" puis "Paramètres de l'atlas"
 
 - Dans la barre de droite, apparait un onglet "Atlas" à côté de "Mise en page", "Propriétés de l'objet", et "Guides". Cocher la case "Générer un atlas"
 
 - Dans le menu déroulant "couche de couverture", sélectionner la couche contenant les entités sur lesquelles devra être centré l'atlas. 
 
-- Facultatif: Filter ou ordonner par un des champs de la couche de couverture. 
+- Facultatif: Filtrer ou ordonner par un des champs de la couche de couverture. 
 
 
 
@@ -38,7 +38,7 @@ Dans la fenêtre de mise en pâge, il faut d'abord activer les paramètres d'atl
     Méthode 1 (_Recommandé_):  Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
 ![](./img/mode_edition.png)
 	
-    Méthode 2 :Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
+    Méthode 2: Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
 ![](./img/modeedition_parcouche.png)
 
 - Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..

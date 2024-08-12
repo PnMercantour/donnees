@@ -15,7 +15,7 @@ Une liste rappelant les espèces patrimoniales/protégées est aussi disponible.
 
 Les principales couches sont chargées, et représentées de façon simple.
 Par défaut, des filtres sont appliqués afin d'accélérer le chargement du projet et de permettre la représentation d'entitées superposées.
-Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](../../tutos/BonnesPratiques.md#filtres)).
+Ces filtres sont appliqués à la fois par l'outil de filtrage, et au niveau de la symbologie ([Voir Bonnes Pratiques](../tutos/BonnesPratiques.md#filtres)).
 
 Pour utiliser le projet, ces filtres peuvent être remplacés pour ne conserver que les données pertinentes.
 
@@ -41,8 +41,9 @@ date_part('year', "date_max") = 2023
 ```sql
 annee = 2023
 ```
-> Elle est aussi filtrée au niveau de la symbologie
 
+
+> Elle est aussi filtrée au niveau de la symbologie
 _Valeur_ : `sum("n_obs",group_by:="maille")`
 > qui permet de regrouper les valeurs des mailles superposées. Au moment du chargement est donc représenté le nombre d'observation par maille en 2023.
 > Les autres couches agrégées sont construites sur le même modèle. 
@@ -135,7 +136,7 @@ entre 4 schémas:
 
 ## Mises à jour
 
-Tous les ans, ou quand les couches de références changent. -->
+Tous les ans, ou quand les couches de références changent.
 
 ## Code de création des tables
 
@@ -143,4 +144,4 @@ Tous les ans, ou quand les couches de références changent. -->
 
 
 
-
+ -->

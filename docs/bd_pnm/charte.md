@@ -1,10 +1,9 @@
-
- # Charte
- ## Description
+# Charte
+## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
  Ce schéma contient toutes les informations nécessaire à la réalisation d'une carte des vocations dans le parc (y compris des couches à la fonction purement esthétique). 
  _NB: Les vocations à Barcelonnette sont absentes de ces données_
- ## Utilisation du projet Qgis
+## Utilisation du projet Qgis
 _Description du projet Qgis accessible par défaut dans le projet._
 
 ### _Exemples_
@@ -55,6 +54,7 @@ Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom p
 |...      |...       |...   |
 -->
 
+<!-- 
 _____
 _Documentation pour utilisateurs avancés et maintenance_
 
@@ -74,6 +74,6 @@ WHERE nom_truc ILIKE 'a%'
 
 
 ## Code de création des tables
-<!-- 
+
 [lien](./README.md)
 -->

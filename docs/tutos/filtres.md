@@ -13,13 +13,13 @@ Dans certain projets, ou au moment de charger certaines couches, vous pouvez voi
 ![](./img/symbole_filtre.png)
 
 
-Elle signifique que la couche associée est filtrée. 
+Elle signifique que la couche associée est filtrée. C'est-à-dire que seules les entités qui répondent aux conditions définies par la formule de filtrage sont visibles.
 
-En cliquant dessus, le constructeur d'expression de filtrage apparait. 
+En cliquant sur l'icône de filtrage le constructeur d'expression de filtrage apparait. 
 
 ![](./img/filtre_couche.png)
 
-Effacer l'expression puis cliquer sur "OK" revient à enlever le filtre.
+Effacer l'expression puis cliquer sur "OK" revient à enlever le filtre, et donc à afficher à nouveau toutes les entités présentes dans la couche. 
 
 
 

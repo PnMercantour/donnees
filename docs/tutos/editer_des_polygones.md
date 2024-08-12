@@ -44,6 +44,7 @@ et s'ouvre facilement avec QGIS.
 ![](./img/mode_edition.png)
 	
     Méthode 2 :Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
+	
 ![](./img/modeedition_parcouche.png)
 
 - Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..

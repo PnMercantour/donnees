@@ -2,9 +2,12 @@
 _Les phrases en italiques comme celle ci seront à considérer comme des commentaires._ 
 
 ------------
- # _Nom du Schéma_
+ # Bd Source
  ## Description
  _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
+En cours de documentation 
+
+<!--
  C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.
  Les données sont issues de https://www.sourcededonnees.com, et sont mises à jour manuellement quand elles changent, c'est-à-dire jamais. 
 
@@ -66,3 +69,4 @@ table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 ## Code de création des tables
 
 [lien](./README.md)
+-->

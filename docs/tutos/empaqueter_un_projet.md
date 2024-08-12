@@ -1,4 +1,4 @@
-# Empaqueter un projet
+# Empaquetage de projet QGIS en Geopackage
 
 Il est parfois nécessaire de partager un projet initialement construit sur une machine, avec des ressources se situant à différents endroits. 
 Pour le partager simplement, le plus simple est d'enregistrer à la fois le projet, et les couches qu'il contient dans un geopackage. 
@@ -12,14 +12,14 @@ Pour cela, on peut utiliser l'outil "Empaquetage de couche".
 Pour y avoir accès, le plus simple est de faire un clic clic droit sur la batte des menus, puis de cliquer dans "Panneaux > Panneau Boîte à outils de traitements"
 
 
-![](./img/panneaux_barretoutils.png)
+![](./img/panneaux_barreoutils.png)
 
 
 Dans le panneau qui s'affiche, il est possible de chercher automatiquement parmis tous les outils disponibles dans QGIS celui qui s'appelle "Empaquetage de couche". 
 
 Là, il suffit de choisir toutes les couches du projet et de les enregistrer dans un geopackage avec leurs styles et symbologies associées. 
 
-_NB: Certaines couches ne peuvent pas être enregistrées dans un geopackage, d'autres solutions seront à envisager dans ces cas_
+_NB: Certaines couches ne peuvent pas être enregistrées dans un geopackage, d'autres solutions seront à envisager dans ces cas._
 
 Vous pourrez vérifier ensuite que les couches du projet sont bien maintenant situées dans le geopackage. Sinon, vous pourrez les charger à nouveau dans le projet.
 
