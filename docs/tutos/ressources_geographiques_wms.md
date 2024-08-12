@@ -1,8 +1,8 @@
+# Liste de ressources WMS 
+
 _De document décrit les principales données accessibles par flux WMS_
 _Si vous souhaitez rajouter d'autres ressources WMS vous pouvez suivre [ce tutoriel](./ajout_fond_de_carte_wms.md)._
 
-
-# Catalogue WMS pré-installé
 _L'ensemble des ressources décrites dans cette partie devraient déjà vous avoir été rendu accessible, sinon vous pouvez suivre les instructions sur [ce tutoriel](./ajout_fond_de_carte_wms.md).
 Les plateformes IGN desquelles elles sont issues sont toutefois en cours de migration et peuvent rencontrer des problèmes passages. En cas de problème d'accès prolongé, contacter le SI._
 
