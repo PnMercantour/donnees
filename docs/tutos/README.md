@@ -14,7 +14,7 @@ termes utilisés en géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a 
 |[F.A.Q.](./FAQ.md)| Solutions aux questions et problèmes les plus fréquents |
 |[Les Filtres dans QGIS](./filtres.md)| Comprendre l'utilisation des filtres pour ne charger qu'une partie des entités d'une couche|
 |[Generation d'atlas](./generer_un_atlas.md)| Générer un ensemble de cartes à partir d'une couche|
-|[glossaire](./README.md#glossaire)|Glossaire des principaux termes de géomatique utilisés sur ce git|
+|[glossaire](./glossaire.md)|Glossaire des principaux termes de géomatique utilisés sur ce git|
 |[Accès à la base de données](./installer_certificats_base_de_donnees.md)|Paramétrage de l'accès à la base de données depuis QGIS|
 |[Mon premier projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet QGIS existant, son enregistrement, sa modification et ses exports|
 |[Premier paramétrage](./premier_parametrage.md)|Configuration de base de QGIS permettant d'en assurer le bon fonctionnement|
