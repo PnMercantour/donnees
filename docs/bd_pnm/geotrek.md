@@ -4,11 +4,15 @@
 
 Documentation en cours de rédaction
 
+
+
+## Projets QGIS
+
+### travaux sentiers flore/faune
+
+Ces projets visent à servir de façon dynamique à l'extraction d'espèces patrimoniales/protégées 
+
 <!--
-
-## Utilisation du projet qgis 
-
-
 
 ### _Exemples_
 #### Couche "détail"

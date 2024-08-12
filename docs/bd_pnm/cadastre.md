@@ -1,4 +1,4 @@
-# Cadastre
+# cadastre
 
 ## Description
 Ce schéma contient les données du cadastre librement accessibles mises en forme pour faciliter leur consultation. Les parcelles sont issues de https://cadastre.data.gouv.fr/data/etalab-cadastre/2024-01-01/geojson/departements/
@@ -45,16 +45,21 @@ Il fonctionne sur le même mode que le projet avec des informations différentes
 
 
 
+## Tables remarquables
+
+- autorisations_travaux_test: table en cours de préparation. Vise à lister le nombre d'autorisations de travaux délivrées par parcelle.
+- cadastre_parc: limites du cadastre sur la superficie du Parc national du Mercantour (données datant de 04-2024)
+- cadastre_personne_morale: liste des personnes morales 
+- code_droit: table qui permet de comprendre les différents codes associés aux différents types de lien entre une personne et une parcelle.
+
+
+- cadastre_parcelle_proprietaire: Vue qui fait le lien entre les limites cadastrales et les données de propriété disponibles. 
+
 <!--
 ### _Exemples_
 _Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
 
-## Tables remarquables
-_Les tables accessibles, le type de données_ </br>
-Contient X tables accessibles. 
-- La première table qui fait des trucs
-- la deuxième qui est aussi très intéressante
-- sans parler de la troisième
+
 
 #	# Description des colonnes remarquables
 

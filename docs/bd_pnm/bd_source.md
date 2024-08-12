@@ -4,6 +4,10 @@
 _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
 En cours de documentation 
 
+
+## Tables
+- donnees : contient une liste des sources ainsi que leurs caractéristiques principables (nom, altitude, débit..)
+
 <!--
  C'est un schéma qui contient des informations vides.  Il est supposé servir à aucun utilisateur pour faire des trucs.
  Les données sont issues de https://www.sourcededonnees.com, et sont mises à jour manuellement quand elles changent, c'est-à-dire jamais. 
