@@ -1,3 +1,9 @@
+---
+search:
+  exclude: true
+---
+# Git
+
 ## Première fois sur git ? 
 
 Voici une explication rapide d'une page git: 
