@@ -51,7 +51,7 @@ C:\Users\ *[nomdelasession]* \AppData\Roaming
 
 ## _Si vous ne voyez pas "service projets" dans le menu déroulant en haut_
 
-- Télécharger le fichier de paramétrage en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [services postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/raw/main/docs/tutos/ressources/services%20postgresql.xml)
+- Télécharger le fichier de paramétrage en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [services postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/raw/main/docs/tutos/ressources/services_postgresql.xml)
 
 - Cliquer sur "Charger" à droite de la fenêtre
 
