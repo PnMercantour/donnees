@@ -42,9 +42,9 @@ _les noms des schémas ci-dessous sont des liens cliquables_
  |[tourisme](./bd_pnm/tourisme.md)| Tourisme et fréquentation du parc (compteurs..)|
 
 
- ## Tutos Qgis [tutos](./tutos/README.md)
+## Tutos Qgis [tutos](./tutos/README.md)
  
- Le dossier [tutos](./tutos/README.md) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
+Le dossier [tutos](./tutos/README.md) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
 
 Si vous venez de recevoir votre ordinateur, il est nécessaire de réaliser les premiers paramétrages pour avoir accès à la base de données du parc, et aux fonds 
