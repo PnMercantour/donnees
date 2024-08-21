@@ -42,7 +42,7 @@ _les noms des schémas ci-dessous sont des liens cliquables_
  |[tourisme](./bd_pnm/tourisme.md)| Tourisme et fréquentation du parc (compteurs..)|
 
 
-## Tutos Qgis [tutos](./tutos/README.md)
+## Tutos [Qgis](./tutos/README.md)
  
 Le dossier [tutos](./tutos/README.md) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du aprc, et provenant de sources externes. Ainsi qu'un glossaire des 
 termes de géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations !
@@ -70,7 +70,8 @@ de carte au format wms.
 
 
 
- 
+<!-- 
+
  ## Structure du dépôt
 
 ```bash
@@ -117,7 +118,7 @@ Dans chaque dossier-schéma se trouve un dossier bin contenant notamment deux sc
  - `dump_schema` lit depuis la base de données la version courante du schema sql et l'enregistre dans `schema.sql`.  
  - `dump_project` télécharge la version courante du projet QGIS depuis la base de données et l'enregistre dans `nom_du_schema.qgs`
 
- <!--
+
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
@@ -135,4 +136,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-        -->
+-->
+
