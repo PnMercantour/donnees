@@ -9,8 +9,9 @@ hide:
 
 Vous trouverez ici la documentation concernant la [_base de données_ (qu'est-ce que c'est ?)](./tutos/README.md##base-de-données "Au sens large, une base de donnée permet de stocker et de manipuler des données par des moyens informatiques") utilisée par les agents du parc ainsi que des tutoriels et ressources facilitant l'utilisation de la base de données, et des données géographiques en général.
 
+Cette page est exclusivement destinée aux agents du Parc national du Mercantour.
 
-Cette page est composé de deux parties principales: 
+Elle composé de deux parties principales: 
 
  - [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
  - [tutos](./docs/tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
