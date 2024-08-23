@@ -1,3 +1,13 @@
 .md-grid {
   max-width: 2880px; 
 }
+
+.md-logo {
+  /*
+  height: 48px;
+  width: 48px;
+  size: 200%;
+  */
+  margin: 0px !important;
+  padding: 0px !important;
+}
