@@ -12,7 +12,7 @@ theme:
     - content.code.annotation
     - content.code.copy
     #    - toc.integrate
-  logo: tutos/img/logo_embleme_pnm_quadri.jpg
+  logo: tutos/img/logo_embleme_pnm_quadri_vert.jpg
   language: fr
   palette:
     - scheme: default
