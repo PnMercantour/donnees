@@ -16,6 +16,9 @@ Elle composé de deux parties principales:
  - [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
  - [tutos](./tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
+
+Si vous cherchez la réponse à une question précise concernant la messagerie, le réseau, le mobile ou autres ressource interne du parc, vous pouvez consulter la [FAQ à ce lien.](https://pnmercantour.github.io/faq/).
+
 ## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 
