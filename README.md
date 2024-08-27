@@ -32,7 +32,6 @@ _les noms des schémas ci-dessous sont des liens cliquables_
 |[charte](./bd_pnm/charte)|Données nécessaires à la réalisation de la carte des vocations<!-- à compléter -->|
 |[foret](./bd_pnm/foret)|Données publiques issues cadastre<!-- à compléter -->|
 |[geonature_synthese](./bd_pnm/geonature_synthese)|Observations géonature, détaillées et agrégées selon différents critères|
-
 |[geotrek](./bd_pnm/geotrek)| Sentiers du parc|
 |[inpn](./bd_pnm/inpn)| Limites de parcs nationaux, régionaux, et réserves naturelles|
 |[limites](./bd_pnm/limites)| Limites du parc et administratives|
