@@ -22,11 +22,11 @@ Si vous cherchez la réponse à une question précise concernant la messagerie, 
 ## Anciens liens 
 
 ### Métadonnées
-Dans le passé, des métadonnées ont été stockées sur ce site:  https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/home 
+Dans le passé, des métadonnées ont été stockées sur ce site:  [https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/home](https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/home)
 Elles ne sont plus mises à jour, et la plupart ont été copiées ici. 
 
 ### Cartothèque
-Certaines cartes et données sont accessibles sur la carthotèque à ce lien: http://192.168.80.85/lm/
+Certaines cartes et données sont accessibles sur la carthotèque à ce lien: [http://192.168.80.85/lm/](http://192.168.80.85/lm/)
 
 
 ## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)

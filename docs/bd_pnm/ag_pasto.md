@@ -153,6 +153,20 @@ Données produites dans le cadre d'une compilation / correction du jeu de donné
 Résolution: 30 m
 
 
+###  obs_priorite_maec
+Observations des espèces de flore du Docob de geonature de la Stratégie flore niveau 1 et 2 de priorité, + 3 espèces : 
+- Reine des Alpes
+- Fritillaire de Moggridge
+- Rossolis à feuilles rondes (Drosera)
+<!--NB: Couche A VERIFIER APRES INTEGRATION DU DOCOB.  -->
+
+Filtre important sur cette couche pour le plan de gestion maec
+extract(year from date_min)>2000 AND
+("priorite" < 3 AND
+("protegee" = 'true' OR 
+"ic" = 'true')) or 
+"cd_ref" in (97133, 95442, 98978)
+
 ###  Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis 
 
 #### Description des colonnes remarquables
