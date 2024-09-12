@@ -19,6 +19,16 @@ Elle composé de deux parties principales:
 
 Si vous cherchez la réponse à une question précise concernant la messagerie, le réseau, le mobile ou autres ressource interne du parc, vous pouvez consulter la [FAQ à ce lien.](https://pnmercantour.github.io/faq/).
 
+## Anciens liens 
+
+### Métadonnées
+Dans le passé, des métadonnées ont été stockées sur ce site:  https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/home 
+Elles ne sont plus mises à jour, et la plupart ont été copiées ici. 
+
+### Cartothèque
+Certaines cartes et données sont accessibles sur la carthotèque à ce lien: http://192.168.80.85/lm/
+
+
 ## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 
