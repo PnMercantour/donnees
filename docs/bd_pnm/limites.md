@@ -48,13 +48,13 @@ Définitions trouvables sur [ce site](https://www.statistiques.developpement-dur
 
 Dans le cas du Parc National du Mercantour voilà une illustration des différents territoires (les zones colorées correspondent à chaque délimitation)
 
-|Délimitation                  |Surface|Carte|
-|:---------------:             |:--:|:--:|
-|Aire d'Adhésion               |1211,7.|![](./img/AA_bdd.png)|
-|Zone Coeur                    |679,1        |![](./img/coeur_bdd.png)|
-|Aire Optimale d'Adhésion      |1485|![](./img/AOA_bdd.png)|
-|Périmètre d’étude de la charte|2164,1|![](./img/perim_etude_charte_bdd.png)|
-|Territoire de parc national   |1890,8|![](./img/territoire_bdd.png)|
+|Délimitation                  |Surface(km²) |Carte|
+|:---------------:             |:--:    |:--:|
+|Aire d'Adhésion               |1211,7  |![](./img/AA_bdd.png)|
+|Zone Coeur                    |679,1   |![](./img/coeur_bdd.png)|
+|Aire Optimale d'Adhésion      |1485    |![](./img/AOA_bdd.png)|
+|Périmètre d’étude de la charte|2164,1  |![](./img/perim_etude_charte_bdd.png)|
+|Territoire de parc national   |1890,8  |![](./img/territoire_bdd.png)|
 
 
 
