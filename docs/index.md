@@ -27,6 +27,7 @@ Elles ne sont plus mises à jour, et la plupart ont été copiées ici.
 
 ### Cartothèque
 Certaines cartes et données sont accessibles sur la carthotèque à ce lien: [http://192.168.80.85/lm/](http://192.168.80.85/lm/)
+Elles ne sont plus mises à jour, et la plupart ont été copiées ici. 
 
 
 ## Documentation de la base de données: [bd_pnm](./docs/bd_pnm/README.md)
@@ -53,6 +54,8 @@ _les noms des schémas ci-dessous sont des liens cliquables_
  |[rice](./bd_pnm/rice.md)| Réserve Internationale de Ciel Etoilé|
  |[survol](./bd_pnm/survol.md)| Zones sensibles en lien avec les autorisations de survol|
  |[tourisme](./bd_pnm/tourisme.md)| Tourisme et fréquentation du parc (compteurs..)|
+
+### Clarification concernant les limites et zones du PnM
 
 
 ## Tutos [Qgis](./tutos/README.md)
