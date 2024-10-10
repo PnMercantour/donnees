@@ -13,7 +13,7 @@ Cette page est exclusivement destinée aux agents du Parc national du Mercantour
 
 Elle composé de deux parties principales: 
 
- - [bd_pnm](./bd_pnm/README.md) contient les descriptions des schémas et données de la base de données du parc, 
+ - [bd_pnm](./bd_pnm/index.md) contient les descriptions des schémas et données de la base de données du parc, 
  - [tutos](./tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
 
