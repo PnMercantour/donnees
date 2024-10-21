@@ -2,18 +2,20 @@
 
 ## Explication
 Afin que les données naturalistes puissent être partagées et échangées, chaque taxon est associé à un identifiant numérique unique qui s'appelle le cd_nom.
-Ce numéro est extrêmement important puisqu'il permet de suivre les taxons indépendemment des changements de noms, d'orthographe.
+Ce numéro est extrêmement important puisqu'il permet de suivre les observations indépendemment des changements de noms, d'orthographe, de taxonomie.
 
-Or, de façon générale, les relevés naturalistes sont faits à l'aide d'un nom. Il faut donc, pour pouvoir enregistrer et valider ces obervations, leur associer un cd_nom. 
+Or, de façon générale, les relevés naturalistes sont faits à l'aide en utilisant un nom. Il faut donc leur associer un cd_nom. 
 
 
 Taxrefmatch est un outil qui permet à partir d'un nom scientifique de taxon de retrouver le cd_nom associé, et donc l'ensemble de ses propriétés (nom scientifique valide, niveau taxonomique etc...).
 
 En combinant taxrefmatch et les formules disponibles sur LibreOffice il est possible d'automatiser et de simplifier le processus associant à chaque nom de taxon saisi un cd_nom correct et unique. 
 
-Il y a plusieurs étapes: 
 
-- à partir d'un fichier observations.csv récupérer obtenir la correspondance entre noms de taxons et cd_nom
+Il y a plusieurs étapes à partir d'un fichier observations.csv 
+
+- récupérer la liste des noms de taxons observés sans doublons
+- l'utiliser pour obtenir la correspondance entre noms de taxons et cd_nom par taxrefmatch
 - utiliser les outils de libreoffice pour automatiser la mise en relation et obtenir un cd_nom pour chaque observation
 
 
@@ -28,8 +30,8 @@ Soit un tableau d'observations sur un format similaire à ce qui suit nommé "ob
 |Date|Observateur|Taxon|x|y|
 |:--:|:--:|:--:|:--:|:--:|
 |12/10/2016|Paul Bismut|Nicrophorus vespilloides|7.070697|44.204141|
-|12/10/2016|Serge Plouf|Cossus cossus|7.020686|44.188697|
-|12/10/2016|Jean-Paul Pierre|Glomeris klugii|7.10808|44.207472|
+|10/12/2016|Serge Plouf|Cossus cossus|7.020686|44.188697|
+|16/10/2012|Jean-Paul Pierre|Glomeris klugii|7.10808|44.207472|
 |...|...|...|...|....|
 
 
@@ -53,14 +55,16 @@ _On peut faire un premier essai en laissant vide la deuxième colonne, mais il e
 
 |nom_complet|classification|fk|
 |:--:|:--:|:--:|
-|helix lapicidus linné 1758)|mollusca,gastropoda,helicidae|12|
-|Cyclops minutus O.F. Müller, 1776||30|
+|helix lapicidus linné 1758)|mollusca,gastropoda,helicidae||
+|Cyclops minutus O.F. Müller, 1776|||
 
 #### Préparer le fichier pour taxref-match
 Une bonne façon de faire peut être de procéder de la façon suivante:
+
 - créer un nouveau fichier "input-taxrefmatch.csv".
 - copier la colonne contenant les noms de taxon de "observations.csv" en première colonne du nouveau fichier
 - cliquer sur "Données->plus de filtres->filtre standard"
+
 ![](./img/filtrer_doublons.png)
  
 
@@ -86,8 +90,6 @@ Une bonne façon de faire peut être de procéder de la façon suivante:
 - Dans le fichier "observation.csv" créer une nouvelle colonne "cd_nom".
 
 
-### Formule pour récupérer les cd_nom
-
 On va maintenant y inscrire une formule pour obtenir automatiquement les cd_nom de "taxrefmatch.csv".
 
 Dans LibreOffice la formule "=RECHERCHEV" permet de réaliser cette opération. 
@@ -104,7 +106,7 @@ A : numéro de la cellule contenant le nom de taxon saisi
 
 B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les données. il s'écrit de la façon suivante: 
 
-> 'file///c/:users/nomutilisateur/documents/taxrefmatch.csv'#nomdelapage.A1:D40
+> 'file///c/:utilisateurs/nomutilisateur/documents/taxrefmatch.csv'#taxrefmatch.A1:D99
 
 la fin de la formule (A1:D40) défini la plage de donnée dans laquelle libreoffice va chercher le nom du taxon. 
 C: numéro de la colonne dans la plage de cellule définie en B
