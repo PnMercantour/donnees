@@ -11,6 +11,11 @@ Taxrefmatch est un outil qui permet à partir d'un nom scientifique de taxon de 
 
 En combinant taxrefmatch et les formules disponibles sur LibreOffice il est possible d'automatiser et de simplifier le processus associant à chaque nom de taxon saisi un cd_nom correct et unique. 
 
+Il y a plusieurs étapes: 
+
+- à partir d'un fichier observations.csv récupérer obtenir la correspondance entre noms de taxons et cd_nom
+- utiliser les outils de libreoffice pour automatiser la mise en relation et obtenir un cd_nom pour chaque observation
+
 
 
 ## Pas à pas
@@ -28,14 +33,13 @@ Soit un tableau d'observations sur un format similaire à ce qui suit nommé "ob
 |...|...|...|...|....|
 
 
-à ce tableau peuvent être ajoutés autant de colonnes que souhaitées (déterminateur, effectifs observés, méthode d'observation...), il manque principalement pour pouvoir être enregistrés dans une base de données le cd_nom. 
+à ce tableau il manque le cd_nom pour pouvoir être enregistré dans une base de données. ( Un grand nombre d'informations supplémentaires peuvent être ajoutées : le déterminateur, les effectifs observés, la méthode d'observation...) 
 
-### Obtenir les cd_nom par taxref-match
 
+### Obtenir les cd_nom pour tous les taxons observés par taxref-match
 
 Afin de l'obtenir on peut utiliser taxref-match:
 https://taxref.mnhn.fr/taxref-match/taxrefmatch/import
-
 
 
 Il faut pour cela donner le plus de détails sur les taxons en renseignant un fichier csv sur ce format: 
@@ -43,6 +47,9 @@ Il faut pour cela donner le plus de détails sur les taxons en renseignant un fi
 - la première colonne contient le nom saisi
 - la deuxième colonne contient le plus d'information sur les noms de taxons supérieur, séparés par des virgules (sans espace).
 - la troisième colonne contient un numéro d'identifiant arbitraire
+
+
+_On peut faire un premier essai en laissant vide la deuxième colonne, mais il est possible que certaines correspondances ne se fassent pas, ou mal_
 
 |nom_complet|classification|fk|
 |:--:|:--:|:--:|
@@ -81,24 +88,29 @@ Une bonne façon de faire peut être de procéder de la façon suivante:
 
 ### Formule pour récupérer les cd_nom
 
-On va maintenant y inscrire une formule pour obtenir automatiquement les cd_nom de "taxrefmatch.csv"
+On va maintenant y inscrire une formule pour obtenir automatiquement les cd_nom de "taxrefmatch.csv".
+
 Dans LibreOffice la formule "=RECHERCHEV" permet de réaliser cette opération. 
+
 Cette formule prend la valeur d'une cellule, puis va la chercher dans une plage de cellules données, et renvoie la valeur d'une colonne à la même ligne.
 Elle permet donc de récupérer les cd_nom des espèces dont le nom est présent dans "observations.csv" et "taxrefmatch.csv"
 
-il faudra y inscrire 
+il faudra donc utiliser la formule :
 =RECHERCHEV(A;B;C;D)
 
 en remplacant:
 
 A : numéro de la cellule contenant le nom de taxon saisi
+
 B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les données. il s'écrit de la façon suivante: 
+
 > 'file///c/:users/nomutilisateur/documents/taxrefmatch.csv'#nomdelapage.A1:D40
+
 la fin de la formule (A1:D40) défini la plage de donnée dans laquelle libreoffice va chercher le nom du taxon. 
 C: numéro de la colonne dans la plage de cellule définie en B
+
 D: indique l'ordre de tri, laisser à 0
 
 ![](./img/demo_taxref.gif)
 
-
-Donc 
+Enfin, pour transformer la formule en valeur il suffit de sélectionner la nouvelle colonne de cd_noms, puis de cliquer sur "Données>calculer>formules en valeur".
