@@ -102,21 +102,21 @@ A : numéro de la cellule contenant le nom de taxon saisi
 
 B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les données. Il s'écrit de la façon suivante: 
 
-> 'file///c/:utilisateurs/nomutilisateur/documents/taxrefmatch.csv'#taxrefmatch.A1:D99
+> 'file///c/:utilisateurs/nomutilisateur/documents/taxrefmatch.csv'#taxrefmatch.$A$1:$D$99
 
 que l'on décompose en plusieurs parties: 
 
 - où la partie entre guillements décrit le chemin vers le fichier, sans majuscule
 
-- le nom de la page précédé d'un # (ici #taxrefmatch)
+- le nom de la page précédé de #$ (ici #$taxrefmatch)
 
-- la fin de la formule A1:D99 donne la plage de donnée dans laquelle LibreOffice va chercher le nom du taxon. 
+- la fin de la formule $A$1:$D$99 donne la plage de donnée dans laquelle LibreOffice va chercher le nom du taxon. Ajouter des $ avant les lettres et chiffres permet de les verrouiller pour copier/coller la formule sans modifier la plage de données.
 
 C: numéro de la colonne dans la plage de cellule définie en B (au format taxrefmatch, ce sera toujours la 4ème si on prend toutes les colonnes depuis le nom cité jusqu'au cd_nom).
 
 D: indique l'ordre de tri, laisser à 0
 
-> exemple: =RECHERCHEV(E2;'file:///C:/Users/pnmercantour/Documents/demo_taxref/taxrefmatch.csv'#$taxrefmatch.A1:D62;4;0)
+> exemple: =RECHERCHEV(E2;'file:///C:/Users/pnmercantour/Documents/demo_taxref/taxrefmatch.csv'#$taxrefmatch.$A$1:$D$62;4;0)
 
 
 - On peut ensuite copier/coller la formule sur toute la colonne
