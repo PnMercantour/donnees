@@ -42,7 +42,7 @@ Afin de l'obtenir on va utiliser taxref-match:
 [https://taxref.mnhn.fr/taxref-match/taxrefmatch/import](https://taxref.mnhn.fr/taxref-match/taxrefmatch/import)
 
 
-#### Liste des taxons sans doublons au format taxref-match
+### Liste des taxons sans doublons 
 On peut procéder de la façon suivante pour obtenir une liste des taxons saisis sans doublon:
 
 - créer un nouveau fichier "input-taxrefmatch.csv".
@@ -58,7 +58,9 @@ On peut procéder de la façon suivante pour obtenir une liste des taxons saisis
 	- cocher "copier le résultat vers" et choisir une case vide
 - On obtient ainsi la liste des taxons
 
-- Ajouter les colonnes "classification" où ajouter les informations des taxons supérieurs séparés par des virgules comme indiqué [ici](https://taxref.mnhn.fr/taxref-match/taxrefmatch/taxrefMatchDoc) et une colonne fk que l'on peut laisser vide.
+### Mise au format taxref-match
+
+- Ajouter les colonnes "classification" où on ajoute les informations des taxons supérieurs séparés par des virgules comme indiqué [ici](https://taxref.mnhn.fr/taxref-match/taxrefmatch/taxrefMatchDoc) et une colonne fk que l'on peut laisser vide.
 
 _On peut faire un premier essai en laissant vide la deuxième colonne, mais il est possible que certaines correspondances ne se fassent pas, ou mal ci dessous un exemple de tableau_
 
@@ -69,7 +71,7 @@ _On peut faire un premier essai en laissant vide la deuxième colonne, mais il e
 
 
  
-- On peut ensuite enregistrer en faisant attention à bien spécifier d'utiliser des points-virgule comme séparateur.
+- On peut ensuite enregistrer en faisant attention à bien spécifier d'utiliser des points-virgule comme séparateur de champ.
 
 ![](./img/calc_pointvirgule.png)
 
@@ -98,7 +100,7 @@ en remplacant:
 
 A : numéro de la cellule contenant le nom de taxon saisi
 
-B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les données. il s'écrit de la façon suivante: 
+B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les données. Il s'écrit de la façon suivante: 
 
 > 'file///c/:utilisateurs/nomutilisateur/documents/taxrefmatch.csv'#taxrefmatch.A1:D99
 
@@ -108,11 +110,14 @@ que l'on décompose en plusieurs parties:
 
 - le nom de la page précédé d'un # (ici #taxrefmatch)
 
-- la fin de la formule (A1:D99) définit la plage de donnée dans laquelle libreoffice va chercher le nom du taxon. 
+- la fin de la formule A1:D99 donne la plage de donnée dans laquelle LibreOffice va chercher le nom du taxon. 
 
-C: numéro de la colonne dans la plage de cellule définie en B
+C: numéro de la colonne dans la plage de cellule définie en B (au format taxrefmatch, ce sera toujours la 4ème si on prend toutes les colonnes depuis le nom cité jusqu'au cd_nom).
 
 D: indique l'ordre de tri, laisser à 0
+
+> exemple: =RECHERCHEV(E2;'file:///C:/Users/pnmercantour/Documents/demo_taxref/taxrefmatch.csv'#$taxrefmatch.A1:D62;4;0)
+
 
 - On peut ensuite copier/coller la formule sur toute la colonne
 
@@ -120,4 +125,4 @@ D: indique l'ordre de tri, laisser à 0
 
 Enfin, pour transformer la formule en valeur il suffit de sélectionner la nouvelle colonne de cd_noms, puis de cliquer sur "Données>calculer>formules en valeur".
 
-Attention! Il faudra alors vérifier puisque certaines correspondances peuvent avoir échouer. Dans ce cas, réessayer en complétant la colonne "classification" différemment avant de soumettre à taxref-match, ou bien les compléter à la main à partir du [site de l'inpn](https://inpn.mnhn.fr/) 
+Attention! Certaines correspondances peuvent avoir échoué. Dans ce cas, réessayer en complétant la colonne "classification" différemment avant de soumettre à taxref-match, ou bien les compléter à la main à partir du [site de l'inpn](https://inpn.mnhn.fr/) 
