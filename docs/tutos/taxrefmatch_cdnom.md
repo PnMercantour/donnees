@@ -4,7 +4,7 @@
 Afin que les données naturalistes puissent être partagées et échangées, chaque taxon est associé à un identifiant numérique unique qui s'appelle le cd_nom.
 Ce numéro est extrêmement important puisqu'il permet de suivre les observations indépendemment des changements de noms, d'orthographe, de taxonomie.
 
-Or, de façon générale, les relevés naturalistes sont faits à l'aide en utilisant un nom. Il faut donc leur associer un cd_nom. 
+Or, de façon générale, les relevés naturalistes sont faits en utilisant un nom. Il faut donc leur associer un cd_nom. 
 
 
 Taxrefmatch est un outil qui permet à partir d'un nom scientifique de taxon de retrouver le cd_nom associé, et donc l'ensemble de ses propriétés (nom scientifique valide, niveau taxonomique etc...).
@@ -12,7 +12,7 @@ Taxrefmatch est un outil qui permet à partir d'un nom scientifique de taxon de 
 En combinant taxrefmatch et les formules disponibles sur LibreOffice il est possible d'automatiser et de simplifier le processus associant à chaque nom de taxon saisi un cd_nom correct et unique. 
 
 
-Il y a plusieurs étapes à partir d'un fichier observations.csv 
+Ce processus peut être fait en trois étapes: 
 
 - récupérer la liste des noms de taxons observés sans doublons
 - l'utiliser pour obtenir la correspondance entre noms de taxons et cd_nom par taxrefmatch
@@ -38,28 +38,12 @@ Soit un tableau d'observations sur un format similaire à ce qui suit nommé "ob
 à ce tableau il manque le cd_nom pour pouvoir être enregistré dans une base de données. ( Un grand nombre d'informations supplémentaires peuvent être ajoutées : le déterminateur, les effectifs observés, la méthode d'observation...) 
 
 
-### Obtenir les cd_nom pour tous les taxons observés par taxref-match
-
-Afin de l'obtenir on peut utiliser taxref-match:
-https://taxref.mnhn.fr/taxref-match/taxrefmatch/import
+Afin de l'obtenir on va utiliser taxref-match: 
+[https://taxref.mnhn.fr/taxref-match/taxrefmatch/import](https://taxref.mnhn.fr/taxref-match/taxrefmatch/import)
 
 
-Il faut pour cela donner le plus de détails sur les taxons en renseignant un fichier csv sur ce format: 
-
-- la première colonne contient le nom saisi
-- la deuxième colonne contient le plus d'information sur les noms de taxons supérieur, séparés par des virgules (sans espace).
-- la troisième colonne contient un numéro d'identifiant arbitraire
-
-
-_On peut faire un premier essai en laissant vide la deuxième colonne, mais il est possible que certaines correspondances ne se fassent pas, ou mal_
-
-|nom_complet|classification|fk|
-|:--:|:--:|:--:|
-|helix lapicidus linné 1758)|mollusca,gastropoda,helicidae||
-|Cyclops minutus O.F. Müller, 1776|||
-
-#### Préparer le fichier pour taxref-match
-Une bonne façon de faire peut être de procéder de la façon suivante:
+#### Liste des taxons sans doublons au format taxref-match
+On peut procéder de la façon suivante pour obtenir une liste des taxons saisis sans doublon:
 
 - créer un nouveau fichier "input-taxrefmatch.csv".
 - copier la colonne contenant les noms de taxon de "observations.csv" en première colonne du nouveau fichier
@@ -75,16 +59,26 @@ Une bonne façon de faire peut être de procéder de la façon suivante:
 - On obtient ainsi la liste des taxons
 
 - Ajouter les colonnes "classification" où ajouter les informations des taxons supérieurs séparés par des virgules comme indiqué [ici](https://taxref.mnhn.fr/taxref-match/taxrefmatch/taxrefMatchDoc) et une colonne fk que l'on peut laisser vide.
+
+_On peut faire un premier essai en laissant vide la deuxième colonne, mais il est possible que certaines correspondances ne se fassent pas, ou mal ci dessous un exemple de tableau_
+
+|nom_complet|classification|fk|
+|:--:|:--:|:--:|
+|helix lapicidus linné 1758)|mollusca,gastropoda,helicidae||
+|Cyclops minutus O.F. Müller, 1776|||
+
+
  
 - On peut ensuite enregistrer en faisant attention à bien spécifier d'utiliser des points-virgule comme séparateur.
 
 ![](./img/calc_pointvirgule.png)
 
-- et enfin soumettre le fichier à taxref match : https://taxref.mnhn.fr/taxref-match/taxrefmatch/import
 
-### utiliser le résultat de taxref
+- et enfin soumettre le fichier à taxref match : [https://taxref.mnhn.fr/taxref-match/taxrefmatch/import](https://taxref.mnhn.fr/taxref-match/taxrefmatch/import)
 
-- On récupère un fichier nommé "résultats.csv", le renommer en "taxrefmatch.csv" et renommer la premièrepage en "taxrefmatch"
+### Utiliser le résultat de taxref pour obtenir les cd_nom
+
+- On récupère un fichier nommé "résultats.csv", le renommer en "taxrefmatch.csv" et renommer la première page en "taxrefmatch"
 
 
 - Dans le fichier "observation.csv" créer une nouvelle colonne "cd_nom".
@@ -108,11 +102,22 @@ B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les
 
 > 'file///c/:utilisateurs/nomutilisateur/documents/taxrefmatch.csv'#taxrefmatch.A1:D99
 
-la fin de la formule (A1:D40) défini la plage de donnée dans laquelle libreoffice va chercher le nom du taxon. 
+que l'on décompose en plusieurs parties: 
+
+- où la partie entre guillements décrit le chemin vers le fichier, sans majuscule
+
+- le nom de la page précédé d'un # (ici #taxrefmatch)
+
+- la fin de la formule (A1:D99) définit la plage de donnée dans laquelle libreoffice va chercher le nom du taxon. 
+
 C: numéro de la colonne dans la plage de cellule définie en B
 
 D: indique l'ordre de tri, laisser à 0
 
+- On peut ensuite copier/coller la formule sur toute la colonne
+
 ![](./img/demo_taxref.gif)
 
 Enfin, pour transformer la formule en valeur il suffit de sélectionner la nouvelle colonne de cd_noms, puis de cliquer sur "Données>calculer>formules en valeur".
+
+Attention! Il faudra alors vérifier puisque certaines correspondances peuvent avoir échouer. Dans ce cas, réessayer en complétant la colonne "classification" différemment avant de soumettre à taxref-match, ou bien les compléter à la main à partir du [site de l'inpn](https://inpn.mnhn.fr/) 
