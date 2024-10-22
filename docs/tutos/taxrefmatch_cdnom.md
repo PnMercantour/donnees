@@ -19,6 +19,9 @@ Ce processus peut être fait en trois étapes:
 - utiliser les outils de libreoffice pour automatiser la mise en relation et obtenir un cd_nom pour chaque observation
 
 
+_Avertissement_
+Tout outil d'automatisation comme taxref-match exige une vérification des résultats. Il est nécessaire de revoir les correspondances établies pour éviter d'introduire des erreurs dans les relevés. 
+
 
 ## Pas à pas
 
@@ -82,6 +85,7 @@ _On peut faire un premier essai en laissant vide la deuxième colonne, mais il e
 
 - On récupère un fichier nommé "résultats.csv", le renommer en "taxrefmatch.csv" et renommer la première page en "taxrefmatch"
 
+- Prendre le temps de relire ce fichier et de le corriger si besoin. Dans certains cas, taxref-match va proposer plusieurs options pour un taxon donné, dans ce cas là il est nécessaire de supprimer les lignes erronées. 
 
 - Dans le fichier "observation.csv" créer une nouvelle colonne "cd_nom".
 
