@@ -8,9 +8,8 @@ _Si vous avez déjà accès à la base de données, la plupart des autres indica
 
 
 Il est capital de gérer la [projection](./README.md#projection) dans QGIS pour que les cartes produites 
-soient lisibles dans le système de coordonnées de référence (SCR) français: Lambert-93.
-
-Pour cela, 
+soient lisibles dans le système de coordonnées de référence (SCR) français: Lambert-93. D'autres paramètres
+aident aussi à rendre le logiciel lisible et à éviter des plantages. 
 
 
 # Pas à pas
