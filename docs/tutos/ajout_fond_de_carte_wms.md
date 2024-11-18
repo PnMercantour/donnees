@@ -15,7 +15,7 @@ Dans ce tuto, nous allons enregistrer des listes d'adresses de serveurs pour pou
 
 ### Ajout du catalogue de WMS
 
-- Télécharger le catalogue en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [service WMS.xml en cliquant sur ce lien](https://raw.githubusercontent.com//PnMercantour/donnees/main/tutos/ressources/service%20WMS.xml)
+- Télécharger le catalogue en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant:  [service WMS.xml en cliquant sur ce lien](https://raw.githubusercontent.com/PnMercantour/donnees/refs/heads/main/docs/tutos/ressources/service%20WMS.xml)
 
 - Déplacer ce fichier dans un dossier où il sera facile à retrouver.
  

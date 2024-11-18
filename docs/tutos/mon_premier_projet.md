@@ -65,7 +65,7 @@ l'affichage des fichiers cachés dans les options)
 
 
 #### _Si vous ne voyez pas "service projets"_
-- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://github.com/PnMercantour/donnees/blob/main/tutos/ressources/services%20postgresql.xml).
+- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://raw.githubusercontent.com/PnMercantour/donnees/refs/heads/main/docs/tutos/ressources/service%20WMS.xml).
 
 - Dans le gestionnaire de sources de QGIS, cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
 
