@@ -42,6 +42,7 @@ en cliquant sur "Ajouter un groupe". On peut ensuite glisser des couches dans le
 
  
 ### Pour le travail en local
+ - Organiser ses fichiers et projets QGIS. Garder les projets QGIS dans des dossiers où il sera facile de les retrouver, et si possible, conserver les donnéees utilisées dans chaque projet proches.
  - Toujours conserver une copie intacte des données de travail par exemple dans un sous-dossier
  - Penser à supprimer les produits intermédiaires de votre projet, et des fichiers.
  - Privilégier les exports en dur aux couches temporaires pour les résultats de géotraitements 

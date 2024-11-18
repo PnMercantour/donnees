@@ -9,7 +9,7 @@ _Si vous avez déjà accès à la base de données, la plupart des autres indica
 
 Il est capital de gérer la [projection](./README.md#projection) dans QGIS pour que les cartes produites 
 soient lisibles dans le système de coordonnées de référence (SCR) français: Lambert-93. D'autres paramètres
-aident aussi à rendre le logiciel lisible et à éviter des plantages. 
+aident aussi à rendre le logiciel lisible et à éviter des plantages.
 
 
 # Pas à pas
@@ -29,11 +29,15 @@ pour les projets, et pour les couches.
 
 ## Table d'attributs
 
+Dans la même fenêtre se trouve l'onglet "sources de données".
+
+
+
 
 En bas à droite de de la fenêtre de la table d'attributs se trouve une petite icône avec un menu déroulant. 
-Choisir l'option "Ne montrer que les entités visibles sur la carte". 
+Choisir l'option "Montrer les entités visibles sur la carte". 
 
-![](./img/tableattributs-limiter.png)
+![](./img/params_afficher_visibles.png)
 
 Dorénavant, la table d'attribut ne montrera que les entités visibles sur l'étendue du canevas visible, en zoomant et vous déplaçant sur le canevas vous limiterez le nombre d'entités à charger dans la table d'attribut et donc
 le risque de plantage de QGIS. 
