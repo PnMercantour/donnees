@@ -21,7 +21,7 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Dans nom entrer "Scan 25"
 - Dans URL copier le lien suivant
-> https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
+> https://data.geopf.fr/private/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
 
 <!--
 - Il faut ensuite cliquer sur la petite croix verte dans l'encadré "Athentification"
