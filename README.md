@@ -7,6 +7,14 @@ Ce dépôt sert à construire la documentation qui est affichée sur le site: ht
 
 La documentation est composé de deux parties principales. [bd_pnm](#bd_pnm) contient les descriptions des schémas et données de la base de données du parc, [tutos](#tutos) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
+
+
+## Notes pour écriture de la documentation
+- syntaxe markdown simple
+- Nom du document tel qu'on veut qu'il apparaisse dans la table des matières en premier titre (\# Titre)
+- Pour ignorer un fichier dans la génération du site, possibilité d'ajouter son nom dans mkdoc.yml (en considérant la racine comme le dossier "docs") 
+
+
  ## [bd_pnm](./bd_pnm)
   
 Dans ce dossier, se trouve la documentation permettant de comprendre le contenu de chaque [_schéma_ (qu'est-ce que c'est ?](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données")) de la base de données, 

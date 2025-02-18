@@ -1,4 +1,4 @@
-# Accueuil de la documentation de la base de données
+# Accueil de la documentation de la base de données
 
 Ce dossier contient la documentation pour les données contenues dans la base de données. 
 

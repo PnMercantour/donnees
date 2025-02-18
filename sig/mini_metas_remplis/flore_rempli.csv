@@ -1,0 +1,18 @@
+Etat,nom_table,referent,resume,date_maj,sensibilite,table_a_supprimer,commentaires
+DONE,flore_vasculaire_sensible_SINP_PACA_2021,Adele Rauzier,liste d’espèces de plantes vasculaires dîtes sensibles pour la région PACA,01/01/21,referent,,
+DONE,geranium argenteum_25x25,Adele Rauzier,"totalité des mailles proposées par le réseau flore sentinelle pour le suivi du Geranium argenteum. Suivi type territoire, mailles de 25mx25m",01/01/23,interne,,Changer nom : total_mailles_territoire_geranium argenteum_25x25 + ajouter une autre couche avec les mailles suivies à partir de 2023 : mailles_territoire_geranium argenteum_25x25
+TBD : repointer les dépendances,gn_synthese,Adele Rauzier,export de la base de données geonature. Totalité des données.,,,oui,à supprimer si accès à la bdd de geonature autrement
+TBD : avec vegetation→habitat,mailles_caricion_vf,Adele Rauzier,"mailles de caricion incurvae suivi dans le cadre du réseau flore-sentinelle. Suivi type territoire, mailles de 100mx100m. Début du suivi en 2013.",01/01/23,interne,,Changer nom : mailles_territoire_caricion_100x100 + mettre dans vegetation
+DONE,mailles_eryngium alpinum,Adele Rauzier,"mailles de suivi pour l’Eryngium alpinum dans le cadre du réseau flore-sentinelle. Suivi type territoire, mailles de 25mx25m.",01/01/18,interne,,Changer nom :mailles_territoire_eryngium alpinum_25x25. Fusionner avec la couche : c_maille_lauzanier_eryngium_alpinum_mlea (dans végétation)
+,observation_redirigee,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,qgis_projects,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,redirection_taxon,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,strategie_maille_resume_attributs,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,strategie_maille_taxon_attributs,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,strategie_mailles,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,strategie_notation,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,strategie_taxonomie,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,strategie_taxons,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,taxref,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+,taxref_12,Adele Rauzier,A voir_ lien avec stratégie flore,,,,
+DONE,mailles_adonis_pyrenaica_vf,Adele Rauzier,"totalité des mailles proposées par le réseau flore sentinelle pour le suivi de Adonis pyrenaica. Suivi type territoire, mailles de 25mx25m",01/01/23,interne,,Changer nom : total_mailles_territoire_adonis pyrenaica_25x25 + ajouter une autre couche avec les mailles suivies à partir de 2023 : mailles_territoire_adonis pyrenaica_25x25
