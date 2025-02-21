@@ -54,7 +54,7 @@ exclude_docs: |
   */_modele.md
   */resume_formation.md
   */Surveillance_TourdeFrance.md
-
+  *.tmp
 
 extra_css:
   - stylesheets/extra.css

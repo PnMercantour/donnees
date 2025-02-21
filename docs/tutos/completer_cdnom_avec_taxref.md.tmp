@@ -1,0 +1,117 @@
+# Récupérer les informations taxonomiques à partir d'un cd_nom
+
+## Explication
+Afin que les données naturalistes puissent être partagées et échangées, chaque taxon est associé à un identifiant numérique unique qui s'appelle le cd_nom.
+Ce numéro est extrêmement important puisqu'il permet de suivre les observations indépendemment des changements de noms, d'orthographe, de taxonomie.
+
+Taxref est le  est un outil qui permet à partir d'un nom scientifique de taxon de retrouver le cd_nom associé, et donc l'ensemble de ses propriétés (nom scientifique valide, niveau taxonomique etc...).
+
+En combinant taxrefmatch et les formules disponibles sur LibreOffice il est possible d'automatiser et de simplifier le processus associant à chaque nom de taxon saisi un cd_nom correct et unique. 
+
+
+Ce processus peut être fait en trois étapes: 
+
+- récupérer le référentiel taxref
+- l'utiliser pour obtenir la correspondance cd_nom et taxref à l'aide des outils de libre office
+
+
+
+
+## Pas à pas
+
+### Situation de départ
+
+Soit un tableau d'observations sur un format similaire à ce qui suit nommé "observations.csv"
+
+
+|Date|Observateur|cd_nom|x|y|
+|:--:|:--:|:--:|:--:|:--:|
+|12/10/2016|Paul Bismut|18051|7.070697|44.204141|
+|10/12/2016|Serge Plouf|932765|7.020686|44.188697|
+|16/10/2012|Jean-Paul Pierre|1852|7.10808|44.207472|
+|...|...|...|...|....|
+
+Le cd_nom dans ce tableau permet bien d'identifier de manière unique un taxon, mais on peut avoir besoin de le compléter à l'aide des autres données de références. 
+
+
+
+Pour cela on a téléchargé le référentiel taxref dans sa dernière version sur ce lien: 
+
+[https://inpn.mnhn.fr/telechargement/referentielEspece/referentielTaxo](https://inpn.mnhn.fr/telechargement/referentielEspece/referentielTaxo)
+
+_Les données Geonature du Parc sont pour l'instant en Taxref v17, par conséquent il est préférable de choisir la même version en cas de besoin de comparaisons._
+
+Et on l'a mis en forme de manière à ce que la recherche soit plus rapide
+
+
+
+
+
+### Mise au format taxref-match
+
+- Ajouter les colonnes "classification" où on ajoute les informations des taxons supérieurs séparés par des virgules comme indiqué [ici](https://taxref.mnhn.fr/taxref-match/taxrefmatch/taxrefMatchDoc) et une colonne fk que l'on peut laisser vide.
+
+_On peut faire un premier essai en laissant vide la deuxième colonne, mais il est possible que certaines correspondances ne se fassent pas, ou mal ci dessous un exemple de tableau_
+
+|nom_complet|classification|fk|
+|:--:|:--:|:--:|
+|helix lapicidus linné 1758)|mollusca,gastropoda,helicidae||
+|Cyclops minutus O.F. Müller, 1776|||
+
+
+ 
+- On peut ensuite enregistrer en faisant attention à bien spécifier d'utiliser des points-virgule comme séparateur de champ.
+
+![](./img/calc_pointvirgule.png)
+
+
+- et enfin soumettre le fichier à taxref match : [https://taxref.mnhn.fr/taxref-match/taxrefmatch/import](https://taxref.mnhn.fr/taxref-match/taxrefmatch/import)
+
+### Utiliser le résultat de taxref pour obtenir les cd_nom
+
+- On récupère un fichier nommé "résultats.csv", le renommer en "taxrefmatch.csv" et renommer la première page en "taxrefmatch"
+
+- Prendre le temps de relire ce fichier et de le corriger si besoin. Dans certains cas, taxref-match va proposer plusieurs options pour un taxon donné, dans ce cas là il est nécessaire de supprimer les lignes erronées. 
+
+- Dans le fichier "observation.csv" créer une nouvelle colonne "cd_nom".
+
+
+On va maintenant y inscrire une formule pour obtenir automatiquement les cd_nom de "taxrefmatch.csv".
+
+Dans LibreOffice la formule "=RECHERCHEV" permet de réaliser cette opération. 
+
+Cette formule prend la valeur d'une cellule, puis va la chercher dans une plage de cellules données, et renvoie la valeur d'une colonne à la même ligne.
+Elle permet donc de récupérer les cd_nom des espèces dont le nom est présent dans "observations.csv" et "taxrefmatch.csv"
+
+il faudra donc utiliser la formule :
+=RECHERCHEV(A;B;C;D)
+
+en remplacant:
+
+A : numéro de la cellule contenant le nom de taxon saisi
+
+B : le chemin vers le fichier taxrefmatch, et la plage de cellules contenant les données. Il s'écrit de la façon suivante: 
+
+> 'file///c/:utilisateurs/nomutilisateur/documents/taxrefmatch.csv'#taxrefmatch.$A$1:$D$99
+
+que l'on décompose en plusieurs parties: 
+
+- où la partie entre guillements décrit le chemin vers le fichier, sans majuscule
+
+- le nom de la page précédé de #$ (ici #$taxrefmatch)
+
+- la fin de la formule $A$1:$D$99 donne la plage de donnée dans laquelle LibreOffice va chercher le nom du taxon. Ajouter des $ avant les lettres et chiffres permet de les verrouiller pour copier/coller la formule sans modifier la plage de données.
+
+C: numéro de la colonne dans la plage de cellule définie en B (au format taxrefmatch, ce sera toujours la 4ème si on prend toutes les colonnes depuis le nom cité jusqu'au cd_nom).
+
+D: indique l'ordre de tri, laisser à 0
+
+> exemple: =RECHERCHEV(E2;'file:///C:/Users/pnmercantour/Documents/demo_taxref/taxrefmatch.csv'#$taxrefmatch.$A$1:$D$62;4;0)
+
+
+- On peut ensuite copier/coller la formule sur toute la colonne
+
+
+Enfin, pour transformer la formule en valeur il suffit de sélectionner la nouvelle colonne de cd_noms, puis de cliquer sur "Données>calculer>formules en valeur".
+
+Attention! Certaines correspondances peuvent avoir échoué. Dans ce cas, réessayer en complétant la colonne "classification" différemment avant de soumettre à taxref-match, ou bien les compléter à la main à partir du [site de l'inpn](https://inpn.mnhn.fr/) 

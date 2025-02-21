@@ -56,7 +56,7 @@ AND position (split_part(lower(pre.nom_cite),' ',2) in lower(tr.nom_valide)) = 0
 Au moment de l'utilisation de cette commande (2024-08), on obtient 11099 entrées où les 3 premières lettres ne collent pas avec nom valide NI nom vern
 Et le premier mot ni le deuxième mot de nom cite ne sont ni dans nom vern, ni dans nom valide.
 
-Par ailleurs, commande intéressante pour récupérer l'ensemble des noms: 
+Par ailleurs, commande intéressante pour récupérer l'ensemble des noms d'un taxon donné: 
 
 ```sql
 SELECT string_agg(nom_complet ||','|| lb_nom||','|| nom_vern, ', ')
@@ -83,4 +83,56 @@ out_path = os.path.join(out_path,
 temp.to_file(out_path)
     
     return
+```
+
+# Conversion de WKB en WKT 
+```python
+from shapely.wkb import loads
+df['geometry'] = df.WKT.apply(loads)
+df = df.drop(columns=['WKT', 'geom'])
+gdf = gpd.GeoDataFrame(df, geometry='geometry')
+```
+
+# Fusions de données à partir de requêtes sur Geonature V1 et V2
+```
+"""
+Combinaison des opérations pour changer les géométries de WKB vers objets shapely gérés par geopandas
+et combinaison des requêtes à partir des uuid (dans ce cas aucune valeur d'uuid n'est nulle, sinon cas à gérer).
+"""
+import pandas as pd
+old_lepido = "C:/Users/echraibi/Documents/projets/2025/synthese_lepido_clementine/requete_gnv1.csv"
+new_lepido = "C:/Users/echraibi/Documents/projets/2025/synthese_lepido_clementine/requete_gnv2.csv"
+
+
+lepidol = pd.read_csv(old_lepido)
+lepidnew = pd.read_csv(new_lepido)
+
+toadd = lepidol.loc[~lepidol['unique_id_sinp'].isin(lepidnew['unique_id_sinp'])]
+
+res = pd.concat((lepidnew,toadd))
+
+import geopandas as gpd
+import shapely.wkb
+res['geom'] = res['geom'].map(shapely.wkb.loads)
+res = gpd.GeoDataFrame(res, crs="EPSG:2154", geometry=res['geom'])
+res = res.drop('geom', axis=1)
+res['geometry'] = res['geometry'].centroid
+res.to_csv("C:/Users/echraibi/Documents/projets/2025/synthese_lepido_clementine/sub_cdref_lepido_res.csv")
+res.to_file("C:/Users/echraibi/Documents/projets/2025/synthese_lepido_clementine/sub_cdref_lepido_res.gpkg")
+```
+
+
+# Expérimentation MBtiles
+Script supposé générer un MBTiles qui se sert du scan25 pour les hauts niveaux de zoom, et du scan100 pour les bas niveaux de zoom.
+```bash
+gdal_translate -of mbtiles -co "TILE_FORMAT=PNG8" -co "ZLEVEL=9" "scan100_exp.tif" "mapbase.mbtiles"
+gdal_translate -of mbtiles -co "TILE_FORMAT=PNG8" -co "ZLEVEL=9" "scan25_exp.tif" "mapbase_low.mbtiles"
+gdaladdo -r nearest -oo "TILE_FORMAT=PNG8" -oo "ZLEVEL=9" "mapbase_low.mbtiles" 2 4 8 16
+echo ATTACH "mapbase_low.mbtiles" AS low; INSERT or REPLACE INTO tiles SELECT * FROM low.tiles; | sqlite3 "mapbase.mbtiles"
+
+> sqlite3 mapbase.mbtiles
+> update metadata set value=10 where name='minzoom';
+
+sqlite3 mapbase_tomodif.mbtiles
+ update tiles set zoom_level=23-zoom_level;
 ```
