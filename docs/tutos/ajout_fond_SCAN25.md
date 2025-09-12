@@ -68,4 +68,8 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - puis sur "Ajouter"
 
+## Troubleshoot
 
+Si les fonds de carte IGN ne s'affichent pas et qu'aucune erreur explicite n'apparaît voir la section 
+
+[Problème d'affichage des couches IGN WMTS dans QGIS](./FAQ.md#problème-daffichage-des-couches-ign-wmts-dans-qgis)

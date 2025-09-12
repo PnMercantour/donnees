@@ -165,6 +165,36 @@ l'onglet "Traitement" de la barre de menu.
 
 ___________________________________
 
+### Problème d'affichage des couches IGN WMTS dans QGIS
+
+#### Symptômes
+- QGIS ne charge pas les couches WMTS de l'IGN.
+- Les requêtes HTTP vers le service IGN échouent.
+- Aucun message d'erreur clair dans QGIS, ou des erreurs liées à SSL/TLS.
+
+#### Cause
+Depuis avril 2023, l'IGN a mis à jour ses certificats SSL pour ses services web. Ces certificats sont à priori installés d'office sur windows. Or il se trouve que sur certaines installations ils ne sont pas présents.  
+Si QGIS n'a pas ces certificats installés, les connexions HTTPS vers les services WMTS de l'IGN échouent par manque de confiance dans le certificat du serveur.
+
+#### Solution
+1. Télécharger les certificats SSL mis à jour par l'IGN :  
+   [https://geoservices.ign.fr/2023-04-certificat-ssl](https://geoservices.ign.fr/2023-04-certificat-ssl)
+
+2. Ajouter les certificats dans QGIS :  
+   - Aller dans **Préférences > Options > Authentification > Certificats SSL**.
+   - Cliquer sur **+** puis **Importer** et sélectionner les fichiers téléchargés.
+   - Redémarrer QGIS si nécessaire.
+
+3. Tester l'accès au service WMTS :  
+   - Ajouter à nouveau la couche WMTS IGN.
+   - La couche devrait maintenant s'afficher correctement.
+
+#### Remarques
+- Cette étape est nécessaire uniquement si votre QGIS ne reconnaît pas automatiquement les certificats racine de l'IGN.
+- Ne pas installer de certificats issus d'internet si l'on est pas certain de leur provenance.
+
+___________________________________
+
 ## Oruxmaps
 
 ### charger une couche dans Oruxmaps
@@ -189,5 +219,7 @@ Vous devriez trouver le fichier kml, et pouvoir le sélectionner pour le charger
 
 
 > https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
+
+
 
 
