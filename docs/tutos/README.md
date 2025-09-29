@@ -19,6 +19,7 @@ termes utilisés en géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a 
 |[Mon premier projet](./mon_premier_projet.md)|Tutoriel complet sur la consultation d'un projet QGIS existant, son enregistrement, sa modification et ses exports|
 |[Premier paramétrage](./premier_parametrage.md)|Configuration de base de QGIS permettant d'en assurer le bon fonctionnement|
 |[Ressources WMS](./ressources_geographiques_wms.md)|Liste et description des ressources disponibles au format wms.|
+|[Installation d'un plugin QGIS](./tutos/installation_plugin_via_depot.md)|Indique comment installer un plugin QGIS développé par le service SI du Parc National du Mercantour|
 
 
 <!--|[git](./git.md)|Présentation et explication de ce qu'est "git"|-->
