@@ -15,6 +15,7 @@ Elle composé de deux parties principales:
 
  - [bd_pnm](./bd_pnm/index.md) contient les descriptions des schémas et données de la base de données du parc, 
  - [tutos](./tutos/README.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
+ - [qgis_plugins](./qgis_plugins/plugins_list.md) contient les tutoriels, supports de formations et ressources pour l'utilisation de QGIS et des bases de données du parc. 
 
 
 Si vous cherchez la réponse à une question précise concernant la messagerie, le réseau, le mobile ou autres ressource interne du parc, vous pouvez consulter la [FAQ à ce lien.](https://pnmercantour.github.io/faq/).
