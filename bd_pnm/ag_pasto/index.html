@@ -1,0 +1,3570 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../admin_express/">
+      
+      
+        <link rel="next" href="../bd_lacs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../tutos/img/logo_embleme_pnm_quadri_vert.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>ag_pasto - Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ag_pasto" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour" class="md-header__button md-logo" aria-label="Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../../tutos/img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ag_pasto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Mode Sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode Sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Page d'Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Bd pnm
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qgis_plugins/plugins_list/" class="md-tabs__link">
+          
+  
+  
+  Qgis plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutos/" class="md-tabs__link">
+          
+  
+  
+  Tutos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour" class="md-nav__button md-logo" aria-label="Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../../tutos/img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page d'Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bd pnm
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bd pnm
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil de la documentation de la base de données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin_express/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    admin_express
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ag_pasto
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ag_pasto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables remarquables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tables remarquables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brulages-diriges-ag_pastoc_brulages_diriges_bru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brulages dirigés: ag_pasto.c_brulages_diriges_bru
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brulages dirigés: ag_pasto.c_brulages_diriges_bru">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conventions-de-paturage-pluri-annuelles-c_convention_paturage_cpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conventions de Pâturage Pluri-annuelles : c_convention_paturage_cpa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conventions de Pâturage Pluri-annuelles : c_convention_paturage_cpa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defens-du-parc-national-du-mercantour-c_defen_def" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Défens du Parc national du Mercantour : c_defen_def
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Défens du Parc national du Mercantour : c_defen_def">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesures-agro-environnementales-de-gestion-pastorale-c_mesure_gestion_pastorale_meg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesures agro-environnementales de gestion pastorale: c_mesure_gestion_pastorale_meg
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mesures agro-environnementales de gestion pastorale: c_mesure_gestion_pastorale_meg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesures-agro-environnementales-de-gestion-des-prairies-c_mesure_pres_fauche_mep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesures agro-environnementales de gestion des prairies: c_mesure_pres_fauche_mep
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mesures agro-environnementales de gestion des prairies: c_mesure_pres_fauche_mep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obs_priorite_maec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        obs_priorite_maec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcelles-visitees-lors-du-concours-prairies-fleuries-c_parcelles_visitees_pf_vis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prairies-du-parc-national-du-mercantour-c_prairie_pra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prairies du Parc national du Mercantour : c_prairie_pra
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prairies du Parc national du Mercantour : c_prairie_pra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unites-pastorales-du-parc-national-du-mercantour-c_unite_pastorale_unp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unités pastorales du Parc national du Mercantour : c_unite_pastorale_unp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unités pastorales du Parc national du Mercantour : c_unite_pastorale_unp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contacts-sur-les-unites-pastorales-t_contact_up_cup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contacts sur les unités pastorales : t_contact_up_cup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contacts sur les unités pastorales : t_contact_up_cup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrats-de-mesures-agro-environnementales-de-gestion-pastorale-t_maec_gestion_pastorale_mgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrats de Mesures agro-environnementales de gestion pastorale : t_maec_gestion_pastorale_mgp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contrats de Mesures agro-environnementales de gestion pastorale : t_maec_gestion_pastorale_mgp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_engagement_unitaire_eun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_engagement_unitaire_eun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_entomo_enjeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_entomo_enjeu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_entomo_taxref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_entomo_taxref
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_especes_enjeu_agropasto_eap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_especes_enjeu_agropasto_eap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_fertilisation_prairie_fer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_fertilisation_prairie_fer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_irrigation_prairie_iri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_irrigation_prairie_iri
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_mesure_gestion_pastorale_mpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_mesure_gestion_pastorale_mpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_statut_cpp_sta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_statut_cpp_sta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_type_location_loc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_type_location_loc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_regroupement_propriete_rpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_regroupement_propriete_rpr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_type_paec_tpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_type_paec_tpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_vocation_unite_pastorale_vup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_vocation_unite_pastorale_vup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bd_lacs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bd_lacs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bd_source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bd_source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cadastre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cadastre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    charte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../foret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    foret
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geonature_synthese/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    geonature_synthese
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geotrek/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    geotrek
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    inpn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    limites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PAEC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    survol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tourisme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tourisme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vegetation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vegetation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qgis plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Qgis plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qgis_plugins/plugins_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste des plugins QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table des matières des tutos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F.A.Q.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/ajout_fond_SCAN25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ajout fond SCAN25
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/ajout_fond_de_carte_wms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ajout de couches WMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/bonnes_pratiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonnes Pratiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/charger_un_projet_de_la_bd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charger un projet depuis la base de données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/charger_une_couche_de_la_bd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charger une couche depuis la base de données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/editer_des_polygones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edition de polygones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/editeur_expression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editeur d'expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/empaqueter_un_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empaquetage de projet QGIS en Geopackage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/filtres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les Filtres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/generer_un_atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generation d'atlas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/glossaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/installation_plugin_via_depot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation d’un plugin QGIS depuis le dépôt interne du Parc National du Mercantour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/installer_certificats_base_de_donnees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation des certificats d'accès la base de données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/mon_premier_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mon premier projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/premier_parametrage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Premier paramétrage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/ressources_geographiques_wfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste de ressources WFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/ressources_geographiques_wms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste de ressources WMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/taxrefmatch_cdnom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxrefmatch et cd_nom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutos/utiliser_un_masque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utiliser un masque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables remarquables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tables remarquables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brulages-diriges-ag_pastoc_brulages_diriges_bru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brulages dirigés: ag_pasto.c_brulages_diriges_bru
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brulages dirigés: ag_pasto.c_brulages_diriges_bru">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conventions-de-paturage-pluri-annuelles-c_convention_paturage_cpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conventions de Pâturage Pluri-annuelles : c_convention_paturage_cpa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conventions de Pâturage Pluri-annuelles : c_convention_paturage_cpa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defens-du-parc-national-du-mercantour-c_defen_def" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Défens du Parc national du Mercantour : c_defen_def
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Défens du Parc national du Mercantour : c_defen_def">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesures-agro-environnementales-de-gestion-pastorale-c_mesure_gestion_pastorale_meg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesures agro-environnementales de gestion pastorale: c_mesure_gestion_pastorale_meg
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mesures agro-environnementales de gestion pastorale: c_mesure_gestion_pastorale_meg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesures-agro-environnementales-de-gestion-des-prairies-c_mesure_pres_fauche_mep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesures agro-environnementales de gestion des prairies: c_mesure_pres_fauche_mep
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mesures agro-environnementales de gestion des prairies: c_mesure_pres_fauche_mep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obs_priorite_maec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        obs_priorite_maec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcelles-visitees-lors-du-concours-prairies-fleuries-c_parcelles_visitees_pf_vis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prairies-du-parc-national-du-mercantour-c_prairie_pra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prairies du Parc national du Mercantour : c_prairie_pra
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prairies du Parc national du Mercantour : c_prairie_pra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unites-pastorales-du-parc-national-du-mercantour-c_unite_pastorale_unp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unités pastorales du Parc national du Mercantour : c_unite_pastorale_unp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unités pastorales du Parc national du Mercantour : c_unite_pastorale_unp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contacts-sur-les-unites-pastorales-t_contact_up_cup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contacts sur les unités pastorales : t_contact_up_cup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contacts sur les unités pastorales : t_contact_up_cup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrats-de-mesures-agro-environnementales-de-gestion-pastorale-t_maec_gestion_pastorale_mgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrats de Mesures agro-environnementales de gestion pastorale : t_maec_gestion_pastorale_mgp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contrats de Mesures agro-environnementales de gestion pastorale : t_maec_gestion_pastorale_mgp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genealogie_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généalogie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_engagement_unitaire_eun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_engagement_unitaire_eun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_entomo_enjeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_entomo_enjeu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_entomo_taxref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_entomo_taxref
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_especes_enjeu_agropasto_eap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_especes_enjeu_agropasto_eap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_fertilisation_prairie_fer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_fertilisation_prairie_fer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_irrigation_prairie_iri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_irrigation_prairie_iri
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_mesure_gestion_pastorale_mpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_mesure_gestion_pastorale_mpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_statut_cpp_sta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_statut_cpp_sta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_type_location_loc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_type_location_loc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_regroupement_propriete_rpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_regroupement_propriete_rpr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_type_paec_tpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_type_paec_tpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr_vocation_unite_pastorale_vup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr_vocation_unite_pastorale_vup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Page d'Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Bd pnm
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ag_pasto">ag_pasto</h1>
+<h2 id="description">Description</h2>
+<p><em>Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources</em></p>
+<p>Ce schéma contient les données liées à l'agro-pastoralisme dans le parc du mercantour. </p>
+<h2 id="tables-remarquables">Tables remarquables</h2>
+<h3 id="brulages-diriges-ag_pastoc_brulages_diriges_bru">Brulages dirigés:  ag_pasto.c_brulages_diriges_bru</h3>
+<p>Ensemble des brulages dirigés opérés sur les années 2012, 2014, 2016 et 2017 sur le territoire de l'aire d'adhésion optimale du Parc National du Mercantour.</p>
+<h4 id="description-des-colonnes-remarquables">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">nom  (text)</td>
+<td style="text-align: center;">Nom du lieu dit où est réalisé le brulage</td>
+</tr>
+<tr>
+<td style="text-align: center;">up_id  (int4)</td>
+<td style="text-align: center;">Unité pastorale concernée (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">annee  (int4)</td>
+<td style="text-align: center;">Année du brulage</td>
+</tr>
+<tr>
+<td style="text-align: center;">avis  (text)</td>
+<td style="text-align: center;">Avis favorable ou défavorable donné</td>
+</tr>
+<tr>
+<td style="text-align: center;">demandeur  (text)</td>
+<td style="text-align: center;">Personne ayant demandé le brulage</td>
+</tr>
+<tr>
+<td style="text-align: center;">objectif  (text)</td>
+<td style="text-align: center;">Objectif du brulage</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+</tbody>
+</table>
+<p>Résolution      30 m</p>
+<p>lien: https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/metadata/9ade3346-9d12-43de-a1bb-42930cfcd4f7
+Généalogie  </p>
+<p>Données issues de Force06, compilés.
+(SCV Nicolas Manié 2017).</p>
+<h3 id="conventions-de-paturage-pluri-annuelles-c_convention_paturage_cpa">Conventions de Pâturage Pluri-annuelles : c_convention_paturage_cpa</h3>
+<p>Ensemble des dernières versions des CPP (Conventions de Pâturage Pluri-annuelles) connues pour chaque alpage situé dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).</p>
+<h4 id="description-des-colonnes-remarquables_1">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">locataire  (int4)</td>
+<td style="text-align: center;">Exploitant signataire du contrat (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">type_location  (int4)</td>
+<td style="text-align: center;">Type de contrat (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">unite_pastorale_1  (int4)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">commune  (int4)</td>
+<td style="text-align: center;">Commune sur laquelle se trouve le terrain loué (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">surface_location  (float4)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">surface_reelement_paturable  (float4)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">journees_max_paturage  (int4)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">debut_contractualisation  (date)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">fin_contractualisation  (date)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">montant  (float4)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_bovin  (float4)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_caprin  (float4)</td>
+<td style="text-align: center;">Effectif caprin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_equin  (float4)</td>
+<td style="text-align: center;">Effectif équin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_ovin  (float4)</td>
+<td style="text-align: center;">Effectif ovin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_porcin  (float4)</td>
+<td style="text-align: center;">Effectif procin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_total  (float4)</td>
+<td style="text-align: center;">Effectif total souhaité (UGB)</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_paturage_1_debut  (date)</td>
+<td style="text-align: center;">Date de début de la première utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_paturage_1_fin  (date)</td>
+<td style="text-align: center;">Date de fin de la première utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_paturage_2_debut  (date)</td>
+<td style="text-align: center;">Date de début de la deuxième utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_paturage_2_fin  (date)</td>
+<td style="text-align: center;">Date de début de la deuxième utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+<tr>
+<td style="text-align: center;">statut  (int4)</td>
+<td style="text-align: center;">Nature des documents en possession du Parc National du Mercantour (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">unite_pastorale_2  (int4)</td>
+<td style="text-align: center;">Unité pastorale minoritairement concernée (Clé étrangère)</td>
+</tr>
+</tbody>
+</table>
+<p>Résolution  30 m</p>
+<h4 id="genealogie">Généalogie</h4>
+<p>Données issues des contrats entre une commune et/ou l'ONF, l'exploitant et le PNM.
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des conventions papiers (SCV Nicolas Manié 2017).</p>
+<h3 id="defens-du-parc-national-du-mercantour-c_defen_def">Défens du Parc national du Mercantour : c_defen_def</h3>
+<p>Ensemble des défens connus, définis comme tel dans les CPP (Conventions de Pâturage Pluri-annuelles) des alpages situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).</p>
+<h4 id="genealogie_1">Généalogie</h4>
+<p>Données issues des contrats entre une commune et/ou l'ONF, l'exploitant et le PNM.
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des conventions papiers (SCV Nicolas Manié 2017).</p>
+<p>Résolution: 30 m</p>
+<h3 id="mesures-agro-environnementales-de-gestion-pastorale-c_mesure_gestion_pastorale_meg">Mesures agro-environnementales de gestion pastorale: c_mesure_gestion_pastorale_meg</h3>
+<p>Ensemble des mesures HE09 (gestion pastorale) contenues dans les contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.</p>
+<h4 id="description-des-colonnes-remarquables_2">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">maec  (int4)   Contrat de mesures dans lequel est énoncé la mesure (Clé étrangère)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">type_mesure_gestion  (int4)    Typologie de la mesure de gestion (Clé étrangère)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">surface  (float4)  Surface concernée par la mesure</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">mesure  (text)     Engagement du bénéficiaire</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)    Commentaire libre, contient des précisions sur l'objectif de la mesure</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="genealogie_2">Généalogie</h4>
+<p>Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).</p>
+<p>Résolution  30 m</p>
+<h3 id="mesures-agro-environnementales-de-gestion-des-prairies-c_mesure_pres_fauche_mep">Mesures agro-environnementales de gestion des prairies: c_mesure_pres_fauche_mep</h3>
+<p>Ensemble des mesures HE07 (prairies fleuries) et HE08 (fauche à pied) contenues dans les contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.</p>
+<h4 id="description-des-colonnes-remarquables_3">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">surface  (float4)</td>
+<td style="text-align: center;">Surface concernée par la mesure</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+<tr>
+<td style="text-align: center;">prairie  (int4)</td>
+<td style="text-align: center;">Prairie sur laquelle est réalisée la mesure (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">engagement_unitaire  (int4)</td>
+<td style="text-align: center;">Engagement unitaire concerné (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">debut_contractualisation  (date)</td>
+<td style="text-align: center;">Date de début d'application du contrat</td>
+</tr>
+<tr>
+<td style="text-align: center;">fin_contractualisation  (date)</td>
+<td style="text-align: center;">Date de fin d'application du contrat</td>
+</tr>
+<tr>
+<td style="text-align: center;">montant_contrat  (float4)</td>
+<td style="text-align: center;">Montant du contrat (€)</td>
+</tr>
+<tr>
+<td style="text-align: center;">pac_parcelle_engagee  (text)</td>
+<td style="text-align: center;">Numéro d'ilot et de parcelle engagée tel que défini dans la déclaration PAC</td>
+</tr>
+<tr>
+<td style="text-align: center;">pacage  (text)</td>
+<td style="text-align: center;">Numéro de déclarant PAC</td>
+</tr>
+<tr>
+<td style="text-align: center;">avenant  (bool)</td>
+<td style="text-align: center;">Existence d'un avenant</td>
+</tr>
+</tbody>
+</table>
+<h4 id="genealogie_3">Généalogie</h4>
+<p>Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).</p>
+<p>Résolution: 30 m</p>
+<h3 id="obs_priorite_maec">obs_priorite_maec</h3>
+<p>Observations des espèces de flore du Docob de geonature de la Stratégie flore niveau 1 et 2 de priorité, + 3 espèces : 
+- Reine des Alpes
+- Fritillaire de Moggridge
+- Rossolis à feuilles rondes (Drosera)</p>
+<!--NB: Couche A VERIFIER APRES INTEGRATION DU DOCOB.  -->
+
+<p>Filtre important sur cette couche pour le plan de gestion maec
+extract(year from date_min)&gt;2000 AND
+("priorite" &lt; 3 AND
+("protegee" = 'true' OR 
+"ic" = 'true')) or 
+"cd_ref" in (97133, 95442, 98978)</p>
+<h3 id="parcelles-visitees-lors-du-concours-prairies-fleuries-c_parcelles_visitees_pf_vis">Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis</h3>
+<h4 id="description-des-colonnes-remarquables_4">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">prairie_id  (int4)</td>
+<td style="text-align: center;">Prairie visitée (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">annee  (int4)</td>
+<td style="text-align: center;">Année de la visite</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+<tr>
+<td style="text-align: center;">id_agriculteur  (int4)</td>
+<td style="text-align: center;">Exploitant participant au concours prairies fleuries (Clé étrangère)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="genealogie_4">Généalogie</h4>
+<p>Données issues d'une compilation / correction du jeu de données thématique existant.
+(SCV Nicolas Manié 2017).
+Résolution: 30 m</p>
+<h3 id="prairies-du-parc-national-du-mercantour-c_prairie_pra">Prairies du Parc national du Mercantour : c_prairie_pra</h3>
+<p>Ensemble des prairies répertoriées et situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).</p>
+<h4 id="description-des-colonnes-remarquables_5">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">exploitant  (int4)</td>
+<td style="text-align: center;">Exploitant de la prairie (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">irrigation  (int4)</td>
+<td style="text-align: center;">Moyens d'irrigation de la prairie (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">nom  (text)</td>
+<td style="text-align: center;">Nom de référence de la prairie</td>
+</tr>
+<tr>
+<td style="text-align: center;">surface  (float4)</td>
+<td style="text-align: center;">Surface de la prairie (ha)</td>
+</tr>
+<tr>
+<td style="text-align: center;">nombre_fauche  (float4)</td>
+<td style="text-align: center;">Nombre de fauches réalisés dans l'année</td>
+</tr>
+<tr>
+<td style="text-align: center;">deprimage  (bool)</td>
+<td style="text-align: center;">Déprimage utilisé ou non</td>
+</tr>
+<tr>
+<td style="text-align: center;">paturage  (bool)</td>
+<td style="text-align: center;">Pâturage ou non</td>
+</tr>
+<tr>
+<td style="text-align: center;">mecanisable  (bool)</td>
+<td style="text-align: center;">Fauche mécanisable ou non</td>
+</tr>
+<tr>
+<td style="text-align: center;">eligible_maec_4_fleurs  (bool)</td>
+<td style="text-align: center;">Prairie pouvant prétendre à l'établissement d'une Mesure Agro-Environnementale HE07 - Prairies Fleuries</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_bovin  (float4)</td>
+<td style="text-align: center;">Effectif bovin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_caprin  (float4)</td>
+<td style="text-align: center;">Effectif caprin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_equin  (float4)</td>
+<td style="text-align: center;">Effectif équin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_ovin  (float4)</td>
+<td style="text-align: center;">Effectif ovin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_porcin  (float4)</td>
+<td style="text-align: center;">Effectif porcin souhaité</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+<tr>
+<td style="text-align: center;">fertilisation  (int4)</td>
+<td style="text-align: center;">Fertilisants utilisés ou non</td>
+</tr>
+<tr>
+<td style="text-align: center;">date_fauche_1  (text)</td>
+<td style="text-align: center;">Date de la première fauche</td>
+</tr>
+<tr>
+<td style="text-align: center;">date_fauche_2  (text)</td>
+<td style="text-align: center;">Date de la deuxième fauche</td>
+</tr>
+<tr>
+<td style="text-align: center;">date_fauche_3  (text)</td>
+<td style="text-align: center;">Date de la troisième fauche</td>
+</tr>
+</tbody>
+</table>
+<h4 id="genealogie_5">Généalogie</h4>
+<p>Ensemble des prairies répertoriées lors d'un inventaire initial en 2010, puis complété et mis à jour lors de la création de ce jeu de données.
+Les prairies sont toutessitués dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.
+(SCV Nicolas Manié 2017)</p>
+<p>Résolution : 30m</p>
+<h3 id="unites-pastorales-du-parc-national-du-mercantour-c_unite_pastorale_unp">Unités pastorales du Parc national du Mercantour : c_unite_pastorale_unp</h3>
+<p>Ensemble des unités pastorales répertoriées et situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).</p>
+<h4 id="description-des-colonnes-remarquables_6">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">nom  (text)</td>
+<td style="text-align: center;">Nom de référence de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+<tr>
+<td style="text-align: center;">commune  (int4)</td>
+<td style="text-align: center;">Commune sur laquelle la majoritée de l'unité pastorale est implentée (Clé étrangère)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="genealogie_6">Généalogie</h4>
+<p>Ensemble des unités pastorales issus du jeu de donnée thématique, complété et mis à jour lors de la création de ce jeu de données. Les unités pastorales sont toutes situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour). L'identité des exploitants est anonymisé par une clé d'identifiant unique.
+(SCV Nicolas Manié 2017)</p>
+<p>Résolution: 30 m</p>
+<h3 id="contacts-sur-les-unites-pastorales-t_contact_up_cup">Contacts sur les unités pastorales : t_contact_up_cup</h3>
+<p>Données d'actualisation générées suite à la visite d'une unité pastorale située dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).</p>
+<h4 id="description-des-colonnes-remarquables_7">Description des colonnes remarquables</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">id  (int4)</td>
+<td style="text-align: center;">Identifiant unique</td>
+</tr>
+<tr>
+<td style="text-align: center;">date  (date)</td>
+<td style="text-align: center;">Date du contact</td>
+</tr>
+<tr>
+<td style="text-align: center;">objet  (text)</td>
+<td style="text-align: center;">Motif du contact</td>
+</tr>
+<tr>
+<td style="text-align: center;">commentaire  (text)</td>
+<td style="text-align: center;">Commentaire libre</td>
+</tr>
+<tr>
+<td style="text-align: center;">up_id  (int4)</td>
+<td style="text-align: center;">Unité pastorale concernée (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">berger  (int4)</td>
+<td style="text-align: center;">Berger rencontré (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">vocation  (int4)</td>
+<td style="text-align: center;">Vocation constatée (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">exploitant  (int4)</td>
+<td style="text-align: center;">Exploitant rencontré (Clé étrangère)</td>
+</tr>
+<tr>
+<td style="text-align: center;">visite_terrain  (bool)</td>
+<td style="text-align: center;">Visite sur le terrain ou à contac t à distance (téléphone, mail, courrier, ..)</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_bovin  (float4)</td>
+<td style="text-align: center;">Effectif bovin constaté</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_caprin  (float4)</td>
+<td style="text-align: center;">Effectif caprin constaté</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_equin  (float4)</td>
+<td style="text-align: center;">Effectif équin constaté</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_ovin  (float4)</td>
+<td style="text-align: center;">Effectif ovin constaté</td>
+</tr>
+<tr>
+<td style="text-align: center;">effectif_porcin  (float4)</td>
+<td style="text-align: center;">Effectif porcin constaté</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_utilisation_1_debut  (date)</td>
+<td style="text-align: center;">Date de début de la première utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_utilisation_1_fin  (date)</td>
+<td style="text-align: center;">Date de fin de la première utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_utilisation_2_debut  (date)</td>
+<td style="text-align: center;">Date de début de la deuxième utilisation de l'unité pastorale</td>
+</tr>
+<tr>
+<td style="text-align: center;">periode_utilisation_2_fin  (date)</td>
+<td style="text-align: center;">Date de fin de la deuxième utilisation de l'unité pastorale</td>
+</tr>
+</tbody>
+</table>
+<h4 id="genealogie_7">Généalogie</h4>
+<p>Données actualisées et historisées de l'utilisation réelle d'une unité pastorale située dans la zone optimale d'adhésion du PNM (Parc National du Mercantour), générées suite à la visite de celle-ci.
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.
+(SCV Nicolas Manié 2017)</p>
+<!--
+### Exploitants: t_exploitant_exp 
+Annuaire des exploitants opérant dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
+
+#### Description des colonnes remarquables
+|Nom    |Définition|
+|:--:|:--:|
+|id  (int4)     |Identifiant unique|
+|type_exploitation  (int4) |    Type d'exploitation exploitée par l'exploitant (Clé étrangère)|
+|nom  (text)    |Nom de famille de l'exploitant|
+|adresse  (text) |  Adresse de l'exploitant|
+|tel  (text)    |Numéro de téléphone de l'exploitant|
+|email  (text)  |Email de l'exploitant|
+|groupe_exploitant  (int4)  |Regroupement d'exploitant auquel appartient l'exploitant (Clé étrangère)|
+|commentaire  (text)    |Commentaire libre|
+|prenom  (text)     |Prénom de l'exploitant |
+Contraintes légales     
+Données permettant l'identification d'individus (nom et prénom). Ne pas diffuser 
+
+-->
+
+<p>Contraintes pour la ressource   </p>
+<p>Utilisation restreinte </p>
+<h4 id="genealogie_8">Généalogie</h4>
+<p>Annuaire des exploitants opérant dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
+Données issues des contrats.
+(SCV Nicolas Manié 2017).</p>
+<h3 id="contrats-de-mesures-agro-environnementales-de-gestion-pastorale-t_maec_gestion_pastorale_mgp">Contrats de Mesures agro-environnementales de gestion pastorale : t_maec_gestion_pastorale_mgp</h3>
+<p>Ensemble des contrats MAE (Mesures Agro-Environnementales) contenant des mesures HE09 (gestion pastorale) créées par le Parc National du Mercantour.</p>
+<p>|Nom|   Définition|
+|id  (int4)     |Identifiant unique|
+|unite_pastorale  (int4)    |Unité pastorale concernée (Clé étrangère)|
+|engagement_unitaire  (int4)|   Engagement unitaire concerné (Clé étrangère)|
+|debut_contractualisation  (date) | Date de début d'application du contrat|
+|fin_contractualisation  (date)     |Date de fin d'application du contrat|
+|montant  (float4)  |Montant (€)|
+|pacage  (text)     |Numéro de déclarant PAC|
+|commentaire  (text)    |Commentaire libre|
+|avenant  (bool)    |Existence d'un avenant |</p>
+<h4 id="genealogie_9">Généalogie</h4>
+<p>Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).</p>
+<h3 id="tr_engagement_unitaire_eun">tr_engagement_unitaire_eun</h3>
+<p>Types d engagement unitaire pour les MAEC</p>
+<h3 id="tr_entomo_enjeu">tr_entomo_enjeu</h3>
+<p>Espèces d'insectes sensibles aux pratiques agropastorales</p>
+<h3 id="tr_entomo_taxref">tr_entomo_taxref</h3>
+<p>Correspondance cd_ref cd_nom des taxons entomo à enjeu en taxref v15</p>
+<h3 id="tr_especes_enjeu_agropasto_eap">tr_especes_enjeu_agropasto_eap</h3>
+<p>Ne pas utiliser, table remplacée par tr_entomo_enjeu</p>
+<h3 id="tr_fertilisation_prairie_fer">tr_fertilisation_prairie_fer</h3>
+<p>Types de fertilisation d une prairie</p>
+<h3 id="tr_irrigation_prairie_iri">tr_irrigation_prairie_iri</h3>
+<p>Types d irrigation d une prairie</p>
+<h3 id="tr_mesure_gestion_pastorale_mpa">tr_mesure_gestion_pastorale_mpa</h3>
+<p>Types de mesures de gestion pour les MAEC gestion pastorale</p>
+<h3 id="tr_statut_cpp_sta">tr_statut_cpp_sta</h3>
+<p>Statut possible d'une CPP</p>
+<h3 id="tr_type_location_loc">tr_type_location_loc</h3>
+<p>Type de location d un pâturage</p>
+<h3 id="t_regroupement_propriete_rpr">t_regroupement_propriete_rpr</h3>
+<p>Groupement de propriétés</p>
+<h3 id="tr_type_paec_tpa">tr_type_paec_tpa</h3>
+<p>Types de PAEC</p>
+<h3 id="tr_vocation_unite_pastorale_vup">tr_vocation_unite_pastorale_vup</h3>
+<p>Vocations de l unité pastorale</p>
+<!-- 
+## Tables remarquables
+_Les tables accessibles, le type de données_
+Contient X tables accessibles. 
+- La première table qui fait des trucs
+- la deuxième qui est aussi très intéressante
+- sans parler de la troisième
+
+
+#   # Description des colonnes remarquables
+
+Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom pourrait prêter à confusion. 
+
+#### table_1
+| Nom de la colonne      | Type | Description     |
+| :---        |    :----:   |          :---: |
+| n_truc      | (PK) int       | c'est le numéro du truc   |
+| nom_truc   | string        | c'est le nom du fameux truc      |
+
+#### table_2
+| Nom de la colonne      | Type | Description     |
+| :---        |    :----:   |          :---: |
+| n_machin      | int       | c'est le numéro du machin   |
+| n_truc   | string        | c'est le numéro du truc      |
+
+#### table_3
+| Nom de la colonne      | Type | Description     |
+| :---        |    :----:   |          :---: |
+|...      |...       |...   |
+
+## Exemples de Requêtes
+_Quelques exemples de requêtes toutes écrites qui permettent de faire des trucs_
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">--Requête pour avoir tous les trucs commençant par &quot;a&quot; ou &quot;A&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">table_1</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">nom_truc</span><span class="w"> </span><span class="k">ILIKE</span><span class="w"> </span><span class="s1">&#39;a%&#39;</span>
+</code></pre></div>
+
+## Dépendances
+
+table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
+
+
+
+## Projets Qgis
+
+## Mises à jour
+
+Tous les ans, ou quand les couches de références changent. 
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
