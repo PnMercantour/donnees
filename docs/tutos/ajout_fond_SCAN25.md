@@ -21,6 +21,7 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Dans nom entrer "Scan 25"
 - Dans URL copier le lien suivant
+
 > https://data.geopf.fr/private/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
 
 <!--
@@ -34,7 +35,8 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 	- Valeur d'en-tête: ign_scan_ws
 ![](./img/detail_params_scan25.png)
 --> 
-- Cocher la case "Ignorer les URI GetMap/GetTile/GetLegendGraphic signalés dans les capacités"
+
+- Cocher la case "Ignorer les URI GetMap/GetTile/GetLegendGraphic signalés dans les capacités" 
 
 -  Puis cliquer sur OK. 
 
@@ -70,6 +72,9 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 ## Troubleshoot
 
-Si les fonds de carte IGN ne s'affichent pas et qu'aucune erreur explicite n'apparaît voir la section 
+Si les fonds de carte IGN ne s'affichent pas et qu'aucune erreur explicite n'apparaît :
 
-[Problème d'affichage des couches IGN WMTS dans QGIS](./FAQ.md#problème-daffichage-des-couches-ign-wmts-dans-qgis)
+- Vérifier que la case "Ignorer les URI GetMap/GetTile/GetLegendGraphic signalés dans les capacités" est bien cochée en éditant la source.
+
+
+- Suivre la procédure décrite dans cette section [Problème d'affichage des couches IGN WMTS dans QGIS](./FAQ.md#probleme-daffichage-des-couches-ign-wmts-dans-qgis)
