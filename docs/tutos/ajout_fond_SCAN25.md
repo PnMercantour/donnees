@@ -6,12 +6,12 @@ Dans le cadre de la bascule des ressources de l'IGN, le SCAN 25 est temporaireme
 Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascule des ressources de l'ign sur la géoplateforme. Quand cela arrivera, le nouveau mode d'accès au SAN25 vous sera communiqué.
 --> 
 
-# Ajouter le SCAN 25 au catalogue WMS
+# Ajouter le SCAN 25 au catalogue WMTS
 
 
 ## Pas à pas
 
-### Ajout de la ressource catalogue de WMS
+### Ajout de la ressource catalogue de WMTS
 
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
@@ -19,10 +19,10 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Cliquer sur WMS/WMTS dans l'explorateur, sélectionner "Nouveau" 
 
-- Dans nom entrer "Scan 25"
+- Dans nom entrer "WMTS IGN SCAN"
 - Dans URL copier le lien suivant
 
-> https://data.geopf.fr/private/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
+> https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities&apikey=ign_scan_ws
 
 <!--
 - Il faut ensuite cliquer sur la petite croix verte dans l'encadré "Athentification"
@@ -38,7 +38,11 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Cocher la case "Ignorer les URI GetMap/GetTile/GetLegendGraphic signalés dans les capacités" 
 
--  Puis cliquer sur OK. 
+![](./img/wmts_connection_configuration.png)
+
+- Puis cliquer sur **OK**.
+
+- Dans le menu déroulant sélectionner WMTS IGN SCAN puis cliquer sur **Connexion**
 
 
 - Un nouvel onglet s'ouvre automatiquement vous permettant de choisir entre plusieurs versions du scan 25, choisir celui projeté en Lambert-93 (EPSG:2154)
@@ -49,7 +53,8 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 
 - Cette couche est maintenant disponible pour être chargée dans tous vos projets.
 
-
+Remarque : On peut aussi ajouter tous les fonds IGN libres (Orthophotos, SCAN 1000, SCAN Régions,...), réitérer cette procédure avec le lien suivant : 
+> https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
 
 
 ### Charger un fond de carte dans un projet QGIS
@@ -57,16 +62,13 @@ Cette solution est temporaire, et cessera de fonctionner dès la fin de la bascu
 - Lancer QGIS
  
 - Ouvrir le gestionnaire de sources de données (Onglet "Couche>Gestionnaire de source de données" ou CTRL+L). 
-
-- Cliquer sur l'onglet "WMS" dans la colonne à gauche de la fenêtre.
-
 ![](./img/gestionnaire_sources.png)
 
-- Cliquer sur la ressource d'intérêt dans le menu déroulant (ici "SCAN 25") puis sur "Charger"
-- Cliquer sur la couche qui s'affiche dans le menu central
-- Entrer des tailles de tuile (recommandé: "256" et "256".) Le système de coordonnées n'est pas toujours modifiable.
+- Cliquer sur l'onglet "WMS/WMTS" dans la colonne à gauche de la fenêtre.
 
-![](./img/ajout_wms_parametres.png)
+
+- Cliquer sur la ressource d'intérêt dans le menu déroulant (ici "WMTS IGN SCAN") puis sur "Connexion"
+- Cliquer sur la couche souhaitée qui s'affiche dans le menu central
 
 - puis sur "Ajouter"
 
