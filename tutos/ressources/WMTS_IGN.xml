@@ -1,0 +1,5 @@
+<!DOCTYPE connections>
+<qgsWMSConnections version="1.0">
+    <wms ignoreGetMapURI="1" smoothPixmapTransform="0" name="WMTS_IGN_SCAN" username="" invertAxisOrientation="0" ignoreGetFeatureInfoURI="0" url="https://data.geopf.fr/private/wmts?SERVICE=WMTS&amp;VERSION=1.0.0&amp;REQUEST=GetCapabilities&amp;apikey=ign_scan_ws" ignoreAxisOrientation="0" dpiMode="7" password=""/>
+    <wms ignoreGetMapURI="0" smoothPixmapTransform="0" name="WMTS_IGN" username="" invertAxisOrientation="0" ignoreGetFeatureInfoURI="0" url="https://data.geopf.fr/wmts?SERVICE=WMTS&amp;VERSION=1.0.0&amp;REQUEST=GetCapabilities" ignoreAxisOrientation="0" dpiMode="7" password=""/>
+</qgsWMSConnections>

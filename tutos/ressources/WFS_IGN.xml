@@ -1,0 +1,4 @@
+<!DOCTYPE connections>
+<qgsWFSConnections version="1.1">
+    <wfs version="auto" username="" invertAxisOrientation="0" pagingenabled="default" featureMode="default" url="https://data.geopf.fr/wfs/ows?VERSION=2.0.0" maxnumfeatures="" name="WFS_IGN" password="" pagesize="" ignoreAxisOrientation="0"/>
+</qgsWFSConnections>
