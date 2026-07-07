@@ -17,7 +17,7 @@ entrer vos relevés terrains en modifiant une couche existante.
 
 
 ## Accès à la [base de données](./README.md#base-de-donnees)
-_Cette partie reprend le processus décrit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
+_Cette partie reprend le processus décrit dans [ce tutoriel](./installer_certificats_base_de_donnees.md)._
 ### 1. Vérifier que vous avez bien accès à la base de données par QGIS. 
 
 
@@ -65,13 +65,13 @@ l'affichage des fichiers cachés dans les options)
 
 
 #### _Si vous ne voyez pas "service projets"_
-- Télécharger le fichier suivant, en faisant "clic droit>Télécharger la cible du lien sous " sur le lien suivant: [service postgresql.xml en cliquant sur ce lien](https://raw.githubusercontent.com/PnMercantour/donnees/refs/heads/main/docs/tutos/ressources/service%20WMS.xml).
+## _Si vous ne voyez pas "service projets" dans le menu déroulant en haut_
+
+- Télécharger le fichier de paramétrage en faisant clic droit "Enregistrer la cible du lien sous" sur le lien suivant :  [services postgresql.xml](https://raw.githubusercontent.com/PnMercantour/donnees/main/docs/tutos/ressources/services_postgresql.xml)
 
 - Dans le gestionnaire de sources de QGIS, cliquer sur "charger" et retrouver le fichier "service projets.xml" que vous venez de copier
 
-
 - Vérifier que la connexion "Service projets" est disponible, et se connecter
-
 
 
 _La liste des [tables et schémas](./README.md#schéma "Dans une base de données relationnelle, un schéma regroupe différents objets dont des tables, vues et fonctions.") 
