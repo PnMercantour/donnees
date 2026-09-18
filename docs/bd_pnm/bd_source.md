@@ -1,8 +1,7 @@
 # bd_source
 
 ## Description
-_Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
-En cours de documentation 
+!!! note "En cours de documentation"
 
 
 ## Tables

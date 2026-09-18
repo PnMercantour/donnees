@@ -1,34 +1,19 @@
-# bd_lacs
+# rice
 
-## Description
- Ce schéma contient les données relatives aux lacs du mercantour. 
- 
-!!! note "En cours de documentation"
+## Schéma
+Sources et structure de la donnée utile à la construction des projets : [rice](../bd_pnm/rice.md).
 
 
+## Projet Extension
 
-## Tables
+Le projet "Extension zoom_2024" est la dernière version à jour contenant les informations sur l'extension de la Rice.  
+!!! warning "Pas sûre que la doc soit à jour, il existe des projets plus récents"  
 
-- Data_PNM_ref_pat
-- data_PNM
-- Lac_PNM
-- Lacs_remarquables
-- T_Lac_alevinage
-- T_Lac_caract_statut
-- T_Lac_enjeux
-- T_Lac_etudes
-- T_Lac_etudes_liaison
-- T_Lac_photo
-- T_Lac_poisson
-- T_Lac_poisson_statutpop
-- T_Lac_releves_phys_chim
-- T_Lac_vie_aquatique
+Les couches de ce projet sont le résultat de liaisons à partir de la table "rice.extension" et "limites.communes". 
+Pour le mettre à jour ce sont donc ces tables là qu'il faut modifier. 
 
 
- <!--
- ## Utilisation du projet Qgis
-_Description du projet Qgis accessible par défaut dans le projet._
-
+<!--
 ### _Exemples_
 _Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
 
@@ -84,4 +69,4 @@ table_3 mise à jour à partir de **schema1.table_46** et **schema3.table_18**
 ## Code de création des tables
 
 [lien](./README.md)
--->
+--> 

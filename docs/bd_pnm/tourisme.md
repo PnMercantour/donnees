@@ -2,8 +2,8 @@
 
 ## Description
 
-Ce schéma contient les informations en lien avec le tourisme et la fréquentation du parc (notamment les données issues des compteurs de passage),
-il est en cours de documentation. 
+Ce schéma contient les informations en lien avec le tourisme et la fréquentation du parc (notamment les données issues des compteurs de passage).
+!!! note "En cours de documentation" 
 
 <!--
 

@@ -1,22 +1,14 @@
 # foret
 
 ## Description
-_Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
-Informations concernant les forêts du Parc national du Mercantour. Documentation en cours
+Informations concernant les forêts du Parc national du Mercantour. 
+!!! note "En cours de documentation"
 
 
-## Utilisation des projets Qgis
+## Projets Qgis associés
+Vous trouverez la documentation des projets [ici](../projets_qgis/foret.md).
 
-### gestion 
-Composition de couches du schéma foret représentant les régimes forestiers, et les zones en libre évolution. 
 
-### foret 
-Projet par défaut du schéma. Montre le parcellaire forestier, les peuplements remarquables et les forêts anciennes. 
-
-<!--
-### _Exemples_
-_Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
--->
 
 ## Tables remarquables
 

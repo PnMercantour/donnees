@@ -1,13 +1,13 @@
 # geotrek
 
-## Description
-
-!!! note "En cours de documentation"
-
+## Schéma
+Sources et structure de la donnée utile à la construction des projets : [geotrek](../bd_pnm/geotrek.md).
 
 
-## Projets Qgis associés
-Vous trouverez la documentation des projets [ici](../projets_qgis/geotrek.md).
+
+## Projets travaux sentiers flore/faune
+
+Ces projets visent à servir de façon dynamique à l'extraction d'espèces patrimoniales/protégées.
 
 <!--
 
@@ -100,39 +100,3 @@ FROM table_1
 WHERE nom_truc ILIKE 'a%'
 ```
 -->
-## Dépendances
-??? Note "Documentation pour utilisateurs avancés et maintenance"
-    Les 3 vues agrégées sont construites sur la vue matérialisée _geonature_synthese.observation_taxonomie_grille_ qui permet de faire le lien
-    entre 4 schémas: 
-
-    |Schéma| Table/Vue/Vue Matérialisée| Description| clef |
-    |:--:|:--:|:--:|:--:|
-    |gn_synthese|synthese_avec_partenaires |observations de la base géonature| - |
-    |limites|grid|données géographiques liées aux mailles | spatiale|
-    |taxonomie|taxref|données taxonomiques| _cd_nom_|
-    |taxonomie|v_taxref_pp |patrimonialité/protection|_cd_nom_|
-    |ref_nomenclatures|*|détails sur l'observation|_id_nomenclature\_\*_|
- 
- 
- <!-- -
- - [limites.grid](https://github.com/PnMercantour/limites/README.md#tables_remarquables) : données géographiques liées aux mailles - jointure géographique
-  [limites.grid](https://github.com/PnMercantour/limites/limites/README.md#limites.communes) : données géographiques liées aux mailles - jointure géographique 
-
- - gn_synthese.synthese_avec_partenaires : observations de la base géonature
- - taxonomie.taxref : classification - jointure sur _cd_nom_
- - taxonomie.v_taxref_pp : patrimonialité/protection - jointure sur _cd_nom_
- - ref_nomenclatures.* : détails sur l'observation - jointure sur _id_nomenclature\_\*_
-
-
-## Mises à jour
-
-Tous les ans, ou quand les couches de références changent. -->
-
-## Code de création des tables
-??? Note "Script"
-    [Lien vers le script](./sql/creation.sql)
-
-
-
-
-

@@ -1,9 +1,7 @@
 # ag_pasto
 
 ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_
-
- Ce schéma contient les données liées à l'agro-pastoralisme dans le parc du mercantour. 
+ Ce schéma contient les données liées à l'agro-pastoralisme dans le Parc du Mercantour. 
 
 
 
@@ -11,7 +9,9 @@
 
 
 
-### Brulages dirigés:  ag_pasto.c_brulages_diriges_bru
+### Brulages dirigés    
+!!! example "ag_pasto.c_brulages_diriges_bru"
+
 Ensemble des brulages dirigés opérés sur les années 2012, 2014, 2016 et 2017 sur le territoire de l'aire d'adhésion optimale du Parc National du Mercantour.
 
 #### Description des colonnes remarquables
@@ -30,15 +30,14 @@ Ensemble des brulages dirigés opérés sur les années 2012, 2014, 2016 et 2017
 
 
 
-Résolution 	    30 m
+Résolution 	    30 m   
 
-lien: https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/metadata/9ade3346-9d12-43de-a1bb-42930cfcd4f7
-Généalogie 	
-
-Données issues de Force06, compilés.
+#### Généalogie 	
+Données issues de Force06, compilés : [lien](https://catalogue.parcnational.fr/catalogue/pnm/fre/catalog.search#/metadata/9ade3346-9d12-43de-a1bb-42930cfcd4f7).  
 (SCV Nicolas Manié 2017).
 
-###  Conventions de Pâturage Pluri-annuelles : c_convention_paturage_cpa 
+###  Conventions de Pâturage Pluri-annuelles 
+!!! example "c_convention_paturage_cpa"   
 Ensemble des dernières versions des CPP (Conventions de Pâturage Pluri-annuelles) connues pour chaque alpage situé dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
 
 #### Description des colonnes remarquables
@@ -75,10 +74,10 @@ Ensemble des dernières versions des CPP (Conventions de Pâturage Pluri-annuell
 
 Résolution 	30 m
 #### Généalogie 
-Données issues des contrats entre une commune et/ou l'ONF, l'exploitant et le PNM.
-Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
-L'identité des exploitants est anonymisé par une clé d'identifiant unique.
-Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des conventions papiers (SCV Nicolas Manié 2017).
+Données issues des contrats entre une commune et/ou l'ONF, l'exploitant et le PNM.  
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.  
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.  
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des conventions papiers (SCV Nicolas Manié 2017).  
 
 
 
@@ -86,21 +85,23 @@ Données produites dans le cadre d'une compilation / correction du jeu de donné
 
 
 
-###  Défens du Parc national du Mercantour : c_defen_def 
+###  Défens du Parc national du Mercantour 
+!!! example "c_defen_def"   
 Ensemble des défens connus, définis comme tel dans les CPP (Conventions de Pâturage Pluri-annuelles) des alpages situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
 
 
 #### Généalogie 
 
-Données issues des contrats entre une commune et/ou l'ONF, l'exploitant et le PNM.
-Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
-Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des conventions papiers (SCV Nicolas Manié 2017).
+Données issues des contrats entre une commune et/ou l'ONF, l'exploitant et le PNM.  
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.  
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des conventions papiers (SCV Nicolas Manié 2017).  
 
 Résolution: 30 m
 
 
 
-### Mesures agro-environnementales de gestion pastorale: c_mesure_gestion_pastorale_meg
+### Mesures agro-environnementales de gestion pastorale
+!!! example "c_mesure_gestion_pastorale_meg"
 Ensemble des mesures HE09 (gestion pastorale) contenues dans les contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
 
 #### Description des colonnes remarquables
@@ -118,14 +119,15 @@ Ensemble des mesures HE09 (gestion pastorale) contenues dans les contrats MAE (M
 
 #### Généalogie 	
 
-Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
-Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
-Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).
+Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.  
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.  
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).  
 
 Résolution 	30 m
 
 
-### Mesures agro-environnementales de gestion des prairies: c_mesure_pres_fauche_mep 
+### Mesures agro-environnementales de gestion des prairies
+!!! example "c_mesure_pres_fauche_mep"
 Ensemble des mesures HE07 (prairies fleuries) et HE08 (fauche à pied) contenues dans les contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
 
 #### Description des colonnes remarquables
@@ -145,29 +147,32 @@ Ensemble des mesures HE07 (prairies fleuries) et HE08 (fauche à pied) contenues
 
 #### Généalogie 	
 
-Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
-Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
-Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).
+Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.  
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.  
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).  
 
 
 Résolution: 30 m
 
 
-###  obs_priorite_maec
+###  Observations priorité MAEC
+!!! example "obs_priorite_maec"
 Observations des espèces de flore du Docob de geonature de la Stratégie flore niveau 1 et 2 de priorité, + 3 espèces : 
+
 - Reine des Alpes
 - Fritillaire de Moggridge
 - Rossolis à feuilles rondes (Drosera)
 <!--NB: Couche A VERIFIER APRES INTEGRATION DU DOCOB.  -->
 
-Filtre important sur cette couche pour le plan de gestion maec
-extract(year from date_min)>2000 AND
-("priorite" < 3 AND
-("protegee" = 'true' OR 
-"ic" = 'true')) or 
-"cd_ref" in (97133, 95442, 98978)
+Filtre important sur cette couche pour le plan de gestion maec  
+```sql
+extract(year from date_min)>2000 
+AND ("priorite" < 3 AND ("protegee" = 'true' OR "ic" = 'true')) 
+OR "cd_ref" in (97133, 95442, 98978)
+``` 
 
-###  Parcelles visitées lors du concours Prairies Fleuries: c_parcelles_visitees_pf_vis 
+###  Parcelles visitées lors du concours Prairies Fleuries
+!!! example "c_parcelles_visitees_pf_vis "
 
 #### Description des colonnes remarquables
 |Nom 	|Définition|
@@ -180,13 +185,15 @@ commentaire  (text) 	|Commentaire libre|
 
 #### Généalogie 	
 
-Données issues d'une compilation / correction du jeu de données thématique existant.
-(SCV Nicolas Manié 2017).
+Données issues d'une compilation / correction du jeu de données thématique existant.  
+(SCV Nicolas Manié 2017).  
+
 Résolution: 30 m
 
 
 
-### Prairies du Parc national du Mercantour : c_prairie_pra
+### Prairies du Parc national du Mercantour 
+!!! example "c_prairie_pra"
 
 Ensemble des prairies répertoriées et situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
 
@@ -219,15 +226,16 @@ Ensemble des prairies répertoriées et situés dans la zone optimale d'adhésio
 #### Généalogie 	
  	
 
-Ensemble des prairies répertoriées lors d'un inventaire initial en 2010, puis complété et mis à jour lors de la création de ce jeu de données.
-Les prairies sont toutessitués dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
-L'identité des exploitants est anonymisé par une clé d'identifiant unique.
+Ensemble des prairies répertoriées lors d'un inventaire initial en 2010, puis complété et mis à jour lors de la création de ce jeu de données.  
+Les prairies sont toutessitués dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).  
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.  
 (SCV Nicolas Manié 2017)
 
 Résolution : 30m
 
 
-### Unités pastorales du Parc national du Mercantour : c_unite_pastorale_unp
+### Unités pastorales du Parc national du Mercantour 
+!!! example "c_unite_pastorale_unp"
 Ensemble des unités pastorales répertoriées et situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
 
 #### Description des colonnes remarquables
@@ -241,7 +249,9 @@ Ensemble des unités pastorales répertoriées et situés dans la zone optimale 
 
 #### Généalogie 	
 
-Ensemble des unités pastorales issus du jeu de donnée thématique, complété et mis à jour lors de la création de ce jeu de données. Les unités pastorales sont toutes situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour). L'identité des exploitants est anonymisé par une clé d'identifiant unique.
+Ensemble des unités pastorales issus du jeu de donnée thématique, complété et mis à jour lors de la création de ce jeu de données.  
+Les unités pastorales sont toutes situés dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).  
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.  
 (SCV Nicolas Manié 2017)
 
 
@@ -250,7 +260,8 @@ Résolution: 30 m
 
 
 
-### Contacts sur les unités pastorales : t_contact_up_cup 
+### Contacts sur les unités pastorales
+!!! example "t_contact_up_cup" 
 Données d'actualisation générées suite à la visite d'une unité pastorale située dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
 
 
@@ -278,9 +289,9 @@ Données d'actualisation générées suite à la visite d'une unité pastorale s
 
 #### Généalogie 	
 
-Données actualisées et historisées de l'utilisation réelle d'une unité pastorale située dans la zone optimale d'adhésion du PNM (Parc National du Mercantour), générées suite à la visite de celle-ci.
-L'identité des exploitants est anonymisé par une clé d'identifiant unique.
-(SCV Nicolas Manié 2017)
+Données actualisées et historisées de l'utilisation réelle d'une unité pastorale située dans la zone optimale d'adhésion du PNM (Parc National du Mercantour), générées suite à la visite de celle-ci.  
+L'identité des exploitants est anonymisé par une clé d'identifiant unique.  
+(SCV Nicolas Manié 2017)  
 
 
 
@@ -310,22 +321,21 @@ Données permettant l'identification d'individus (nom et prénom). Ne pas diffus
 
 
 
-
-Contraintes pour la ressource 	
-
-Utilisation restreinte 
+!!! warning "Contraintes pour la ressource. Utilisation restreinte."
 
 #### Généalogie 	
 
-Annuaire des exploitants opérant dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).
-Données issues des contrats.
-(SCV Nicolas Manié 2017).
+Annuaire des exploitants opérant dans la zone optimale d'adhésion du PNM (Parc National du Mercantour).  
+Données issues des contrats.  
+(SCV Nicolas Manié 2017).  
 
 
-### Contrats de Mesures agro-environnementales de gestion pastorale : t_maec_gestion_pastorale_mgp 
+### Contrats de Mesures agro-environnementales de gestion pastorale 
+!!! example "t_maec_gestion_pastorale_mgp" 
 Ensemble des contrats MAE (Mesures Agro-Environnementales) contenant des mesures HE09 (gestion pastorale) créées par le Parc National du Mercantour.
 
 |Nom| 	Définition|
+|:--:|:--:|
 |id  (int4) 	|Identifiant unique|
 |unite_pastorale  (int4) 	|Unité pastorale concernée (Clé étrangère)|
 |engagement_unitaire  (int4)| 	Engagement unitaire concerné (Clé étrangère)|
@@ -339,9 +349,9 @@ Ensemble des contrats MAE (Mesures Agro-Environnementales) contenant des mesures
 
 #### Généalogie 	
 
-Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.
-Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.
-Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).
+Données issues des contrats MAE (Mesures Agro-Environnementales) créées par le Parc National du Mercantour.  
+Données géographiques déterminées sur la base des données parcellaires cadastrales et forestière, ou à défaut, sur carte IGN au 1/250000ème.  
+Données produites dans le cadre d'une compilation / correction du jeu de données thématique et des contrats papiers (SCV Nicolas Manié 2017).  
 
 
 ### tr_engagement_unitaire_eun
@@ -415,8 +425,8 @@ Attention: Ne sont décrites ici que les colonnes remarquables, ou dont le nom p
 | :---        |    :----:   |          :---: |
 |...      |...       |...   |
 
-## Exemples de Requêtes
-_Quelques exemples de requêtes toutes écrites qui permettent de faire des trucs_
+## examples de Requêtes
+_Quelques examples de requêtes toutes écrites qui permettent de faire des trucs_
 
 ```postgreSQL
 --Requête pour avoir tous les trucs commençant par "a" ou "A"

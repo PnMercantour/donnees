@@ -1,8 +1,10 @@
 # charte
 
 ## Description
- Ce schéma contient toutes les informations nécessaire à la réalisation d'une carte des vocations dans le parc (y compris des couches à la fonction purement esthétique). 
- _NB: Les vocations à Barcelonnette sont absentes de ces données_
+ Ce schéma contient toutes les informations nécessaire à la réalisation d'une carte des vocations dans le parc (y compris des couches à la fonction purement esthétique).  
+
+!!! Warning "Les vocations à Barcelonnette sont absentes de ces données."
+    Doc à jour ?
 
 <!--
 ## Utilisation du projet Qgis
