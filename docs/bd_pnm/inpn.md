@@ -12,18 +12,14 @@ Ces données sont également accessibles via des flux [WMS](QGIS/inpn_wms.xml) e
 
 
 
-## Utilisation du projet qgis 
-
-Le projet QGIS `inpn` dans ce schéma permet de visualiser les:
-
-    - Parcs nationaux de métropole,
-    - Parcs naturels régionaux de la région Sud PACA,
-    - Réserves naturelles régionales de la région Sud PACA.
+## Projets Qgis associés
+Vous trouverez la documentation des projets [ici](../projets_qgis/inpn.md).
 
 
 ## Tables remarquables
 
-Contient 3 tables principales. 
+Contient 3 tables principales.
+
 - pn
 - pnr
 - rnr : réserves naturelles régionales

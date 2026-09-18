@@ -4,11 +4,11 @@
 
 Schéma qui centralise les données relevant de l'étude de la flore du Parc National du Mercantour. 
 
+<!--
 ## Utilisation du projet Qgis
 _Description du projet Qgis accessible par défaut dans le projet._
 
-### _Exemples_
-_Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
+
 
 ## Tables remarquables
 

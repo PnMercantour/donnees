@@ -1,14 +1,10 @@
 # rice
 
 ## Description
- _Description générale du schéma: quel type d'information, pour quelles utilisations, de quelles sources_ </br>
 Ce schéma contient les informations en lien avec la Réserve Intégrale de Ciel Étoilé.
 
-## Utilisation du projet Qgis
-_Description du projet Qgis accessible par défaut dans le projet._
-Le projet "Extension zoom_2024" est la dernière version à jour contenant les informations sur l'extension de la Rice. 
-Les couches de ce projet sont le résultat de liaisons à partir de la table "rice.extension" et "limites.communes". 
-Pour le mettre à jour ce sont donc ces tables là qu'il faut modifier. 
+## Projets Qgis associés
+Vous trouverez la documentation des projets [ici](../projets_qgis/rice.md).
 
 
 <!--

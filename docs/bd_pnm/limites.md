@@ -2,18 +2,15 @@
 
 ## Description
 
-Le schema `limites` donne accès aux données géographiques réglementaires du Parc national du Mercantour 
-et des entités administratives remarquables aux alentours:
+Le schema `limites` donne accès aux données géographiques réglementaires du Parc national du Mercantour et des entités administratives remarquables aux alentours :
+
 - les différentes zones du PNM
 - la liste des communes de l'aire optimale d'adhésion
 - la répartition géographique des services territoriaux 
 
-
-
-
-___NB: Les limites doivent être revues. Elles peuvent être utilisées à fin illustratives, mais leurs localisations précises sont en cours de révision.
-Si des statistiques précises concernant les superficies de communes en coeur de parc, se référer au document spécifiquement produites pour le calcul de 
-"X:\6.7 SYSTEME INFORMATION\6_OUTILS_MEMO\STATS-CHIFFRES CLES"___
+!!! warning "Les limites doivent être revues."
+    Elles peuvent être utilisées à fin illustratives, mais leurs localisations précises sont en cours de révision **(toujours d'actu ?)**  
+    Si des statistiques précises concernant les superficies de communes en coeur de parc, se référer au document spécifiquement produites pour le calcul de "X:\6.7 SYSTEME INFORMATION\6_OUTILS_MEMO\STATS-CHIFFRES CLES"___
 
 <!-- ## Utilisation du projet qgis 
 
@@ -22,8 +19,8 @@ le projet qgis "mailles" ne contien -->
 
 ## Les limites du parc
 
-Les parcs nationaux sont divisés en plusieurs zones, encadrés par des réglementation plus ou moins strictes. 
-Vous trouverez ci-dessous les définitions des principales zones ainsi que leur illustration:
+Les parcs nationaux sont divisés en plusieurs zones, encadrés par des réglementation plus ou moins strictes.  
+Vous trouverez ci-dessous les définitions des principales zones ainsi que leur illustration :
 
 
 ### Aire d’adhésion
@@ -96,13 +93,14 @@ Dans le cas du Parc National du Mercantour voilà une illustration des différen
 |                | TOTAL                   |        -                       | 679,1                | 1485                                |1890,8 (=Territoire du parc)|2164,1 ( = Périmètre d'étude de la charte) |      -    |      -        |  
 
 
-__NB: La surface en Aire d'Adhésion est égale à la surface en Aire Optimale d'Adhésion quand la commune adhère à la charte, sinon elle est égale à 0. La surface totale de l'Aire d'adhésion du parc est de 1211,7.__
+!!! warning "Précision"
+    La surface en Aire d'Adhésion est égale à la surface en Aire Optimale d'Adhésion quand la commune adhère à la charte, sinon elle est égale à 0. La surface totale de l'Aire d'adhésion du parc est de 1211,7 km².
 
 
 
 ### Méthode de calcul
 
-Les données utilisées pour le calcul des aires par commune et pour l'ensemble du parc sont: 
+Les données utilisées pour le calcul des aires par commune et pour l'ensemble du parc sont : 
 
 - [Admin Express](https://geoservices.ign.fr/adminexpress]) (dans l'édition de mars 2024)
 - les limites du parc [telles qu'elles ont été déposées sur le site de l'inpn](https://inpn.mnhn.fr/telechargement/cartes-et-information-geographique/ep/pn)
@@ -125,7 +123,7 @@ Les tables suivantes peuvent être chargées directement dans QGIS.  Un style pa
 
 
 ## Description détaillée des tables
-_Les tableaux suivants décrivent les principales tables du schéma, et certaines de leur variables. Sauf précision, il s'agit de tables._
+!!! info "Les tableaux suivants décrivent les principales tables du schéma, et certaines de leur variables. Sauf précision, il s'agit de tables."
 
 ### _.area_
 
@@ -224,9 +222,8 @@ Maillage de 500m de côté
 | id_parent | int| id de la maille 1km parente |
 
 
-## Projets QGIS
-
-Pas de projet connu.
+## Projets Qgis associés
+Aucun projet documenté à ce jour.
 
 ## Dépendances
 
@@ -235,149 +232,148 @@ Pas de dépendance connue.
 
 
 
-_____
-_Documentation pour utilisateurs avancés et maintenance_
-
 <!-- toute la suite devrait être dans un autre document dédié au sql -->
+??? Note "Documentation pour utilisateurs avancés et maintenance"
 
-# Utilisation du schema `limites` dans les projets SQL et QGIS
-
-## Log Interne
-
-Les objets géographiques remarquables du PNM (limites du parc, limites des communes du parc, services territoriaux, mailles 1km du territoire, etc) sont souvent utilisées dans les projets SQL et QGIS, ce qui nécessite l'optimisation des opérations de calcul les plus fréquentes (intersection, ...) par leur mise en cache.
-
-Les traitements géométriques (intersections, inclusions) sont plus rapides lorsqu'il s'appliquent à des objets d'emprise réduite. On a donc découpé tous les objets géométriques remarquables suivant les mailles 1km et mis en cache la géométrie et la surface de l'intersection avec pour effet :
-
-- l'identification immédiate des mailles 1km liées à chaque géométrie remarquable
-- l'accélération des calculs de surface commune entre un objet géographique remarquable et une géométrie arbitraire.
+    ## Utilisation du schema `limites` dans les projets SQL et QGIS
 
 
+    ### Log Interne
 
-### fonction limites.get_id_type
+    Les objets géographiques remarquables du PNM (limites du parc, limites des communes du parc, services territoriaux, mailles 1km du territoire, etc) sont souvent utilisées dans les projets SQL et QGIS, ce qui nécessite l'optimisation des opérations de calcul les plus fréquentes (intersection, ...) par leur mise en cache.
 
-Retourne l'identifiant correspondant à un type. Par exemple:
-```sql
-select limites.get_id_type('st');
-```
-retourne l'identifiant de type des services territoriaux.
+    Les traitements géométriques (intersections, inclusions) sont plus rapides lorsqu'il s'appliquent à des objets d'emprise réduite. On a donc découpé tous les objets géométriques remarquables suivant les mailles 1km et mis en cache la géométrie et la surface de l'intersection avec pour effet :
 
-### fonction limites.get_id_area
-
-Retourne l'identifiant d'un objet géographique remarquable à partir de son type et de son nom. Par exemple
-```sql
-select limites.get_id_area('limites', 'coeur');
-```
-retourne l'identifiant de l'objet `coeur` de type `limites`.
+    - l'identification immédiate des mailles 1km liées à chaque géométrie remarquable
+    - l'accélération des calculs de surface commune entre un objet géographique remarquable et une géométrie arbitraire.
 
 
 
+    #### fonction limites.get_id_type
 
-### Exemples d'utilisation de la table grid1k_area
+    Retourne l'identifiant correspondant à un type. Par exemple:
+    ```sql
+    select limites.get_id_type('st');
+    ```
+    retourne l'identifiant de type des services territoriaux.
 
-La table peut être utilisée directement ou en conjonction avec les mailles 1000 pour déterminer les relations géométriques entre une géométrie arbitraire et l'un des multipolygones.
+    #### fonction limites.get_id_area
+
+    Retourne l'identifiant d'un objet géographique remarquable à partir de son type et de son nom. Par exemple
+    ```sql
+    select limites.get_id_area('limites', 'coeur');
+    ```
+    retourne l'identifiant de l'objet `coeur` de type `limites`.
 
 
-Exemple: Pour retrouver la surface coeur de chaque commune
 
-```sql
-select
-	round(sum(case
-                when gcoeur.surface = 1000000 then gcom.surface
-                when gcom.surface = 1000000 then gcoeur.surface
-                else st_area(st_intersection(gcoeur.geom, gcom.geom))
-            end)) "surface coeur",
-	name commune
-from
-	limites.grid1k_area gcom
-join limites.area on
-	gcom.id_area = area.id
-join (
-	select
-		*
-	from
-		limites.grid1k_area
-	where
-		id_area = limites.get_id_area('limites',
-		'coeur'))gcoeur
-		using (id_grid)
-where
-	area.id_type = limites.get_id_type('communes')
-group by
-	area.name
-order by
-	area.name;
-```
 
-Pour retrouver la Surface du ST Haut Var Cians en coeur de parc
+    #### Exemples d'utilisation de la table grid1k_area
 
-```sql
--- méthode grid
-select round(sum(
+    La table peut être utilisée directement ou en conjonction avec les mailles 1000 pour déterminer les relations géométriques entre une géométrie arbitraire et l'un des multipolygones.
+
+
+    Exemple: Pour retrouver la surface coeur de chaque commune
+
+    ```sql
+    select
+        round(sum(case
+                    when gcoeur.surface = 1000000 then gcom.surface
+                    when gcom.surface = 1000000 then gcoeur.surface
+                    else st_area(st_intersection(gcoeur.geom, gcom.geom))
+                end)) "surface coeur",
+        name commune
+    from
+        limites.grid1k_area gcom
+    join limites.area on
+        gcom.id_area = area.id
+    join (
+        select
+            *
+        from
+            limites.grid1k_area
+        where
+            id_area = limites.get_id_area('limites',
+            'coeur'))gcoeur
+            using (id_grid)
+    where
+        area.id_type = limites.get_id_type('communes')
+    group by
+        area.name
+    order by
+        area.name;
+    ```
+
+    Pour retrouver la Surface du ST Haut Var Cians en coeur de parc
+
+    ```sql
+    -- méthode grid
+    select round(sum(
+            case
+                when a.surface = 1000000 then b.surface
+                when b.surface = 1000000 then a.surface
+                else st_area(st_intersection(a.geom, b.geom))
+            end
+        ))
+    from limites.grid1k_area a
+        join limites.grid1k_area b on a.id_grid = b.id_grid
+    where a.id_area = limites.get_id_area('limites','coeur')
+        and b.id_area = limites.get_id_area('st', 'Haut Var Cians');
+
+    -- méthode classique
+    select round(st_area(st_intersection(a.geom, b.geom)))
+    from limites.area a,
+        limites.area b
+    where a.id = limites.get_id_area('limites','coeur')
+        and b.id = limites.get_id_area('st', 'Haut Var Cians');
+    ```
+
+    Intersection du ST Haut Var Cians et du coeur de parc
+
+    ```sql
+    -- méthode grid
+    select st_union(
         case
-            when a.surface = 1000000 then b.surface
-            when b.surface = 1000000 then a.surface
-            else st_area(st_intersection(a.geom, b.geom))
+            when a.surface = 1000000 then b.geom
+            when b.surface = 1000000 then a.geom
+            else st_intersection(a.geom, b.geom)
         end
-    ))
-from limites.grid1k_area a
-    join limites.grid1k_area b on a.id_grid = b.id_grid
-where a.id_area = limites.get_id_area('limites','coeur')
-    and b.id_area = limites.get_id_area('st', 'Haut Var Cians');
-
--- méthode classique
-select round(st_area(st_intersection(a.geom, b.geom)))
-from limites.area a,
-    limites.area b
-where a.id = limites.get_id_area('limites','coeur')
-    and b.id = limites.get_id_area('st', 'Haut Var Cians');
-```
-
-Intersection du ST Haut Var Cians et du coeur de parc
-
-```sql
--- méthode grid
-select st_union(
-    case
-        when a.surface = 1000000 then b.geom
-        when b.surface = 1000000 then a.geom
-        else st_intersection(a.geom, b.geom)
-    end
-)
-from limites.grid1k_area a
-    join limites.grid1k_area b on a.id_grid = b.id_grid
-where a.id_area = limites.get_id_area('limites','coeur')
-    and b.id_area = limites.get_id_area('st', 'Haut Var Cians');
-
--- methode classique
-select st_intersection(a.geom, b.geom)
-from limites.area a,
-    limites.area b
-where a.id = limites.get_id_area('limites','coeur')
-    and b.id = limites.get_id_area('st', 'Haut Var Cians');
-```
-
-### Mise à jour des données
-
-
-Exemple de mise à jour manuelle de la table `grid1k_area` pour les communes :
-<!-- (exemple à généraliser et automatiser): -->
-```sql
-    with c as (select a.id from limites.area a where id_type = 4)
-    delete from limites.grid1k_area gka using c where c.id = gka.id_area
-
-    with i as (
-        select a.id id_grid,
-            b.id id_area,
-            st_intersection(a.geom, b.geom) geom
-        from limites.maille1k a
-            join limites.area b on st_intersects(a.geom, b.geom)
-            where b.id_type=4
     )
-    insert into limites.grid1k_area(id_grid, id_area, surface, geom)
-    select id_grid,
-        id_area,
-        st_area(geom) surface,
-        st_multi(geom)
-    from i
-    where st_area(geom) > 0;
-```
+    from limites.grid1k_area a
+        join limites.grid1k_area b on a.id_grid = b.id_grid
+    where a.id_area = limites.get_id_area('limites','coeur')
+        and b.id_area = limites.get_id_area('st', 'Haut Var Cians');
+
+    -- methode classique
+    select st_intersection(a.geom, b.geom)
+    from limites.area a,
+        limites.area b
+    where a.id = limites.get_id_area('limites','coeur')
+        and b.id = limites.get_id_area('st', 'Haut Var Cians');
+    ```
+
+    #### Mise à jour des données
+
+
+    Exemple de mise à jour manuelle de la table `grid1k_area` pour les communes :
+    <!-- (exemple à généraliser et automatiser): -->
+    ```sql
+        with c as (select a.id from limites.area a where id_type = 4)
+        delete from limites.grid1k_area gka using c where c.id = gka.id_area
+
+        with i as (
+            select a.id id_grid,
+                b.id id_area,
+                st_intersection(a.geom, b.geom) geom
+            from limites.maille1k a
+                join limites.area b on st_intersects(a.geom, b.geom)
+                where b.id_type=4
+        )
+        insert into limites.grid1k_area(id_grid, id_area, surface, geom)
+        select id_grid,
+            id_area,
+            st_area(geom) surface,
+            st_multi(geom)
+        from i
+        where st_area(geom) > 0;
+    ```

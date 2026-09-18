@@ -7,25 +7,25 @@ Ce schéma contient les tables et vues nécessaires aux calculs des indicateurs 
 En l'état, le projet PAEC, principal produit a été "figé" puisqu'il a rempli son objectif. Le projet original contenait à la fois des couches sur la base de donées, des requêtes, et des données dans des fichiers sur les serveurs. Il a donc été exporté en fichier statique afin de pouvoirle consulter dans le futur pour comparaison. Ci-dessous sont listés les principaux critères et méthodes appliqués. 
 
 
-la plupart des couches du projet ont été filtrées pour ne plus contenir que les données se situant en coeur de parc, ou dans l'aire d'adhésion. 
+La plupart des couches du projet ont été filtrées pour ne plus contenir que les données se situant en coeur de parc, ou dans l'aire d'adhésion. 
 
-Le Projet QGIS PAEC est structuré en plusieurs thématiques, chacune divisée en sous thématiques: 
+Le Projet QGIS PAEC est structuré en plusieurs thématiques, chacune divisée en sous thématiques : 
 
-# Enjeux: 
+## Enjeux
 
-## Zones humides
+### Zones humides
 
 
-Les données relatives aux zones humides proviennent essentiellement du schema eau_zh.
+Les données relatives aux zones humides proviennent essentiellement du schema ```eau_zh```.
 
-La table paec.eau_zh_exclus sert à exclure certains sites zh (et les zh, defens et altérations associés) du projet.
+La table ```paec.eau_zh_exclus``` sert à exclure certains sites zh (et les zh, defens et altérations associés) du projet.
 
 Des vues permettent d'appliquer automatiquement le filtre d'exclusion. Par convention, la vue porte le même nom que la table filtrée avec le suffixe fx (filtre d'exclusion).
-```
+```sql
 select * from paec.alteration_fx
 ```
 
-Les couches UP et prairies présentées dans le contexte zone humide ont les attributs suivants:
+Les couches UP et prairies présentées dans le contexte zone humide ont les attributs suivants :
 
     id de l'objet (UP ou prairie),
     nom (pour les UP)
@@ -37,11 +37,11 @@ Les couches UP et prairies présentées dans le contexte zone humide ont les att
 
 
 
-## Faune
+### Faune
 
-### Bouquetins
-Zones d'hivernage (répertoriées depuis 2017)
-
+#### Bouquetins
+**Zones d'hivernage**  
+_Répertoriées depuis 2017_  
 Attributs de la couche up_hivernage
 
     id unité pastorale
@@ -50,19 +50,18 @@ Attributs de la couche up_hivernage
     surface d'hivernage sur l'unité pastorale
     proportion de la surface de l'unité pastorale utilisée par les bouquetins
 
-Relevés GPS hivernaux
-
+**Relevés GPS hivernaux**  
 On retient dans la synthèse les UP qui contiennent au moins 5ha de zone d'hivernage ou qui ont plus de 100 observations hivernales sur le territoire.
 
 
 
-## Flore
+### Flore
 
-La table paec.enjeu_flore définit les espèces à enjeu, reproduite dans le projet sous le nom : "Flore - Espèces remarquables". L'attribut booléen super_priorite marque les espèces à enjeu majeur, l'attribut priorite de valeur >= 1 indique la priorité (par convention, 1 est la priorité la plus élevée).
+La table ```paec.enjeu_flore``` définit les espèces à enjeu, reproduite dans le projet sous le nom : "Flore - Espèces remarquables". L'attribut booléen ```super_priorite``` marque les espèces à enjeu majeur, l'attribut priorite de valeur >= 1 indique la priorité (par convention, 1 est la priorité la plus élevée).
 
-L'attribut enjeu_espece indique une espèce à enjeu.
+L'attribut ```enjeu_espece``` indique une espèce à enjeu.
 
-L'attribut enjeu_habitat indique une espèce indicatrice d'un habitat à enjeu (voir Habitat).
+L'attribut ```enjeu_habitat``` indique une espèce indicatrice d'un habitat à enjeu (voir Habitat).
 
 Les observations depuis 1990 sont reliées aux prairies et unités pastorales lorsque la distance entre l'obs et le territoire étudié est inférieure à 200 m. Il est permis de modifier dynamiquement ce paramètre en ajoutant un filtre sur la valeur de l'attribut proximite dans les vues détaillées. Par contre, la requête de synthèse doit être réécrite si l'on veut changer la proximité prise en compte avant l'agrégation des résultats.
 
@@ -73,7 +72,7 @@ Pour chaque territoire (up ou prairie) et chaque taxon, un objet graphique est c
 
 Les couches "Observation ..." donnent le détail des observations d'espèce de flore à enjeu.
 
-# Sous-zones PAEC 2023
+## Sous-zones PAEC 2023
 
 Les couches dans sous-zones PAEC 2023 permettent d'observer des zones particulières liées aux enjeux spécifiques suivants : 
 
@@ -83,7 +82,7 @@ Les couches dans sous-zones PAEC 2023 permettent d'observer des zones particuli�
 - Sous-zone Pres de fauche
 - Sous-zone Soutien au collectif
 
-# Zonage
+## Zonage
 
 Contient aussi les sites Natura200, le périmètre de la PAEC ainsi que les limites génèrales du parc et des services territoriaux. 
 

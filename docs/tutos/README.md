@@ -1,8 +1,14 @@
 # Table des matières des tutos
  
-[Ce dossier](./) contient l'ensemble des tutoriels et guides pour l'accès et la bonne utilisation des données géographiques du parc, et provenant de sources externes. Ainsi qu'un glossaire des 
-termes utilisés en géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a vocation à intégrer vos interrogations.
+Ici vous retrouverez l'ensemble des guides pour l'accès et la bonne utilisation des données géographiques du parc ou provenant de sources externes.  
+Un [glossaire](./tutos/glossaire.md) des termes de géomatique est disponible pour vous aider, et une [F.A.Q.](./tutos/FAQ.md) a vocation à intégrer vos interrogations !
 
+
+!!! info "Nouveau PC" 
+    Si vous venez de recevoir votre ordinateur, il est nécessaire de réaliser les premiers paramétrages pour avoir accès à la base de données du parc, et aux fonds de carte au format WMS. 
+
+
+    
 |Nom|Description|
 |:--:|:--:|
 |[Ajout de couches wms](./ajout_fond_de_carte_wms.md)| Ajouter un fond de carte standard (SCAN25, Orthophotos) à partir d'un [service wms](#wms)|
@@ -20,7 +26,4 @@ termes utilisés en géomatique ou en lien avec ce dépôt, et une F.A.Q. qui a 
 |[Premier paramétrage](./premier_parametrage.md)|Configuration de base de QGIS permettant d'en assurer le bon fonctionnement|
 |[Ressources WMS](./ressources_geographiques_wms.md)|Liste et description des ressources disponibles au format wms.|
 |[Installation d'un plugin QGIS](./installation_plugin_via_depot.md)|Indique comment installer un plugin QGIS développé par le service SI du Parc National du Mercantour|
-
-
-<!--|[git](./git.md)|Présentation et explication de ce qu'est "git"|-->
 

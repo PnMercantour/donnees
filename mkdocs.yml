@@ -11,7 +11,8 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-    #    - toc.integrate
+    - toc.follow
+    #- toc.integrate
   logo: tutos/img/logo_embleme_pnm_quadri_vert.jpg
   favicon: tutos/img/logo_embleme_pnm_quadri_vert.jpg
   language: fr
@@ -46,6 +47,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  #- toc:
+  #    permalink: true
  # - pymdownx.emoji:
  #     emoji_index: !!python/name:materialx.emoji.twemoji
  #     emoji_generator: !!python/name:materialx.emoji.to_svg

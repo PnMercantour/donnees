@@ -7,11 +7,9 @@
  avec des zones tampon quand nécessaire pour déterminer les zones dont le survol sera interdit. 
 
 
-## Utilisation du projet Qgis
-Pas encore de projet Qgis dédié.
+## Projets Qgis associés
+Aucun projet documenté à ce jour.
 
-### _Exemples_
-_Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de la symbologie._
 
 ## Tables remarquables
  - _.zones_sensibles_ </br>
@@ -20,7 +18,10 @@ _Détail de l'utilisation du projet Qgis, de la manipulation des filtres et de l
 
  Le tableau suivant résume les critères choisis pour chaque espèce, ainsi que les schémas et tables où les informations relatives sont stockées. 
 
- > NB: `"survol.t_calendrier_interdiction_survol_cis"  est abrégé en "cis"`
+
+
+!!! info "Abréviation"
+     ```survol.t_calendrier_interdiction_survol_cis``` est abrégé en ```cis```
 
 |Espèce|Zone Tampon|Critère|Schéma|table|
 | :--:|:--: |:--:|:--:|:--:|
