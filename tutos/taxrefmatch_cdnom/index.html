@@ -1,0 +1,2607 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../formation/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/logo_embleme_pnm_quadri_vert.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Taxrefmatch > cd_nom - Documentation et Tutos sur les données géographiques du Parc national du Mercantour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#taxrefmatch-et-cd_nom" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-header__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxrefmatch > cd_nom
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Mode Sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode Sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Page d'accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bd_pnm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  BD_PNM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projets_qgis/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projets Qgis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qgis_plugins/plugins_list/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Qgis plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-nav__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page d'accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bd_pnm/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BD_PNM
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../projets_qgis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projets Qgis
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../qgis_plugins/plugins_list/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qgis plugins
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parametrage_qgis_pnm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paramètres QGIS au PNM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installer_certificats_base_de_donnees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accéder aux ressources du PNM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wms_wfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonds de carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Système de coordonnées
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_plugin_via_depot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installer un plugin QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prise en main
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prise en main
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naviguer dans QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_modifier_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer ou modifier un projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_modifier_couche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer ou modifier une couche
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Symbologie & Etiquettes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pour aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pour aller plus loin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empaqueter_un_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partager un projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sélection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calculatrice_champs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculatrice de champs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outils_traitement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils de traitement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cartographie
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cartographie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_carte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer une carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generer_un_atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Génération d'atlas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utiliser_un_masque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utiliser un masque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ressources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bonnes_pratiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonnes pratiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxrefmatch > cd_nom
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxrefmatch > cd_nom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#le-principe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le principe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation-de-depart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situation de départ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-lister-les-taxons-sans-doublons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : lister les taxons sans doublons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-passer-par-taxrefmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : passer par Taxrefmatch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : passer par Taxrefmatch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mettre-au-format-taxrefmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettre au format Taxrefmatch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrer-et-envoyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer et envoyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-recuperer-les-cd_nom-dans-le-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : récupérer les cd_nom dans le tableau
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 3 : récupérer les cd_nom dans le tableau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparer-le-fichier-de-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Préparer le fichier de résultats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecrire-la-formule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Écrire la formule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etendre-la-formule-et-la-figer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étendre la formule et la figer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonnes pratiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-cas-de-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En cas de problème
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#le-principe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le principe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation-de-depart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situation de départ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-lister-les-taxons-sans-doublons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : lister les taxons sans doublons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-passer-par-taxrefmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : passer par Taxrefmatch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 2 : passer par Taxrefmatch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mettre-au-format-taxrefmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettre au format Taxrefmatch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrer-et-envoyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer et envoyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-recuperer-les-cd_nom-dans-le-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : récupérer les cd_nom dans le tableau
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étape 3 : récupérer les cd_nom dans le tableau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparer-le-fichier-de-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Préparer le fichier de résultats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecrire-la-formule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Écrire la formule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etendre-la-formule-et-la-figer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étendre la formule et la figer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonnes pratiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-cas-de-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En cas de problème
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Page d'accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tutos
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../FAQ/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="taxrefmatch-et-cd_nom">Taxrefmatch et cd_nom</h1>
+<p>Pour que les données naturalistes puissent être <strong>partagées et échangées</strong>, chaque taxon est associé à un identifiant numérique unique : le <strong>cd_nom</strong>.<br />
+Or les relevés de terrain sont faits avec un <strong>nom</strong> : il faut donc retrouver le cd_nom correspondant. <strong>Taxrefmatch</strong> le fait pour vous, et LibreOffice permet de l'appliquer à tout un tableau.</p>
+<p>Afin que les données naturalistes puissent être <strong>partagées</strong> et <strong>échangées</strong>, chaque taxon est associé à un identifiant numérique unique qui s'appelle le <strong>cd_nom</strong>. Ce numéro est extrêmement important puisqu'il permet de suivre les observations indépendemment des changements de noms, d'orthographe, de taxonomie.</p>
+<p>Or, de façon générale, les relevés naturalistes sont faits en utilisant un <strong>nom</strong>. Il faut donc leur associer un <strong>cd_nom</strong>.</p>
+<p><strong>Taxrefmatch</strong> est un outil qui permet à partir d'un <strong>nom scientifique de taxon</strong> de retrouver le <strong>cd_nom</strong> associé, et donc l'ensemble de ses propriétés (nom scientifique valide, niveau taxonomique etc...).</p>
+<p>En combinant taxrefmatch et les formules disponibles sur LibreOffice/Excel il est possible d'<strong>automatiser</strong> et de <strong>simplifier</strong> le processus associant à chaque nom de taxon saisi un cd_nom correct et unique.</p>
+<hr />
+<h2 id="le-principe">Le principe</h2>
+<p>Le processus se fait en <strong>trois étapes</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Ce qu'on fait</th>
+<th>Outil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Lister</strong></td>
+<td>Récupérer la liste des noms de taxons observés, <strong>sans doublons</strong></td>
+<td>LibreOffice Calc / Excel</td>
+</tr>
+<tr>
+<td><strong>2. Faire correspondre</strong></td>
+<td>Obtenir le cd_nom de chaque nom</td>
+<td><a href="https://taxref.mnhn.fr/taxref-match/taxrefmatch/import">Taxrefmatch</a></td>
+</tr>
+<tr>
+<td><strong>3. Appliquer</strong></td>
+<td>Associer un cd_nom à <strong>chaque observation</strong></td>
+<td>LibreOffice Calc / Excel (<code>RECHERCHEV</code>)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Toujours vérifier les résultats</p>
+<p>Un outil automatique comme Taxrefmatch se trompe parfois.<br />
+<strong>Relisez les correspondances</strong> avant de les utiliser, pour ne pas introduire d'erreurs dans les relevés.</p>
+</div>
+<h2 id="situation-de-depart">Situation de départ</h2>
+<p>Vous avez un tableau d'observations, par exemple <code>observations.csv</code> :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Date</th>
+<th style="text-align: center;">Observateur</th>
+<th style="text-align: center;">Taxon</th>
+<th style="text-align: center;">x</th>
+<th style="text-align: center;">y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">12/10/2016</td>
+<td style="text-align: center;">Paul Bismut</td>
+<td style="text-align: center;">Nicrophorus vespilloides</td>
+<td style="text-align: center;">7.070697</td>
+<td style="text-align: center;">44.204141</td>
+</tr>
+<tr>
+<td style="text-align: center;">10/12/2016</td>
+<td style="text-align: center;">Serge Plouf</td>
+<td style="text-align: center;">Cossus cossus</td>
+<td style="text-align: center;">7.020686</td>
+<td style="text-align: center;">44.188697</td>
+</tr>
+<tr>
+<td style="text-align: center;">16/10/2012</td>
+<td style="text-align: center;">Jean-Paul Pierre</td>
+<td style="text-align: center;">Glomeris klugii</td>
+<td style="text-align: center;">7.10808</td>
+<td style="text-align: center;">44.207472</td>
+</tr>
+<tr>
+<td style="text-align: center;">...</td>
+<td style="text-align: center;">...</td>
+<td style="text-align: center;">...</td>
+<td style="text-align: center;">...</td>
+<td style="text-align: center;">...</td>
+</tr>
+</tbody>
+</table>
+<p>Il manque le <strong>cd_nom</strong> pour pouvoir enregistrer ces observations en base de données. D'autres informations peuvent aussi s'ajouter : le déterminateur, les effectifs, la méthode d'observation...</p>
+<h2 id="etape-1-lister-les-taxons-sans-doublons">Étape 1 : lister les taxons sans doublons</h2>
+<ol>
+<li>Créez un nouveau fichier <code>input-taxrefmatch.csv</code>.</li>
+<li>Copiez la colonne des <strong>noms de taxons</strong> de <code>observations.csv</code> dans la <strong>première colonne</strong> du nouveau fichier.</li>
+<li>
+<p>Sur LibreOffice :</p>
+<ul>
+<li>
+<p>Cliquez sur <span class="keys"><kbd>Données</kbd></span> &gt; <span class="keys"><kbd>Plus de filtres</kbd></span> &gt; <span class="keys"><kbd>Filtre standard...</kbd></span>.</p>
+<p><img alt="" src="../img/filtrer_doublons.png" /></p>
+</li>
+<li>
+<p>Dans la boîte de dialogue :</p>
+<ul>
+<li>réglez le premier <strong>nom de champ</strong> sur <code>- aucun -</code> ;</li>
+<li>cochez <strong>Sans doublon</strong> ;</li>
+<li>cochez <strong>Copier les résultats vers</strong> et choisissez une cellule vide.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sur Excel :</p>
+<ul>
+<li>
+<p>Cliquez sur <span class="keys"><kbd>Données</kbd></span> &gt; <span class="keys"><kbd>Avancé</kbd></span> (dans l'emplacement des <span class="keys"><kbd>Filtres</kbd></span>) </p>
+<p><img alt="" src="../img/filtrer_doublons_excel.png" /></p>
+</li>
+<li>
+<p>Dans la boîte de dialogue :</p>
+<ul>
+<li><code>Filtrer la liste sur place</code> doit être coché</li>
+<li>La plage correspond à la colonne sélectionnée</li>
+<li>Cochez <strong>extraction sans doublon</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Vous obtenez la liste de chaque taxon <strong>une seule fois</strong>.</p>
+<h2 id="etape-2-passer-par-taxrefmatch">Étape 2 : passer par Taxrefmatch</h2>
+<p><a href="https://taxref-match.mercantour.eu/">Méthode automatisée : Taxref Matcher du Mercantour</a></p>
+<p>Cliquez sur <span class="keys"><kbd>Upload</kbd></span> pour récupérer les <strong>cd_nom</strong> de votre fichier fraichement anti-doublonné.</p>
+<h3 id="mettre-au-format-taxrefmatch">Mettre au format Taxrefmatch</h3>
+<p>Le fichier envoyé à Taxrefmatch a <strong>trois colonnes</strong> :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>nom_complet</code></th>
+<th><code>classification</code></th>
+<th><code>fk</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Contenu</strong></td>
+<td>Le nom du taxon</td>
+<td>Les taxons supérieurs, séparés par des virgules (voir la <a href="https://taxref.mnhn.fr/taxref-match/taxrefmatch/taxrefMatchDoc">documentation Taxrefmatch</a>)</td>
+<td>Un identifiant libre</td>
+</tr>
+<tr>
+<td><strong>Obligatoire</strong></td>
+<td>OUI</td>
+<td>Non, mais aide à départager</td>
+<td>Non, on peut la laisser vide</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">nom_complet</th>
+<th style="text-align: center;">classification</th>
+<th style="text-align: center;">fk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Helix lapicida Linnaeus, 1758</td>
+<td style="text-align: center;">mollusca,gastropoda,helicidae</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Cyclops minutus O.F. Müller, 1776</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Commencez simple</p>
+<p>Un premier essai avec la colonne <code>classification</code> <strong>vide</strong> est possible. Certaines correspondances peuvent alors échouer ou être fausses : on complète ensuite pour celles-là.</p>
+</div>
+<h3 id="enregistrer-et-envoyer">Enregistrer et envoyer</h3>
+<ol>
+<li>
+<p>Enregistrez le fichier en <strong>CSV</strong>, en choisissant le <strong>point-virgule</strong> comme séparateur de champ ; format <strong>CSV UTF-8 (délimité par des virgules)</strong> dans Excel</p>
+<figure>
+<p><img alt="" src="../img/calc_pointvirgule.png" /></p>
+<figcaption>
+<p>Sous <strong>LibreOffice</strong></p>
+</figcaption>
+</figure>
+<figure>
+<p><img alt="" src="../img/enregistrer_sous_csv.png" /></p>
+<figcaption>
+<p>Sous <strong>Excel</strong></p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Envoyez-le sur <a href="https://taxref.mnhn.fr/taxref-match/taxrefmatch/import">Taxrefmatch</a>.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Le séparateur compte</p>
+<p>Avec une virgule ou une tabulation, Taxrefmatch ne lit pas les colonnes correctement.</p>
+</div>
+<h2 id="etape-3-recuperer-les-cd_nom-dans-le-tableau">Étape 3 : récupérer les cd_nom dans le tableau</h2>
+<h3 id="preparer-le-fichier-de-resultats">Préparer le fichier de résultats</h3>
+<ol>
+<li>Taxrefmatch fournit un fichier <code>résultats.csv</code> : renommez-le en <strong><code>taxrefmatch.csv</code></strong>.</li>
+<li>Ouvrez-le et renommez sa première feuille en <strong><code>taxrefmatch</code></strong>.</li>
+<li><strong>Relisez-le</strong> et corrigez-le si besoin. Quand Taxrefmatch propose <strong>plusieurs options</strong> pour un même taxon, supprimez les lignes erronées.</li>
+<li>Dans <code>observations.csv</code>, créez une nouvelle colonne <strong><code>cd_nom</code></strong>.</li>
+</ol>
+<h3 id="ecrire-la-formule">Écrire la formule</h3>
+<p>La formule <code>RECHERCHEV</code> de LibreOffice ou Excel prend la valeur d'une cellule, la cherche dans la première colonne d'une plage, et renvoie la valeur d'une autre colonne <strong>sur la même ligne</strong>. Ici : elle cherche le nom du taxon dans <code>taxrefmatch.csv</code> et renvoie son cd_nom.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=RECHERCHEV(A ; B ; C ; D)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Élément</th>
+<th>À remplacer par</th>
+<th>Pour notre cas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>A</strong></td>
+<td>La cellule qui contient le nom du taxon saisi</td>
+<td><code>E2</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>B</strong></td>
+<td>Le chemin vers <code>taxrefmatch.csv</code>, puis la feuille et la plage de données</td>
+<td>voir ci-dessous</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>C</strong></td>
+<td>Le <strong>numéro de la colonne</strong> à renvoyer dans la plage</td>
+<td><code>4</code> (le cd_nom est la 4ᵉ colonne, si la plage va du nom au cd_nom)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>D</strong></td>
+<td>Le mode de recherche</td>
+<td><code>0</code> (correspondance exacte)</td>
+</tr>
+</tbody>
+</table>
+<p>Le paramètre <strong>B</strong> s'écrit de cette façon :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>'file:///C:/Users/prenom.nom/Documents/taxrefmatch.csv'#$taxrefmatch.$A$1:$D$99
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Partie</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'file:///C:/Users/.../taxrefmatch.csv'</code></td>
+<td>Le <strong>chemin</strong> vers le fichier, entre apostrophes, avec des <code>/</code></td>
+</tr>
+<tr>
+<td><code>#$taxrefmatch</code></td>
+<td>Le <strong>nom de la feuille</strong>, précédé de <code>#$</code></td>
+</tr>
+<tr>
+<td><code>.$A$1:$D$99</code></td>
+<td>La <strong>plage</strong> de données où chercher. Les <code>$</code> verrouillent la plage pour copier la formule sans la décaler : appuyez sur <span class="keys"><kbd class="key-f4">F4</kbd></span> lorsque le curseur est sur 'A1' et 'D99' pour écrire les $ à votre place</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple complet</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>=RECHERCHEV(E2;'file:///C:/Users/prenom.nom/Downloads/taxrefmatch.csv'#$taxrefmatch.$A$1:$D$62;4;0)
+</code></pre></div>
+</div>
+<p><img alt="" src="../img/demo_taxref.gif" /></p>
+<h3 id="etendre-la-formule-et-la-figer">Étendre la formule et la figer</h3>
+<ol>
+<li>
+<p><strong>Etendre</strong> : copiez la formule sur <strong>toute la colonne</strong> <code>cd_nom</code> : cliquer/glisser ou copier/coller.</p>
+</li>
+<li>
+<p><strong>Figer</strong> : les cd_nom deviennent des <strong>nombres fixes</strong>, qui ne dépendent plus du fichier <code>taxrefmatch.csv</code></p>
+<ul>
+<li>Sur <strong>LibreOffice</strong> : sélectionnez la colonne <code>cd_nom</code>, puis <span class="keys"><kbd>Données</kbd></span> &gt; <span class="keys"><kbd>Calculer</kbd></span> &gt; <span class="keys"><kbd>Formules en valeurs</kbd></span>. </li>
+<li>Sur <a href="https://support.microsoft.com/fr-fr/excel/replace-a-formula-with-its-result-in-excel"><strong>Excel</strong></a> : copier toute la colonne <code>cd_nom</code>, coller là à côté, cliquez sur la flèche d'<strong>Options de collage</strong> et sélectionnez <strong>Valeurs uniquement</strong> (raccourci <span class="keys"><kbd class="key-control">Ctrl</kbd></span> <strong>puis</strong> <span class="keys"><kbd class="key-v">V</kbd></span>): cette nouvelle colonne est indépendante, vous pouvez supprimer la colonne de départ.
+<img alt="" src="../img/option_collage_excel.png" /></li>
+</ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Certaines correspondances peuvent avoir échoué</p>
+<p>Vérifiez les cases en erreur (<code>#N/A</code>). Dans ce cas :</p>
+<ul>
+<li><strong>réessayez</strong> en complétant autrement la colonne <code>classification</code> avant de soumettre à Taxrefmatch ;</li>
+<li>ou <strong>complétez à la main</strong> depuis le site de l'<a href="https://inpn.mnhn.fr/">INPN</a>.</li>
+</ul>
+</div>
+<h2 id="bonnes-pratiques">Bonnes pratiques</h2>
+<table>
+<thead>
+<tr>
+<th>Réflexe</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Garder une copie</strong> de <code>observations.csv</code> d'origine</td>
+<td>On peut recommencer en cas d'erreur</td>
+</tr>
+<tr>
+<td><strong>Relire</strong> <code>taxrefmatch.csv</code> avant la formule</td>
+<td>Les homonymes et les doublons faussent les cd_nom</td>
+</tr>
+<tr>
+<td><strong>Convertir les formules en valeurs</strong></td>
+<td>Le fichier reste valable si <code>taxrefmatch.csv</code> est déplacé</td>
+</tr>
+<tr>
+<td><strong>Contrôler</strong> quelques lignes à la main</td>
+<td>Un résultat qui « s'affiche » n'est pas forcément correct</td>
+</tr>
+<tr>
+<td><strong>Séparateur</strong> <code>;</code> pour tous les CSV</td>
+<td>Évite les colonnes mal découpées</td>
+</tr>
+</tbody>
+</table>
+<h2 id="en-cas-de-probleme">En cas de problème</h2>
+<table>
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>Cause probable</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#N/A</code> dans la colonne <code>cd_nom</code></td>
+<td>Le nom n'est pas dans <code>taxrefmatch.csv</code>, ou n'est pas écrit à l'identique</td>
+<td>Vérifiez l'orthographe, les espaces en trop, et la ligne dans <code>taxrefmatch.csv</code></td>
+</tr>
+<tr>
+<td><code>Err:502</code> ou <code>#REF!</code></td>
+<td>Chemin du fichier ou nom de feuille incorrect</td>
+<td>Vérifiez le chemin (<code>/</code>, apostrophes) et le nom de la feuille (<code>taxrefmatch</code>)</td>
+</tr>
+<tr>
+<td>La formule renvoie un mauvais cd_nom</td>
+<td>Colonne <code>C</code> mal choisie, ou doublons dans <code>taxrefmatch.csv</code></td>
+<td>Contrôlez que <code>C</code> = <code>4</code>, et supprimez les lignes erronées</td>
+</tr>
+<tr>
+<td>Taxrefmatch ne lit pas mon fichier</td>
+<td>Mauvais séparateur de champ</td>
+<td>Réenregistrez en CSV avec le <strong>point-virgule</strong></td>
+</tr>
+<tr>
+<td>La plage s'est décalée en copiant la formule</td>
+<td><code>$</code> oubliés dans la plage</td>
+<td>Écrivez <code>$A$1:$D$99</code>, pas <code>A1:D99</code></td>
+</tr>
+<tr>
+<td>Les cd_nom disparaissent à la réouverture</td>
+<td>Formule non convertie, fichier source déplacé</td>
+<td><strong>Formules en valeurs</strong> avant de fermer</td>
+</tr>
+<tr>
+<td>Taxrefmatch propose plusieurs taxons</td>
+<td>Nom ambigu</td>
+<td>Supprimez les lignes erronées, ou précisez la <code>classification</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="14 octobre 2026 09:42:56 UTC"><span class="timeago" datetime="2026-10-14T09:42:56+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="14 octobre 2026 09:42:56 UTC">2026-10-14</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="14 octobre 2026 09:42:56 UTC"><span class="timeago" datetime="2026-10-14T09:42:56+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="14 octobre 2026 09:42:56 UTC">2026-10-14</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.prune", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+    
+  </body>
+</html>

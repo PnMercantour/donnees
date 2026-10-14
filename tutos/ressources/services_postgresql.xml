@@ -1,0 +1,4 @@
+<!DOCTYPE connections>
+<qgsPgConnections version="1.0">
+    <postgis allowGeometrylessTables="true" service="projets" host="" port="" saveUsername="false" name="Service projets" geometryColumnsOnly="true" projectsInDatabase="true" dontResolveType="false" publicOnly="false" database="" sslmode="SslVerifyCa" estimatedMetadata="true" savePassword="false"/>
+</qgsPgConnections>
