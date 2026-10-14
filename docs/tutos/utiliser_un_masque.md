@@ -1,75 +1,88 @@
 # Utiliser un masque
 
+Un **masque** met en avant une couche, ou une entité, en **grisant** (ou « floutant ») tout ce qui l'entoure.
 
-## Explications
+!!! info "Pourquoi le faire à la main ?"
+    Certaines extensions QGIS savent le faire, mais cette opération est très simple à réaliser soi-même. Savoir la faire évite de dépendre d'une extension en cas de problème de mise à jour ou de bug.
 
-On désire parfois mettre en avant une couche, ou une entité, en "floutant" tout ce qu'il y a autour. 
-Cette opération peut être réalisée avec certains plugs-ins ou extensions QGIS, elle est toutefois très simple à réaliser à la main, et savoir la réaliser peut éviter les soucis de mise à jour en cas de problème ou bug. 
-  
+--- 
 
-Appliquer un masque de ce genre peut être fait de deux façons: 
-- en appliquant le style "polygone inversé" à une entité ou une couche, ce qui "vide" l'intérieur du polygone, et permet d'appliquer un "grisage" autour
-- en créant une couche "masque" qui est gris transparent, puis en y faisant un trou qui laisse apparaitre le polygone d'intérêt
+## Quelle méthode choisir ?
 
+| | **Polygone inversé** | **Masque piloté par l'atlas** |
+|---|---|---|
+| **Principe** | Un style "polygone inversé" vide l'intérieur du polygone et grise l'extérieur | Une couche grise transparente, dans laquelle un "trou" se crée automatiquement sur l'entité de chaque page |
+| **Pour** | Une carte simple : ne voir que la zone d'une couche (par exemple une commune) | Une série de cartes : un atlas où seule l'entité de la page courante ressort |
+| **Difficulté** | Facile | Un peu plus long |
 
-Dans tous les cas, il est possible de mettre en lien le masque avec un [atlas](./generer_un_atlas.md) pour que seule l'entité apparaissant dans l'[atlas](./generer_un_atlas.md) soit visible.
- 
-# Pas à pas
+---
 
-## Style polygone inversé
+## Méthode 1 : le style "polygone inversé"
 
-Cette solution marche pour une carte simple: on ne souhaite voir que les zones couvertes par une couche (par exemple: représentant une commune).
+Cette solution convient à une carte simple : on ne souhaite voir que la zone couverte par une couche (par exemple celle d'une commune).
 
-- faire clic droit sur la couche de la zone désirée, et cliquer sur dupliquer la couche
+1. Faites un ++"clic droit"++ sur la couche de la zone désirée > **Dupliquer la couche**. On travaille sur la copie pour garder la couche d'origine intacte.
+2. Double-cliquez sur la copie, ou ++"clic droit"++ > ++"Propriétés"++, puis allez dans l'onglet **Symbologie**.
+3. Tout en bas à gauche de la fenêtre, cliquez sur le bouton **Style**, puis sur **Charger**.
+4. Cliquez sur les **...** et naviguez jusqu'au fichier `W:\symbologie\masque.qml`.
+5. Cliquez sur **Appliquer**.
 
-- faire double clic sur la couche, ou bien clic droit > Propriétés, puis dans l'onglet "Symbologie"
+![Chargement du style masque](./img/charger_style.png)
 
-- Tout en bas à gauche de la fenêtre se trouve le bouton "Style", cliquer dessus puis "Charger"
+!!! tip "Régler l'intensité du grisé"
+    Dans l'onglet **Symbologie**, vous pouvez modifier la couleur de remplissage et son **opacité** pour un masque plus ou moins marqué.
 
-- En cliquant sur les "..." naviguer jusqu'à ce fichier   : "W:\symbologie\masque.qml"
-
-- Cliquer sur "Appliquer"
-
-
-## Représenter la zone de l'entité courante d'un atlas
- 
-### générer l'atlas
-
-- En partant d'une carte existante, dans la barre de menu cliquer sur "Projet" puis "Gestionnaire de mise en page"
-
-- Créer une nouvelle mise en page, ou utiliser une mise en page existante. 
-
-Dans la fenêtre de mise en page, il faut d'abord activer les paramètres d'atlas. Pour ça: 
+!!! note "Le fichier de style est sur le disque partagé"
+    Le fichier `masque.qml` se trouve sur le lecteur réseau `W:`. Si vous n'y avez pas accès, contactez le SI : `si@mercantour-parcnational.fr`.
 
 
-- dans la barre de menu, cliquer sur "Atlas" puis "Paramètres de l'atlas"
+---
 
-- Dans la barre de droite, apparait un onglet "Atlas" à côté de "Mise en page", "Propriétés de l'objet", et "Guides". Cocher la case "Générer un atlas"
+## Méthode 2 : mettre en valeur l'entité de chaque page d'un atlas
 
-- Dans le menu déroulant "couche de couverture", sélectionner la couche contenant les entités sur lesquelles devra être centré l'atlas. 
+Cette méthode crée un masque qui **s'adapte automatiquement** à l'entité représentée sur chaque page d'un atlas.
 
-- Facultatif: Filtrer ou ordonner par un des champs de la couche de couverture. 
+### 1. Générer l'atlas
+
+Préparez d'abord l'atlas à partir de la couche désirée [:octicons-arrow-right-24: Générer un atlas](./generer_un_atlas.md#pas-a-pas).
+
+### 2. Créer la couche de masque
+
+Il s'agit de créer un fond uni et grisé, dont la géométrie sera calculée pour **ne pas cacher** l'entité de la page courante.
+
+1. Dans la barre de menu, cliquez sur ++"Couche"++ > ++"Créer une couche"++ et choisissez une **nouvelle couche shapefile** de type **polygone** (un **GeoPackage** convient aussi).
+2. Cliquez sur les ++"..."++ pour l'enregistrer dans votre dossier de travail, avec un nom clair : `masque_xxx`.
+3. Créez **une seule entité** qui englobe toute la zone à représenter, **avec une bonne marge**. Si besoin, voir [éditer des polygones](./creer_modifier_couche.md#creation-dentitesmodification-de-geometrie).
+4. Enregistrez les modifications.
+
+!!! warning "Une marge suffisante"
+    L'entité du masque doit couvrir **toutes** les zones qui pourront apparaître sur la carte, quelle que soit la page de l'atlas. Sinon, des zones sans grisé apparaîtront en bordure de carte.
+
+### 3. Faire un "trou" dans le masque
+
+1. Dans la couche de masque, ouvrez ses **Propriétés** (double-clic, ou ++"clic droit"++ > ++"Propriétés"++).
+2. Dans l'onglet **Symbologie**, choisissez **Générateur de géométrie** comme type de symbole.
+3. Réglez le **type de géométrie** sur **Polygone**.
+4. Remplacez la formule existante par : `difference( $geometry, @atlas_geometry )`
+5. Réglez l'apparence du masque (gris, avec une certaine opacité), puis cliquez sur **Appliquer**.
+
+!!! info "Que fait cette formule ?"
+    `difference( $geometry, @atlas_geometry )` retire de la géométrie du masque (`$geometry`) celle de l'entité courante de l'atlas (`@atlas_geometry`). Le « trou » laisse apparaître l'entité de la page, et le reste de la carte est grisé.
+
+Désormais, quand vous générez l'atlas, un **trou se forme automatiquement** à l'emplacement de l'entité d'intérêt de chaque page.
+
+!!! tip "Vérifier le résultat"
+    Dans la mise en page, cliquez sur ++"Atlas"++ > ++"Prévisualiser l'atlas"++ et passez d'une page à l'autre : le trou doit suivre l'entité.
 
 
-### Créer la couche de masque
+---
 
-Ces opérations ont pour but de créer un fond uni et grisé, dont la géométrie sera ensuite générée pour ne pas cacher la partie correspondant à l'entité actuellement représentée par l'atlas. 
+## En cas de problème
 
-- Créer une couche en cliquant sur l'onglet couche de la barre de menu puis "Créer une couche" 
-- Sélectionner nouvelle couche shapefile de polygone
-- Naviguer en cliquant sur les "..."  et enregistrer avec un nom clair ("masque_xxx") dans le dossier de travail courant.
-- Créer une seule entité (suivre [ce tuto](./editer_des_polygones.md) si nécessaire)  englobant toute la zone à représenter, avec une bonne marge. 
-- Enregistrer les modifications 
-
-- Dans la couche masque ainsi crée, aller dans propriétés (double clic ou clic droit>propriétés)
-- Dans l'onglet symbologie choisir "Générateur de géométrie"
-- remplacer la formule existante par la suivante :
-
-> difference( $geometry,  @atlas_geometry )
-
-Appliquer les modifications.
-
-Dorénavant, quand vous générez l'atlas, un "trou" se formera automatiquement à l'emplacement de l'unité d'intérêt de l'atlas. 
-
-
-
+| Symptôme | Cause probable | Solution |
+|----------|----------------|----------|
+| Rien n'est grisé | Style non appliqué, ou couche placée sous les autres | Remontez la couche de masque en haut du panneau **Couches** |
+| Pas de trou dans le masque (méthode 2) | L'aperçu de l'atlas n'est pas actif | Lancez **Prévisualiser l'atlas** dans la mise en page |
+| Le masque est vide ou erreur de formule | Type de géométrie non réglé sur **Polygone** | Vérifiez le type du générateur de géométrie et la formule |
+| Des zones restent claires en bordure de carte | Entité de masque trop petite | Modifiez-la pour qu'elle déborde largement de la zone à représenter |
+| Le style `masque.qml` est introuvable | Pas d'accès au lecteur `W:` | Vérifiez votre connexion au réseau du Parc, ou contactez le SI |

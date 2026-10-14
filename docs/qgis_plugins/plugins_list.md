@@ -1,73 +1,152 @@
-# Liste des plugins QGIS
+---
+title: Liste des plugins QGIS
+hide:
+  - path
+  - toc
+  - navigation
+---
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div class="pnm-hero" markdown>
 
-  <!-- Table des matières flottante -->
-  <div id="toc" style="flex: 0 0 250px; position: sticky; top: 20px; max-height: 90vh; overflow-y: auto; border:1px solid #ddd; padding: 1rem; border-radius:8px; background:#f9f9f9;">
-  </div>
+<div class="pnm-hero__brand" markdown>
 
-  <!-- Conteneur des cartes -->
-  <div id="plugins" style="flex: 1; display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 1rem;"></div>
+:material-puzzle-plus:{ .pnm-hero__icon }
 
 </div>
 
+<div class="pnm-hero__text" markdown>
+
+# Les plugins QGIS du Parc
+
+Cette page présente les **plugins QGIS développés ou hébergés par le Parc**, disponibles depuis le dépôt de plugins du Parc. Chaque plugin renvoie vers sa documentation, son code source et un lien pour signaler un problème.
+
+[:material-download: Installer un plugin QGIS](../tutos/installation_plugin_via_depot.md){ .md-button .md-button--primary }
+
+
+</div>
+
+</div>
+
+!!! success "Une liste toujours à jour"
+    Cette liste est **générée automatiquement** à partir du dépôt de plugins du Parc : elle affiche toujours les plugins et les versions actuellement disponibles.
+
+## :material-puzzle: Plugins disponibles
+
+<p>
+  <input id="plugin-filter" type="search" placeholder="Filtrer les plugins par nom ou description..."
+         aria-label="Filtrer les plugins"
+         style="width:100%; padding:.5rem .8rem; border:1px solid var(--md-default-fg-color--lighter); border-radius:.4rem; background:var(--md-default-bg-color); color:var(--md-default-fg-color);">
+</p>
+
+<p id="plugin-count" style="margin-top:0; font-size:.8rem; color:var(--md-default-fg-color--light);"></p>
+
+<div class="grid cards" id="plugins">
+  <ul id="plugins-list"></ul>
+</div>
+
+<div id="plugins-error"></div>
+
 <script>
-fetch("https://qgis-depot.mercantour.eu/plugins.xml")
-  .then(resp => resp.text())
-  .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-  .then(xml => {
-    let plugins = Array.from(xml.getElementsByTagName("pyqgis_plugin"));
-    let container = document.getElementById("plugins");
-    let toc = document.getElementById("toc");
+(function () {
+  var list = document.getElementById("plugins-list");
+  var countEl = document.getElementById("plugin-count");
+  var filterEl = document.getElementById("plugin-filter");
+  var errorEl = document.getElementById("plugins-error");
 
-    // Trier les plugins par nom
-    plugins.sort((a, b) => {
-      let nameA = a.getAttribute("name")?.toLowerCase() || "";
-      let nameB = b.getAttribute("name")?.toLowerCase() || "";
-      return nameA.localeCompare(nameB);
+  function text(xmlParent, tag) {
+    var el = xmlParent.getElementsByTagName(tag)[0];
+    return el && el.textContent ? el.textContent.trim() : "";
+  }
+
+  function addLink(ul, href, label) {
+    if (!href) { return; }
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = label;
+    li.appendChild(a);
+    ul.appendChild(li);
+  }
+
+  function updateCount() {
+    var all = list.children.length;
+    var shown = Array.prototype.filter.call(list.children, function (li) {
+      return !li.hidden;
+    }).length;
+    countEl.textContent = shown === all
+      ? all + " plugin" + (all > 1 ? "s" : "") + " disponible" + (all > 1 ? "s" : "")
+      : shown + " plugin" + (shown > 1 ? "s" : "") + " sur " + all;
+  }
+
+  fetch("https://qgis-depot.mercantour.eu/plugins.xml")
+    .then(function (resp) {
+      if (!resp.ok) { throw new Error("HTTP " + resp.status); }
+      return resp.text();
+    })
+    .then(function (str) {
+      return new window.DOMParser().parseFromString(str, "text/xml");
+    })
+    .then(function (xml) {
+      var plugins = Array.prototype.slice.call(xml.getElementsByTagName("pyqgis_plugin"));
+
+      plugins.sort(function (a, b) {
+        return (a.getAttribute("name") || "").toLowerCase()
+          .localeCompare((b.getAttribute("name") || "").toLowerCase());
+      });
+
+      plugins.forEach(function (plugin) {
+        var name = plugin.getAttribute("name") || "Sans nom";
+        var version = plugin.getAttribute("version") || "";
+        var description = text(plugin, "description");
+
+        var li = document.createElement("li");
+        li.dataset.search = (name + " " + description).toLowerCase();
+
+        var title = document.createElement("p");
+        var strong = document.createElement("strong");
+        strong.textContent = name;
+        title.appendChild(strong);
+        if (version) {
+          var small = document.createElement("small");
+          small.textContent = " v" + version;
+          title.appendChild(small);
+        }
+        li.appendChild(title);
+
+        li.appendChild(document.createElement("hr"));
+
+        var desc = document.createElement("p");
+        desc.textContent = description;
+        li.appendChild(desc);
+
+        var links = document.createElement("ul");
+        addLink(links, text(plugin, "homepage"), "Documentation");
+        addLink(links, text(plugin, "repository"), "Code source");
+        addLink(links, text(plugin, "tracker"), "Signaler un problème");
+        if (links.children.length) { li.appendChild(links); }
+
+        list.appendChild(li);
+      });
+
+      updateCount();
+
+      filterEl.addEventListener("input", function () {
+        var q = filterEl.value.trim().toLowerCase();
+        Array.prototype.forEach.call(list.children, function (li) {
+          li.hidden = q !== "" && li.dataset.search.indexOf(q) === -1;
+        });
+        updateCount();
+      });
+    })
+    .catch(function (err) {
+      errorEl.innerHTML =
+        '<div class="admonition failure"><p class="admonition-title">Liste indisponible</p>' +
+        "<p>Impossible de charger la liste des plugins pour le moment. " +
+        "Vérifiez votre connexion au réseau du Parc, ou contactez le SI : " +
+        "<code>si@mercantour-parcnational.fr</code>.</p></div>";
+      console.error(err);
     });
-
-    let tocHtml = "<h2 style='margin-top:0; font-size:0.8rem;'>Table alphabétique</h2>";
-    tocHtml += "<ul style='padding-left:1rem; font-size:0.7rem; line-height:0.8;'>";
-
-    plugins.forEach((plugin, idx) => {
-      let name = plugin.getAttribute("name") || "Sans nom";
-      let version = plugin.getAttribute("version") || "N/A";
-      let description = plugin.getElementsByTagName("description")[0]?.textContent || "";
-      let homepage = plugin.getElementsByTagName("homepage")[0]?.textContent || "";
-      let repository = plugin.getElementsByTagName("repository")[0]?.textContent || "";
-      let tracker = plugin.getElementsByTagName("tracker")[0]?.textContent || "";
-
-      // Id unique pour l'ancre
-      let anchorId = "plugin-" + idx;
-      tocHtml += `<li style="margin-bottom:0.3rem;"><a href="#${anchorId}">${name}</a></li>`;
-
-      let card = document.createElement("div");
-      card.id = anchorId;
-      card.style.border = "1px solid #ddd";
-      card.style.borderRadius = "8px";
-      card.style.padding = "15px";
-      card.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
-      card.style.background = "#fff";
-
-      card.innerHTML = `
-        <h3 style="margin-top:0">${name} <small style="color:#666">v${version}</small></h3>
-        <p>${description}</p>
-        <ul style="padding-left:18px; margin:0">
-          ${homepage ? `<li><a href="${homepage}" target="_blank">Documentation</a></li>` : ""}
-          ${repository ? `<li><a href="${repository}" target="_blank">Code Source</a></li>` : ""}
-          ${tracker ? `<li><a href="${tracker}" target="_blank">Rapporter un problème</a></li>` : ""}
-        </ul>
-      `;
-
-      container.appendChild(card);
-    });
-
-    tocHtml += "</ul>";
-    toc.innerHTML = tocHtml;
-  })
-  .catch(err => {
-    document.getElementById("plugins").innerHTML = "<p style='color:red'>Impossible de charger la liste des plugins.</p>";
-    console.error(err);
-  });
+})();
 </script>

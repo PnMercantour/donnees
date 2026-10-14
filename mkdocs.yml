@@ -1,4 +1,4 @@
-site_name: Documentation et Tutos sur les donnees geographiques du Parc national du Mercantour
+site_name: Documentation et Tutos sur les données géographiques du Parc national du Mercantour
 theme:
   name: material
   features:
@@ -6,6 +6,8 @@ theme:
     - navigation.sections
     - navigation.path
     - navigation.top
+    - navigation.prune
+    - navigation.indexes #supprime l'index.md de la liste des onglets à gauche
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -22,16 +24,21 @@ theme:
         icon: material/toggle-switch-off-outline 
         name: Mode Sombre
       primary: teal
-      accent: purple 
+      accent: deep orange 
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode    
       primary: teal
-      accent: lime
+      accent: deep orange
 
 plugins:
   - search
+  - git-revision-date-localized:
+      enabled: true
+      type: timeago
+      enable_creation_date: true
+      locale: fr
 
 
 markdown_extensions:
@@ -47,21 +54,115 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  - pymdownx.blocks.caption
+  - pymdownx.caret
+  - pymdownx.keys
+  - def_list
+  - md_in_html
+  - pymdownx.tasklist:
+        custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   #- toc:
   #    permalink: true
- # - pymdownx.emoji:
- #     emoji_index: !!python/name:materialx.emoji.twemoji
- #     emoji_generator: !!python/name:materialx.emoji.to_svg
 
 exclude_docs: |
   /tutos/git.md
   */_modele.md
-  */resume_formation.md
   */Surveillance_TourdeFrance.md
   *.tmp
 
+
 extra_css:
   - stylesheets/extra.css
+
+nav:
+  - Page d'accueil: index.md
+  - BD_PNM:
+    - Accueil et liste des schémas: bd_pnm/index.md
+    - Limites et territoire:
+        - admin_express: bd_pnm/admin_express.md
+        - limites: bd_pnm/limites.md
+        - inpn: bd_pnm/inpn.md
+        - cadastre: bd_pnm/cadastre.md
+    - Biodiversité et millieux naturels: 
+        - geonature_synthese: bd_pnm/geonature_synthese.md
+        - bd_lacs: bd_pnm/bd_lacs.md
+        - bd_source: bd_pnm/bd_source.md
+        - foret: bd_pnm/foret.md
+        - vegetation: bd_pnm/vegetation.md
+    - Gestion et fréquentation:
+        - ag_pasto: bd_pnm/ag_pasto.md
+        - geotrek: bd_pnm/geotrek.md
+        - PAEC: bd_pnm/paec.md
+        - tourisme: bd_pnm/tourisme.md
+    - Réglementation et zonages:
+        - charte: bd_pnm/charte.md
+        - rice: bd_pnm/rice.md
+        - survol: bd_pnm/survol.md
+    
+  - Projets Qgis:
+    - Accueil et liste des projets: projets_qgis/index.md
+    - Limites et territoire:
+        - admin_express: projets_qgis/admin_express.md
+        - cadastre: projets_qgis/cadastre.md
+        - inpn: projets_qgis/inpn.md
+    - Biodiversité et millieux naturels:
+        - geonature_synthese: projets_qgis/geonature_synthese.md
+        - foret: projets_qgis/foret.md
+    - Gestion et fréquentation:
+        - geotrek: projets_qgis/geotrek.md
+    - Réglementation et zonages:
+        - rice: projets_qgis/rice.md
+  - Qgis plugins:
+    - Liste des plugins: qgis_plugins/plugins_list.md
+
+  - Tutos:
+    - Accueil tutos: tutos/README.md                
+
+    - Installation:
+        - Paramètres QGIS au PNM: tutos/parametrage_qgis_pnm.md       
+        - Accéder aux ressources du PNM: tutos/installer_certificats_base_de_donnees.md 
+        - Fonds de carte: tutos/wms_wfs.md                            
+        - Système de coordonnées: tutos/scr.md                        
+        - Installer un plugin QGIS: tutos/installation_plugin_via_depot.md      
+
+    - Prise en main:
+        #- Charger un projet depuis la base de données: tutos/charger_un_projet_de_la_bd.md   
+        #- Charger une couche depuis la base de données: tutos/charger_une_couche_de_la_bd.md
+        - Naviguer dans QGIS: tutos/navigation.md  
+        - Créer ou modifier un projet: tutos/creer_modifier_projet.md 
+        - Créer ou modifier une couche: tutos/creer_modifier_couche.md
+        - Symbologie & Etiquettes: tutos/symbologie.md
+        #- Mon premier projet: tutos/mon_premier_projet.md            
+    
+    - Pour aller plus loin:
+        - Partager un projet: tutos/empaqueter_un_projet.md                             
+        - Sélection: tutos/selection.md
+        - Filtres: tutos/filtres.md                                                        
+        - Calculatrice de champs: tutos/calculatrice_champs.md
+        - Outils de traitement: tutos/outils_traitement.md                    
+        - Raster: tutos/raster.md                                         
+
+    - Cartographie:
+        - Créer une carte: tutos/creer_carte.md
+        - Génération d'atlas: tutos/generer_un_atlas.md              
+        - Utiliser un masque: tutos/utiliser_un_masque.md            
+
+    - Ressources:
+        - FAQ: tutos/FAQ.md                                          
+        - Glossaire: tutos/glossaire.md                              
+        - Bonnes pratiques: tutos/bonnes_pratiques.md 
+        - Formation: tutos/formation.md 
+        - Taxrefmatch > cd_nom: tutos/taxrefmatch_cdnom.md                          
+
+    #- QField:
+    #    - Présentation de QField: tutos/qfield_presentation.md        
+    #    - Préparer un projet pour QField: tutos/qfield_preparation.md 
+    #    - Collecte terrain avec QField: tutos/qfield_collecte.md      
+    #    - Réimport des données collectées: tutos/qfield_reimport.md   
+
 
 
 # copyright: |

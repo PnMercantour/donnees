@@ -1,101 +1,114 @@
-# Generation d'atlas
+# Générer un atlas
 
+Un **atlas** est une série de cartes qui ont la **même mise en page et la même symbologie**, mais chacune **centrée sur une entité différente** d'une même couche. QGIS les produit automatiquement, en un seul export.
 
-## Explications
+!!! info "À quoi ça sert ?"
+    - Une carte par commune, par secteur, par site ou par unité pastorale.
+    - Des fiches avec un titre, des informations et une carte générés pour chaque entité.
+    - Une série de cartes cohérentes, sans refaire la mise en page à la main.
 
-QGIS permet de générer des atlas un ensemble de cartes avec la même représentation (symbologie) centrées sur des entités différentes d'une même couche.
-On peut ainsi générer par exemple les cartes des principales villes d'une région.
+!!! warning "Condition principale"
+    Toutes les entités qui doivent apparaître dans l'atlas doivent se trouver **dans une même couche**. C'est cette couche, dite **couche de couverture**, qui détermine le nombre de pages et leur contenu.
 
-La condition principale est qu'il faut que toutes les entités qui doivent apparaître sur l'atlas soient dans une même couche.
-  
- 
+---
+
+## Le principe
+
+| Élément | Rôle |
+|---------|------|
+| **Couche de couverture** | Une page de l'atlas est générée pour **chaque entité** de cette couche |
+| **Carte de la mise en page** | Se recentre automatiquement sur l'entité de la page courante |
+| **Textes dynamiques** | Affichent des informations propres à chaque entité (son nom, son numéro...) |
+
+---
+
 ## Pas à pas
 
-### Ouvrir l'éditeur de cartes.
+### 1. Ouvrir une mise en page
 
-- En partant d'une carte existante, dans la barre de menu cliquer sur "Projet" puis "Gestionnaire de mise en page"
+1. Partez d'un projet qui affiche déjà la carte que vous voulez décliner.
+2. Dans la barre de menu, cliquez sur ++"Projet"++ > ++"Gestionnaire de mise en page"++.
+3. Créez une **nouvelle mise en page**, ou ouvrez une mise en page existante.
 
-- Créer une nouvelle mise en page, ou utiliser une mise en page existante. 
+### 2. Activer l'atlas
 
-Dans la fenêtre de mise en page, il faut d'abord activer les paramètres d'atlas. Pour ça: 
+1. Dans la fenêtre de mise en page, cliquez sur ++"Atlas"++ > ++"Paramètres de l'atlas"++.
+2. Dans le panneau de droite apparaît un onglet ++"Atlas"++, à côté de **Mise en page**, **Propriétés de l'objet** et **Guides**.
+3. Cochez la case **Générer un atlas**.
+4. Dans le menu déroulant **Couche de couverture**, choisissez la couche qui contient les entités sur lesquelles l'atlas doit être centré.
 
+    ![](./img/atlas.png)
 
-- dans la barre de menu, cliquer sur "Atlas" puis "Paramètres de l'atlas"
+Options facultatives, dans le même onglet :
 
-- Dans la barre de droite, apparait un onglet "Atlas" à côté de "Mise en page", "Propriétés de l'objet", et "Guides". Cocher la case "Générer un atlas"
+| Option | À quoi ça sert |
+|--------|----------------|
+| **Nom de page** | Champ qui nomme chaque page (utile pour les noms de fichiers à l'export) |
+| **Filtrer avec** | Ne générer l'atlas que pour certaines entités de la couche |
+| **Trier par** | Choisir l'ordre des pages à partir d'un champ de la couche |
+| **Masquer la couche de couverture** | Cache la couche de couverture sur la carte, pour ne voir que le reste |
 
-- Dans le menu déroulant "couche de couverture", sélectionner la couche contenant les entités sur lesquelles devra être centré l'atlas. 
+### 3. Lier la carte à l'atlas
 
-- Facultatif: Filtrer ou ordonner par un des champs de la couche de couverture. 
+Il faut dire à la carte de se recentrer sur chaque entité.
 
+1. Cliquez sur la carte dans la mise en page.
+2. Dans l'onglet **Propriétés de l'objet**, cochez **Contrôlé par l'atlas**.
+3. Choisissez comment la carte s'adapte à l'entité :
+    - **Marge autour des entités** : la carte cadre chaque entité avec une marge en pourcentage ;
+    - **Échelle prédéfinie** : QGIS choisit la meilleure échelle parmi une liste ;
+    - **Échelle fixe** : toutes les pages ont la même échelle, seule l'emprise change.
 
+!!! tip "Quelle option choisir ?"
+    - Entités de tailles très différentes (communes, par exemple) : **Marge autour des entités**.
+    - Besoin de cartes comparables entre elles : **Échelle fixe**.
 
+### 4. Ajouter un texte qui change à chaque page
 
-### Activer le mode édition
+Pour afficher par exemple le nom de l'entité en titre :
 
-- Activer le mode édition (2 façons possibles).
+1. Ajoutez une **étiquette** : ++"Ajouter un objet"++ > ++"Ajouter une étiquette"++, puis dessinez-la sur la page.
+2. Dans ses propriétés, saisissez une expression entre `[%` et `%]` : `Commune de [% "nom" %]`
 
-    Méthode 1 (_Recommandé_):  Sélectionner la couche à modifier, puis cliquer sur l'icône de crayon dans la barre d'outils en haut de l'écran  
-![](./img/mode_edition.png)
-	
-    Méthode 2: Cliquer droit sur la couche à modifier, puis en cliquant sur l'icône crayon "Basculer en mode édition"
-![](./img/modeedition_parcouche.png)
+Pour chaque page, `[% "nom" %]` est remplacé par la valeur du champ `"nom"` de l'entité. Vous pouvez aussi utiliser des **variables d'atlas** :
 
-- Une fois dans ce mode, un crayon apparait au-dessus du symbole de la couche..
-![](./img/couche_en_cours_edition.png)
+| Expression | Affiche |
+|------------|---------|
+| `[% @atlas_featurenumber %]` | Le numéro de la page courante |
+| `[% @atlas_totalfeatures %]` | Le nombre total de pages |
+| `[% @atlas_pagename %]` | Le nom de la page courante |
 
+!!! tip "Même syntaxe que les filtres et sélections"
+    Les noms de champs s'écrivent entre guillemets doubles `"`, les textes entre apostrophes `'` [:octicons-arrow-right-24: Détails dispo dans la page ^^Filtres^^](./filtres.md#les-regles-de-syntaxe-a-retenir).
 
-- ..et des outils deviennent accessibles dans la barre d'outil. Ces outils sont regroupés dans les barres d'outils "Numérisation" et "Numérisation avancée".
+### 5. Prévisualiser
 
+Cliquez sur ++"Atlas"++ > ++"Prévisualiser l'atlas"++. Des boutons de navigation apparaissent : passez d'une page à l'autre pour vérifier que la carte se recentre bien et que les textes se mettent à jour.
 
-- visibles en faisant un clic droit sur une des barres d'outils en haut de l'écran, ou bien dans la barre de menu "Vue > Barres d'outils > ..."
+### 6. Exporter
 
-![](./img/barre_doutils_numerisation.png)
+Le menu ++"Atlas"++ propose d'exporter l'atlas :
 
-_A partir de là, différentes opérations sont disponibles, nous ne décrirons que les plus simples._
+- en **PDF** ;
+- en **images** ;
+- en **SVG**.
 
-### Créer une nouvelle entité
-
-- Proche de l'icone de crayon, dans la barre d'outils, se trouve l'icône "Ajouter une entité"
-
-![](./img/edition_ajouter_une_entite.png)
-
-- Après avoir cliqué dessus, votre curseur change. Vous pouvez directement ajouter des points qui formeront, suivant le type de géométrie que votre couche contient
-	- une entité par point
-	- une partie de ligne ou de polygone
-- Un clic gauche vous permet d'ajouter un point, un clic droit termine la saisie d'une entité sans en rajouter de nouveau, _donc pour faire un rectangle, il faut 4 clics gauches + 1 clic droit_.
-- A chaque fin de saisie, une boite de dialogue s'ouvre, permettant d'entrer manuellement les attributs de l'entité. Dans la plupart des cas, vous n'êtes pas obligé d'entrer
-quoi que ce soit, et pouvez simplement cliquer sur OK pour continuer la saisie. 
-
-![](./img/nouvelle_entite.png)
-
-
-
-### Modifier la géométrie d'une entité existante
-
-- L'outil sommet, disponible dans la barre d'outil numérisation à droite de l'outil d'ajout d'entité permet d'ajouter, supprimer, ou créer de nouveaux sommets.
-![](./img/outil_sommet.png)
-- Une fois l'outil sommet sélectionné, on peut sélectionner n'importe quel sommet en cliquant dessus. Les sommets de chaque polygone sont visibles sous la forme de petits cercles rouges
-
-![](./img/edition_modif_de_sommets.png)
-
-- Après avoir sélectionné un sommet avec l'outil sommet, il est possible de le supprimer en appuyant sur la touche "Suppr" du clavier. 
-- On peut aussi le déplacer, en cliquant à nouveau avec le clic gauche à un autre endroit après avoir sélectionné un sommet. 
-
-- Enfin, il est possible de créer de nouveaux sommets dans un polygone en cliquant très précisément sur la croix qui apparait en faisant passer le curseur entre deux sommets. 
-![](./img/edition_nouveau_sommet.png)
-
-En combinant le déplacement, la modification, et la création de sommets, il est possible de changer complètement la forme d'un polygone.
-
-_Tant que les modifications n'ont pas été enregistrées, elles ne sont pas définitives_
+!!! info "Un fichier ou un fichier par page ?"
+    Dans les paramètres de l'atlas, l'option de sortie permet de réunir toutes les pages dans **un seul PDF**, ou de produire **un fichier par entité**, nommé d'après le **Nom de page**.
 
 
-### Modifier les attributs d'une entité
+---
 
-- Une fois activé l'outil édition, il est possible d'éditer à la main les cases de la table attributaire. 
-_On peut aussi activer le mode édition depuis la barre d'outils de la table attributaire._
-![](./img/mode_tableattributaire.png)
+## En cas de problème
 
+| Symptôme | Cause probable | Solution |
+|----------|----------------|----------|
+| La carte ne bouge pas d'une page à l'autre | **Contrôlé par l'atlas** n'est pas coché | Sélectionnez la carte, puis cochez-le dans **Propriétés de l'objet** |
+| L'onglet **Atlas** n'apparaît pas | L'atlas n'est pas activé | ++"Atlas"++ > ++"Paramètres de l'atlas"++ |
+| Trop ou pas assez de pages | **Filtrer avec** ou la couche de couverture | Vérifiez le filtre et le contenu de la couche |
+| Le texte dynamique s'affiche tel quel (`[% "nom" %]`) | Faute dans l'expression, ou mode aperçu inactif | Vérifiez guillemets et crochets, puis lancez **Prévisualiser l'atlas** |
+| Les entités sont toutes cadrées de la même façon | Mode **Échelle fixe** | Passez à **Marge autour des entités** |
 
-
-
+!!! tip "Documentation complète sur les ^^atlas^^"
+    La documentation de QGIS est très complète, n'hésitez pas à la parcourir pour explorer les possibilités : [créer une carte forestière avec un atlas](https://docs.qgis.org/3.44/fr/docs/training_manual/forestry/forest_maps.html).  
+    Maintenez ++ctrl++ en cliquant pour que la fenêtre s'ouvre dans un nouvel onglet :wink:

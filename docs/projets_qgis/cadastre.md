@@ -3,6 +3,8 @@
 ## Schéma 
 Sources et structure de la donnée utile à la construction des projets : [cadastre](../bd_pnm/cadastre.md).
 
+---
+
 ## Projet Cadastre
 Ce projet permet de consulter les tracés des parcelles, de vérifier si elles appartiennent à une personne privée ou morale et le cas échéant, de visualiser son propriétaire.  
 Il n'a vocation qu'à être consulté.
@@ -16,6 +18,8 @@ Ce projet s'affiche différemment selon le niveau de zoom :
 - A très haut niveau de zoom (min 1:4000) les propriétaires de chaque parcelle s'affichent là où ces parcelles appartiennent à des personnes morales. 
 
 Il est aussi possible de chercher une parcelle directement par son ID en réalisant une [sélection par expression](../tutos/editeur_expression.md) ou en filtrant la recherche par d'autres attributs comme la section, le code INSEE de la commune, ...
+
+--- 
 
 ## Projet Autorisations de Travaux
 Deux projets cohabitent à ce sujet :
@@ -37,11 +41,20 @@ La visualisation sur ces 2 projets fonctionne sur le même mode que le projet ``
 !!! info "Les onglets suivants concernent le projet ```autorisation_travaux_v2```"
 
 ### Guide d'utilisation
+!!! tip "Prendre en main QGIS"
+    La page des [tutos](../tutos/README.md) est riche d'outils vous permettant de naviguer séreinement dans le projet, n'hésitez pas à explorer les pages [sélection](../tutos/selection.md), [table attributaire](../tutos/creer_modifier_couche.md#modification-de-la-table-attributaire), ... avant ou pendant l'introduction à ce projet.
 
 #### Ajouter une nouvelle autorisation
 Depuis le projet ```autorisation_travaux_v2``` dans Qgis, il est possible d'ajouter une nouvelle autorisation et de l'associer à une ou plusieurs parcelles du cadastre. 
 
-Le plus simple est de sélectionner en amont la ou les parcelles concernées par l'autorisation à ajouter, par différentes méthodes : [sélection par expression](../tutos/editeur_expression.md), sélection par attribut, sélection par clic, ... puis d'éditer la couche ```Registre des autorisations de travaux``` et d'y ajouter une entité. La fenêtre suivante s'affiche alors.
+Le plus simple est de **sélectionner en amont** la ou les parcelles concernées par l'autorisation à ajouter, par différentes méthodes : 
+
+- [sélection par attribut](../tutos/selection.md#selectionner-par-valeur)
+- [sélection avec la souris](../tutos/selection.md#sélectionner-sur-la-carte-avec-la-souris)
+- [sélection par expression](../tutos/selection.md#selectionner-par-expression)
+- [...](../tutos/selection.md) 
+
+Puis d'**éditer** la couche ```Registre des autorisations de travaux``` et d'y **ajouter une entité**. La fenêtre suivante s'affiche alors :
 
 ![](./img/nouvelle_autorisation_travaux_qgis.png)
 
@@ -54,28 +67,39 @@ Le plus simple est de sélectionner en amont la ou les parcelles concernées par
 #### Associer une parcelle à une autorisation
 ![](./img/lier_autorisation_travaux_parcelle.png)
 
-Dès lors que le numéro d'autorisation est correctement renseigné, il est possible de lier une ou plusieurs parcelles à celle-ci. Depuis la même fenêtre, cliquer sur l'outil "lier les entités enfants existantes" - étape 1 de l'image ci-dessus.  
+Dès lors que le numéro d'autorisation est correctement renseigné, il est possible de **lier une ou plusieurs parcelles** à celle-ci.  
+Depuis la même fenêtre, cliquer sur l'outil ++"lier les entités enfants existantes"++ - étape 1 de l'image ci-dessus :octicons-arrow-up-24:.  
+
 ![](./img/lier_les_entites_enfants_existantes.png)
 
-Le cadastre se charge, une nouvelle fenêtre s'ouvre avec la liste des identifiants de parcelles. Pour savoir si une parcelle sera bien ajoutée à votre saisie, il faut que le carré soit coloré (jaune/orange) devant l'identifiant de la parcelle :
+Le cadastre se charge, une nouvelle fenêtre s'ouvre avec la **liste des identifiants de parcelles**.  
+
+Pour savoir si une parcelle sera bien ajoutée à votre saisie, il faut que le carré soit ==coloré== (jaune/orange) devant l'identifiant de la parcelle :
+
 ![](./img/entites_liees_selectionnees.png)
-Si vous aviez sélectionné en amont les parcelles sur la carte, celles-ci seront déjà colorées et ajoutées si vous cliquer simplement sur OK une fois cette fenêtre ouverte.  
+
+Si vous aviez sélectionné en amont les parcelles sur la carte, celles-ci seront déjà colorées et ajoutées si vous cliquer simplement sur OK une fois cette fenêtre ouverte.    
+Sinon **cliquez sur les carrés** pour ajouter à votre sélection les parcelles désirées.
+
 Vous devriez alors obtenir l'affichage ci-dessous.
+
 ![](./img/exemple_saisie_autorisation_travaux_parcelles.png)
 
 #### Consulter le registre des autorisation de travaux 
-Cliquer sur la couche ```Registre des autorisations de travaux``` et ouvrez la table d'attributs.  
+Cliquer sur la couche ```Registre des autorisations de travaux``` et ouvrez la **table d'attributs** ++f6++. 
 
 ![](./img/ouvrir_table_attributs.png)
 
 Par défaut, les numéros d'autorisation sont affichés dans l'ordre croissant, vous pouvez les ordonnancer de manière décroissante.
 
 #### Modifier une association 'autorisation - parcelle'
-Placer vous en mode édition. Ouvrez la table d'attributs de la couche ```Registre des autorisations de travaux```.  
-Cliquer sur l'autorisation à modifier.  
-Sélectionner le·s identifiant·s de parcelle que vous ne souhaitez plus voir associé·s à ce numéro d'autorisation (carré coloré devant l'identifiant) et cliquer sur l'outil "détacher entité(s) enfant sélectionnée" :  
 
-![](./img/detacher_entites_selectionnees.png)
+- Placer vous en mode **édition**.  
+- Ouvrez la **table d'attributs** de la couche ```Registre des autorisations de travaux```.  
+- Cliquer sur l'**autorisation** à modifier.  
+- Sélectionner le·s identifiant·s de parcelle que vous ne souhaitez plus voir associé·s à ce numéro d'autorisation (**carré coloré** devant l'identifiant) et cliquer sur l'outil **"détacher entité(s) enfant sélectionnée"** :  
+
+    ![](./img/detacher_entites_selectionnees.png)
 
 
 
@@ -84,23 +108,28 @@ Sélectionner le·s identifiant·s de parcelle que vous ne souhaitez plus voir a
 !!! warning "Point de vigilance"
     En supprimant une autorisation, toutes les associations 'autorisation-parcelle' seront supprimées aussi. Les données renseignées à propos de l'autorisation ne seront pas récupérables, sauf à "ne pas enregistrer les modifications" apportées.
 
-En mode édition, ouvrez la table d'attribut de la couche ```Registre des autorisations de travaux```, et cliquer droit sur l'autorisation à supprimer > "Supprimer l'entité".
+En mode **édition**, ouvrez la **table d'attribut** de la couche ```Registre des autorisations de travaux```, et **cliquer droit **sur l'autorisation à supprimer > ++"Supprimer l'entité"++.
 
 
 ### Règles sur le cadastre
 
 #### Identifiant de parcelles
-Les identifiants de parcelles ont un format fixe. Ils sont composés de plusieurs numéros et lettres permettant d’identifier successivement le département, la commune, un préfixe (utile dans le cas de communes fusionnées), la section et un numéro de plan.  
-Il permet de réaliser des jointures entre les différentes données mentionnant des parcelles.  
-Le strict respect de ce format est nécessaire pour s’assurer que les données géométriques (tracés de parcelles) sont bien associées aux données attributaires (numéros d’autorisation).  
+
+Les identifiants de parcelles ont un format **fixe**. 
+
+Ils sont composés de plusieurs numéros et lettres permettant d’identifier successivement le département, la commune, un préfixe (utile dans le cas de communes fusionnées), la section et un numéro de plan.  
+Il permet de réaliser des **jointures** entre les différentes données mentionnant des parcelles. 
+
+Le **strict respect** de ce format est nécessaire pour s’assurer que les données géométriques (tracés de parcelles) sont bien associées aux données attributaires (numéros d’autorisation).  
 
 |Département|Commune|Préfixe|Section|Numéro de plan|
  |:--:|:--:|:--:|:--:|:--:|
  |_2 caractères_|_3 chiffres_|_3 chiffres_|_2 caractères_|_4 chiffres_|
  |06|114|000|0A|0262|
 
-Par défaut le préfixe est fixé à `000` sur toutes les communes.  
-Néanmoins, dès lors qu'une fusion de commune a lieu, les préfixes doivent être distingués pour identifier chaque parcelle distinctement : sinon on aurait 2 parcelles portant le même identifiant dès lors que le code de commune est rendu unique sur 2 communes. 
+!!! warning "Préfixe et fusion de communes"
+    Par défaut le préfixe est fixé à `000` sur toutes les communes.  
+    Néanmoins, dès lors qu'une fusion de commune a lieu, les préfixes doivent être distingués pour identifier chaque parcelle distinctement : sinon on aurait 2 parcelles portant le même identifiant dès lors que le code de commune est rendu unique sur 2 communes. 
 
 #### Aide à la compréhension du cadastre
 Deux communes sur le Parc national du Mercantour ont été concernées par une fusion :  
@@ -109,10 +138,11 @@ Deux communes sur le Parc national du Mercantour ont été concernées par une f
 - **Uvernet-Fours** : préfixe `000` et `089`
 
 Pour identifier où se trouvent les parcelles concernées par les différents préfixes, 4 couches ont été ajoutées dans le projet ```autorisation_travaux_v2```. Elles sont à afficher au besoin.
+
 ![](./img/fusion_communes.png)
 
 #### Code INSEE des communes
-X:\2.2. INSTRUCTION ET POLICE\04_INSTRUCTION\11_Travaux\Recap pour SIG\Communes codes INSEE.ods
+> X:\2.2. INSTRUCTION ET POLICE\04_INSTRUCTION\11_Travaux\Recap pour SIG\Communes codes INSEE.ods
 
 ??? Note "Construction du projet (admin)"
     ### Documentation administrateur

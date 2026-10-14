@@ -1,37 +1,38 @@
 # Charger un projet depuis la base de données
 
 
-## Explications
-La base de données du parc contient non seulement des données, mais peut aussi stocker des [projets](./glossaire#projet) QGIS. C'est à dire l'ensemble de la mise en page et des options de représentaitons liées à un ensemble de couches. 
-Cela permet de rendre disponible aux agents du parc des cartes "prêtes-à-l'emploi" pour différentes thématiques, en plus des données brutes. 
+## Pourquoi charger un projet depuis la base ?
 
-## Accès à la [base de données](./README.md#base-de-donnees)
-_Cette partie reprend le processus décrit dans [ce tutoriel](./installation_certificats_base_de_donnees.md)._
-### Vérifier que vous avez bien accès à la base de données par QGIS. 
+La base de données du Parc ne contient pas que des données : elle peut aussi stocker des [projets QGIS](./glossaire#projet), c'est-à-dire la mise en page et les options de représentation d'un ensemble de couches.
+
+Les agents disposent ainsi de cartes « prêtes à l'emploi » pour différentes thématiques, en plus des données brutes. Tous les agents ouvrent le même projet et peuvent partager un même support de travail.
 
 
-Pour cela vous pouvez ouvrir QGIS et charger le projet depuis la base de données. 
+## Prérequis : [accès à la base de données du PNM](./installer_certificats_base_de_donnees.md)
+Pour ouvrir un projet de la base, il faut avoir accès à la connexion "Service projets".  
+Si elle n'apparaît pas dans votre liste de connexions décrite plus bas, suivez d'abord [ce tutoriel](./installation_certificats_base_de_donnees.md).
 
-- Cliquer sur l'onglet de la barre de menu "Projet"
-- puis Ouvrir depuis >
-- PostgreSQL
-
- 
-![](./img/charger_projet.png)
+En cas de difficulté, contactez le SI : `si@mercantour-parcnational.fr`.
 
 
-Si dans la connexion "Service projets" des schémas et projets s'affichent bien dans les menus déroulant, continuer, sinon passer à [ce tuto](./installer_certificats_base_de_donnees.md) et contacter le SI si besoin.
-Sinon, continuer au paragraphe suivant.
+## Charger un projet
 
-![](./img/charger_projet_postgresql_schema.png)
+- Ouvrir QGIS  
+- Dans la barre de menu, cliquer sur ++"Projet"++
+- Puis ++"Ouvrir depuis"++ > ++"PostgreSQL"++
+
+    ![](./img/charger_projet.png)
+
+- Choisir la connexion **Service projets**
+- Sélectionner le **schéma** qui vous intéresse : les projets sont regroupés par thème.
+- Puis sélectionner le **projet** souhaité.
+
+    ![](./img/charger_projet_postgresql_schema.png)
 
 
+!!! tip "Quel projet ouvrir ?" 
+    La page [Projets QGIS](../projets_qgis/index.md)  décrit chaque projet : à quoi il sert et comment l'utiliser.
 
-### Charger un projet
-
-- Cliquer sur l'onglet de la barre de menu "Projet"
-- puis Ouvrir depuis >
-- PostgreSQL
-
- 
-![](./img/charger_projet.png)
+!!! failure "Si vous ne voyez pas la connexion "Service projets" dans la liste des connexions"
+    Il faut paramétrer l'accès à la base en suivant [ce lien](./installer_certificats_base_de_donnees.md).   
+    Contactez le SI (`si@mercantour-parcnational.fr`) en cas de difficulté.  

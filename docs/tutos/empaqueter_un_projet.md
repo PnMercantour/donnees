@@ -1,61 +1,94 @@
-# Empaquetage de projet QGIS en Geopackage
+# Empaqueter un projet QGIS en Geopackage
 
-Il est parfois nécessaire de partager un projet initialement construit sur une machine, avec des ressources se situant à différents endroits. 
-Pour le partager simplement, le plus simple est d'enregistrer à la fois le projet, et les couches qu'il contient dans un geopackage. 
-_Le format gpkg fonctionne sur le modèle de la base de données, un onglet lui est spécialement dédié dans le Gestionnaire de sources de données._
+---
 
+## Comment partager un projet ?
+
+Il est parfois nécessaire de partager un projet initialement construit sur une machine, avec des ressources se situant à différents endroits.   
+Pour le partager simplement, le plus simple est d'enregistrer à la fois le projet, et les couches qu'il contient dans un [GeoPackage](./glossaire.md#geopackage-gpkg).  
+
+!!! info "Un GeoPackage fonctionne comme une base de données" 
+    Le format .gpkg fonctionne sur le modèle d'une base de données : un onglet lui est spécialement dédié dans le Gestionnaire de sources de données.
+
+L'opération se fait en deux étapes :
+ 
+- Empaqueter les couches du projet dans un GeoPackage
+- Enregistrer le projet dans ce même GeoPackage
+- Partager le fichier
+
+--- 
 
 ## Empaquetage des couches
 
-Dans un premier temps, il faut enregistrer toutes les données desquelles dépend le projet dans un geopackage. 
-Pour cela, on peut utiliser l'outil "Empaquetage de couche".
-Pour y avoir accès, le plus simple est de faire un clic clic droit sur la batte des menus, puis de cliquer dans "Panneaux > Panneau Boîte à outils de traitements"
+Dans un premier temps, il faut enregistrer toutes les données desquelles dépend le projet dans un GeoPackage.    
+Pour cela, on peut utiliser l'outil **Empaquetage de couche**. 
+
+!!! warning "N'empaqueter que les couches stockées ^^en dehors^^ de la base de données "Service projets""
+    Les agents du Parc ont généralement le même accès que vous à la base, ainsi empaqueter ces couches reviendrait à dupliquer de la donnée et à la rendre obsolète.
+
+Si toutes les couches que vous utilisez dans votre projet sont stockées dans **Service projets**, sauter ce paragraphe et rdv à l'[empaquetage du projet](#empaquetage-du-projet).
 
 
-![](./img/panneaux_barreoutils.png)
+1. Affichez la boîte à outils de traitements : faites un ++"clic droit"++ sur la barre des menus, puis ++"Panneaux"++ > **Panneau**  ++"Boîte à outils de traitements"++
+
+    ![](./img/panneaux_et_barre_outils.png)
 
 
-Dans le panneau qui s'affiche, il est possible de chercher automatiquement parmis tous les outils disponibles dans QGIS celui qui s'appelle "Empaquetage de couche". 
+2. Dans le panneau qui s'affiche, la boîte à outils de traitement, recherchez l'outil **Empaquetage de couche**. 
 
-Là, il suffit de choisir toutes les couches du projet et de les enregistrer dans un geopackage avec leurs styles et symbologies associées. 
+3. Sélectionnez toutes les couches du projet, dans le premier ++"..."++ et enregistrez-les dans un GeoPackage, deuxième ++"..."++. 
 
-_NB: Certaines couches ne peuvent pas être enregistrées dans un geopackage, d'autres solutions seront à envisager dans ces cas._
+    ![](./img/empaquetage_couches.png)
 
-Vous pourrez vérifier ensuite que les couches du projet sont bien maintenant situées dans le geopackage. Sinon, vous pourrez les charger à nouveau dans le projet.
 
+4. Vérifiez ensuite que les couches du projet ouvert prennent bien leur source depuis le GeoPackage créé : ++"clic droit"++ sur la couche > ++"Propriétés"++ > onglet ++"Information"++.  
+
+5. Si ce n'est pas le cas, chargez-les à nouveau dans le projet depuis le GeoPackage et retirer les anciennes, ou [changer la source des données](FAQ.md#jai-un-probleme-et-je-ne-sais-pas-quoi-faire).
+
+
+!!! failure "Certaines couches ne peuvent pas être enregistrées dans un GeoPackage" 
+    C'est le cas des couches qui ne sont pas des fichiers de données, comme les [fonds de carte WMS/WMTS](./wms_wfs.md).  
+    Dans ces cas, d'autres solutions sont à envisager : par exemple, la personne qui reçoit le projet devra ajouter la connexion de son côté.
+
+---
 
 ## Empaquetage du projet 
 
+On va pouvoir utiliser le même GeoPackage qui contient les couches pour stocker également le projet. Dans ce cas là sauter l'étape suivante et rdv à [Définir la connexion à ce fichier](#definir-la-connexion-a-ce-fichier). 
 
-1. Sauvegarder un projet au format geopackage
+Cependant, il est possible que vous n'ayez pas besoin d'empaqueter des couches avant de partager le projet (couches stockées uniquement dans la bdd du PNM), alors vous aurez besoin d'un support vierge pour enregistrer votre projet : [créer un GeoPackage vierge](#creer-un-geopackage-vierge).
 
-Afin de pouvoir enregistrer le projet et l'ensemble des couches le composant dans un geopackage, il faut d'abord créer un geopackage vierge. 
-On pourra le faire à l'onglet Couche:
-> Couche > Créer une couche > Nouvelle couche Geopackage ...
+### Créer un GeoPackage vierge
 
+Pour enregistrer le projet dans un GeoPackage, il faut d'abord en créer un vierge : ++"Couche"++ > ++"Créer une couche"++ > ++"Nouvelle couche GeoPackage..."++
 
 ![](./img/creer_gpkg.png)
 
+### Définir la connexion à ce fichier
 
-QGIS n'est pas par défaut "conscient" du geopackage nouvellement créé. Il faut définir la connexion à ce fichier. 
-Pour cela on peut passer par le gestionnaire de sources de données (Ctrl + l) 
-> Base de données > Gestionnaire de source de données
+Par défaut, QGIS ne "connaît" pas le GeoPackage que vous venez de créer : il faut définir la connexion à ce fichier.
 
-et cliquer droit sur "Geopackage>Nouvelle connexion..." dans le menu de gauche.
-On pourra alors naviguer jusqu'au fichier geopackage nouvellement créé. 
+- Ouvrez le **gestionnaire de sources de données** ++ctrl+l++
+- Dans le menu de gauche, faites un ++"clic droit"++ sur **GeoPackage** > ++"Nouvelle connexion..."++
+- Naviguez jusqu'au fichier GeoPackage que vous venez de créer.
 
+### Enregistrer le projet
 
-Enfin, on pourra simplement enregistrer le projet et lui donner un nom.
-> Projet > Enregistrer le projet sous.... > Geopackage
+Il ne reste qu'à enregistrer le projet et à lui donner un nom :
 
+++"Projet"++ > ++"Enregistrer le projet sous..."++ > ++"GeoPackage"++
 
+!!! tip "Vous pouvez enregistrer plusieurs projets dans un même GeoPackage"
+    Il suffit de choisir le même fichier .gpk et donner un nom de projet différent.
 
-### Ouvrir un projet dans un geopackage
+--- 
 
-Pour ouvrir le projet ainsi enregistré, il suffit d'aller à 
+## Ouvrir un projet depuis un GeoPackage
 
-> Projet > Ouvrir depuis .. > Geopackage
+++"Projet"++ > ++"Ouvrir depuis..."++ > ++"GeoPackage"++
 
+![](./img/charger_projet.png)
 
-_Si le geopackage n'est pas affiché dans les connexions par défaut, il suffit de cliquer sur l'icone "..." puis de naviguer jusqu'au geopackage_
+!!! tip "Le GeoPackage n'apparaît pas dans la liste ?" 
+    S'il n'est pas affiché parmi les connexions par défaut, cliquez sur l'icône ++"..."++ puis naviguez jusqu'au fichier GeoPackage.
 

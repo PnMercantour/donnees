@@ -1,34 +1,193 @@
-# Acceuil et liste des schémas
+---
+hide:
+  - path
+  - toc
+  - navigation
+---
 
-Bienvenue dans la documentation permettant de comprendre le contenu et la source de chaque [schéma*](./tutos/README.md#schéma "Un schéma est un sous-ensemble organisé d'une base de données") de la base de données du parc. 
+<div class="pnm-hero" markdown>
 
-Chaque schéma est décrit dans une page qui précise :
+<div class="pnm-hero__brand" markdown>
 
- - le contenu général du schéma
- - la source des données
- - la description des [projets qgis](../projets_qgis/index.md) associés
- - le détail des colonnes de certaines tables importantes
- - des informations utiles pour la maintenance 
+![Parc national du Mercantour](./img/territoire_bdd.png){ .pnm-hero__logo }
+
+</div>
+
+<div class="pnm-hero__text" markdown>
+
+# La base de données du Parc
+
+Cette documentation décrit : le **contenu** général, la **source** des données, les [projets QGIS](../projets_qgis/index.md) associés, le détail des colonnes de certaines tables importantes, et des informations utiles pour la maintenance de chaque [schéma*](../tutos/glossaire.md#schema "Un schéma est un sous-ensemble organisé d'une base de données").  
+
+Choisissez un schéma ci-dessous pour en savoir plus !
+
+[:material-magnify: Utilisez la recherche en haut de page](#){ .md-button .md-button--primary onclick="document.querySelector('[data-md-toggle=search]').checked=true; document.querySelector('.md-search__input').focus(); return false;" }
+
+</div>
+
+</div>
+
+!!! tip "Comment accéder à la base de données ?"
+    Les données sont stockées dans la base de données du Parc [:octicons-arrow-right-24: Se connecter à la base de données dans QGIS](../tutos/installer_certificats_base_de_donnees.md).
+
+
+## :material-map-outline: Limites et territoire
+
+<div class="grid cards cols-4" markdown>
+
+-   :material-city-variant-outline: **admin_express**
+
+    ---
+
+    Limites administratives (produites par l'IGN).
+
+    [:octicons-arrow-right-24: Voir le schéma](./admin_express.md){ .stretched }
+
+-   :material-vector-polygon: **limites**
+
+    ---
+
+    Limites du Parc et limites administratives.
+
+    [:octicons-arrow-right-24: Voir le schéma](./limites.md){ .stretched }
+
+-   :material-leaf-circle: **inpn**
+
+    ---
+
+    Limites des parcs nationaux, des parcs régionaux et des réserves naturelles.
+
+    [:octicons-arrow-right-24: Voir le schéma](./inpn.md){ .stretched }
+
+-   :material-home-map-marker: **cadastre**
+
+    ---
+
+    Données publiques issues du cadastre.
+
+    [:octicons-arrow-right-24: Voir le schéma](./cadastre.md){ .stretched }
+
+</div>
+
+## :material-binoculars: Biodiversité et milieux naturels
+
+<div class="grid cards cols-4" markdown>
+
+-   :material-binoculars: **geonature_synthese**
+
+    ---
+
+    Observations GeoNature, détaillées et agrégées selon différents critères.
+
+    [:octicons-arrow-right-24: Voir le schéma](./geonature_synthese.md){ .stretched }
+
+-   :material-waves: **bd_lacs**
+
+    ---
+
+    Données concernant les lacs.
+
+    [:octicons-arrow-right-24: Voir le schéma](./bd_lacs.md){ .stretched }
+
+-   :material-water: **bd_source**
+
+    ---
+
+    Données concernant les sources.
+
+    [:octicons-arrow-right-24: Voir le schéma](./bd_source.md){ .stretched }
+
+-   :material-pine-tree: **foret**
+
+    ---
+
+    Données concernant les forêts.
+
+    [:octicons-arrow-right-24: Voir le schéma](./foret.md){ .stretched }
+
+-   :material-flower: **vegetation**
+
+    ---
+
+    Données concernant la flore.
+
+    [:octicons-arrow-right-24: Voir le schéma](./vegetation.md){ .stretched }
+
+
+</div>
+
+## :material-sign-direction: Gestion et fréquentation
+
+<div class="grid cards cols-4" markdown>
+
+-   :material-sheep: **ag_pasto**
+
+    ---
+
+    Agropastoralisme.
+
+    [:octicons-arrow-right-24: Voir le schéma](./ag_pasto.md){ .stretched }
+
+-   :material-sign-direction: **geotrek**
+
+    ---
+
+    Sentiers du Parc.
+
+    [:octicons-arrow-right-24: Voir le schéma](./geotrek.md){ .stretched }
+
+-   :material-sprout: **PAEC**
+
+    ---
+
+    Indicateurs AgroEnvironnementaux et Climatiques.
+
+    [:octicons-arrow-right-24: Voir le schéma](./paec.md){ .stretched }
+
+-   :material-hiking: **tourisme**
+
+    ---
+
+    Tourisme et fréquentation du Parc (compteurs...).
+
+    [:octicons-arrow-right-24: Voir le schéma](./tourisme.md){ .stretched }
+
+</div>
+
+## :material-shield-check-outline: Réglementation et zonages
+
+<div class="grid cards cols-4" markdown>
+
+-   :material-file-document-check-outline: **charte**
+
+    ---
+
+    Données nécessaires à la réalisation de la carte des vocations.
+
+    [:octicons-arrow-right-24: Voir le schéma](./charte.md){ .stretched }
+
+-   :material-weather-night: **rice**
+
+    ---
+
+    Réserve Internationale de Ciel Étoilé.
+
+    [:octicons-arrow-right-24: Voir le schéma](./rice.md){ .stretched }
+    
+-   :material-helicopter: **survol**
+
+    ---
+
+    Zones sensibles en lien avec les autorisations de survol.
+
+    [:octicons-arrow-right-24: Voir le schéma](./survol.md){ .stretched }
+
+</div>
 
 
 
-!!! tip "Essayez pour voir !"
-    Le nom des schémas dans le tableau ci-dessous sont des liens cliquables.
- 
+!!! note "Tous les schémas ne sont pas accessibles à tous les agents"
+    Certains contiennent des données sensibles, si un schéma n'apparaît pas dans QGIS, contactez le SI : `si@mercantour-parcnational.fr`.
 
- |Schéma|Description des données|
- |:--:|:--:|
- |[admin_express](./bd_pnm/admin_express.md)|Données concernant les limites administratives (produites par l'IGN)<!-- à compléter -->|
- |[ag_pasto](./bd_pnm/ag_pasto.md)|Agropastoralisme <!-- à compléter -->|
- |[bd_lacs](./bd_pnm/bd_lacs.md)|Données concernant les lacs<!-- à compléter -->|
- |[bd_source](./bd_pnm/bd_lacs.md)|Données concernant les lacs<!-- à compléter -->|
- |[cadastre](./bd_pnm/cadastre.md)|Données publiques issues cadastre<!-- à compléter -->|
- |[charte](./bd_pnm/charte.md)|Données nécessaires à la réalisation de la carte des vocations<!-- à compléter -->|
- |[foret](./bd_pnm/foret.md)|Données publiques issues cadastre<!-- à compléter -->|
- |[geonature_synthese](./bd_pnm/geonature_synthese.md)|Observations géonature, détaillées <br > et agrégées selon différents critères|
- |[geotrek](./bd_pnm/geotrek.md)| Sentiers du parc|
- |[inpn](./bd_pnm/inpn.md)| Limites de parcs nationaux, régionaux, et réserves naturelles|
- |[limites](./bd_pnm/limites.md)| Limites du parc et administratives|
- |[rice](./bd_pnm/rice.md)| Réserve Internationale de Ciel Etoilé|
- |[survol](./bd_pnm/survol.md)| Zones sensibles en lien avec les autorisations de survol|
- |[tourisme](./bd_pnm/tourisme.md)| Tourisme et fréquentation du parc (compteurs..)|
+!!! info "Documentation en cours"
+    Si vous avez besoin d'infos complémentaires sur la donnée stockée dans la base contactez le SI : `si@mercantour-parcnational.fr`.  
