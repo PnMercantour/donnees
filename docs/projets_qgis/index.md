@@ -29,7 +29,7 @@ La documentation est structurée par [schéma](../tutos/glossaire.md#schema "Un 
 </div>
 
 !!! tip "Comment ouvrir un projet ?"
-    Les projets sont stockés dans la base de données du Parc [:octicons-arrow-right-24: Charger un projet depuis la base de données](../tutos/charger_un_projet_de_la_bd.md).
+    Les projets sont stockés dans la base de données du Parc [:octicons-arrow-right-24: Charger un projet depuis la base de données](../tutos/installer_certificats_base_de_donnees.md#charger-un-projet).
 
 
 ## :material-map-outline: Limites et territoire
