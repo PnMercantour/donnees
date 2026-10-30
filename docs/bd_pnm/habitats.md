@@ -107,8 +107,6 @@ Un même habitat ne peut figurer qu'une fois sur un polygone (contrainte d'unici
 | fiche_merc | text | Fiche descriptive de l'habitat, quand elle existe |
 | code_guide_habitats_alpes | text | Code de l'habitat dans le guide des habitats naturels et semi-naturels des Alpes |
 
-<!-- À valider avant publication : signification de IC / PR / NC (déduite des données : 123 IC, 33 PR, 98 NC, contre 158 habitats ayant un code EUR27). -->
-
 #### v_releve_dominant
 
 | Nom de la colonne | Type | Description |
@@ -218,7 +216,7 @@ La couche d'origine plaçait les habitats dans des colonnes numérotées (`TYPO_
 |Intitulé de l'habitat (`INTIT_MER_i`) retiré|Redondant avec `dico_typo_mer.intitule`.|
 |`enjeu_pnm` conservé sur l'occurrence|Il peut différer de l'`enjeu` du dictionnaire.|
 |Métadonnées dans une table à part|`t_releve_habitat` ne garde que l'essentiel : où, quand, qui.|
-|Pourcentages additionnés pour un habitat répété|Quand le même `typo_mer` figurait sur deux rangs d'un polygone, les deux pourcentages ont été additionnés.|
+|Pourcentages additionnés pour un habitat répété|Quand le même `typo_mer` figurait sur deux rangs d'un polygone, les deux pourcentages ont été additionnés (à priori ça ne concernait aucun polygone chez nous).|
 |`pour_hab` limité à 0-100, sans contrôle de la somme|Les données de terrain ne totalisent pas toujours 100 ; le contrôle se fait par requête (voir plus bas).|
 
 ### Migration des données
@@ -226,7 +224,7 @@ La couche d'origine plaçait les habitats dans des colonnes numérotées (`TYPO_
 La migration est faite par le script de [création](./habitats/sql/creation.sql). Deux points techniques méritent d'être connus :
 
 - l'`id` de la couche d'origine n'étant pas unique, une jointure sur cet identifiant multiplierait les lignes. Le script rattache chaque ligne source à son nouveau polygone par `ctid` (identifiant physique de ligne), dans une table temporaire ;
-- les habitats dont le `typo_mer` est absent du dictionnaire ne sont pas migrés (la clé étrangère l'interdirait).
+- les habitats dont le `typo_mer` est absent du dictionnaire font échouer la migration (une vérification avec la partie 3 du script de contrôle - voir plus bas - est vivement recommandée).
 
 ### Contrôler la migration
 
@@ -234,7 +232,7 @@ Le fichier [controle_migration.sql](./habitats/sql/controle_migration.sql) regro
 
 1. nombre de polygones, source et cible ;
 2. nombre d'habitats, avant et après regroupement des doublons ;
-3. `typo_mer` de la source absents du dictionnaire (occurrences perdues) ;
+3. `typo_mer` de la source absents du dictionnaire (à checker avant de lancer la migration, elle échoue sinon) ;
 4. comparaison détaillée, par `id_origine` et par `typo_mer`, entre la source recalculée et la cible : aucune ligne signifie que la migration est cohérente ;
 5. polygones où le même `typo_mer` figurait sur plusieurs rangs ;
 6. polygones dont la somme des pourcentages s'écarte de 100 de plus de 5 points ;

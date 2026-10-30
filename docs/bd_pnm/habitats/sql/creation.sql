@@ -157,36 +157,36 @@ FROM habitats.t_fusion_habitats_vegetation f
 JOIN _map_releve m ON m.src_ctid = f.ctid;
 
 -- Occurrences : les quatre blocs TYPO_MER_i / POUR_HAB_i deviennent des lignes.
--- * Les typo_mer absents du dictionnaire sont écartés (sinon la clé étrangère
---   échoue) : controle_migration.sql les met en évidence.
+-- * Les typo_mer absents du dictionnaire mettent renvoient une erreur lors de l'insertion dans la table t_habitat_occurrence
+--   un script est disponible pour checker leur présence dans controle_migration.sql.
 -- * Quand un même typo_mer figure sur deux rangs d'un même polygone, les
 --   pourcentages sont additionnés ; enjeu_pnm prend la première valeur non nulle.
 WITH occurrences_brutes AS (
     SELECT m.releve_id, f."TYPO_MER_1" AS typo_mer_id, f."POUR_HAB_1" AS pour_hab, f."ENJEU_PNM_1" AS enjeu_pnm
     FROM habitats.t_fusion_habitats_vegetation f
     JOIN _map_releve m ON m.src_ctid = f.ctid
-    WHERE f."TYPO_MER_1" IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
+    WHERE f."TYPO_MER_1" IS NOT NULL  --IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
 
     UNION ALL
 
     SELECT m.releve_id, f."TYPO_MER_2", f."POUR_HAB_2", f."ENJEU_PNM_2"
     FROM habitats.t_fusion_habitats_vegetation f
     JOIN _map_releve m ON m.src_ctid = f.ctid
-    WHERE f."TYPO_MER_2" IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
+    WHERE f."TYPO_MER_2" IS NOT NULL  --IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
 
     UNION ALL
 
     SELECT m.releve_id, f."TYPO_MER_3", f."POUR_HAB_3", f."ENJEU_PNM_3"
     FROM habitats.t_fusion_habitats_vegetation f
     JOIN _map_releve m ON m.src_ctid = f.ctid
-    WHERE f."TYPO_MER_3" IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
+    WHERE f."TYPO_MER_3" IS NOT NULL  --IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
 
     UNION ALL
 
     SELECT m.releve_id, f."TYPO_MER_4", f."POUR_HAB_4", NULL
     FROM habitats.t_fusion_habitats_vegetation f
     JOIN _map_releve m ON m.src_ctid = f.ctid
-    WHERE f."TYPO_MER_4" IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
+    WHERE f."TYPO_MER_4" IS NOT NULL  --IN (SELECT code_typo_mer FROM habitats.dico_typo_mer)
 )
 INSERT INTO habitats.t_habitat_occurrence (releve_id, typo_mer_id, pour_hab, enjeu_pnm)
 SELECT
