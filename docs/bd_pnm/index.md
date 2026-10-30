@@ -105,6 +105,14 @@ Choisissez un schéma ci-dessous pour en savoir plus !
 
     [:octicons-arrow-right-24: Voir le schéma](./foret.md){ .stretched }
 
+-   :material-leaf: **habitats**
+
+    ---
+
+    Cartographie des habitats naturels du Parc.
+
+    [:octicons-arrow-right-24: Voir le schéma](./habitats.md){ .stretched }
+
 -   :material-flower: **vegetation**
 
     ---

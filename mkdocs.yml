@@ -91,6 +91,7 @@ nav:
         - bd_lacs: bd_pnm/bd_lacs.md
         - bd_source: bd_pnm/bd_source.md
         - foret: bd_pnm/foret.md
+        - habitats: bd_pnm/habitats.md
         - vegetation: bd_pnm/vegetation.md
     - Gestion et fréquentation:
         - ag_pasto: bd_pnm/ag_pasto.md
@@ -111,6 +112,7 @@ nav:
     - Biodiversité et millieux naturels:
         - geonature_synthese: projets_qgis/geonature_synthese.md
         - foret: projets_qgis/foret.md
+        - habitats: projets_qgis/habitats.md
     - Gestion et fréquentation:
         - geotrek: projets_qgis/geotrek.md
     - Réglementation et zonages:

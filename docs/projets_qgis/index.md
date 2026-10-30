@@ -96,6 +96,16 @@ La documentation est structurée par [schéma](../tutos/glossaire.md#schema "Un 
 
     [:octicons-arrow-right-24: Voir le schéma](../bd_pnm/foret.md)
 
+-   :material-leaf: **habitats**
+
+    ---
+
+    Cartographie des habitats naturels du Parc.
+
+    - [Habitats du PNM](./habitats.md#projet-habitats)
+
+    [:octicons-arrow-right-24: Voir le schéma](../bd_pnm/habitats.md)
+
 </div>
 
 ## :material-sign-direction: Gestion et fréquentation

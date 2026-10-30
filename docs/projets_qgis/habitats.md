@@ -5,7 +5,7 @@ Sources et structure de la donnée utile à la construction des projets : [habit
 
 ---
 
-## Projet habitats
+## Projet **Habitats du PNM**
 
 Projet par défaut du schéma. Il permet de **visualiser la cartographie des habitats** du Parc : quel habitat domine sur chaque polygone, quels habitats composent une mosaïque, quels secteurs ont un enjeu élevé ou relèvent de Natura 2000.
 

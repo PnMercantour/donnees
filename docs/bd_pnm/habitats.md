@@ -14,6 +14,9 @@ Deux notions sont au centre du schéma :
 !!! info "Les libellés de la typologie sont enregistrés sans accents"
     Par exemple `Forets`, `Fourres` ou `Tres fort`. Il faut les écrire ainsi dans les filtres et les requêtes.
 
+!!! warning "Nomenclature à compléter"
+    Une nomenclature métier complète reste à mettre en place. Pour l'instant, de nombreux champs descriptifs sont stockés en `text` et leurs valeurs ne sont pas toutes encadrées par des listes de référence. Les valeurs documentées ici reflètent l'état actuel des données.
+
 
 ## Projets Qgis associés
 Vous trouverez la documentation du projet [ici](../projets_qgis/habitats.md).
@@ -248,6 +251,5 @@ Le fichier [controle_migration.sql](./habitats/sql/controle_migration.sql) regro
 - Vues : [vues.sql](./habitats/sql/vues.sql)
 
 Le script de création charge le dictionnaire avec la commande `\copy`, propre à `psql` : il faut le lancer avec `psql` depuis le dossier qui contient le fichier CSV du dictionnaire. En pratique le script est lancé par bloc à la main.
-
 
 
