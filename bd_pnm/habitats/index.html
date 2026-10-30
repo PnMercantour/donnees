@@ -1,0 +1,2662 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../foret/">
+      
+      
+        <link rel="next" href="../vegetation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../tutos/img/logo_embleme_pnm_quadri_vert.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>habitats - Documentation et Tutos sur les données géographiques du Parc national du Mercantour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#habitats" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-header__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../../tutos/img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              habitats
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Mode Sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode Sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Page d'accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  BD_PNM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projets_qgis/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projets Qgis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qgis_plugins/plugins_list/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Qgis plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutos/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-nav__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../../tutos/img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page d'accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BD_PNM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BD_PNM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limites et territoire
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Limites et territoire
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin_express/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    admin_express
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    limites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    inpn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cadastre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cadastre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biodiversité et millieux naturels
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biodiversité et millieux naturels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geonature_synthese/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    geonature_synthese
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bd_lacs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bd_lacs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bd_source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bd_source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../foret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    foret
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    habitats
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    habitats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projets-qgis-associes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projets Qgis associés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables remarquables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tables remarquables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description des colonnes remarquables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t_releve_habitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_releve_habitat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_releve_metadonnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_releve_metadonnee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_habitat_occurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_habitat_occurrence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dico_typo_mer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dico_typo_mer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v_releve_dominant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v_releve_dominant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v_occurrence_carto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v_occurrence_carto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-de-requetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples de requêtes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choix-de-conception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choix de conception
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choix de conception">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration des données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controler-la-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrôler la migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-de-creation-des-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code de création des tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vegetation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vegetation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion et fréquentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestion et fréquentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ag_pasto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ag_pasto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geotrek/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    geotrek
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PAEC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tourisme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tourisme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réglementation et zonages
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réglementation et zonages
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    charte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    survol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../projets_qgis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projets Qgis
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../qgis_plugins/plugins_list/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qgis plugins
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tutos/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutos
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projets-qgis-associes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projets Qgis associés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables remarquables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tables remarquables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description-des-colonnes-remarquables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des colonnes remarquables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description des colonnes remarquables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t_releve_habitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_releve_habitat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_releve_metadonnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_releve_metadonnee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_habitat_occurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        t_habitat_occurrence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dico_typo_mer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dico_typo_mer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v_releve_dominant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v_releve_dominant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v_occurrence_carto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v_occurrence_carto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-de-requetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples de requêtes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choix-de-conception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choix de conception
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choix de conception">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration des données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controler-la-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrôler la migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-de-creation-des-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code de création des tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Page d'accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    BD_PNM
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../geonature_synthese/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Biodiversité et millieux naturels
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="habitats">habitats</h1>
+<h2 id="description">Description</h2>
+<p>Ce schéma contient la <strong>cartographie des habitats naturels</strong> du Parc national du Mercantour. Il rassemble des cartographies réalisées lors de plusieurs projets, fusionnées dans une même couche (<code>t_fusion_habitats_vegetation</code>), puis réorganisées ici sous la forme d'une base de données relationnelle.</p>
+<p>Chaque <strong>polygone</strong> correspond à un secteur observé. Un polygone peut porter plusieurs habitats (une <em>mosaïque</em>) : dans la couche d'origine, il pouvait en porter jusqu'à quatre ; le schéma actuel n'impose plus de limite.</p>
+<p>Deux notions sont au centre du schéma :</p>
+<ul>
+<li>le <strong><code>typo_mer</code></strong> : le code d'un habitat dans la typologie du Parc. Chaque code est décrit dans le dictionnaire <code>dico_typo_mer</code> (intitulé, groupe, correspondances Corine Biotopes, EUNIS et EUR27, enjeu...) ;</li>
+<li>le <strong><code>pour_hab</code></strong> : le pourcentage du polygone couvert par cet habitat.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Les libellés de la typologie sont enregistrés sans accents</p>
+<p>Par exemple <code>Forets</code>, <code>Fourres</code> ou <code>Tres fort</code>. Il faut les écrire ainsi dans les filtres et les requêtes.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Nomenclature à compléter</p>
+<p>Une nomenclature métier complète reste à mettre en place. Pour l'instant, de nombreux champs descriptifs sont stockés en <code>text</code> et leurs valeurs ne sont pas toutes encadrées par des listes de référence. Les valeurs documentées ici reflètent l'état actuel des données.</p>
+</div>
+<h2 id="projets-qgis-associes">Projets Qgis associés</h2>
+<p>Vous trouverez la documentation du projet <a href="../../projets_qgis/habitats/">ici</a>.</p>
+<h2 id="tables-remarquables">Tables remarquables</h2>
+<p>Le schéma est constitué de 4 tables et de 3 vues.</p>
+<figure>
+<p><img alt="Modèle relationnel du schéma habitats" src="../img/habitats_modele.png" /></p>
+<figcaption>
+<p>Les quatre tables du schéma (extrait des colonnes). Un polygone a au plus une ligne de métadonnées et autant de lignes d'occurrences que d'habitats présents.</p>
+</figcaption>
+</figure>
+<h3 id="tables">Tables</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom de la table</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">t_releve_habitat</td>
+<td style="text-align: left;">Un polygone cartographié : sa géométrie, le site, la date, l'observateur et l'organisme.</td>
+</tr>
+<tr>
+<td style="text-align: center;">t_releve_metadonnee</td>
+<td style="text-align: left;">Les informations complémentaires sur le polygone (méthode, gestion, altitude, enjeu flore...). Au plus une ligne par polygone.</td>
+</tr>
+<tr>
+<td style="text-align: center;">t_habitat_occurrence</td>
+<td style="text-align: left;">Un habitat présent sur un polygone, avec le pourcentage du polygone qu'il couvre (<code>pour_hab</code>). C'est la table à interroger pour savoir <em>quels habitats</em> se trouvent <em>où</em>.</td>
+</tr>
+<tr>
+<td style="text-align: center;">dico_typo_mer</td>
+<td style="text-align: left;">Le dictionnaire des habitats : un <code>typo_mer</code> par ligne, avec sa description.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vues">Vues</h3>
+<p>Les vues recomposent les tables pour la cartographie et l'analyse. Elles sont en lecture seule et sont celles utilisées par le <a href="../../projets_qgis/habitats/">projet QGIS</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom de la vue</th>
+<th style="text-align: center;">Une ligne par</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">v_releve_dominant</td>
+<td style="text-align: center;">polygone</td>
+<td style="text-align: left;">L'habitat dominant de chaque polygone, la composition complète de la mosaïque, la part Natura 2000 et les métadonnées. Couche principale du projet.</td>
+</tr>
+<tr>
+<td style="text-align: center;">v_occurrence_carto</td>
+<td style="text-align: center;">habitat sur un polygone</td>
+<td style="text-align: left;">Chaque habitat avec la géométrie de son polygone et sa surface. Permet de cartographier un habitat précis, <strong>même quand il n'est pas dominant</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;">v_stats_habitat</td>
+<td style="text-align: center;">habitat de la typologie</td>
+<td style="text-align: left;">Nombre de polygones et surface de chaque habitat, y compris les habitats jamais observés. Sans géométrie.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-des-colonnes-remarquables">Description des colonnes remarquables</h2>
+<div class="admonition warning">
+<p class="admonition-title">Ne sont décrites ici que les colonnes remarquables, ou dont le nom pourrait prêter à confusion.</p>
+</div>
+<h4 id="t_releve_habitat">t_releve_habitat</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom de la colonne</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: center;">(PK) uuid</td>
+<td style="text-align: left;">Identifiant du polygone</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_origine</td>
+<td style="text-align: center;">int8</td>
+<td style="text-align: left;">Identifiant du polygone dans la couche d'origine. <strong>Il n'est pas unique</strong> (plusieurs polygones peuvent le partager) : il sert à retrouver l'origine d'un polygone, pas à faire une jointure.</td>
+</tr>
+<tr>
+<td style="text-align: left;">geometry</td>
+<td style="text-align: center;">multipolygone</td>
+<td style="text-align: left;">Contour du polygone, en Lambert-93 (EPSG:2154)</td>
+</tr>
+<tr>
+<td style="text-align: left;">site</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Site cartographié</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_obs</td>
+<td style="text-align: center;">timestamp</td>
+<td style="text-align: left;">Date de l'observation</td>
+</tr>
+<tr>
+<td style="text-align: left;">observateur</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Observateur</td>
+</tr>
+<tr>
+<td style="text-align: left;">organisme</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Organisme ayant réalisé l'observation</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t_releve_metadonnee">t_releve_metadonnee</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom de la colonne</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">releve_id</td>
+<td style="text-align: center;">(PK, FK) uuid</td>
+<td style="text-align: left;">Polygone concerné (<code>t_releve_habitat.id</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">natu_obs, unit_vege, echelle, grand_type, legende</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Informations de méthode : nature de l'observation, unité de végétation, échelle, grand type, légende</td>
+</tr>
+<tr>
+<td style="text-align: left;">gestion, gestion_b</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Informations sur la gestion du milieu</td>
+</tr>
+<tr>
+<td style="text-align: left;">alt_obs, alt_grille</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Altitude, observée ou issue de la grille</td>
+</tr>
+<tr>
+<td style="text-align: left;">enjeu_flore</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Enjeu flore</td>
+</tr>
+<tr>
+<td style="text-align: left;">ec_exp, comm_exp, grille_ec, note_ec</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Informations issues de la couche d'origine : expertise, commentaire, grille et note</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t_habitat_occurrence">t_habitat_occurrence</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom de la colonne</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: center;">(PK) uuid</td>
+<td style="text-align: left;">Identifiant de l'occurrence</td>
+</tr>
+<tr>
+<td style="text-align: left;">releve_id</td>
+<td style="text-align: center;">(FK) uuid</td>
+<td style="text-align: left;">Polygone sur lequel l'habitat est présent (<code>t_releve_habitat.id</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">typo_mer_id</td>
+<td style="text-align: center;">(FK) int8</td>
+<td style="text-align: left;">Habitat présent (<code>dico_typo_mer.code_typo_mer</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">pour_hab</td>
+<td style="text-align: center;">numeric(5,2)</td>
+<td style="text-align: left;">Pourcentage du polygone couvert par l'habitat, de 0 à 100. La somme sur un polygone devrait être proche de 100, sans que ce soit imposé : les données de terrain ne sont pas toujours exactes. Peut être vide.</td>
+</tr>
+<tr>
+<td style="text-align: left;">enjeu_pnm</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Enjeu propre à cette occurrence (ancienne colonne <code>ENJEU_PNM_i</code> de la couche d'origine)</td>
+</tr>
+</tbody>
+</table>
+<p>Un même habitat ne peut figurer qu'une fois sur un polygone (contrainte d'unicité sur <code>releve_id</code> et <code>typo_mer_id</code>).</p>
+<h4 id="dico_typo_mer">dico_typo_mer</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom de la colonne</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code_typo_mer</td>
+<td style="text-align: center;">(PK) int8</td>
+<td style="text-align: left;">Code de l'habitat dans la typologie du Parc</td>
+</tr>
+<tr>
+<td style="text-align: left;">intitule</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Nom de l'habitat</td>
+</tr>
+<tr>
+<td style="text-align: left;">groupe_mercantour</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Grand groupe d'habitats : <code>Forets</code>, <code>Pelouses</code>, <code>Milieux rocheux</code>, <code>Fourres</code>, <code>Zones humides</code>, <code>Friches</code>, <code>Landes</code>, <code>Megaphorbiaies</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">groupe_mer_pelouses</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Comme <code>groupe_mercantour</code>, avec les pelouses détaillées par type (par exemple <code>Pelouses calcicoles de crete</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">groupe, sous_groupe, sous_sous_groupe</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Niveaux de classement plus fins</td>
+</tr>
+<tr>
+<td style="text-align: left;">rata_ordre, rata_allia, rata_assoc</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Rattachement phytosociologique : ordre, alliance, association. La valeur <code>A definir</code> ou <code>A preciser</code> indique un rattachement à compléter.</td>
+</tr>
+<tr>
+<td style="text-align: left;">code_cb, lib_cb</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Code et libellé Corine Biotopes</td>
+</tr>
+<tr>
+<td style="text-align: left;">code_eunis, lib_eunis</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Code et libellé EUNIS</td>
+</tr>
+<tr>
+<td style="text-align: left;">code_eur27, lib_eur27</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Code et libellé de l'habitat d'intérêt communautaire (Natura 2000, EUR27). Vides si l'habitat n'est pas concerné.</td>
+</tr>
+<tr>
+<td style="text-align: left;">statut_eur27</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;"><code>IC</code> : habitat d'intérêt communautaire, <code>PR</code> : habitat prioritaire, <code>NC</code> : non concerné</td>
+</tr>
+<tr>
+<td style="text-align: left;">enjeu</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Enjeu associé à l'habitat dans la typologie : <code>Tres fort</code>, <code>Fort</code>, <code>Moyen</code>, <code>Faible</code> ou <code>Non defini</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">fiche_merc</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Fiche descriptive de l'habitat, quand elle existe</td>
+</tr>
+<tr>
+<td style="text-align: left;">code_guide_habitats_alpes</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Code de l'habitat dans le guide des habitats naturels et semi-naturels des Alpes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="v_releve_dominant">v_releve_dominant</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom de la colonne</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: center;">uuid</td>
+<td style="text-align: left;">Identifiant du polygone</td>
+</tr>
+<tr>
+<td style="text-align: left;">typo_mer_dominant, habitat_dominant, pour_hab_dominant</td>
+<td style="text-align: center;">int8, text, numeric</td>
+<td style="text-align: left;">L'habitat dominant : son code, son nom et son pourcentage</td>
+</tr>
+<tr>
+<td style="text-align: left;">groupe_mercantour, enjeu, code_cb, code_eunis, code_eur27, statut_eur27...</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Description de l'habitat dominant, reprise du dictionnaire</td>
+</tr>
+<tr>
+<td style="text-align: left;">nb_habitats</td>
+<td style="text-align: center;">bigint</td>
+<td style="text-align: left;">Nombre d'habitats présents sur le polygone</td>
+</tr>
+<tr>
+<td style="text-align: left;">mosaique</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: left;">Vrai si le polygone porte plus d'un habitat</td>
+</tr>
+<tr>
+<td style="text-align: left;">total_pour_hab</td>
+<td style="text-align: center;">numeric</td>
+<td style="text-align: left;">Somme des pourcentages des habitats du polygone</td>
+</tr>
+<tr>
+<td style="text-align: left;">composition</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Liste des habitats du polygone, du plus au moins couvrant, un par ligne (<code>121 - Nom de l'habitat (60 %)</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">natura2000</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: left;">Vrai si au moins un habitat du polygone est d'intérêt communautaire ou prioritaire (<code>statut_eur27</code> = <code>IC</code> ou <code>PR</code>), quel que soit son pourcentage</td>
+</tr>
+<tr>
+<td style="text-align: left;">pour_hab_n2000</td>
+<td style="text-align: center;">numeric</td>
+<td style="text-align: left;">Part du polygone couverte par des habitats Natura 2000</td>
+</tr>
+<tr>
+<td style="text-align: left;">prioritaire</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: left;">Vrai si au moins un habitat prioritaire (<code>PR</code>) est présent</td>
+</tr>
+<tr>
+<td style="text-align: left;">surface_ha</td>
+<td style="text-align: center;">numeric</td>
+<td style="text-align: left;">Surface du polygone, en hectares</td>
+</tr>
+<tr>
+<td style="text-align: left;">natu_obs, unit_vege, echelle...</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Métadonnées du relevé, reprises de <code>t_releve_metadonnee</code></td>
+</tr>
+</tbody>
+</table>
+<p>L'<strong>habitat dominant</strong> est celui qui a le plus fort <code>pour_hab</code>. À égalité, c'est celui qui a le plus petit code <code>typo_mer</code>. Un polygone sans habitat n'a pas d'habitat dominant.</p>
+<h4 id="v_occurrence_carto">v_occurrence_carto</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom de la colonne</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: center;">uuid</td>
+<td style="text-align: left;">Identifiant de l'occurrence</td>
+</tr>
+<tr>
+<td style="text-align: left;">releve_id</td>
+<td style="text-align: center;">uuid</td>
+<td style="text-align: left;">Polygone concerné</td>
+</tr>
+<tr>
+<td style="text-align: left;">typo_mer_id, habitat</td>
+<td style="text-align: center;">int8, text</td>
+<td style="text-align: left;">Code et nom de l'habitat</td>
+</tr>
+<tr>
+<td style="text-align: left;">pour_hab</td>
+<td style="text-align: center;">numeric</td>
+<td style="text-align: left;">Pourcentage du polygone couvert par l'habitat</td>
+</tr>
+<tr>
+<td style="text-align: left;">surface_ha</td>
+<td style="text-align: center;">numeric</td>
+<td style="text-align: left;">Surface occupée par l'habitat : surface du polygone × <code>pour_hab</code> / 100, en hectares</td>
+</tr>
+<tr>
+<td style="text-align: left;">groupe_mercantour, enjeu, statut_eur27...</td>
+<td style="text-align: center;">text</td>
+<td style="text-align: left;">Description de l'habitat, reprise du dictionnaire</td>
+</tr>
+<tr>
+<td style="text-align: left;">natura2000</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: left;">Vrai si l'habitat est d'intérêt communautaire ou prioritaire</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Les surfaces sont planimétriques</p>
+<p><code>surface_ha</code> est calculée sur la carte, en Lambert-93, et non sur le relief. En montagne, la surface réelle du terrain est plus grande. Une occurrence sans <code>pour_hab</code> n'a pas de surface.</p>
+</div>
+<hr />
+<p><em>Documentation pour utilisateurs avancés et maintenance</em></p>
+<h2 id="exemples-de-requetes">Exemples de requêtes</h2>
+<p>Surface de chaque groupe d'habitats :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">groupe_mercantour</span><span class="p">,</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="n">sum</span><span class="p">(</span><span class="n">surface_ha</span><span class="p">),</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">surface_ha</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">habitats</span><span class="mf">.</span><span class="n">v_occurrence_carto</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">groupe_mercantour</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">surface_ha</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<p>Tous les polygones où un habitat est présent, même s'il n'est pas dominant (ici le <code>typo_mer</code> 98) :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">r</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="mf">.</span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">o</span><span class="mf">.</span><span class="n">pour_hab</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">habitats</span><span class="mf">.</span><span class="n">t_habitat_occurrence</span><span class="w"> </span><span class="n">o</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">habitats</span><span class="mf">.</span><span class="n">t_releve_habitat</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">r</span><span class="mf">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="mf">.</span><span class="n">releve_id</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">o</span><span class="mf">.</span><span class="n">typo_mer_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">98</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">o</span><span class="mf">.</span><span class="n">pour_hab</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">NULLS</span><span class="w"> </span><span class="k">LAST</span><span class="p">;</span>
+</code></pre></div>
+<p>Surface des habitats prioritaires, habitat par habitat :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">typo_mer_id</span><span class="p">,</span><span class="w"> </span><span class="n">habitat</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nb_polygones</span><span class="p">,</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="n">sum</span><span class="p">(</span><span class="n">surface_ha</span><span class="p">),</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">surface_ha</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">habitats</span><span class="mf">.</span><span class="n">v_occurrence_carto</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">statut_eur27</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'PR'</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">typo_mer_id</span><span class="p">,</span><span class="w"> </span><span class="n">habitat</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">surface_ha</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<p>Les polygones en mosaïque, avec leur composition :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">habitat_dominant</span><span class="p">,</span><span class="w"> </span><span class="n">pour_hab_dominant</span><span class="p">,</span><span class="w"> </span><span class="k">replace</span><span class="p">(</span><span class="n">composition</span><span class="p">,</span><span class="w"> </span><span class="sa">E</span><span class="s1">'\n'</span><span class="p">,</span><span class="w"> </span><span class="s1">' | '</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">composition</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">habitats</span><span class="mf">.</span><span class="n">v_releve_dominant</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">mosaique</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">site</span><span class="p">;</span>
+</code></pre></div>
+<p>Les habitats de la typologie jamais observés :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">code_typo_mer</span><span class="p">,</span><span class="w"> </span><span class="n">intitule</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">habitats</span><span class="mf">.</span><span class="n">v_stats_habitat</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">nb_polygones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">code_typo_mer</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="dependances">Dépendances</h2>
+<ul>
+<li>Les tables ont été créées à partir de la table <code>habitats.t_fusion_habitats_vegetation</code> (la couche d'origine, au format « large » : <code>TYPO_MER_1</code> à <code>4</code>, <code>POUR_HAB_1</code> à <code>4</code>).</li>
+<li><code>dico_typo_mer</code> a été chargé depuis le fichier de la typologie des habitats du Parc (<code>Typologie_habitats_PNMercantour_Correspondances_table_Attributaire_Cartographie_Habitats_Rattachement_UFL.csv</code>), dont seules les colonnes de classification et de correspondance ont été retenues.</li>
+<li>Les vues dépendent des quatre tables et utilisent <code>ST_Area</code> (PostGIS) pour calculer les surfaces.</li>
+</ul>
+<h2 id="choix-de-conception">Choix de conception</h2>
+<p>La couche d'origine plaçait les habitats dans des colonnes numérotées (<code>TYPO_MER_1</code> à <code>TYPO_MER_4</code>, avec leurs pourcentages) : c'est une relation « un polygone, plusieurs habitats » écrite en colonnes. Le schéma la remplace par une table d'occurrences, une ligne par habitat. Les choix qui en découlent :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Choix</th>
+<th style="text-align: left;">Raison</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Une table d'occurrences, une ligne par habitat</td>
+<td style="text-align: left;">Pas de limite à quatre habitats, et une requête simple pour retrouver un habitat quel que soit son rang.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Identifiants <code>uuid</code>, avec <code>id_origine</code> conservé</td>
+<td style="text-align: left;">Des clés robustes, tout en gardant la trace de l'ancien identifiant. (uuid plutôt qu'id pour intégration dans QFieldCloud)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_origine</code> sans contrainte d'unicité</td>
+<td style="text-align: left;">L'identifiant de la couche d'origine n'est pas unique. Il ne doit jamais servir de clé de jointure.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pas de colonne « rang »</td>
+<td style="text-align: left;">La position (1 à 4) n'a pas de sens pour l'habitat. L'importance se lit dans <code>pour_hab</code>. À la place, un habitat ne peut figurer qu'une fois par polygone.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Colonnes Corine Biotopes, EUNIS, EUR27 retirées de l'occurrence</td>
+<td style="text-align: left;">Ce sont des attributs de l'habitat, déjà dans <code>dico_typo_mer</code> : les recopier sur chaque ligne ferait diverger les copies. Une jointure les restitue (voir les vues).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Intitulé de l'habitat (<code>INTIT_MER_i</code>) retiré</td>
+<td style="text-align: left;">Redondant avec <code>dico_typo_mer.intitule</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>enjeu_pnm</code> conservé sur l'occurrence</td>
+<td style="text-align: left;">Il peut différer de l'<code>enjeu</code> du dictionnaire.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Métadonnées dans une table à part</td>
+<td style="text-align: left;"><code>t_releve_habitat</code> ne garde que l'essentiel : où, quand, qui.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pourcentages additionnés pour un habitat répété</td>
+<td style="text-align: left;">Quand le même <code>typo_mer</code> figurait sur deux rangs d'un polygone, les deux pourcentages ont été additionnés (à priori ça ne concernait aucun polygone chez nous).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pour_hab</code> limité à 0-100, sans contrôle de la somme</td>
+<td style="text-align: left;">Les données de terrain ne totalisent pas toujours 100 ; le contrôle se fait par requête (voir plus bas).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="migration-des-donnees">Migration des données</h3>
+<p>La migration est faite par le script de <a href="sql/creation.sql">création</a>. Deux points techniques méritent d'être connus :</p>
+<ul>
+<li>l'<code>id</code> de la couche d'origine n'étant pas unique, une jointure sur cet identifiant multiplierait les lignes. Le script rattache chaque ligne source à son nouveau polygone par <code>ctid</code> (identifiant physique de ligne), dans une table temporaire ;</li>
+<li>les habitats dont le <code>typo_mer</code> est absent du dictionnaire font échouer la migration (une vérification avec la partie 3 du script de contrôle - voir plus bas - est vivement recommandée).</li>
+</ul>
+<h3 id="controler-la-migration">Contrôler la migration</h3>
+<p>Le fichier <a href="sql/controle_migration.sql">controle_migration.sql</a> regroupe sept requêtes de contrôle. Les quatre dernières ne doivent rien retourner, ou seulement des cas compris :</p>
+<ol>
+<li>nombre de polygones, source et cible ;</li>
+<li>nombre d'habitats, avant et après regroupement des doublons ;</li>
+<li><code>typo_mer</code> de la source absents du dictionnaire (à checker avant de lancer la migration, elle échoue sinon) ;</li>
+<li>comparaison détaillée, par <code>id_origine</code> et par <code>typo_mer</code>, entre la source recalculée et la cible : aucune ligne signifie que la migration est cohérente ;</li>
+<li>polygones où le même <code>typo_mer</code> figurait sur plusieurs rangs ;</li>
+<li>polygones dont la somme des pourcentages s'écarte de 100 de plus de 5 points ;</li>
+<li>occurrences sans pourcentage.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Limite de la comparaison détaillée</p>
+<p>Elle regroupe par <code>id_origine</code>. Si deux polygones distincts partagent le même <code>id_origine</code>, le contrôle valide leur groupe, pas chacun d'eux.</p>
+</div>
+<h2 id="code-de-creation-des-tables">Code de création des tables</h2>
+<ul>
+<li>Tables et migration : <a href="sql/creation.sql">creation.sql</a></li>
+<li>Contrôles après migration : <a href="sql/controle_migration.sql">controle_migration.sql</a></li>
+<li>Vues : <a href="sql/vues.sql">vues.sql</a></li>
+</ul>
+<p>Le script de création charge le dictionnaire avec la commande <code>\copy</code>, propre à <code>psql</code> : il faut le lancer avec <code>psql</code> depuis le dossier qui contient le fichier CSV du dictionnaire. En pratique le script est lancé par bloc à la main.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="30 octobre 2026 11:15:40 UTC"><span class="timeago" datetime="2026-10-30T11:15:40+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="30 octobre 2026 11:15:40 UTC">2026-10-30</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="30 octobre 2026 11:15:40 UTC"><span class="timeago" datetime="2026-10-30T11:15:40+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="30 octobre 2026 11:15:40 UTC">2026-10-30</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.prune", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+    
+  </body>
+</html>

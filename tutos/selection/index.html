@@ -1,0 +1,2787 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../empaqueter_un_projet/">
+      
+      
+        <link rel="next" href="../filtres/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/logo_embleme_pnm_quadri_vert.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Sélection - Documentation et Tutos sur les données géographiques du Parc national du Mercantour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#selectionner-des-entites-dans-qgis" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-header__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sélection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Mode Sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode Sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Page d'accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bd_pnm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  BD_PNM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projets_qgis/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projets Qgis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qgis_plugins/plugins_list/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Qgis plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-nav__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page d'accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bd_pnm/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BD_PNM
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../projets_qgis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projets Qgis
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../qgis_plugins/plugins_list/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qgis plugins
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parametrage_qgis_pnm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paramètres QGIS au PNM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installer_certificats_base_de_donnees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accéder aux ressources du PNM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wms_wfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonds de carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Système de coordonnées
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_plugin_via_depot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installer un plugin QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prise en main
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prise en main
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naviguer dans QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_modifier_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer ou modifier un projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_modifier_couche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer ou modifier une couche
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Symbologie & Etiquettes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pour aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pour aller plus loin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empaqueter_un_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partager un projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sélection
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sélection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-sur-la-carte-avec-la-souris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner sur la carte avec la souris
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sélectionner sur la carte avec la souris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-ou-retirer-des-entites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajouter ou retirer des entités
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annuler-la-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annuler la sélection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-dans-la-table-attributaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner dans la table attributaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-par-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner par valeur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-par-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner par expression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sélectionner par expression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lediteur-dexpression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'éditeur d'expression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construire-une-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construire une expression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construire une expression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-regles-de-syntaxe-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les règles de syntaxe à retenir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combiner-plusieurs-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combiner plusieurs conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#des-expressions-plus-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Des expressions plus avancées
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-selon-la-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner selon la position
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-faire-dune-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que faire d'une sélection ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-une-selection-dans-une-nouvelle-couche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer une sélection dans une nouvelle couche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier-la-couleur-de-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifier la couleur de sélection
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calculatrice_champs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculatrice de champs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outils_traitement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils de traitement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cartographie
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cartographie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_carte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer une carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generer_un_atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Génération d'atlas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utiliser_un_masque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utiliser un masque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ressources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bonnes_pratiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonnes pratiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taxrefmatch_cdnom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxrefmatch > cd_nom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-sur-la-carte-avec-la-souris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner sur la carte avec la souris
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sélectionner sur la carte avec la souris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-ou-retirer-des-entites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajouter ou retirer des entités
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annuler-la-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annuler la sélection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-dans-la-table-attributaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner dans la table attributaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-par-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner par valeur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-par-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner par expression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sélectionner par expression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lediteur-dexpression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'éditeur d'expression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construire-une-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construire une expression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construire une expression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-regles-de-syntaxe-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les règles de syntaxe à retenir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combiner-plusieurs-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combiner plusieurs conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#des-expressions-plus-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Des expressions plus avancées
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectionner-selon-la-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sélectionner selon la position
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-faire-dune-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Que faire d'une sélection ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-une-selection-dans-une-nouvelle-couche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer une sélection dans une nouvelle couche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier-la-couleur-de-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifier la couleur de sélection
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Page d'accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tutos
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../empaqueter_un_projet/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Pour aller plus loin
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="selectionner-des-entites-dans-qgis">Sélectionner des entités dans QGIS</h1>
+<p><strong>Sélectionner</strong> des entités, c'est en désigner certaines (en <mark>jaune</mark> sur la carte) pour agir uniquement sur elles : les compter, les exporter, les modifier, les analyser...</p>
+<div class="admonition info">
+<p class="admonition-title">À quoi ça sert ?</p>
+<ul>
+<li><strong>Repérer</strong> des entités sur la carte ou dans la table attributaire.</li>
+<li><strong>Exporter</strong> uniquement une partie d'une couche.</li>
+<li><strong>Modifier</strong> seulement certaines entités.</li>
+<li><strong>Croiser</strong> des couches : sélectionner les entités d'une couche situées dans une autre.</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Sélection ou filtre ?</p>
+<p>La sélection <strong>surligne</strong> des entités sans cacher les autres ; elle est temporaire. <br />
+Le <a href="../filtres/">filtre</a> <strong>masque</strong> les entités sur la carte qui ne correspondent pas, et reste appliqué tant qu'on ne le retire pas.<br />
+Les deux se combinent : on peut sélectionner dans une couche déjà filtrée.</p>
+</div>
+<hr />
+<h2 id="selectionner-sur-la-carte-avec-la-souris">Sélectionner sur la carte avec la souris</h2>
+<p>La barre d'outils <strong>Sélection</strong> propose plusieurs outils de sélection (menu déroulant) :</p>
+<p><img alt="Outils de sélection de la barre d'outils" src="../img/selection_deplie.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Comment l'utiliser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sélectionner des entités</strong></td>
+<td>Un clic sur une entité, ou un rectangle à tracer</td>
+</tr>
+<tr>
+<td><strong>Sélectionner par polygone</strong></td>
+<td>Cliquez pour dessiner un polygone ; clic droit pour terminer</td>
+</tr>
+<tr>
+<td><strong>Sélectionner à main levée</strong></td>
+<td>Dessinez la zone en maintenant le bouton enfoncé</td>
+</tr>
+<tr>
+<td><strong>Sélectionner par rayon</strong></td>
+<td>Cliquez au centre, puis définissez le rayon</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">« Rien ne se passe quand je clique » : vérifiez la couche active</p>
+<p>Si vous sélectionnez sur la carte sans résultat, c'est souvent qu'aucune couche vecteur n'est active, ou que la couche active n'est pas celle que vous visez.</p>
+</div>
+<h3 id="ajouter-ou-retirer-des-entites">Ajouter ou retirer des entités</h3>
+<p>Pour modifier une sélection existante, utilisez le clavier pendant que vous cliquez sur la carte :</p>
+<table>
+<thead>
+<tr>
+<th>Touche maintenue</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
+<td><strong>Ajouter</strong> les nouvelles entités à la sélection</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span></td>
+<td><strong>Retirer</strong> les entités de la sélection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annuler-la-selection">Annuler la sélection</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Raccourci</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tout sélectionner</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span></td>
+</tr>
+<tr>
+<td><strong>Tout désélectionner</strong></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span></td>
+</tr>
+<tr>
+<td>Inverser la sélection</td>
+<td>Menu <span class="keys"><kbd>Édition</kbd></span> &gt; <span class="keys"><kbd>Sélectionner</kbd></span> &gt; <span class="keys"><kbd>Inverser la sélection</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="selectionner-dans-la-table-attributaire">Sélectionner dans la table attributaire</h2>
+<p>Ouvrez la table attributaire d'une couche (<span class="keys"><kbd class="key-f6">F6</kbd></span>), puis :</p>
+<ul>
+<li>Cliquez sur le <strong>numéro de ligne</strong> (à gauche) pour sélectionner une entité.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic : sélection de lignes <strong>non consécutives</strong>.</li>
+<li><span class="keys"><kbd class="key-shift">Shift</kbd></span> + clic : sélection de toutes les lignes <strong>entre deux clics</strong>.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/selection_table_attributaire.png" /></p>
+<figcaption>
+<p>Vue <strong>tabulaire</strong> de la table attributaire </p>
+</figcaption>
+</figure>
+<p>Dans la vue <strong>Formulaire</strong>, cliquez sur le symbole à côté de l'identifiant de l'entité.</p>
+<figure>
+<p><img alt="" src="../img/selection_table_attributaire_formulaire.png" /></p>
+<figcaption>
+<p>Vue <strong>formulaire</strong> de la table attributaire</p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Mettre la sélection en évidence sur la carte</p>
+<p>Le menu déroulant en bas à gauche de la table (encadré en vert ci-dessus) permet d'afficher <strong>toutes</strong> les entités, <strong>seulement les sélectionnées</strong>, ou seulement celles <strong>visibles sur la carte</strong>.   </p>
+<p><ins>Dans le bandeau d'outils encadré en violet de la table attributaire</ins> :  </p>
+<ul>
+<li>un bouton permet aussi de <strong>déplacer la sélection en haut</strong> de la table</li>
+<li>un autre de <strong>zoomer sur les entités sélectionnées</strong></li>
+</ul>
+</div>
+<hr />
+<h2 id="selectionner-par-valeur">Sélectionner par valeur</h2>
+<p>Pour sélectionner les entités qui ont telle ou telle valeur dans un champ, sans écrire de formule.</p>
+<p><strong>Raccourci</strong> : <span class="keys"><kbd class="key-f3">F3</kbd></span>, ou menu <span class="keys"><kbd>Édition</kbd></span> &gt; <span class="keys"><kbd>Sélectionner</kbd></span> &gt; <span class="keys"><kbd>Sélectionner par valeur...</kbd></span></p>
+<p>Un formulaire s'ouvre avec tous les champs : renseignez les valeurs recherchées, choisissez comment les combiner avec la sélection existante, puis validez.</p>
+<figure>
+<p><img alt="" src="../img/selection_valeur_deplie.png" /></p>
+<figcaption>
+<p>Cliquer sur <strong>Sélectionner des entités par valeur...</strong> </p>
+</figcaption>
+</figure>
+<hr />
+<h2 id="selectionner-par-expression">Sélectionner par expression</h2>
+<p>La sélection par expression permet de choisir des entités selon <strong>des conditions portant sur leurs colonnes</strong> (les attributs). C'est l'outil le plus puissant pour sélectionner.</p>
+<p>L'outil <strong>Sélection par expression</strong> se trouve à plusieurs endroits :</p>
+<ul>
+<li>dans la barre d'outils principale ;</li>
+<li>dans la barre d'outils de la table attributaire d'une couche ;</li>
+<li>au clavier : <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f3">F3</kbd></span>.  </li>
+</ul>
+<p>Il est représenté par ce symbole dans tous les cas : <img alt="Icône Sélection par expression" src="../img/selection_expression.png" /></p>
+<p>Une fois ouvert, il donne accès à l'<strong>éditeur d'expression</strong>, tel qu'on le retrouve à différents endroits de QGIS (filtres, calculatrice de champs...).</p>
+<h3 id="lediteur-dexpression">L'éditeur d'expression</h3>
+<p>L'éditeur d'expression est le même partout : <a href="../filtres/">filtre</a>, <a href="../calculatrice_champs/">calculatrice de champs</a>, sélection ... Les règles de syntaxes sont donc les mêmes !</p>
+<p><img alt="L'éditeur d'expression" src="../img/editeur_expression.png" /></p>
+<p>Il est séparé en trois panneaux :</p>
+<table>
+<thead>
+<tr>
+<th>Panneau</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>À gauche : l'éditeur</strong></td>
+<td>C'est là qu'on entre et qu'on modifie l'expression</td>
+</tr>
+<tr>
+<td><strong>Au milieu : fonctions et variables</strong></td>
+<td>Opérateurs, champs et fonctions sélectionnables, regroupés par catégories</td>
+</tr>
+<tr>
+<td><strong>À droite : l'aide</strong></td>
+<td>Informations sur l'opérateur, la fonction ou le champ sélectionné au milieu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="construire-une-expression">Construire une expression</h3>
+<p>Pour une sélection, l'expression doit aboutir, pour <strong>chaque entité</strong>, à une condition <strong>vraie ou fausse</strong> (on peut aussi utiliser <code>1</code> pour vrai et <code>0</code> pour faux). Seules les entités pour lesquelles la condition est vraie sont sélectionnées.</p>
+<h4 id="les-regles-de-syntaxe-a-retenir">Les règles de syntaxe à retenir</h4>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Se note</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nom de champ</strong></td>
+<td>entre <strong>guillemets doubles</strong> <code>"</code></td>
+<td><code>"nom"</code></td>
+</tr>
+<tr>
+<td><strong>Texte</strong></td>
+<td>entre <strong>apostrophes</strong> <code>'</code></td>
+<td><code>'Alpes-Maritimes'</code></td>
+</tr>
+<tr>
+<td><strong>Nombre</strong></td>
+<td>sans rien</td>
+<td><code>4257</code></td>
+</tr>
+<tr>
+<td><strong>Texte contenant une apostrophe</strong></td>
+<td>apostrophe <strong>doublée</strong></td>
+<td><code>'Val d''Entraunes'</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Majuscules et accents</p>
+<p>Pour un texte, la valeur doit être <strong>exactement</strong> celle de la table (accents, tirets, majuscules).<br />
+<code>'Alpes-Maritimes'</code> fonctionne, <code>'alpes maritimes'</code> non.<br />
+Pour éviter les erreurs de frappe, rechercher la valeur d'un champ dans l'onglet <strong>valeur</strong> et double cliquer pour l'ajouter.</p>
+</div>
+<p>Le symbole <code>%</code> remplace n'importe quelle suite de caractères.<br />
+Le symbole <code>_</code> remplace un seul caractère (exemple un mot qui contient - ou pas - un accent).</p>
+<h4 id="combiner-plusieurs-conditions">Combiner plusieurs conditions</h4>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>Sens</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AND</code></td>
+<td><strong>les deux</strong> conditions doivent être vraies</td>
+<td><code>"cd_ref" = 4257 AND "date_min" &gt;= 2022</code></td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td><strong>au moins une</strong> des conditions doit être vraie</td>
+<td><code>"date_min" &gt;= 2022 OR "cd_ref" = 4257</code></td>
+</tr>
+<tr>
+<td><code>NOT</code></td>
+<td><strong>inverse</strong> une condition</td>
+<td><code>NOT "cd_ref" = 4257</code></td>
+</tr>
+</tbody>
+</table>
+<p>Le premier exemple affiche les observations de l'espèce 4257 <strong>faites depuis 2022</strong>.<br />
+Le deuxième affiche <strong>toutes</strong> les observations depuis 2022, <strong>plus</strong> toutes celles de l'espèce 4257, quelle que soit leur date.<br />
+Le troisième affiche <strong>toutes</strong> les observations qui <strong>ne concernent pas</strong> l'espèce 4257.</p>
+<div class="admonition warning">
+<p class="admonition-title">Utilisez des parenthèses dès que vous mélangez <code>AND</code> et <code>OR</code></p>
+<p>Sans parenthèses, <code>AND</code> est évalué avant <code>OR</code>, ce qui donne souvent un résultat inattendu.<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="p">(</span><span class="ss">"cd_ref"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4257</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="ss">"cd_ref"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4258</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="ss">"date_min"</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2022</span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Une valeur numérique</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+</code></pre></div>
+Ne sélectionne que les entités où la colonne <code>"id"</code> est égale à 10, puisque c'est la seule pour laquelle <code>"id" = 10</code> est vrai.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Un texte exact</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="ss">"nom"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Beuil'</span>
+</code></pre></div>
+Ne sélectionne que les entités où la colonne <code>"nom"</code> contient <strong>exactement</strong> la chaîne de caractères <code>'Beuil'</code>. Les entités nommées <code>'beuil'</code> ou <code>' Beuil '</code> (avec des espaces autour) ne sont pas sélectionnées.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Le plus sûr : ne pas taper les noms de colonnes</p>
+<p>Dépliez l'onglet <strong>Champs et Valeurs</strong> du panneau central et <strong>double-cliquez</strong> sur les colonnes qui vous intéressent : elles sont copiées dans l'éditeur avec la mise en forme appropriée.</p>
+<p>Une fois un champ sélectionné au milieu, le panneau de droite permet d'en vérifier les valeurs :</p>
+<ul>
+<li><strong>Tous uniques</strong> affiche toutes les valeurs possibles du champ dans la couche (à éviter sur les couches très volumineuses) ;</li>
+<li><strong>Echantillon de 10</strong> affiche 10 valeurs que le champ peut prendre.</li>
+</ul>
+</div>
+<p>Avec ces outils, on construit déjà de nombreuses expressions à conditions simples. Pour combiner plusieurs conditions (<code>AND</code>, <code>OR</code>, <code>IN</code>, <code>LIKE</code>...).</p>
+<h3 id="des-expressions-plus-avancees">Des expressions plus avancées</h3>
+<p>L'éditeur permet aussi de construire des expressions plus complexes.</p>
+<div class="admonition example">
+<p class="admonition-title">Comparer deux colonnes entre elles</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="ss">"aire_pastorale"</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="ss">"aire_forest"</span>
+</code></pre></div>
+Ne sélectionne que les entités où la valeur de <code>"aire_pastorale"</code> est supérieure à celle de <code>"aire_forest"</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Utiliser une fonction : <code>$area</code></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="ss">"aire_pastorale"</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="err">$</span><span class="n">area</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+Sélectionne les entités où <code>"aire_pastorale"</code> est supérieure à la moitié de la surface de l'entité, dans l'unité d'aire définie dans le projet (en général le m²). <br />
+Ce paramètre se modifie dans <span class="keys"><kbd>Projet</kbd></span> &gt; <span class="keys"><kbd>Propriétés</kbd></span>, onglet <strong>Général</strong>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title"><code>$area</code> et <code>area</code> sont deux fonctions différentes</p>
+<p><code>$area</code> renvoie la superficie de <strong>chaque entité</strong> de la couche. <code>area</code> est une fonction qui s'applique à <strong>une géométrie donnée</strong>.<br />
+Exemple tiré de la documentation de QGIS :<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">area</span><span class="p">(</span><span class="n">geom_from_wkt</span><span class="p">(</span><span class="s1">'POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'</span><span class="p">))</span>
+</code></pre></div>
+    renvoie <code>8.0</code>.</p>
+</div>
+<p>Il existe de nombreux autres outils à explorer, regroupés par catégories dans le panneau central :</p>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Pour...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chaînes de caractères</strong></td>
+<td>Manipuler du texte : récupérer les premiers ou derniers caractères d'un champ, changer la casse...</td>
+</tr>
+<tr>
+<td><strong>Date et heure</strong></td>
+<td>Gérer l'information temporelle et les champs au format <code>datetime</code></td>
+</tr>
+<tr>
+<td><strong>Géométrie</strong></td>
+<td>Réaliser des opérations géométriques : vérifier des intersections, créer un tampon, obtenir les distances entre entités...</td>
+</tr>
+<tr>
+<td><strong>Conversions</strong></td>
+<td>Changer le type d'une valeur</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Combiner avec une sélection existante</p>
+<p>Dans la fenêtre de sélection par expression, le bouton de validation en bas (<strong>Sélectionner les entités</strong>) est accompagné d'une petite flèche qui déroule d'autres choix : <strong>ajouter à la sélection actuelle</strong>, <strong>retirer de la sélection actuelle</strong>, ou <strong>sélectionner dans la sélection actuelle</strong>. <br />
+Cela permet de construire une sélection en plusieurs étapes.</p>
+</div>
+<hr />
+<h2 id="selectionner-selon-la-position">Sélectionner selon la position</h2>
+<p>Pour sélectionner les entités d'une couche selon leur <strong>position par rapport à une autre couche</strong> (par exemple, les observations situées dans le périmètre d'une zone d'étude), utilisez l'outil de traitement <strong>Sélection par localisation</strong>, disponible dans la barre d'outils :</p>
+<p><img alt="" src="../img/selection_localisation.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sélectionner les entités de</strong></td>
+<td>La couche dans laquelle sélectionner (ex : les observations)</td>
+</tr>
+<tr>
+<td><strong>Où les entités</strong></td>
+<td>La relation spatiale avec la couche de comparaison (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06"/></svg></span> voir ci-dessous)</td>
+</tr>
+<tr>
+<td><strong>En les comparant aux entités de</strong></td>
+<td>La couche de comparaison (ex : zone d'étude)</td>
+</tr>
+<tr>
+<td><strong>Modifier la sélection actuelle par</strong></td>
+<td>Créer une nouvelle sélection, l'ajouter à la sélection actuelle, sélectionner dans la sélection actuelle, ou en retirer</td>
+</tr>
+</tbody>
+</table>
+<p>Les relations spatiales possibles (<strong>prédicats géométriques</strong>) :</p>
+<table>
+<thead>
+<tr>
+<th>Prédicat</th>
+<th>Les entités sélectionnées...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>intersectent</strong></td>
+<td>ont au moins un point en commun avec la couche de comparaison (le choix le plus courant)</td>
+</tr>
+<tr>
+<td><strong>sont à l'intérieur</strong></td>
+<td>sont entièrement dans une entité de comparaison</td>
+</tr>
+<tr>
+<td><strong>contiennent</strong></td>
+<td>contiennent entièrement une entité de comparaison</td>
+</tr>
+<tr>
+<td><strong>touchent</strong></td>
+<td>se touchent par leurs bords, sans se recouvrir</td>
+</tr>
+<tr>
+<td><strong>chevauchent</strong></td>
+<td>se recouvrent en partie</td>
+</tr>
+<tr>
+<td><strong>croisent</strong></td>
+<td>se croisent (lignes)</td>
+</tr>
+<tr>
+<td><strong>sont disjoints</strong></td>
+<td>n'ont rien en commun : tout ce qui est <strong>en dehors</strong></td>
+</tr>
+<tr>
+<td><strong>égalent</strong></td>
+<td>ont exactement la même géométrie</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Choisir le prédicat</p>
+<ul>
+<li>« Les observations <strong>dans</strong> la zone » → <strong>sont à l'intérieur</strong></li>
+<li>« Tout ce qui touche de près ou de loin la zone » → <strong>intersectent</strong></li>
+<li>« Tout ce qui est <strong>hors</strong> de la zone » → <strong>sont disjoints</strong></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Les deux couches doivent être dans un même SCR</p>
+<p>QGIS gère les différences de SCR, mais vérifiez que les couches se superposent bien sur la carte avant de lancer l'outil <a href="../scr/"> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Systèmes de coordonnées</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Autres outils de sélection dans la boîte à outils</p>
+<p>La boîte à outils de traitements propose aussi <strong>Sélection par attribut</strong>, <strong>Sélection dans un rayon</strong> (entités situées à une distance donnée d'une autre couche) et <strong>Sélection aléatoire</strong> (par exemple pour prélever un échantillon).</p>
+</div>
+<hr />
+<h2 id="que-faire-dune-selection">Que faire d'une sélection ?</h2>
+<table>
+<thead>
+<tr>
+<th>Je veux...</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Voir</strong> les entités sélectionnées</td>
+<td><span class="keys"><kbd>Vue</kbd></span> &gt; <span class="keys"><kbd>Zoom sur la sélection</kbd></span> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-j">J</kbd></span>), ou <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span> pour seulement centrer</td>
+</tr>
+<tr>
+<td><strong>Les lire</strong> dans la table</td>
+<td>Table attributaire, menu en bas à gauche : afficher les entités sélectionnées</td>
+</tr>
+<tr>
+<td><strong>Les exporter</strong> dans un nouveau fichier</td>
+<td><a href="#enregistrer-une-selection-dans-une-nouvelle-couche"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06"/></svg></span> ci-dessous : enregistrer dans une nouvelle couche</a></td>
+</tr>
+<tr>
+<td><strong>Les copier</strong></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> dans la table, puis coller dans un tableur ou une autre couche (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>)</td>
+</tr>
+<tr>
+<td><strong>Les modifier</strong> toutes d'un coup</td>
+<td><a href="../calculatrice_champs/">Calculatrice de champs</a>, en cochant l'option pour ne traiter que les entités sélectionnées</td>
+</tr>
+<tr>
+<td><strong>Les mesurer ou les compter</strong></td>
+<td>Titre de la table attributaire (nombre d'entités sélectionnées)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="enregistrer-une-selection-dans-une-nouvelle-couche">Enregistrer une sélection dans une nouvelle couche</h2>
+<p>Une fois la sélection réalisée (avec l'éditeur d'expression ou autrement), vous pouvez créer une couche qui ne contient que les entités sélectionnées :</p>
+<ol>
+<li><span class="keys"><kbd>Clic droit</kbd></span> sur la couche qui contient la sélection &gt; <span class="keys"><kbd>Exporter</kbd></span> &gt; <span class="keys"><kbd>Sauvegarder les entités sous...</kbd></span></li>
+<li>Cochez <strong>Enregistrer uniquement les entités sélectionnées</strong>.</li>
+<li>Cliquez sur les <span class="keys"><kbd>...</kbd></span> pour choisir l'emplacement et le nom du fichier, vérifiez le format et le <a href="../scr/">SCR</a>.</li>
+<li>Validez : la nouvelle couche apparaît dans le projet.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Sans la case cochée, toute la couche est exportée</p>
+<p>Si <strong>Enregistrer uniquement les entités sélectionnées</strong> n'est pas cochée, l'export contient <strong>toutes</strong> les entités, même si une partie seulement est sélectionnée.</p>
+</div>
+<hr />
+<h2 id="modifier-la-couleur-de-selection">Modifier la couleur de sélection</h2>
+<p>Par défaut, les entités sélectionnées sont en <mark>jaune</mark>.<br />
+Sur un fond de carte jaune ou beige (certaines orthophotos, cartes IGN...), la sélection peut être difficile à repérer : vous pouvez changer cette couleur.  </p>
+<p>Cette modification est propre à chaque projet, et prime sur la valeur par défaut.</p>
+<p><span class="keys"><kbd>Projet</kbd></span> &gt; <span class="keys"><kbd>Propriétés</kbd></span> &gt; <span class="keys"><kbd>Général</kbd></span> &gt; <strong>Couleur de la sélection</strong></p>
+<p><img alt="" src="../img/couleur_selection.png" /></p>
+<p>Il est également possible de modifier la couleur <strong>par défaut</strong> de sélection pour tous vos projets :  </p>
+<p><span class="keys"><kbd>Préférences</kbd></span> &gt; <span class="keys"><kbd>Options</kbd></span> &gt; <span class="keys"><kbd>Canevas et légende</kbd></span> &gt; <strong>Couleur de la sélection</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Documentation complète sur les <ins>sélections</ins></p>
+<p>La documentation de QGIS est très complète, n'hésitez pas à la parcourir pour explorer les possibilités : <a href="https://docs.qgis.org/3.44/fr/docs/user_manual/introduction/general_tools.html#sec-selection">Sélections</a>.</p>
+<p>Maintenez <span class="keys"><kbd class="key-control">Ctrl</kbd></span> en cliquant pour que la fenêtre s'ouvre dans un nouvel onglet <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f609.svg" title=":wink:" /></p>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="30 octobre 2026 11:15:40 UTC"><span class="timeago" datetime="2026-10-30T11:15:40+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="30 octobre 2026 11:15:40 UTC">2026-10-30</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="30 octobre 2026 11:15:40 UTC"><span class="timeago" datetime="2026-10-30T11:15:40+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="30 octobre 2026 11:15:40 UTC">2026-10-30</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.prune", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+    
+  </body>
+</html>

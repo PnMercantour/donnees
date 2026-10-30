@@ -1,0 +1,2337 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../parametrage_qgis_pnm/">
+      
+      
+        <link rel="next" href="../wms_wfs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/logo_embleme_pnm_quadri_vert.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Ressources PNM - Documentation et Tutos sur les données géographiques du Parc national du Mercantour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#acceder-aux-ressources-du-pnm" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-header__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ressources PNM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Mode Sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode Sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Page d'accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bd_pnm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  BD_PNM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projets_qgis/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projets Qgis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qgis_plugins/plugins_list/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Qgis plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" class="md-nav__button md-logo" aria-label="Documentation et Tutos sur les données géographiques du Parc national du Mercantour" data-md-component="logo">
+      
+  <img src="../img/logo_embleme_pnm_quadri_vert.jpg" alt="logo">
+
+    </a>
+    Documentation et Tutos sur les données géographiques du Parc national du Mercantour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page d'accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bd_pnm/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BD_PNM
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../projets_qgis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projets Qgis
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../qgis_plugins/plugins_list/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qgis plugins
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parametrage_qgis_pnm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paramètres QGIS au PNM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accéder aux ressources du PNM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accéder aux ressources du PNM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#avant-de-commencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avant de commencer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deposer-les-certificats-sur-votre-poste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déposer les certificats sur votre poste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecter-qgis-a-la-bd_pnm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecter QGIS à la BD_PNM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecter QGIS à la BD_PNM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-ne-voyez-pas-service-projets-dans-le-menu-deroulant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous ne voyez pas "service projets" dans le menu déroulant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-voyez-service-projets-dans-le-menu-deroulant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous voyez "service projets" dans le menu déroulant
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charger-un-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charger un projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charger-une-couche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charger une couche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charger une couche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facultatif-filtrer-les-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facultatif : Filtrer les données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrer-une-couche-localement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer une couche localement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wms_wfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonds de carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Système de coordonnées
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_plugin_via_depot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installer un plugin QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prise en main
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prise en main
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naviguer dans QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_modifier_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer ou modifier un projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_modifier_couche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer ou modifier une couche
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Symbologie & Etiquettes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pour aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pour aller plus loin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empaqueter_un_projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partager un projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sélection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calculatrice_champs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculatrice de champs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outils_traitement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils de traitement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cartographie
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cartographie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creer_carte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Créer une carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generer_un_atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Génération d'atlas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utiliser_un_masque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utiliser un masque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ressources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bonnes_pratiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonnes pratiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taxrefmatch_cdnom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxrefmatch > cd_nom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#avant-de-commencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avant de commencer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deposer-les-certificats-sur-votre-poste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déposer les certificats sur votre poste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecter-qgis-a-la-bd_pnm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecter QGIS à la BD_PNM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecter QGIS à la BD_PNM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-ne-voyez-pas-service-projets-dans-le-menu-deroulant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous ne voyez pas "service projets" dans le menu déroulant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-voyez-service-projets-dans-le-menu-deroulant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous voyez "service projets" dans le menu déroulant
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charger-un-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charger un projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charger-une-couche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charger une couche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charger une couche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facultatif-filtrer-les-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facultatif : Filtrer les données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrer-une-couche-localement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer une couche localement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Page d'accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tutos
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../parametrage_qgis_pnm/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Installation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="acceder-aux-ressources-du-pnm">Accéder aux ressources du PNM</h1>
+<p>L'accès à la base de données du parc est sécurisée par des certificats. QGIS ne peut pas, sans action de votre part, se connecter à la base de données du parc. </p>
+<div class="admonition tip">
+<p class="admonition-title">Pourquoi un certificat plutôt qu'un simple mot de passe ?</p>
+<p>La base contient des données sensibles. Le certificat garantit que seul un poste autorisé peut s'y connecter, et sa durée de vie limitée réduit le risque si un fichier venait à être compromis.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">À renouveler chaque année</p>
+<p>Les certificats ont une durée de validité limitée pour des raisons de sécurité. Passé ce délai, la connexion à la base échoue tant que vous n'avez pas réinstallé un nouveau jeu de certificats, selon la même procédure.</p>
+</div>
+<hr />
+<h2 id="avant-de-commencer">Avant de commencer</h2>
+<ul>
+<li>
+<p>Vous avez reçu un fichier <strong>.zip</strong> permettant le paramétrage de la connexion de la part du service informatique.</p>
+</li>
+<li>
+<p>Vous êtes bien connecté·e sur votre session.</p>
+</li>
+</ul>
+<h2 id="deposer-les-certificats-sur-votre-poste">Déposer les certificats sur votre poste</h2>
+<ul>
+<li>Télécharger le fichier <strong>.zip</strong> </li>
+<li>Dézipper le fichier reçu dans un dossier (que vous pouvez retrouver facilement) </li>
+<li>
+<p>Aller dans le dossier <code>\AppData</code>. Deux façons de faire sont possibles :</p>
+<ul>
+<li><strong>Recommandée</strong> : Appuyer sur  <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> (la touche <span class="keys"><kbd class="key-windows">Win</kbd></span> se trouve entre <span class="keys"><kbd class="key-control">Ctrl</kbd></span> et <span class="keys"><kbd class="key-alt">Alt</kbd></span>) puis écrivez <code>%AppData%</code></li>
+<li>
+<p>Naviguer manuellement dans l'explorateur de fichiers jusqu'à <code>C:\Users\ *[nomdelasession]* \AppData\Roaming</code></p>
+<p><img alt="" src="../img/appdata.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Vérifier si un dossier <span class="keys"><kbd>postgresql</kbd></span> existe dans <code>..\AppData\Roaming</code>  </p>
+<ul>
+<li>Sinon, le créer.</li>
+</ul>
+</li>
+<li>
+<p>Copier dans ce dossier tous les fichiers du zip à votre nom, y compris - <ins>et surtout</ins> - le fichier masqué <strong>.pg_service.conf</strong>.  </p>
+<ul>
+<li>S'ils existent déjà, les remplacer.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Fichier invisible dans l'explorateur</p>
+<p><strong>.pg_service.conf</strong> commence par un point, ce qui le rend masqué par défaut sous Windows. <br />
+Si vous ne le voyez pas dans le zip dézippé, activez l'affichage des fichiers cachés dans la fenêtre du dossier &amp; fichiers : <strong>Affichage &gt; Éléments masqués dans l'explorateur de fichiers</strong>.</p>
+</div>
+<h2 id="connecter-qgis-a-la-bd_pnm">Connecter QGIS à la BD_PNM</h2>
+<ul>
+<li>
+<p>Lancer Qgis</p>
+</li>
+<li>
+<p>Ouvrir le <strong>gestionnaire de sources de données</strong> : onglet du haut <span class="keys"><kbd>Couche</kbd></span> &gt; <span class="keys"><kbd>Gestionnaire de source de données</kbd></span> ou tout simplement <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span></p>
+<p><img alt="" src="../img/gestionnaire_sources_pg.png" /></p>
+</li>
+<li>
+<p>Cliquer sur <span class="keys"><kbd>PostgreSQL</kbd></span> dans la barre de gauche</p>
+</li>
+</ul>
+<h3 id="si-vous-ne-voyez-pas-service-projets-dans-le-menu-deroulant">Si vous ne voyez pas "service projets" dans le menu déroulant</h3>
+<ul>
+<li>
+<p>Télécharger le fichier de paramétrage en faisant <span class="keys"><kbd>clic droit</kbd></span> &gt; <span class="keys"><kbd>Enregistrer la cible du lien sous</kbd></span> sur le lien suivant :  <a href="https://raw.githubusercontent.com/PnMercantour/donnees/main/docs/tutos/ressources/services_postgresql.xml">services postgresql.xml</a></p>
+</li>
+<li>
+<p>Cliquer sur <strong>Charger</strong> à droite de la fenêtre</p>
+</li>
+<li>
+<p>Sélectionner le fichier <code>services_postgresql.xml</code> que vous avez téléchargé. </p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">La liste des tables et schémas accessibles devrait alors apparaître</p>
+<p>Vous êtes prêt à accéder aux ressources du Parc : <a href="#charger-un-projet"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06"/></svg></span> charger un projet, une couche ...</a></p>
+</div>
+<h3 id="si-vous-voyez-service-projets-dans-le-menu-deroulant">Si vous voyez "service projets" dans le menu déroulant</h3>
+<ul>
+<li>
+<p>Sélectionner <strong>Service projets</strong> dans le menu déroulant en haut</p>
+</li>
+<li>
+<p>Cliquer sur <strong>Connecter</strong></p>
+</li>
+<li>
+<p>Vous avez maintenant accès à l'ensemble des schémas et projets de la base des données pour lesquels vos droits ont été définis.</p>
+</li>
+</ul>
+<div class="admonition failure">
+<p class="admonition-title">Si un message d'erreur apparaît à la tentative de connexion à <strong>Service projets</strong></p>
+<p>Contactez le SI (<code>si@mercantour-parcnational.fr</code>), votre certificat est surement arrivé à expiration.  </p>
+</div>
+<hr />
+<h2 id="charger-un-projet">Charger un projet</h2>
+<div class="admonition tip">
+<p class="admonition-title">Pourquoi charger un projet depuis la base ?</p>
+<p>La base de données du Parc ne contient pas que des données : elle peut aussi stocker des <a href="../../projets_qgis/">projets QGIS</a>, c'est-à-dire la <strong>mise en page</strong> et les <strong>options de représentation</strong> d'un ensemble de couches.</p>
+<p>Les agents disposent ainsi de cartes <strong>"prêtes à l'emploi"</strong> pour différentes thématiques, en plus des données brutes. Tous les agents ouvrent le même projet et peuvent partager un même support de travail.</p>
+</div>
+<ul>
+<li>Dans la barre de menu, cliquer sur <span class="keys"><kbd>Projet</kbd></span></li>
+<li>
+<p>Puis <span class="keys"><kbd>Ouvrir depuis</kbd></span> &gt; <span class="keys"><kbd>PostgreSQL</kbd></span></p>
+<p><img alt="" src="../img/charger_projet.png" /></p>
+</li>
+<li>
+<p>Choisir la connexion <strong>Service projets</strong></p>
+</li>
+<li>Sélectionner le <strong>schéma</strong> qui vous intéresse : les projets sont regroupés par thème.</li>
+<li>
+<p>Puis sélectionner le <strong>projet</strong> souhaité.</p>
+<p><img alt="" src="../img/charger_projet_postgresql_schema.png" /></p>
+</li>
+<li>
+<p>Si vous ne voyez aucun projet une fois le schéma sélectionné, c'est qu'il n'y a pas de projet stocké dans ce schéma.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Remplacer les couches manquantes</p>
+<p>Il est possible qu'un projet QGIS fasse référence à des données locales ou qui ont été supprimées / déplacées.<br />
+Cliquez sur <strong>Conserver les couches inutilisables</strong>.  </p>
+<p>Vous pouvez modifier le chemin vers lequel la couche fait référence : <a href="../FAQ/#traiter-les-couches-inutilisables-à-louverture-dun-projet--certaines-couches-ne-saffichent-pas">tuto ici</a></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Quel projet ouvrir ?</p>
+<p>La page <a href="../../projets_qgis/">Projets QGIS</a>  décrit chaque projet : à quoi il sert et comment l'utiliser.</p>
+<p>Plus de détails sur les projets <a href="../creer_modifier_projet/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Créer/Modifier un projet</a></p>
+</div>
+<hr />
+<h2 id="charger-une-couche">Charger une couche</h2>
+<div class="admonition tip">
+<p class="admonition-title">Pourquoi charger une couche de la base de données ?</p>
+<p>La base de données du Parc contient des données organisées en <strong>tables</strong>, auxquelles les agents peuvent accéder directement depuis QGIS.  </p>
+<p>Cela évite de manipuler des copies de fichiers qui deviendraient vite obsolètes : vous travaillez toujours sur la donnée de référence.</p>
+</div>
+<ul>
+<li>
+<p>Ouvrir le <strong>gestionnaire de sources de données</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span> ou en cliquant sur l'onglet <span class="keys"><kbd>Couche</kbd></span> de la barre de menu puis <span class="keys"><kbd>Gestionnaire de sources de données</kbd></span>)</p>
+<p><img alt="" src="../img/gestionnaire_sources.png" /></p>
+</li>
+<li>
+<p>Aller dans l'onglet <span class="keys"><kbd>PostgreSQL</kbd></span> à gauche</p>
+</li>
+<li>Dans le menu déroulant <span class="keys"><kbd>Connexions</kbd></span> Sélectionner <strong>Service projets</strong></li>
+<li>Cliquer sur <span class="keys"><kbd>Connecter</kbd></span></li>
+</ul>
+<p>S'affichent les différents <a href="../glossaire/#schema">schémas</a> dans lesquels vous pouvez trouver les données.<br />
+En les dépliant vous affichez les couches, qui ont des noms et des commentaires permettant d'identifier les données qu'elles contiennent. </p>
+<p><img alt="" src="../img/ajouter_couche.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">Tous les schémas ne sont pas accessibles à tous les agents</p>
+<p>Certains contiennent des données sensibles. Si vous avez besoin d'un schéma qui ne s'affiche pas, contactez les agents référents sur les données qui vous intéressent.</p>
+</div>
+<h3 id="facultatif-filtrer-les-donnees"><ins>Facultatif</ins> : Filtrer les données</h3>
+<p>Certaines tables (comme la table "detail" du schéma "geonature_synthese") sont <ins><strong>très</strong></ins> lourdes.<br />
+Afin d'éviter de saturer votre machine il est possible d'y appliquer un filtre en cliquant sur l'option <span class="keys"><kbd>Filtrer</kbd></span>, avant d'ajouter la couche à votre projet.<br />
+Ce filtre sera appliqué quand la table en question sera chargée en cliquant sur <span class="keys"><kbd>Ajouter</kbd></span>. </p>
+<p>Pour plus de détails sur les filtres : <a href="../filtres/">tutoriel sur les filtres en cliquant ici</a>.</p>
+<h3 id="enregistrer-une-couche-localement">Enregistrer une couche localement</h3>
+<p>Si vous souhaitez éditer une couche, il vous faudra copier les données de la base de données sur votre machine.<br />
+Pour cela : </p>
+<ul>
+<li><span class="keys"><kbd>clic droit</kbd></span> sur la couche à sauvegarder </li>
+<li><span class="keys"><kbd>Exporter</kbd></span> &gt; <span class="keys"><kbd>Sauvegarder les entités sous</kbd></span></li>
+<li>Cliquer sur les <span class="keys"><kbd>...</kbd></span> naviguer sur l'emplacement de votre machine ou vous souhaitez enregistrer la couche.</li>
+</ul>
+<p>Une fois la nouvelle couche enregistrée, elle devrait apparaitre dans le projet. Vous pourrez vérifier qu'il s'agit bien d'une copie locale en vérifiant son emplacement dans ses propriétés (<span class="keys"><kbd>clic droit</kbd></span> &gt; <span class="keys"><kbd>Propriétés</kbd></span> &gt; <span class="keys"><kbd>Information</kbd></span>).<br />
+Cette nouvelle couche est éditable, sans impact sur les données de la base de données. </p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="30 octobre 2026 11:15:40 UTC"><span class="timeago" datetime="2026-10-30T11:15:40+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="30 octobre 2026 11:15:40 UTC">2026-10-30</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="30 octobre 2026 11:15:40 UTC"><span class="timeago" datetime="2026-10-30T11:15:40+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="30 octobre 2026 11:15:40 UTC">2026-10-30</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.prune", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+    
+  </body>
+</html>
