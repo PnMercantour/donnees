@@ -113,7 +113,7 @@ Si plusieurs habitats sont présents dans un même polygone, on aura plusieurs l
 
 
 !!! info "Source du dictionnaire"
-    Le dictionnaire `dico_typo_mer` est issu de la typologie des habitats du Parc national du Mercantour : Offerhaus B., Van Es J., Frachon C., Genis J-M., 2012. *Étude des habitats naturels du Parc National du Mercantour (Alpes-Maritimes et Alpes-de-Haute-Provence). Partie 1 : Typologie des habitats.* CBNMED, CBNA, ONF : 249 p. ([télécharger le PDF](habitats/pdf/Typologie_habitats_PNMercantour_12042013R.pdf), version compressée).
+    Le dictionnaire `dico_typo_mer` est issu de la typologie des habitats du Parc national du Mercantour : Offerhaus B., Van Es J., Frachon C., Genis J-M., 2012. *Étude des habitats naturels du Parc National du Mercantour (Alpes-Maritimes et Alpes-de-Haute-Provence). Partie 1 : Typologie des habitats.* CBNMED, CBNA, ONF : 249 p. ([télécharger le PDF](habitats/pdf/Typologie_habitats_PNMercantour_12042013R.pdf)).
 
     Cette typologie est la base des différents rattachements (phytosociologie, Corine Biotopes, EUNIS, EUR27) et de la définition des enjeux de conservation.
 
