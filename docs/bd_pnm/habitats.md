@@ -31,6 +31,10 @@ Le schéma est constitué de 4 tables et de 3 vues.
 Les quatre tables du schéma (extrait des colonnes). Un polygone a au plus une ligne de métadonnées et autant de lignes d'occurrences que d'habitats présents.
 ///
 
+!!! Note 
+    - PK = Primary Key (identifiant unique d'une donnée dans une table) 
+    - FK = Foreign Key (identifiant liant deux données de deux tables différents)
+
 ### Tables
 
 |Nom de la table|Description|
@@ -38,15 +42,15 @@ Les quatre tables du schéma (extrait des colonnes). Un polygone a au plus une l
 |t_releve_habitat|Un polygone cartographié : sa géométrie, le site, la date, l'observateur et l'organisme.|
 |t_releve_metadonnee|Les informations complémentaires sur le polygone (méthode, gestion, altitude, enjeu flore...). Au plus une ligne par polygone.|
 |t_habitat_occurrence|Un habitat présent sur un polygone, avec le pourcentage du polygone qu'il couvre (`pour_hab`). C'est la table à interroger pour savoir *quels habitats* se trouvent *où*.|
-|dico_typo_mer|Le dictionnaire des habitats : un `typo_mer` par ligne, avec sa description.|
+|dico_typo_mer|Le dictionnaire des habitats : un `typo_mer` par ligne, avec sa description. Il est issu de la [typologie des habitats du Parc](habitats/pdf/Typologie_habitats_PNMercantour_12042013R.pdf) (Offerhaus et al., 2012).|
 
 ### Vues
 
-Les vues recomposent les tables pour la cartographie et l'analyse. Elles sont en lecture seule et sont celles utilisées par le [projet QGIS](../projets_qgis/habitats.md).
+Les vues recomposent les tables pour la visualisation et l'analyse. Elles sont en lecture seule et sont celles utilisées par le [projet QGIS](../projets_qgis/habitats.md).
 
 |Nom de la vue|Une ligne par|Description|
 |:--:|:--:|:--|
-|v_releve_dominant|polygone|L'habitat dominant de chaque polygone, la composition complète de la mosaïque, la part Natura 2000 et les métadonnées. Couche principale du projet.|
+|v_releve_dominant|polygone|L'habitat dominant de chaque polygone, la composition complète de la mosaïque, la part d'habitat Natura 2000 et les métadonnées. Couche principale du projet.|
 |v_occurrence_carto|habitat sur un polygone|Chaque habitat avec la géométrie de son polygone et sa surface. Permet de cartographier un habitat précis, **même quand il n'est pas dominant**.|
 |v_stats_habitat|habitat de la typologie|Nombre de polygones et surface de chaque habitat, y compris les habitats jamais observés. Sans géométrie.|
 
@@ -72,10 +76,10 @@ Les vues recomposent les tables pour la cartographie et l'analyse. Elles sont en
 | :--- | :---: | :--- |
 | releve_id | (PK, FK) uuid | Polygone concerné (`t_releve_habitat.id`) |
 | natu_obs, unit_vege, echelle, grand_type, legende | text | Informations de méthode : nature de l'observation, unité de végétation, échelle, grand type, légende |
-| gestion, gestion_b | text | Informations sur la gestion du milieu |
-| alt_obs, alt_grille | text | Altitude, observée ou issue de la grille |
+| gestion, gestion_b | text | Préconisations sur la gestion du milieu |
+| alt_obs, alt_grille | text | alteration, observée ou issue de la grille |
 | enjeu_flore | text | Enjeu flore |
-| ec_exp, comm_exp, grille_ec, note_ec | text | Informations issues de la couche d'origine : expertise, commentaire, grille et note |
+| ec_exp, comm_exp, grille_ec, note_ec | text | Informations issues de la couche d'origine : état de conservation, commentaire, grille et note |
 
 #### t_habitat_occurrence
 
@@ -84,10 +88,10 @@ Les vues recomposent les tables pour la cartographie et l'analyse. Elles sont en
 | id | (PK) uuid | Identifiant de l'occurrence |
 | releve_id | (FK) uuid | Polygone sur lequel l'habitat est présent (`t_releve_habitat.id`) |
 | typo_mer_id | (FK) int8 | Habitat présent (`dico_typo_mer.code_typo_mer`) |
-| pour_hab | numeric(5,2) | Pourcentage du polygone couvert par l'habitat, de 0 à 100. La somme sur un polygone devrait être proche de 100, sans que ce soit imposé : les données de terrain ne sont pas toujours exactes. Peut être vide. |
+| pour_hab | numeric(5,2) | Pourcentage du polygone couvert par l'habitat, de 0 à 100. La somme sur un polygone devrait être proche de 100, sans que ce soit imposé : les données de terrain ne sont pas toujours exactes. Ne peut pas être vide. |
 | enjeu_pnm | text | Enjeu propre à cette occurrence (ancienne colonne `ENJEU_PNM_i` de la couche d'origine) |
 
-Un même habitat ne peut figurer qu'une fois sur un polygone (contrainte d'unicité sur `releve_id` et `typo_mer_id`).
+Si plusieurs habitats sont présents dans un même polygone, on aura plusieurs lignes pour ce polygone dans cette table. Un même habitat ne peut figurer qu'une fois sur un polygone (contrainte d'unicité sur `releve_id` et `typo_mer_id`).
 
 #### dico_typo_mer
 
@@ -102,10 +106,17 @@ Un même habitat ne peut figurer qu'une fois sur un polygone (contrainte d'unici
 | code_cb, lib_cb | text | Code et libellé Corine Biotopes |
 | code_eunis, lib_eunis | text | Code et libellé EUNIS |
 | code_eur27, lib_eur27 | text | Code et libellé de l'habitat d'intérêt communautaire (Natura 2000, EUR27). Vides si l'habitat n'est pas concerné. |
-| statut_eur27 | text | `IC` : habitat d'intérêt communautaire, `PR` : habitat prioritaire, `NC` : non concerné |
-| enjeu | text | Enjeu associé à l'habitat dans la typologie : `Tres fort`, `Fort`, `Moyen`, `Faible` ou `Non defini` |
+| statut_eur27 | text | `IC` : habitat d'intérêt communautaire, `PR` : habitat prioritaire, `NC` : Non communautaire |
+| enjeu | text | Enjeu de conservation de l'habitat, spécifique au Mercantour : `Tres fort`, `Fort`, `Moyen`, `Faible` ou `Non defini`. Il a été défini par les CBN dans la [typologie des habitats du Parc](habitats/pdf/Typologie_habitats_PNMercantour_12042013R.pdf) (Offerhaus et al., 2012). |
 | fiche_merc | text | Fiche descriptive de l'habitat, quand elle existe |
 | code_guide_habitats_alpes | text | Code de l'habitat dans le guide des habitats naturels et semi-naturels des Alpes |
+
+
+!!! info "Source du dictionnaire"
+    Le dictionnaire `dico_typo_mer` est issu de la typologie des habitats du Parc national du Mercantour : Offerhaus B., Van Es J., Frachon C., Genis J-M., 2012. *Étude des habitats naturels du Parc National du Mercantour (Alpes-Maritimes et Alpes-de-Haute-Provence). Partie 1 : Typologie des habitats.* CBNMED, CBNA, ONF : 249 p. ([télécharger le PDF](habitats/pdf/Typologie_habitats_PNMercantour_12042013R.pdf), version compressée).
+
+    Cette typologie est la base des différents rattachements (phytosociologie, Corine Biotopes, EUNIS, EUR27) et de la définition des enjeux de conservation.
+
 
 #### v_releve_dominant
 

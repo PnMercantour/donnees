@@ -22,7 +22,7 @@ Le projet est organisé en trois groupes. Le groupe Habitats est mutuellement ex
 |:--|:--|:--|:--:|
 |Habitats|**Habitat dominant (par groupe)**|Un polygone, une couleur par grand groupe d'habitats (forêts, fourrés, landes, pelouses, mégaphorbiaies, zones humides, friches, milieux rocheux). Les polygones en mosaïque portent un `+`.|oui|
 |Habitats|**Enjeu patrimonial (habitat dominant)**|Les polygones colorés selon l'enjeu de leur habitat dominant, du plus clair (faible) au rouge sombre (très fort). Gris : enjeu non défini.|non|
-|Habitats|**Natura 2000**|Seulement les polygones qui portent au moins un habitat d'intérêt communautaire ou prioritaire. Rouge : un habitat **prioritaire** est présent. Bleu foncé : habitats Natura 2000 sur la moitié ou plus du polygone. Bleu clair : moins de la moitié, ou part inconnue.|non|
+|Habitats|**Natura 2000**|Seulement les polygones qui portent au moins un habitat d'intérêt communautaire ou prioritaire. Hachuré : un habitat **prioritaire** est présent. Bleu foncé : habitats d'intérêt communautaire sur la moitié ou plus du polygone. Bleu clair : moins de la moitié, ou part inconnue.|non|
 |Habitats|**Tous les habitats (un par polygone)**|Un habitat sur un polygone = une entité, avec la géométrie du polygone. Les polygones en mosaïque sont donc superposés : cette couche sert à **filtrer** un habitat précis.|non|
 |Tables|**Statistiques par habitat**|Nombre de polygones et surface de chaque habitat de la typologie.|—|
 |Tables|**Typologie des habitats**|Le dictionnaire des habitats (intitulés, correspondances Corine Biotopes, EUNIS, EUR27).|—|
