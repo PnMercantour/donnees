@@ -14,17 +14,20 @@ Il n'a vocation qu'à être consulté : les couches sont en lecture seule.
 !!! info "Un polygone peut porter plusieurs habitats"
     Chaque polygone est dessiné **une seule fois** et coloré selon son habitat **dominant** (celui qui couvre la plus grande part du polygone). Quand le polygone porte plusieurs habitats, l'étiquette du code est suivie d'un `+`, et la liste complète des habitats avec leurs pourcentages s'affiche dans le formulaire d'identification. Pour voir **tous** les habitats, y compris ceux qui ne sont pas dominants, utilisez la couche « Tous les habitats ».
 
+!!! info "Les zones humides sont intégrées"
+    Les vues du projet regroupent les relevés du schéma `habitats` et les habitats du schéma `eau_zh`, lorsqu'ils correspondent à la typologie du Mercantour. Les couches cartographiques et les statistiques couvrent donc les deux sources. Le champ `source_donnee` permet de les distinguer (`habitats` ou `eau_zh`).
+
 ### Les couches
 
 Le projet est organisé en trois groupes. Le groupe Habitats est mutuellement exclusif, lorsqu'on affiche une couche de ce groupe les autres couches disparaîssent.
 
 |Groupe|Couche|Ce qu'elle montre|Affichée au départ|
 |:--|:--|:--|:--:|
-|Habitats|**Habitat dominant (par groupe)**|Un polygone, une couleur par grand groupe d'habitats (forêts, fourrés, landes, pelouses, mégaphorbiaies, zones humides, friches, milieux rocheux). Les polygones en mosaïque portent un `+`.|oui|
+|Habitats|**Habitat dominant (par groupe)**|Un polygone, une couleur par grand groupe d'habitats (forêts, fourrés, landes, pelouses, mégaphorbiaies, zones humides, friches, milieux rocheux), avec les relevés `habitats` et les zones humides `eau_zh`. Les polygones en mosaïque portent un `+`.|oui|
 |Habitats|**Enjeu patrimonial (habitat dominant)**|Les polygones colorés selon l'enjeu de leur habitat dominant, du plus clair (faible) au rouge sombre (très fort). Gris : enjeu non défini.|non|
 |Habitats|**Natura 2000**|Seulement les polygones qui portent au moins un habitat d'intérêt communautaire ou prioritaire. Hachuré : un habitat **prioritaire** est présent. Bleu foncé : habitats d'intérêt communautaire sur la moitié ou plus du polygone. Bleu clair : moins de la moitié, ou part inconnue.|non|
-|Habitats|**Tous les habitats (un par polygone)**|Un habitat sur un polygone = une entité, avec la géométrie du polygone. Les polygones en mosaïque sont donc superposés : cette couche sert à **filtrer** un habitat précis.|non|
-|Tables|**Statistiques par habitat**|Nombre de polygones et surface de chaque habitat de la typologie.|—|
+|Habitats|**Tous les habitats (un par polygone)**|Un habitat sur un polygone = une entité, avec la géométrie du polygone. Les polygones en mosaïque sont donc superposés : cette couche sert à **filtrer** un habitat précis, quelle que soit sa source.|non|
+|Tables|**Statistiques par habitat**|Nombre de polygones et surface de chaque habitat de la typologie, toutes sources confondues.|—|
 |Tables|**Typologie des habitats**|Le dictionnaire des habitats (intitulés, correspondances Corine Biotopes, EUNIS, EUR27).|—|
 |Fonds de carte|**Plan IGN**, **Orthophotos**|Fonds de la Géoplateforme de l'IGN. Une connexion internet est nécessaire.|Plan IGN|
 
@@ -61,6 +64,10 @@ Pour afficher plusieurs habitats d'un même groupe, filtrez sur le groupe (les l
 ```sql
 "groupe_mercantour" = 'Zones humides'
 ```
+Pour ne voir que les occurrences d'une source :
+```sql
+"source_donnee" = 'eau_zh'
+```
 
 #### Chercher un habitat par son nom
 
@@ -84,6 +91,7 @@ Dans la couche **Habitat dominant (par groupe)**, une sélection par expression 
 
 - Les surfaces (`surface_ha`) sont calculées sur la carte, en Lambert-93 : elles ne tiennent pas compte du relief.
 - La somme des pourcentages d'un polygone n'est pas toujours égale à 100, et certains habitats n'ont pas de pourcentage : leur surface ne peut alors pas être calculée.
+- Les habitats de `eau_zh` ne sont intégrés que lorsqu'une correspondance avec `dico_typo_mer` existe. Leur date d'observation est représentée au 1er janvier de l'année d'inventaire ; les autres métadonnées de relevé ne sont pas disponibles dans cette source.
 - La couche « Enjeu patrimonial » montre l'enjeu de l'habitat **dominant**. Un polygone dont l'habitat dominant est d'enjeu moyen peut contenir un habitat d'enjeu plus élevé sur une plus petite part : la couche « Natura 2000 » ou le formulaire permettent de le repérer.
 
 ---
@@ -106,4 +114,4 @@ Les étapes de mise en forme (étiquettes, info-bulles, formulaires) sont isolé
 Comme les autres projets, il est enregistré dans la base de données avec **Projet**, **Enregistrer vers**, **PostgreSQL...**, dans le schéma `habitats`, sous le nom `Habitats du PNM`. Il est ainsi chargé comme les autres projets du Parc ([voir comment charger un projet](../tutos/installer_certificats_base_de_donnees.md#charger-un-projet)).
 
 !!! warning "Droits d'accès"
-    Les vues du schéma n'ont aucun droit par défaut. Pour qu'un projet s'ouvre chez les agents, le rôle de lecture concerné doit avoir le droit `SELECT` sur les quatre tables et les trois vues (voir la fin de [vues.sql](../bd_pnm/habitats/sql/vues.sql)).
+    Les vues du schéma n'ont aucun droit par défaut. Pour que le projet s'ouvre chez les agents, le rôle de lecture concerné doit pouvoir lire les vues et la table `dico_typo_mer` utilisée directement par le projet. Le propriétaire des vues doit également avoir accès aux sources `habitats` et aux tables `eau_zh.zh`, `eau_zh.habitat`, `eau_zh.ref_habitat` et `eau_zh.site`. Voir la fin de [vues.sql](../bd_pnm/habitats/sql/vues.sql) pour l'exemple d'attribution des droits sur les vues.

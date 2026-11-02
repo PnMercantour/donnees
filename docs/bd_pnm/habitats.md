@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce schéma contient la **cartographie des habitats naturels** du Parc national du Mercantour. Il rassemble des cartographies réalisées lors de plusieurs projets, fusionnées dans une même couche (`t_fusion_habitats_vegetation`), puis réorganisées ici sous la forme d'une base de données relationnelle.
+Ce schéma contient la **cartographie des habitats naturels** du Parc national du Mercantour. Il rassemble des cartographies réalisées lors de plusieurs projets, fusionnées dans une même couche (`t_fusion_habitats_vegetation`), puis réorganisées ici sous la forme d'une base de données relationnelle. Les vues de visualisation intègrent également les habitats des zones humides du schéma `eau_zh` ; ces données restent stockées dans leur schéma d'origine et ne sont pas copiées dans les tables `habitats`.
 
 Chaque **polygone** correspond à un secteur observé. Un polygone peut porter plusieurs habitats (une *mosaïque*) : dans la couche d'origine, il pouvait en porter jusqu'à quatre ; le schéma actuel n'impose plus de limite.
 
@@ -24,7 +24,7 @@ Vous trouverez la documentation du projet [ici](../projets_qgis/habitats.md).
 
 ## Tables remarquables
 
-Le schéma est constitué de 4 tables et de 3 vues.
+Le schéma contient 4 tables et 3 vues. Les vues combinent les tables `habitats` avec les données des zones humides (`eau_zh.zh`, `eau_zh.habitat`, `eau_zh.ref_habitat` et `eau_zh.site`) et le dictionnaire `habitats.dico_typo_mer`.
 
 ![Modèle relationnel du schéma habitats](./img/habitats_modele.png)
 /// caption
@@ -50,9 +50,9 @@ Les vues recomposent les tables pour la visualisation et l'analyse. Elles sont e
 
 |Nom de la vue|Une ligne par|Description|
 |:--:|:--:|:--|
-|v_releve_dominant|polygone|L'habitat dominant de chaque polygone, la composition complète de la mosaïque, la part d'habitat Natura 2000 et les métadonnées. Couche principale du projet.|
-|v_occurrence_carto|habitat sur un polygone|Chaque habitat avec la géométrie de son polygone et sa surface. Permet de cartographier un habitat précis, **même quand il n'est pas dominant**.|
-|v_stats_habitat|habitat de la typologie|Nombre de polygones et surface de chaque habitat, y compris les habitats jamais observés. Sans géométrie.|
+|v_releve_dominant|polygone|L'habitat dominant de chaque polygone, la composition complète de la mosaïque, la part d'habitat Natura 2000 et les métadonnées. Regroupe les relevés `habitats` et les zones humides `eau_zh`. Couche principale du projet.|
+|v_occurrence_carto|habitat sur un polygone|Chaque habitat avec la géométrie de son polygone, sa surface et sa source (`habitats` ou `eau_zh`). Permet de cartographier un habitat précis, **même quand il n'est pas dominant**.|
+|v_stats_habitat|habitat de la typologie|Nombre de polygones et surface de chaque habitat, toutes sources confondues, y compris les habitats jamais observés. Sans géométrie.|
 
 
 ## Description des colonnes remarquables
@@ -80,6 +80,12 @@ Les vues recomposent les tables pour la visualisation et l'analyse. Elles sont e
 | alt_obs, alt_grille | text | alteration, observée ou issue de la grille |
 | enjeu_flore | text | Enjeu flore |
 | ec_exp, comm_exp, grille_ec, note_ec | text | Informations issues de la couche d'origine : état de conservation, commentaire, grille et note |
+
+#### Données des zones humides intégrées aux vues
+
+Les vues associent les polygones de `eau_zh.zh` aux occurrences de `eau_zh.habitat`. Le type d'habitat est rapproché du dictionnaire du Mercantour via `eau_zh.ref_habitat.id` et `dico_typo_mer.cor_typo_zh`. Seuls les habitats ayant une correspondance dans `dico_typo_mer` sont intégrés.
+
+Les identifiants des polygones et occurrences issus de `eau_zh` sont des UUID déterministes calculés à partir de leurs identifiants source (`md5('zh:' || id)` et `md5('zhhab:' || id)`). Ils permettent aux deux sources de coexister dans les vues ; ce ne sont pas les identifiants d'origine. Pour ces polygones, le site vient de `eau_zh.site`, la date est le 1er janvier de l'année d'inventaire, et l'état de conservation `etat_zh` alimente `ec_exp` (`bon` → `Bon Etat`, `moyen` → `Etat Altere`, `mauvais` → `Etat Degrade`, sinon `Non Evalue`). Les autres métadonnées propres aux relevés habitats restent vides.
 
 #### t_habitat_occurrence
 
@@ -134,6 +140,7 @@ Si plusieurs habitats sont présents dans un même polygone, on aura plusieurs l
 | prioritaire | boolean | Vrai si au moins un habitat prioritaire (`PR`) est présent |
 | surface_ha | numeric | Surface du polygone, en hectares |
 | natu_obs, unit_vege, echelle... | text | Métadonnées du relevé, reprises de `t_releve_metadonnee` |
+| source_donnee | text | Origine du polygone : `habitats` ou `eau_zh` |
 
 L'**habitat dominant** est celui qui a le plus fort `pour_hab`. À égalité, c'est celui qui a le plus petit code `typo_mer`. Un polygone sans habitat n'a pas d'habitat dominant.
 
@@ -148,6 +155,8 @@ L'**habitat dominant** est celui qui a le plus fort `pour_hab`. À égalité, c'
 | surface_ha | numeric | Surface occupée par l'habitat : surface du polygone × `pour_hab` / 100, en hectares |
 | groupe_mercantour, enjeu, statut_eur27... | text | Description de l'habitat, reprise du dictionnaire |
 | natura2000 | boolean | Vrai si l'habitat est d'intérêt communautaire ou prioritaire |
+| site, date_obs | text, timestamp | Site et date de l'observation ; pour `eau_zh`, le site est le nom du site et la date est ramenée au 1er janvier de l'année d'inventaire |
+| source_donnee | text | Origine de l'occurrence : `habitats` ou `eau_zh` |
 
 !!! note "Les surfaces sont planimétriques"
     `surface_ha` est calculée sur la carte, en Lambert-93, et non sur le relief. En montagne, la surface réelle du terrain est plus grande. Une occurrence sans `pour_hab` n'a pas de surface.
@@ -210,7 +219,7 @@ ORDER BY code_typo_mer;
 
 - Les tables ont été créées à partir de la table `habitats.t_fusion_habitats_vegetation` (la couche d'origine, au format « large » : `TYPO_MER_1` à `4`, `POUR_HAB_1` à `4`).
 - `dico_typo_mer` a été chargé depuis le fichier de la typologie des habitats du Parc (`Typologie_habitats_PNMercantour_Correspondances_table_Attributaire_Cartographie_Habitats_Rattachement_UFL.csv`), dont seules les colonnes de classification et de correspondance ont été retenues.
-- Les vues dépendent des quatre tables et utilisent `ST_Area` (PostGIS) pour calculer les surfaces.
+- Les vues dépendent des quatre tables du schéma `habitats`, des tables `eau_zh.zh`, `eau_zh.habitat`, `eau_zh.ref_habitat` et `eau_zh.site`, ainsi que de la colonne de correspondance `dico_typo_mer.cor_typo_zh`. Elles utilisent `ST_Area` (PostGIS) pour calculer les surfaces. Les statistiques agrègent les deux sources ; `nb_polygones = 0` signifie qu'aucune occurrence correspondante n'est présente dans l'une ou l'autre.
 
 
 ## Choix de conception
@@ -260,5 +269,3 @@ Le fichier [controle_migration.sql](./habitats/sql/controle_migration.sql) regro
 - Vues : [vues.sql](./habitats/sql/vues.sql)
 
 Le script de création charge le dictionnaire avec la commande `\copy`, propre à `psql` : il faut le lancer avec `psql` depuis le dossier qui contient le fichier CSV du dictionnaire. En pratique le script est lancé par bloc à la main.
-
-
