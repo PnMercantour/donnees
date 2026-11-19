@@ -1,0 +1,144 @@
+/*.md-grid {
+  max-width: 2880px;
+}
+étend de bout en bout le contenu sur la largeur*/
+
+/* Logo dans l'en-tête */
+.md-header__button.md-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* optionnel, ajoute une ombre portée */
+  border-radius: 4px; /* optionnel, adoucit les angles */
+}
+
+
+/* Icône à la place des images d'en tête */
+.md-typeset .twemoji.pnm-hero__icon {
+  height: 6rem;
+  width: 6rem;
+}
+
+.md-typeset .twemoji.pnm-hero__icon svg {
+  height: 100%;
+  width: 100%;
+  max-height: none;
+  fill: yellowgreen;  
+}
+
+
+/* Page d'accueil */
+.pnm-hero {
+  display: flex;
+  align-items: center;          
+  gap: 2.5rem;
+  text-align: left;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, #e8f5e9 100%);
+}
+
+.pnm-hero__brand {
+  flex: 0 0 auto;               /* le logo garde sa taille */
+}
+
+.pnm-hero__brand p {
+  margin: 0;
+}
+
+.pnm-hero__text {
+  flex: 1 1 auto;
+}
+
+.pnm-hero h1 {
+  margin: 0 0 0.5rem;
+  color: #1b3a2a;
+  font-weight: 700;
+}
+
+.pnm-hero p {
+  max-width: 60rem;
+  margin: 0.5rem 0 1.2rem;      /* plus de centrage automatique */
+  color: #1b3a2a;
+}
+
+.pnm-hero .pnm-hero__logo {
+  display: block;
+  height: 8rem;
+  width: auto;
+  border-radius: 0.5rem;
+}
+
+/* Petits écrans : le logo repasse au-dessus du texte */
+@media (max-width: 600px) {
+  .pnm-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+}
+
+
+/* Mode sombre */
+
+[data-md-color-scheme="slate"] .pnm-hero {
+  background: linear-gradient(135deg, #1f3a4d 0%, #1e2a24 100%);
+}
+
+[data-md-color-scheme="slate"] .pnm-hero h1,
+[data-md-color-scheme="slate"] .pnm-hero p {
+  color: #fff;
+}
+
+
+/* Grilles de cartes */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  position: relative;           /* nécessaire pour les cartes cliquables */
+  border-radius: 0.6rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Carte entièrement cliquable : ajouter { .stretched } au lien */
+.md-typeset .grid.cards a.stretched::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Grilles de cartes : 4 par ligne (ajouter la classe "cols-4" à la grille) */
+.md-typeset .grid.cards.cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Écrans moyens : 2 par ligne */
+@media (max-width: 76.1875em) {
+  .md-typeset .grid.cards.cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Petits écrans : 1 par ligne */
+@media (max-width: 36em) {
+  .md-typeset .grid.cards.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Emoji dans les titres */
+.md-typeset h2 .twemoji {
+  color: var(--md-primary-fg-color--dark);
+  margin-right: 0.3rem;
+}
