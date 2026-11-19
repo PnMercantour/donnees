@@ -6,6 +6,20 @@ La formation consiste à **dérouler les tutos de ce site, dans l'ordre du menu*
     Ce déroulé n'est pas réservé à la séance : vous pouvez le refaire seul·e, à votre rythme, autant de fois que nécessaire.  
     Rouvrez le projet `Formation QGIS`, travaillez sur votre copie, parcourez les tutos, et réimportez le CSV d'exemple ou vos propres données ! 
 
+## Replay Webinaire - prise en main de QGIS au PNM
+
+Le webinaire du **19 novembre 2026** a été enregistré. Vous pouvez le retrouver en copiant/collant le lien suivant dans votre barre de recherche internet. Il est nécessaire d'être connecté aux réseau du PNM pour y accéder.  
+
+```
+\\nas-media.mercantour.local\data_sig\2026_11_19_webinaire_prise_en_main_QGIS.mp4
+```
+
+Ce webinaire reprend dans les grandes lignes la structure de la page **Formation**, ci-dessous, pour vous présenter les outils propres à QGIS et aux données au sein du Parc. L'objectif de ce premier rendez-vous était de **vous donner les clés** pour que vous ne restiez pas bloqué·e dans vos projets. 
+
+N'hésitez pas à **mettre sur pause** le replay pour refaire à votre rythme les actions menées pendant le webinaire.  
+Bonne lecture !
+
+
 ## Le projet `Formation QGIS`
 
 Le projet d'exemple se trouve dans la base de données du Parc, dans le schéma `formation_qgis`. Pour l'ouvrir : [Accéder aux ressources du PNM](./installer_certificats_base_de_donnees.md#charger-une-couche).
