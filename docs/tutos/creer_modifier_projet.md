@@ -22,24 +22,37 @@
 
 ## Créer un projet 
 
-Dans la barre de menu, cliquez sur ++"Projet"++ > ++"Nouveau"++.
+Le plus simple pour créer son propre projet et bien structurer ses données est de passer par le format GeoPackage.   
+Légèrement plus fastidieux qu'un simple ++"Projet"++ > ++"Nouveau"++, cette méthode vous fera gagner beaucoup de temps par la suite. Elle est détaillée pas à pas ci-dessous.
 
-Vous pouvez ajouter les couches & fonds de carte qui vous intéressent.
-
---- 
-
-## Enregistrer son projet 
-
-- En **local** : choissisez l'emplacement du projet souhaité, donnez lui un nom et choissisez le format `.qgz`/`.qgs` (ShapeFile)
-- Si vous souhaitez pouvoir **partager** facilement à vos collègues les couches et le projet dans un unique fichier, utilisez le format `.gpkg` (GeoPackage) et suivez la méthode : [partager un projet](./empaqueter_un_projet.md).
-
-
-
-??? tip "Choisir le bon format"
+??? tip "Choisir le bon format en local"
     |Format|Ce qu'il contient|Avantages|Limites|
     |:--:|:--:|:--:|:--:|
     |`.qgz`/`.qgs` (ShapeFile)|Le projet uniquement : les chemins menant aux couches et leur définition de style|Léger|**Ne contient pas les données.** Une couche issue d'une base sécurisée ne s'affichera pas sur un ordinateur sans cet accès. Les fichiers locaux doivent se trouver exactement aux mêmes chemins sur l'autre machine.|
     |`.gpkg` (GeoPackage)|Le projet ^^et^^ les données, avec leurs styles|Un seul fichier, facile à échanger ; évite les problèmes de chemins|Plus lourd ; la démarche est plus longue|
+
+### Créer un GeoPackage vierge
+
+Pour enregistrer le projet dans un GeoPackage, il faut d'abord en créer un vierge : ++"Couche"++ > ++"Créer une couche"++ > ++"Nouvelle couche GeoPackage..."++
+
+![](./img/creer_gpkg.png)
+
+### Définir la connexion à ce fichier
+
+Par défaut, QGIS ne "connaît" pas le GeoPackage que vous venez de créer : il faut définir la connexion à ce fichier.
+
+- Ouvrez le **gestionnaire de sources de données** ++ctrl+l++
+- Dans le menu de gauche, faites un ++"clic droit"++ sur **GeoPackage** > ++"Nouvelle connexion..."++
+- Naviguez jusqu'au fichier GeoPackage que vous venez de créer.
+
+### Enregistrer le projet
+
+Il ne reste qu'à enregistrer le projet et à lui donner un nom :
+
+++"Projet"++ > ++"Enregistrer le projet sous..."++ > ++"GeoPackage"++
+
+!!! tip "Vous pouvez enregistrer plusieurs projets dans un même GeoPackage"
+    Il suffit de choisir le même fichier .gpk et donner un nom de projet différent.
 
 --- 
 
