@@ -27,9 +27,9 @@ Le projet d'exemple se trouve dans la base de données du Parc, dans le schéma 
 
 | Groupe | Couche | Rôle |
 |--------|--------|---------|
-| **Mailles à prospecter** | `Presence_a_completer` | Les mailles (polygones) dont il faut renseigner la présence |
-| | `couchetest_a_remplir` | Une couche de points pour accueillir les relevés de terrain |
-| **Limites** | `Vallees` | Les 7 vallées du Parc (couche **filtrée**) |
+| **Mailles à prospecter** | `Zones a completer` | Les mailles (polygones) dont il faut renseigner la présence |
+| | `Releves a completer` | Une couche de points pour accueillir les relevés de terrain |
+| **Limites** | `vallees` | Les 7 vallées du Parc (couche **filtrée**) |
 | | `parc_coeur` | Le cœur du Parc et les communes de l'aire d'adhésion |
 | | Carte topographique (IGN Scan 25) | Fond de carte (WMS) |
 | | `departement` | Limites de départements |
@@ -71,9 +71,9 @@ Vous pouvez également vous servir de vos **propres relevés**, sous format Exce
 | | [Fonds de carte](./wms_wfs.md) | Repérer le Scan 25, ajouter un autre fond (orthophoto) |
 | | [Système de coordonnées](./scr.md) | Vérifier le SCR du projet et celui des couches |
 | **Prise en main** | [Naviguer dans QGIS](./navigation.md) | Explorer le panneau Couches, zoomer sur une vallée |
-| | [Créer ou modifier un projet](./creer_modifier_projet.md) | Enregistrer sa propre copie du projet |
-| | [Créer ou modifier une couche](./creer_modifier_couche.md) | Copie locale de `couchetest_a_remplir` et `presence_a_completer`, puis **ajout du CSV de terrain** : importer `prospection_exemple.csv`, vérifier qu'il se superpose aux vallées |
-| | [Symbologie](./symbologie.md) | Changer la symbologie des vallées, afficher leurs noms en étiquettes, symbologie des relevés |
+| | [Créer ou modifier un projet](./creer_modifier_projet.md) | Créer son propre projet en GeoPackage |
+| | [Créer ou modifier une couche](./creer_modifier_couche.md) | Ajout de polygones et de points dans `Zones a completer` et `Releves a completer`, ouvrir les tables attributaires, puis **ajout du CSV de terrain** : importer `prospection_exemple.csv`, vérifier qu'il se superpose aux vallées |
+| | [Symbologie](./symbologie.md) | Changer la symbologie des vallées, afficher leurs noms en étiquettes, symbologie des relevés - catégorie sur les observateurs ou taille de point sur l'effectif |
 | **Pour aller plus loin** | [Sélection](./selection.md) · [Filtres](./filtres.md) | Sélectionner une vallée, observer le filtre de `Vallees` & appliquer des filtres sur la `prospection` |
 | | [Calculatrice de champs](./calculatrice_champs.md) | Calculer la surface de chaque vallée |
 | | [Outils de traitement](./outils_traitement.md) | Obtenir les relevés uniquement sur la zone désirée |
@@ -85,8 +85,9 @@ Vous pouvez également vous servir de vos **propres relevés**, sous format Exce
 À garder tout du long, voir [Bonnes pratiques](./bonnes_pratiques.md) :
 
 1. **Enregistrer** souvent ++ctrl+s++.
-2. **Travailler sur une copie**, jamais sur le projet partagé.
-3. **Vérifier le SCR** quand on ajoute des données.
+2. **Vérifier sur quel support je travaille** : source des données, projet stocké sur le serveur, dans la base de donnée, local ?
+3. **Vérifier le SCR** quand on ajoute des données.  
+4. **Organiser ses données** : dans le panneau Couche et en local - préférer le format GeoPackage pour enregistrer vos couches et projets dans un même fichier. 
 
 !!! tip "Besoin d'aide ?"
     [Glossaire](./glossaire.md) · [FAQ](./FAQ.md) · `si@mercantour-parcnational.fr`
